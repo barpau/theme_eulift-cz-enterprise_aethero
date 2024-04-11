@@ -20,15 +20,7 @@
 
 <cart-items id="cart-items" data-section="{{ section_id }}" data-empty="{% if cart == empty %}true{% else %}false{% endif %}">
   {%- if cart == empty -%}
-    <div class="cart-empty flex flex-col justify-center items-center h-full js-cart-empty">
-      {%- if settings.cart_icon == 'bag' -%}
-        {%- render 'icon-bag' -%}
-      {%- elsif settings.cart_icon == 'basket' -%}
-        {%- render 'icon-basket' -%}
-      {%- else -%}
-        {%- render 'icon-cart' -%}
-      {%- endif -%}
-
+    <div class="flex flex-col justify-center items-center h-full js-cart-empty">
       <p>{{ 'cart.general.empty' | t }}</p>
 
       {%- if settings.cart_empty_shop_link -%}
@@ -83,12 +75,6 @@
                 {{- item.product.title | escape -}}
               </a>
 
-              {%- if settings.cart_show_weight and item.variant.weight > 0 -%}
-                <div class="cart-item__weight text-sm mt-2">
-                  {{ item.variant.weight | weight_with_unit: item.variant.weight_unit }}
-                </div>
-              {%- endif -%}
-
               <div class="cart-item__info">
                 {%- if variant_price_reduced or item.original_line_price != item.final_line_price -%}
                   <dl class="m-0">
@@ -96,35 +82,35 @@
                       {{- 'products.product.price.sale_price' | t -}}
                     </dt>
                     <dd class="price__current inline m-0 font-bold">
-                      {%- render 'price-as-money', price: item.final_price, show_money_with_currency: false -%}
+                      {{- item.final_price | money -}}
                     </dd>
                     <dt class="visually-hidden">
                       {{- 'products.product.price.regular_price' | t -}}
                     </dt>
                     <dd class="inline m-0">
                       {%- if variant_price_reduced -%}
-                        <s class="price__was{% if settings.superscript_decimals %} price__was--supercents{% endif %}">{%- render 'price-as-money', price: item.variant.compare_at_price, show_money_with_currency: false -%}</s>
+                        <s class="price__was">{{ item.variant.compare_at_price | money }}</s>
                       {%- else -%}
-                        <s class="price__was{% if settings.superscript_decimals %} price__was--supercents{% endif %}">{%- render 'price-as-money', price: item.original_price, show_money_with_currency: false -%}</s>
+                        <s class="price__was">{{ item.original_price | money }}</s>
                       {%- endif -%}
                     </dd>
                   </dl>
                 {%- else -%}
                   <strong class="price__current">
-                    {%- render 'price-as-money', price: item.original_price, show_money_with_currency: false -%}
+                    {{- item.original_price | money -}}
                   </strong>
                 {%- endif -%}
 
-                {%- if item.unit_price_measurement -%}
+                {%- if item.variant.available and item.unit_price_measurement -%}
                   <div class="unit-price">
                     <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                    <span class="unit-price__price">{%- render 'price-as-money', price: item.unit_price, show_money_with_currency: false -%}</span>
+                    <span class="unit-price__price">{{ item.variant.unit_price | money }}</span>
                     <span class="unit-price__separator">{{ 'products.product.price.unit_price_separator' | t }}</span>
                     <span class="unit-price__unit">
-                      {%- if item.unit_price_measurement.reference_value != 1 -%}
-                        {{- item.unit_price_measurement.reference_value -}}
+                      {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                        {{- item.variant.unit_price_measurement.reference_value -}}
                       {%- endif -%}
-                      {{ item.unit_price_measurement.reference_unit }}
+                      {{ item.variant.unit_price_measurement.reference_unit }}
                     </span>
                   </div>
                 {%- endif -%}
@@ -214,27 +200,22 @@
                     {{- 'products.product.price.sale_price' | t -}}
                   </dt>
                   <dd class="price__current m-0 font-bold">
-                    {%- render 'price-as-money', price: item.final_line_price, show_money_with_currency: false -%}
+                    {{- item.final_line_price | money -}}
                   </dd>
                   <dt class="visually-hidden">
                     {{- 'products.product.price.regular_price' | t -}}
                   </dt>
                   <dd class="m-0">
                     {%- if variant_price_reduced -%}
-                      <s class="price__was{% if settings.superscript_decimals %} price__was--supercents{% endif %}">
-                        {%- liquid
-                          assign compare_at_total_price = item.variant.compare_at_price | times: item.quantity
-                          render 'price-as-money', price: compare_at_total_price, show_money_with_currency: false
-                        -%}
-                      </s>
+                      <s class="price__was">{{ item.variant.compare_at_price | times: item.quantity | money }}</s>
                     {%- else -%}
-                      <s class="price__was{% if settings.superscript_decimals %} price__was--supercents{% endif %}">{%- render 'price-as-money', price: item.original_line_price, show_money_with_currency: false -%}</s>
+                      <s class="price__was">{{ item.original_line_price | money }}</s>
                     {%- endif -%}
                   </dd>
                 </dl>
               {%- else -%}
                 <strong class="price__current">
-                  {%- render 'price-as-money', price: item.original_line_price, show_money_with_currency: false -%}
+                  {{- item.original_line_price | money -}}
                 </strong>
               {%- endif -%}
             </td>
@@ -245,7 +226,7 @@
   {%- endif -%}
 
   <p class="visually-hidden" id="cart-live-region-text" role="status" aria-live="polite">
-    {{ 'cart.summary.subtotal' | t }}: {%- render 'price-as-money', price: cart.total_price, show_money_with_currency: true -%}
+    {{ 'cart.summary.subtotal' | t }}: {{ cart.total_price | money_with_currency }}
   </p>
   <p class="visually-hidden" id="cart-line-item-status" role="status" aria-live="polite" aria-hidden="true">
     {{- 'accessibility.loading' | t -}}

@@ -85,7 +85,7 @@ customEvents.forEach((event) => {
     if (event.includes('dispatch:cart-drawer') && theme.settings.cartType !== 'drawer') {
       // eslint-disable-next-line
       console.warn(
-        'Enterprise Theme: The Cart Drawer is not enabled. To enable it, change Theme Settings > Cart > Cart type.'
+        'The Cart Drawer is not enabled. To enable it, change Theme Settings > Cart > Cart type.'
       );
     } else {
       // eslint-disable-next-line

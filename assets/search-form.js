@@ -5,8 +5,6 @@ if (!customElements.get('search-form')) {
     constructor() {
       super();
       this.input = this.querySelector('.js-search-input');
-      this.productTypeSelect = this.querySelector('.js-search-product-types');
-      this.productTypeInput = document.getElementById('product_type_input');
       this.resetBtn = this.querySelector('.js-search-reset');
       this.addListeners();
       this.init();
@@ -14,9 +12,6 @@ if (!customElements.get('search-form')) {
 
     addListeners() {
       this.input.addEventListener('input', debounce(this.handleInput.bind(this)));
-      if (this.productTypeSelect) {
-        this.productTypeSelect.addEventListener('change', this.handleProductTypeChange.bind(this));
-      }
       this.resetBtn.addEventListener('click', this.handleReset.bind(this));
     }
 
@@ -115,14 +110,6 @@ if (!customElements.get('search-form')) {
       } else {
         this.input.classList.remove('search__input--dirty');
       }
-    }
-
-    /**
-     * Handles a change of product type
-     * @param {object} evt - Event object.
-     */
-    handleProductTypeChange(evt) {
-      this.productTypeInput.value = evt.detail.selectedValue;
     }
 
     /**

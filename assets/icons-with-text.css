@@ -30,14 +30,6 @@
   margin: 0 auto;
 }
 
-@media (max-width: 599.98px) {
-  .carousel[disable-mobile=true] .icons-with-text__text:not(.icons-with-text__text--icons-above) {
-    flex-basis: 190px;
-  }
-  .carousel[disable-mobile=true] .icons-with-text .icon {
-    flex-basis: 35px;
-  }
-}
 @media (min-width: 600px) {
   .icons-with-text .slider-nav__btn {
     padding: 0 10px;

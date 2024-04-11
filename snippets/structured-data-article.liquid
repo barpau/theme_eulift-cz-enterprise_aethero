@@ -51,59 +51,41 @@
       {%- endif -%}
       "name": {{ shop.name | json }},
       {% capture sameAs_json %}
-        {%- if settings.social_facebook_url != blank -%}
-          {{ settings.social_facebook_url | json }},
+        {%- if settings.social_twitter_url != blank -%}
+          {{ settings.social_twitter_url | json }},
         {%- endif -%}
-        {%- if settings.social_youtube_url != blank -%}
-          {{ settings.social_youtube_url | json }},
+        {%- if settings.social_facebook_url != blank -%}
+          {{ settings.social_facebook_url | json }},          
         {%- endif -%}
         {%- if settings.social_instagram_url != blank -%}
           {{ settings.social_instagram_url | json }},
         {%- endif -%}
-        {%- if settings.social_whatsapp_url != blank -%}
-          {{ settings.social_whatsapp_url | json }},
+        {%- if settings.social_pinterest_url != blank -%}
+          {{ settings.social_pinterest_url | json }},
         {%- endif -%}
         {%- if settings.social_tiktok_url != blank -%}
           {{ settings.social_tiktok_url | json }},
         {%- endif -%}
         {%- if settings.social_snapchat_url != blank -%}
-          {{ settings.social_snapchat_url | json }},
+          {{ settings.social_snapchat_url | json }},      
         {%- endif -%}
-        {%- if settings.social_pinterest_url != blank -%}
-          {{ settings.social_pinterest_url | json }},
-        {%- endif -%}
-        {%- if settings.social_twitter_url != blank -%}
-          {{ settings.social_twitter_url | json }},
+        {%- if settings.social_tumblr__url != blank -%}
+          {{ settings.social_tumblr_url | json }},            
         {%- endif -%}
         {%- if settings.social_linkedin_url != blank -%}
           {{ settings.social_linkedin_url | json }},
         {%- endif -%}
-        {%- if settings.social_wechat_url != blank -%}
-          {{ settings.social_wechat_url | json }},
+        {%- if settings.social_youtube_url != blank -%}
+          {{ settings.social_youtube_url | json }},
         {%- endif -%}
         {%- if settings.social_vimeo_url != blank -%}
           {{ settings.social_vimeo_url | json }},
         {%- endif -%}
-        {%- if settings.social_tumblr_url != blank -%}
-          {{ settings.social_tumblr_url | json }},
-        {%- endif -%}
-        {%- if settings.social_twitch_url != blank -%}
-          {{ settings.social_twitch_url | json }},
-        {%- endif -%}
         {%- if settings.social_spotify_url != blank -%}
           {{ settings.social_spotify_url | json }},
         {%- endif -%}
-        {%- if settings.social_discord_url != blank -%}
-          {{ settings.social_discord_url | json }},
-        {%- endif -%}
-        {%- if settings.social_mastodon_url != blank -%}
-          {{ settings.social_mastodon_url | json }},
-        {%- endif -%}
-        {%- if settings.social_threads_url != blank -%}
-          {{ settings.social_threads_url | json }},
-        {%- endif -%}
-        {%- if settings.social_custom_url != blank -%}
-          {{ settings.social_custom_url | json }},
+        {%- if settings.social_twitch_url != blank -%}
+          {{ settings.social_twitch_url | json }},
         {%- endif -%}
       {% endcapture %}
       "sameAs": [

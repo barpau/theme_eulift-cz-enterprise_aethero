@@ -56,11 +56,6 @@
   top: calc(var(--header-end, 100px) * -1 - 40px);
 }
 
-@media (max-width: 768.98px) {
-  .sticky-atc-panel {
-    left: 0;
-  }
-}
 @media (min-width: 769px) {
   .sticky-atc-panel {
     width: auto;
@@ -68,13 +63,5 @@
   }
   .card--sticky-atc .card__info {
     flex: 1;
-  }
-  .sticky-atc-panel--center {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .scrolled-to-bottom .sticky-atc-panel.sticky-atc-panel--center,
-.sticky-atc-panel--out.sticky-atc-panel--center {
-    transform: translateX(-50%) translateY(100%);
   }
 }

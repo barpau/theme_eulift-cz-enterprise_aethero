@@ -57,7 +57,7 @@ if (!customElements.get('article-pagination')) {
       // 200px after the end of the article
       const targetY = pos.height + this.article.offsetTop - window.innerHeight + 200;
       const percentScrolled = parseInt((100 / targetY) * window.scrollY, 10);
-      this.style.setProperty('--pagination-percent', `${percentScrolled}%`);
+      this.style.setProperty('--percent-scrolled', `${percentScrolled}%`);
       // Scrolled 300px past the end of the article
       this.classList.toggle('is-visible', window.scrollY - targetY < 300);
     }

@@ -18,7 +18,7 @@ if (!customElements.get('custom-select')) {
     init() {
       this.options = this.querySelectorAll('.custom-select__option');
       this.nativeSelect = document.getElementById(`${this.id}-native`);
-      this.swatches = 'swatch' in this.options[this.options.length - 1].dataset;
+      this.swatches = 'swatch' in this.options[0].dataset;
       this.focusedClass = 'is-focused';
       this.searchString = '';
       this.listboxOpen = false;
@@ -131,10 +131,7 @@ if (!customElements.get('custom-select')) {
      * @param {object} evt - Event object.
      */
     handleClick(evt) {
-      // mouse down + move + up will trigger a click event on parent - only respond to clicks on LI
-      if (evt.target.tagName === 'LI') {
-        this.selectOption(evt.target);
-      }
+      this.selectOption(evt.target);
     }
 
     /**
@@ -205,17 +202,17 @@ if (!customElements.get('custom-select')) {
      */
     setButtonWidth() {
       // Get the width of an element without side padding.
-      const getHorizontalPadding = (el) => {
+      const getUnpaddedWidth = (el) => {
         const elStyle = getComputedStyle(el);
         return parseFloat(elStyle.paddingLeft) + parseFloat(elStyle.paddingRight);
       };
 
-      const buttonPadding = getHorizontalPadding(this.button);
-      const optionPadding = getHorizontalPadding(this.selectedOption);
+      const buttonPadding = getUnpaddedWidth(this.button);
+      const optionPadding = getUnpaddedWidth(this.selectedOption);
       const buttonBorder = this.button.offsetWidth - this.button.clientWidth;
       const optionWidth = Math.ceil(this.selectedOption.getBoundingClientRect().width);
 
-      this.button.style.setProperty('--custom-select-button-width', `${optionWidth - optionPadding + buttonPadding + buttonBorder}px`);
+      this.button.style.width = `${optionWidth - optionPadding + buttonPadding + buttonBorder}px`;
     }
 
     /**
@@ -326,7 +323,7 @@ if (!customElements.get('custom-select')) {
 
         // Update swatch colour in the button.
         if (this.swatches) {
-          this.button.dataset.swatch = option.dataset.swatch || '';
+          this.button.dataset.swatch = option.dataset.swatch;
         }
 
         // Update the button text and set the option as active.

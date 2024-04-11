@@ -11,7 +11,7 @@
   width: 100%;
 }
 .cc-nav-slideshow .slideshow {
-  padding-bottom: calc(var(--quick-nav-height, 400px) + 30px);
+  padding-bottom: calc(var(--element-height, 400px) + 30px);
   transition: padding-bottom 0.2s ease-out;
 }
 

@@ -72,7 +72,6 @@
     --image-size: 80px;
   }
   .mega-nav--pills .main-nav__collection-image {
-    height: auto;
     margin-bottom: calc(4 * var(--space-unit));
     margin-inline-end: calc(6 * var(--space-unit));
   }

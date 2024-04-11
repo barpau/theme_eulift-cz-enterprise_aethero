@@ -1,13 +1,14 @@
 var zeman = "<div id='zeman'><img src='https://cdn.shopify.com/s/files/1/0755/1526/5333/files/chat3.svg?v=1685966497' style='position: fixed; align: right; bottom: 60px; right: 20px; z-index: 39; height: 100px;' /></div>";
-var button = "<button id='zeman-button' class='btn btn--primary'style='position: fixed; align: right; background: #333a40; bottom: 10px; right: 25px; z-index: 39;'><a href='tel:00420 606 600 011' style='color:white;'>Zavolejte mi<br>+420 606 600 011</a></button>"
-var button_close = "<button id='zeman-button-close' class='btn btn--primary'style='position:fixed; align:right; background: #333a40; bottom: 10px; right:25px; z-index: 39;'><a href='tel:00420 606 600 011' style='color:white;'>Nyní nejsem na telefonu.<br> Prozvoňte mě, zavolám vám zpět.<br>+420 606 600 011</a></button>"
+var button = "<button id='zeman-button' class='btn btn--primary'style='position: fixed; align: right; background: #333a40; bottom: 10px; right: 25px; z-index: 39;'><a href='tel:00421949558495' style='color:white;'>Zavolajte mi<br>+421 949 558 495</a></button>"
+
+var button_close = "<button id='zeman-button-close' class='btn btn--primary'style='position:fixed; align:right; background: #333a40; bottom: 10px; right:25px; z-index: 39;'><a href='tel:00421949558495' style='color:white;'>Teraz nie som na drôte.<br> Prezvoňte ma, zavolám vám späť.<br>+421 949 558 495</a></button>"
 
 
 
 function insertImage() {
   $(".shopify-section-group-footer-group").after(zeman);
-  $("#shopify-section-sections--22223179579680__footer").after(button);
-  $("#shopify-section-sections--22223179579680__footer").after(button_close);
+  $("#shopify-section-sections--22502921797920__footer").after(button);
+  $("#shopify-section-sections--22502921797920__footer").after(button_close);
 }
 
 function openingHours(){

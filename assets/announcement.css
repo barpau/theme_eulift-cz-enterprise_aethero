@@ -16,6 +16,7 @@
 
 .announcement {
   color: rgb(var(--announcement-text-color));
+  font-size: var(--font-size);
 }
 .announcement a {
   color: inherit;
@@ -24,7 +25,6 @@
 .announcement__text {
   justify-content: center;
   padding: 6px 0;
-  text-align: center;
 }
 .announcement__text a {
   text-decoration: underline;
@@ -39,7 +39,7 @@
 .announcement__localization .custom-select__btn {
   --input-text-color: var(--announcement-text-color);
   --text-color: var(--announcement-text-color);
-  width: auto;
+  width: auto !important;
   margin-inline-end: calc(2 * var(--space-unit));
   padding: 0;
   border: 0;
@@ -105,13 +105,8 @@ body:not(.tab-used) .announcement__localization .custom-select__btn:focus {
   .announcement__col--right {
     padding-inline-start: 10px;
   }
-  .announcement__col--align-center .announcement__text {
-    padding-right: calc(4 * var(--space-unit));
-    padding-left: calc(4 * var(--space-unit));
-  }
-  .announcement__col--align-left .announcement__text {
+  .announcement__text {
     justify-content: flex-start;
     padding-inline-end: calc(4 * var(--space-unit));
-    text-align: start;
   }
 }

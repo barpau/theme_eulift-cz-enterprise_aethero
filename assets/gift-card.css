@@ -50,12 +50,6 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-mark {
-  background-color: transparent;
-  color: inherit;
-  font-weight: bold;
-}
-
 :root {
   --fluid-vw: 100vw;
   --fluid-max-vw: 1536;
@@ -200,22 +194,6 @@ address {
   font-style: normal;
 }
 
-.text-body-extra_small {
-  font-size: 0.8em;
-}
-
-.text-body-small {
-  font-size: 0.9em;
-}
-
-.text-body-large {
-  font-size: 1.1em;
-}
-
-.text-body-extra_large {
-  font-size: 1.2em;
-}
-
 .small-text {
   font-size: 0.875em;
 }
@@ -286,9 +264,6 @@ address {
 .rte h6:not(:last-child) {
   margin-bottom: 0.2em;
 }
-.rte iframe {
-  max-width: 100%;
-}
 
 .rte--inherit-heading-color h1,
 .rte--inherit-heading-color h2,
@@ -299,15 +274,6 @@ address {
   color: inherit;
 }
 
-@media (max-width: 599.98px) {
-  .xs\:regular-text {
-    font-size: 1em;
-  }
-  .xs\:text-h6 {
-    font-size: var(--h6-font-size);
-    line-height: 1.4;
-  }
-}
 @media (min-width: 769px) {
   .enlarge-text {
     font-size: 1.5em;
@@ -543,29 +509,25 @@ img {
   }
 }
 a,
-.link,
-.product-spec__value a {
+.link {
   color: rgb(var(--link-color));
   text-decoration: none;
 }
 a[aria-disabled=true],
-.link[aria-disabled=true],
-.product-spec__value a[aria-disabled=true] {
+.link[aria-disabled=true] {
   opacity: 0.4;
   cursor: default;
 }
 
 .link,
-.rte a,
-.product-spec__value a {
+.rte a {
   transition: opacity 0.3s;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2rem;
 }
 .link:hover,
-.rte a:hover,
-.product-spec__value a:hover {
+.rte a:hover {
   opacity: 0.6;
 }
 

@@ -20,18 +20,12 @@
   %}
 {%- endcomment -%}
 
-{%- if section.index > 2 -%}
-  <link rel="stylesheet" href="{{ 'product.css' | asset_url }}" media="print" onload="this.media='all'">
-{%- else -%}
-  {{ 'product.css' | asset_url | stylesheet_tag }}
-{%- endif -%}
-
 {%- if settings.enable_quick_add -%}
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'product.css' | asset_url }}" media="print" onload="this.media='all'">
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'variant-picker.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'custom-select.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
 {%- liquid

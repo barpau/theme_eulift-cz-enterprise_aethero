@@ -5,7 +5,6 @@
 .price-range__currency {
   padding: 0 2px;
   font-size: 16px;
-  white-space: nowrap;
 }
 
 .price-range__input-wrapper {

@@ -6,8 +6,6 @@ if (!customElements.get('predictive-search')) {
       super();
       this.cachedResults = {};
       this.input = this.querySelector('.js-search-input');
-      this.productTypeSelect = this.querySelector('.js-search-product-types');
-      this.productTypeInput = document.getElementById('product_type_input');
       this.resetBtn = this.querySelector('.js-search-reset');
       this.results = this.querySelector('.js-search-results');
       this.overlay = this.querySelector('.js-search-overlay');
@@ -26,9 +24,6 @@ if (!customElements.get('predictive-search')) {
     addListeners() {
       this.input.addEventListener('focus', this.handleFocus.bind(this));
       this.input.addEventListener('input', debounce(this.handleInput.bind(this)));
-      if (this.productTypeSelect) {
-        this.productTypeSelect.addEventListener('change', this.handleProductTypeChange.bind(this));
-      }
       this.querySelector('.search').addEventListener('submit', this.handleSubmit.bind(this));
     }
 
@@ -71,18 +66,6 @@ if (!customElements.get('predictive-search')) {
     }
 
     /**
-     * Handles a change of product type
-     * @param {object} evt - Event object.
-     */
-    handleProductTypeChange(evt) {
-      this.productTypeInput.value = evt.detail.selectedValue;
-      const query = this.getQuery();
-      if (query.length > 0) {
-        this.getResults(query);
-      }
-    }
-
-    /**
      * Handles 'focus' events on the search field.
      */
     handleFocus() {
@@ -104,6 +87,9 @@ if (!customElements.get('predictive-search')) {
       // Let tabs script handle keydown events on the tab buttons.
       if (evt.target.matches('.tablist__tab')) return;
 
+      // If search field is empty after key press, close the results.
+      if (!this.getQuery().length) this.close();
+
       switch (evt.key) {
         case 'ArrowUp':
         case 'ArrowDown':
@@ -124,14 +110,6 @@ if (!customElements.get('predictive-search')) {
 
         // no default
       }
-    }
-
-    /**
-     * Handles 'keyup' events on the custom element.
-     */
-    handleKeyup() {
-      // If search field is empty after key press, close the results.
-      if (!this.getQuery().length) this.close();
     }
 
     /**
@@ -186,26 +164,25 @@ if (!customElements.get('predictive-search')) {
      * @param {string} searchTerm - Search query.
      */
     async getResults(searchTerm) {
+      const queryKey = searchTerm.replace(' ', '-').toLowerCase();
       this.setLiveRegionLoadingState();
+
+      if (this.cachedResults[queryKey]) {
+        this.renderResults(this.cachedResults[queryKey]);
+        return;
+      }
 
       const searchTypes = [];
       if (theme.settings.pSearchShowProducts) searchTypes.push('product');
       if (theme.settings.pSearchShowCollections) searchTypes.push('collection');
       if (theme.settings.pSearchShowPages) searchTypes.push('page');
       if (theme.settings.pSearchShowArticles) searchTypes.push('article');
-      if (theme.settings.pSearchShowSuggestions) searchTypes.push('query');
 
       let searchFields = 'title,product_type,variants.title,vendor';
       if (theme.settings.pSearchIncludeSkus) searchFields += ',variants.sku';
       if (theme.settings.pSearchIncludeTags) searchFields += ',tag';
 
-      let searchParams = '';
-      if (this.productTypeInput && this.productTypeInput.value !== '') {
-        searchParams = `q=product_type:${encodeURIComponent(this.productTypeInput.value)} AND ${encodeURIComponent(searchTerm)}`;
-      } else {
-        searchParams = `q=${encodeURIComponent(searchTerm)}`;
-      }
-
+      let searchParams = `q=${encodeURIComponent(searchTerm)}`;
       searchParams += `&${encodeURIComponent('resources[type]')}=${searchTypes.join()}`;
       searchParams += `&${encodeURIComponent('resources[limit]')}=${theme.settings.pSearchLimit}`;
       searchParams += `&${encodeURIComponent('resources[limit_scope]')}=${
@@ -213,12 +190,6 @@ if (!customElements.get('predictive-search')) {
       }`;
       searchParams += `&${encodeURIComponent('resources[options][fields]')}=${searchFields}`;
       searchParams += '&section_id=predictive-search';
-
-      const queryKey = searchParams.replace(' ', '-').toLowerCase();
-      if (this.cachedResults[queryKey]) {
-        this.renderResults(this.cachedResults[queryKey]);
-        return;
-      }
 
       try {
         const response = await fetch(`${theme.routes.predictiveSearch}?${searchParams}`);
@@ -273,20 +244,18 @@ if (!customElements.get('predictive-search')) {
      */
     open() {
       this.overlay.classList.add('is-visible');
-      if (this.getQuery().length) this.resetBtn.hidden = false;
+      this.resetBtn.hidden = false;
       this.input.setAttribute('aria-expanded', 'true');
       this.setAttribute('open', '');
       document.body.classList.add('overlay-predictive-search');
 
       // Add event handlers (so the bound event listeners can be removed).
       this.keydownHandler = this.keydownHandler || this.handleKeydown.bind(this);
-      this.keyupHandler = this.keyupHandler || this.handleKeyup.bind(this);
       this.resetBtnClickHandler = this.resetBtnClickHandler || this.close.bind(this);
       this.overlayClickHandler = this.overlayClickHandler || this.close.bind(this);
 
       // Add event listeners (for while results are open).
       this.addEventListener('keydown', this.keydownHandler);
-      this.addEventListener('keyup', this.keyupHandler);
       this.resetBtn.addEventListener('click', this.resetBtnClickHandler);
       this.overlay.addEventListener('click', this.overlayClickHandler);
     }

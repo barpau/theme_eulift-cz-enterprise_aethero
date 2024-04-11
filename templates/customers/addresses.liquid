@@ -18,7 +18,7 @@
         <span class="badge shrink-0 text-center" aria-hidden="true"> {{ customer.addresses_count }}</span>
       </h1>
 
-      <customer-addresses class="mb-8">
+      <customer-addresses>
         <div class="account-width mt-12 mx-auto">
           <ul class="grid grid-cols-1{% if customer.addresses.size > 1 %} md:grid-cols-2{% endif %}{% if customer.addresses.size > 2 %} lg:grid-cols-3{% endif %} gap-theme" role="list">
             {%- for address in customer.addresses -%}
@@ -211,7 +211,7 @@
         </side-drawer>
       </customer-addresses>
 
-      {%- render 'pagination', paginate: paginate, class: 'mt-10' -%}
+      {%- render 'pagination', paginate: paginate -%}
     {%- endpaginate -%}
   </div>
 </div>

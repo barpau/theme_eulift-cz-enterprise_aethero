@@ -1,5 +1,5 @@
 .promo {
-  min-height: var(--promo-min-height, 0);
+  min-height: var(--promo-min-height);
 }
 .main-nav__promos .promo {
   padding: 0;
@@ -39,25 +39,17 @@
 .promo__content {
   z-index: 1;
   padding: var(--gutter);
-}
-.promo__content .rte {
   color: var(--promo-text-color);
   font-size: var(--font-size);
 }
-.promo__content .rte p {
+.promo__content p {
   margin-bottom: 0.5em;
 }
-.promo__content .rte a {
+.promo__content a {
   color: currentColor;
 }
-.promo__content .rte > *:last-child {
-  margin-bottom: 0;
-}
-.promo__content .link {
-  color: var(--promo-text-color);
-}
 
-.card--promo__content .rte a {
+.card--promo__content a {
   color: currentColor;
 }
 
@@ -77,6 +69,10 @@
 .main-products-grid[data-layout=list] .card--promo {
   padding: calc(4 * var(--space-unit));
 }
+.main-products-grid[data-layout=list] .card--promo .btn {
+  width: -webkit-max-content;
+  width: max-content;
+}
 .main-products-grid[data-layout=list] .card--promo__info {
   padding-top: calc(4 * var(--space-unit));
   padding-bottom: calc(4 * var(--space-unit));
@@ -85,7 +81,7 @@
 }
 
 @media (max-width: 768.98px) {
-  .promo__content .rte {
+  .promo__content {
     font-size: calc(var(--font-size) * 0.9);
   }
   .card--promo-small,
@@ -103,12 +99,8 @@
   .main-products-grid[data-layout=grid] .card--promo {
     padding: calc(4 * var(--space-unit));
   }
-  .main-products-grid[data-layout=list] .card--promo .btn {
-    width: -webkit-max-content;
-    width: max-content;
-  }
   .promo__content {
-    padding: max(1em, 24px) max(1.25em, 30px);
+    padding: 1em 1.25em;
   }
   .main-nav__promos .promo__content {
     padding: 1em 1.5em;

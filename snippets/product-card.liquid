@@ -72,10 +72,6 @@
     else
       assign class = 'img-fit card__main-image ' | append: settings.prod_card_image_align
     endif
-
-    if product.featured_media.preview_image == product_images.last
-      assign show_hover_image = false
-    endif
   endif
 
   assign image_quality = 1
@@ -87,19 +83,10 @@
   if product.template_suffix contains 'coming-soon' or product.template_suffix contains 'countdown'
     assign product_not_for_sale = true
   endif
-
-  assign card_class = ""
-  if product.template_suffix contains 'preorder'
-    assign card_class = " card--product-preorder"
-  elsif product.template_suffix contains 'coming-soon'
-    assign card_class = " card--product-coming-soon"
-  elsif product.template_suffix contains 'countdown'
-    assign card_class = " card--product-countdown"
-  endif
 -%}
 
 {%- if product and product != empty -%}
-  <product-card class="card card--product{{ card_class }} h-full{% if settings.card_contain %} card--product-contained{% endif %}{% unless settings.show_dividers %} card--no-lines{% endunless %}{% if show_compare %} card--product-compare{% endif %} relative flex">
+  <product-card class="card card--product h-full{% if settings.card_contain %} card--product-contained{% endif %}{% unless settings.show_dividers %} card--no-lines{% endunless %}{% if show_compare %} card--product-compare{% endif %} relative flex">
 
     {%- if show_compare -%}
       <div class="card__compare no-js-hidden text-sm">
@@ -125,7 +112,7 @@
             quality: image_quality
           %}
 
-          {%- if settings.card_colors_style == 'swatches' or settings.card_colors_style == 'variant-images' -%}
+          {%- if settings.card_colors_style == 'swatches' -%}
             {%- assign variant_media = product.variants | map: 'featured_media' -%}
             {%- for media in variant_media -%}
               {%- unless media == product.featured_media -%}
@@ -171,7 +158,7 @@
 
     <div class="card__info-container flex flex-col flex-auto relative">
       <div class="card__info w-full">
-        <div class="card__info-inner{% if settings.card_price_bottom %} flex flex-col h-full{% else %} inline-block{% endif %} w-full">
+        <div class="card__info-inner inline-block w-full">
           {%- if settings.card_show_vendor -%}
             <p class="card__vendor{% if settings.show_dividers %} mb-1{% else %} mb-0{% endif %} text-sm text-theme-light">
               {{- product.vendor -}}
@@ -185,41 +172,25 @@
           </p>
 
           {%- if settings.card_show_subtitle and product.metafields.descriptors.subtitle != blank -%}
-            <p class="card__subtitle text-sm text-current mb-1{% unless settings.show_dividers %} mt-1{% endunless %}">
+            <p class="text-sm text-current mb-1{% unless settings.show_dividers %} mt-1{% endunless %}">
               {{ product.metafields.descriptors.subtitle }}
             </p>
           {%- endif -%}
 
-          {%- if settings.card_show_weight -%}
-            <p class="card__weight text-sm mb-1{% unless settings.show_dividers %} mt-1{% endunless %}">
-              {%- render 'product-weight', product: product -%}
-            </p>
-          {%- endif -%}
-
           {%- if product.metafields.reviews.rating.value != blank and settings.card_show_rating -%}
-            <div>
-              {% render 'rating',
-                rating_value: product.metafields.reviews.rating.value,
-                rating_count: product.metafields.reviews.rating_count
-              %}
-            </div>
+            {% render 'rating',
+              rating_value: product.metafields.reviews.rating.value,
+              rating_count: product.metafields.reviews.rating_count
+            %}
           {%- endif -%}
 
-          {%- if settings.card_price_bottom == false -%}
-            {%- render 'price', product: product, class: "price--top" -%}
-          {%- endif -%}
+          {%- render 'price', product: product -%}
 
           {%- if settings.card_colors_style != 'none' -%}
             {%- for option in product.options_with_values -%}
               {%- if settings.swatch_option_name contains option.name -%}
-                {%- if settings.card_colors_style == 'swatches' or settings.card_colors_style == 'variant-images' -%}
-                  {%- liquid
-                    assign swatch_size = settings.card_swatch_size | times: 2
-                    if settings.image_quality == 0.75
-                      assign swatch_size = settings.card_swatch_size
-                    endif
-                  -%}
-                  <div class="card__swatches{% if settings.show_dividers %} mt-3 border-top{% else %} mt-2 pb-1{% endif %} pt-3 flex items-start relative">
+                {%- if settings.card_colors_style == 'swatches' -%}
+                  <div class="card__swatches{% if settings.show_dividers %} mt-3 border-top{% else %} mt-2 pb-1{% endif %} pt-3 flex items-center relative">
                     {%- capture option_id %}{{ section.id }}-{{ product.id }}-{{ option.name | handle }}{% endcapture -%}
                     {%- assign variant_key = 'option' | append: option.position -%}
 
@@ -231,20 +202,11 @@
                         endif
                       -%}
                       <input type="radio" class="opt-btn visually-hidden js-option" name="{{ option_id }}-option" id="{{ option_id }}-opt-{{ forloop.index0 }}" value="{{ value | escape }}" data-variant-id="{{ variant_value.id }}"{% if variant_value.featured_media %} data-media-id="{{ variant_value.featured_media.id }}"{% endif %}{% if option.selected_value == value %} checked{% endif %}>
-                      <label class="opt-label opt-label--swatch relative swatch-shape--{{ settings.card_swatch_shape }}{% if settings.card_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}{% if settings.card_colors_style == 'variant-images' and variant_value.featured_media %} swatch--variant-image{% endif %}" title="{{ value | replace: '"', '`' }}" data-swatch="{% if settings.card_colors_style != 'variant-images' or variant_value.featured_media == blank %}{{ value | replace: '"', '' | downcase }}{% endif %}" for="{{ option_id }}-opt-{{ forloop.index0 }}">
-                        {%- if settings.card_colors_style == 'variant-images' and variant_value.featured_media -%}
-                          {%- if settings.card_swatch_shape == "natural" -%}
-                            <img loading="lazy" class="bg-theme-bg" src="{{ variant_value.featured_media.preview_image | image_url: width: swatch_size }}" height="{{ swatch_size | divided_by: variant_value.featured_media.preview_image.aspect_ratio | round }}" width="{{ swatch_size }}" alt="{{ variant_value.featured_media.preview_image.alt | escape }}"/>
-                          {%- else -%}
-                            <img loading="lazy" class="img-fit bg-theme-bg" src="{{ variant_value.featured_media.preview_image | image_url: width: swatch_size, height: swatch_size, crop: 'center' }}" height="{{ swatch_size }}" width="{{ swatch_size }}" alt="{{ variant_value.featured_media.preview_image.alt | escape }}"/>
-                          {%- endif -%}
-                        {%- endif -%}
-                        <span class="visually-hidden">{{ value }}</span>
-                      </label>
+                      <label class="opt-label opt-label--swatch relative" title="{{ value | replace: '"', '`' }}" data-swatch="{{ value | replace: '"', '' | downcase }}" for="{{ option_id }}-opt-{{ forloop.index0 }}"><span class="visually-hidden">{{ value }}</span></label>
                     {%- endfor -%}
 
                     {%- if option.values.size > swatch_limit -%}
-                      <span class="self-center text-end text-sm">+{{ option.values.size | minus: swatch_limit }}</span>
+                      <span class="text-end text-sm">+{{ option.values.size | minus: swatch_limit }}</span>
                     {%- endif -%}
                   </div>
                 {%- else -%}
@@ -258,27 +220,17 @@
             {%- endfor -%}
           {%- endif -%}
 
-          {%- if settings.card_show_inventory and current_variant.inventory_management != blank -%}
+          {%- if settings.card_show_inventory -%}
             {%- liquid
               assign total = 0
-              assign inventory_policy = ''
               for variant in product.variants
-                if variant.inventory_quantity > 0
+                if variant.inventory_management != blank and variant.inventory_quantity > 0
                   assign total = total | plus: variant.inventory_quantity
-                endif
-                if variant.inventory_policy == 'continue'
-                  assign inventory_policy = 'continue'
                 endif
               endfor
 
               if total <= 0
-                if inventory_policy == 'continue'
-                  if settings.hide_no_stock_backordered
-                    assign inventory_level = 'hide'
-                  else
-                    assign inventory_level = 'backordered'
-                  endif
-                elsif product.available
+                if product.available
                   assign inventory_level = 'in_stock'
                 else
                   assign inventory_level = 'hide'
@@ -310,8 +262,6 @@
                   {%- if settings.inventory_show_count != "never" and total > 0 -%}
                     ({{ 'products.inventory.available_count' | t: count: total }})
                   {%- endif -%}
-                {%- elsif inventory_level == 'backordered' -%}
-                  {{ 'products.inventory.backordered' | t }}
                 {%- else -%}
                   {{ 'products.inventory.in_stock' | t }}
                   {%- if settings.inventory_show_count == "always" and total > 0 -%}
@@ -320,12 +270,6 @@
                 {%- endif -%}
               </div>
             {%- endunless -%}
-          {%- endif -%}
-
-          {%- if settings.card_price_bottom -%}
-            <div class="flex grow items-end">
-              {%- render 'price', product: product, class: "price--bottom" -%}
-            </div>
           {%- endif -%}
         </div>
       </div>
@@ -407,7 +351,11 @@
     <div class="card__info">
       <p class="card__title font-bold">{{ 'onboarding.product.title' | t }}</p>
       <div class="card__price theme-money">
-        {%- render 'price-as-money', price: 1234 -%}
+        {%- if settings.show_currency_code -%}
+          {{- 1234 | money_with_currency -}}
+        {%- else -%}
+          {{- 1234 | money -}}
+        {%- endif -%}
       </div>
     </div>
   </div>

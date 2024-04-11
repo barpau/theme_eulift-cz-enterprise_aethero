@@ -74,24 +74,18 @@ if (!customElements.get('cart-drawer')) {
   class CartDrawer extends SideDrawer {
     constructor() {
       super();
-
-      this.cartSummary = this.querySelector('.cart-drawer__summary');
       this.init();
       this.bindEvents();
     }
 
     disconnectedCallback() {
-      document.removeEventListener('dispatch:cart-drawer:refresh', this.refreshHandler);
+      document.removeEventListener('dispatch:cart-drawer:refresh', this.cartRefreshHandler);
       document.removeEventListener('dispatch:cart-drawer:open', this.openDrawerViaEventHandler);
       document.removeEventListener('dispatch:cart-drawer:close', this.closeDrawerViaEventHandler);
 
       if (Shopify.designMode) {
         document.removeEventListener('shopify:section:select', this.sectionSelectHandler);
         document.removeEventListener('shopify:section:deselect', this.sectionDeselectHandler);
-      }
-
-      if (this.dcbLoadedHandler) {
-        document.removeEventListener('shopify:payment_button:loaded', this.dcbLoadedHandler);
       }
     }
 
@@ -126,14 +120,6 @@ if (!customElements.get('cart-drawer')) {
       this.closeDrawerViaEventHandler = this.close.bind(this, null);
       document.addEventListener('dispatch:cart-drawer:open', this.openDrawerViaEventHandler);
       document.addEventListener('dispatch:cart-drawer:close', this.closeDrawerViaEventHandler);
-
-      if (this.cartSummary.classList.contains('cart-drawer--checkout--sticky-true')) {
-        this.dcbLoadedHandler = this.dcbLoadedHandler || CartDrawer.recalculateCssVarHeights;
-        document.addEventListener('shopify:payment_button:loaded', this.dcbLoadedHandler);
-      }
-
-      this.refreshHandler = this.refresh.bind(this);
-      document.addEventListener('dispatch:cart-drawer:refresh', this.refreshHandler);
     }
 
     /**
@@ -164,8 +150,9 @@ if (!customElements.get('cart-drawer')) {
      * Opens the drawer.
      * @param {Element} [opener] - Element that triggered opening of the drawer.
      * @param {Element} [elementToFocus] - Element to focus after drawer opened.
+     * @param {Function} [callback] - Callback function to trigger after the open has completed
      */
-    open(opener, elementToFocus) {
+    open(opener, elementToFocus, callback) {
       // Get the quick add drawer web component, if it's currently open and close it
       const quickAddDrawer = document.querySelector('quick-add-drawer[aria-hidden="false"]');
       const overlay = document.querySelector('.js-overlay.is-visible');
@@ -177,47 +164,9 @@ if (!customElements.get('cart-drawer')) {
 
       // If the cart drawer is open, wait a few ms for a more optimal ux/animation
       setTimeout(() => {
-        super.open(opener, elementToFocus, () => {
-          if (this.cartSummary.classList.contains('cart-drawer--checkout--sticky-true')) {
-            CartDrawer.recalculateCssVarHeights();
-          }
-        });
-
-        if (this.cartSummary.classList.contains('cart-drawer--checkout--sticky-true')) {
-          CartDrawer.recalculateCssVarHeights();
-        }
-
+        super.open(opener, elementToFocus, callback);
         if (overlay) overlay.style.transitionDelay = '';
       }, quickAddDrawer ? 200 : 0);
-      window.initLazyImages();
-    }
-
-    /**
-     * Attempts to refresh any cart items (if present). Failing that, it refreshes the entire cart
-     * drawer
-     * @param {boolean} [dontRefreshCartItems=false] - Prevents the refresh of cart items, and does
-     * a straight refresh of the whole cart
-     */
-    async refresh(dontRefreshCartItems) {
-      try {
-        const cartItems = this.querySelector('cart-items');
-        if (cartItems && !dontRefreshCartItems) {
-          cartItems.refresh();
-        } else {
-          const response = this.getSectionsToRender().map((section) => section.section);
-          const cartResponse = await fetch(`?sections=${response.join(',')}`);
-          const sections = await cartResponse.json();
-          this.renderContents({ sections }, false);
-        }
-      } catch (error) {
-        console.log(error); // eslint-disable-line
-        this.dispatchEvent(new CustomEvent('on:cart:error', {
-          bubbles: true,
-          detail: {
-            error: this.errorMsg.textContent
-          }
-        }));
-      }
     }
 
     /**
@@ -252,8 +201,6 @@ if (!customElements.get('cart-drawer')) {
       if (openDrawer && this.getAttribute('open') === null) {
         setTimeout(() => this.open());
       }
-
-      window.initLazyImages();
     }
 
     /**
@@ -273,16 +220,6 @@ if (!customElements.get('cart-drawer')) {
           selector: '.shopify-section'
         }
       ];
-    }
-
-    /**
-     * Dispatches an event to recalculate the data-css-var-heights on the page. Useful for
-     * updating the height of the sticky cart buttons
-     */
-    static recalculateCssVarHeights() {
-      window.requestAnimationFrame(() => {
-        document.dispatchEvent(new CustomEvent('on:css-var-height:update'));
-      });
     }
 
     /**

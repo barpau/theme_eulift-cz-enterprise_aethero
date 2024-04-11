@@ -25,9 +25,6 @@
     top: var(--header-end-padded, 0);
     transition: top 0.3s;
   }
-  .featured-collection--sticky-fill {
-    min-height: var(--card--product-height, auto);
-  }
 }
 @media (min-width: 1024px) {
   .featured-collection-info {

@@ -42,7 +42,7 @@ if (!customElements.get('facet-filters')) {
         this.breakpointChangeHandler = this.breakpointChangeHandler
           || this.handleBreakpointChange.bind(this);
         this.filters.addEventListener('click', this.handleFiltersClick.bind(this));
-        this.filters.addEventListener('input', debounce(this.handleFilterChange.bind(this), 500));
+        this.filters.addEventListener('input', debounce(this.handleFilterChange.bind(this), 300));
         this.activeFilters.addEventListener('click', this.handleActiveFiltersClick.bind(this));
         window.addEventListener('on:breakpoint-change', this.breakpointChangeHandler);
       }
@@ -167,9 +167,6 @@ if (!customElements.get('facet-filters')) {
      * @param {boolean} [updateUrl=true] - Update url with the selected options.
      */
     async applyFilters(searchParams, evt, updateUrl = true) {
-      const customPagination = document.querySelector('custom-pagination');
-      if (customPagination) customPagination.dataset.pauseInfiniteScroll = 'true';
-
       this.results.classList.add('is-loading');
 
       // Disable "Show X results" button until submission is complete.
@@ -193,11 +190,8 @@ if (!customElements.get('facet-filters')) {
         // Update the results.
         this.results.innerHTML = tmpl.content.getElementById('filter-results').innerHTML;
 
-        // Reinitialize lazyload images after filters applied.
+        // Reinitiate lazyload images after filters applied.
         if (typeof initLazyImages === 'function') initLazyImages();
-
-        // Reinitialize any custom pagination
-        if (customPagination && customPagination.reload) customPagination.reload();
 
         // Update the URL.
         if (updateUrl) FacetFilters.updateURL(searchParams);
@@ -223,9 +217,6 @@ if (!customElements.get('facet-filters')) {
         // Enable the "Show X results" button
         closeBtn.classList.remove('is-loading');
         closeBtn.removeAttribute('aria-disabled');
-
-        // Renable infinite scroll
-        if (customPagination) customPagination.dataset.pauseInfiniteScroll = 'false';
 
         // Broadcast the update for anything else to hook into
         document.dispatchEvent(new CustomEvent('on:facet-filters:updated'), { bubbles: true });
@@ -284,20 +275,15 @@ if (!customElements.get('facet-filters')) {
      * @param {boolean} updateAll - Update all filter markup or just toggle/header.
      */
     static updateFilter(filter, fetchedFilter, updateAll) {
-      if (fetchedFilter) {
-        filter.hidden = false;
-        if (updateAll) {
-          filter.innerHTML = fetchedFilter.innerHTML;
-        } else {
-          // Update toggle and header only.
-          filter.replaceChild(
-            fetchedFilter.querySelector('.filter__toggle'),
-            filter.querySelector('.filter__toggle')
-          );
-          filter.querySelector('.filter__header').innerHTML = fetchedFilter.querySelector('.filter__header').innerHTML;
-        }
+      if (updateAll) {
+        filter.innerHTML = fetchedFilter.innerHTML;
       } else {
-        filter.hidden = true;
+        // Update toggle and header only.
+        filter.replaceChild(
+          fetchedFilter.querySelector('.filter__toggle'),
+          filter.querySelector('.filter__toggle')
+        );
+        filter.querySelector('.filter__header').innerHTML = fetchedFilter.querySelector('.filter__header').innerHTML;
       }
     }
 

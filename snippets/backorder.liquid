@@ -10,7 +10,7 @@
   %}
 {%- endcomment -%}
 
-<div class="backorder"{% unless variant.inventory_management == 'shopify' and variant.inventory_quantity < 1 and variant.available %} hidden{% endunless %}>
+<div class="backorder"{% unless variant.inventory_management == 'shopify' and variant.inventory_quantity < 1 %} hidden{% endunless %}>
   {%- if template contains 'cart' -%}
     <p class="m-0">{{ 'cart.general.backorder' | t }}</p>
   {%- else -%}

@@ -7,7 +7,6 @@
   - color_scheme {String} - Color scheme for the card (optional).
   - image_ratio {Number} - Aspect ratio for the image (optional).
   - show_image {Boolean} - Show the article image (optional, default is true).
-  - large_image {Boolean} - Whether to render a large image or not.
   - show_author {Boolean} - Show the article author (optional, default is true).
   - show_date {Boolean} - Show the article published date (optional, default is true).
   - show_excerpt {Boolean} - Show the article excerpt (optional, default is true).
@@ -42,11 +41,7 @@
   endif
 
   if article.image
-    if large_image
-      capture sizes
-        render 'sizes-attribute', grid: true, min: 1
-      endcapture
-    elsif section.settings.card_size == 'small'
+    if section.settings.card_size == 'small'
       capture sizes
         render 'sizes-attribute', grid: true, min: 2, md: 3, lg: 4, xl: 5
       endcapture

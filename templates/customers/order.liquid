@@ -1,16 +1,3 @@
-{%- liquid
-  assign all_properties_empty = true
-
-  for line_item in order.line_items
-    for property in line_item.properties
-      unless property.last == blank
-        assign all_properties_empty = false
-        break
-      endunless
-    endfor
-  endfor
--%}
-
 <div class="account-nav">
   <div class="container flex justify-center">
     <a class="btn btn--secondary btn--arrow-back-with-text" href="{{ routes.account_url }}">
@@ -24,11 +11,11 @@
     <div class="account-width mx-auto text-center">
       <h1>{{ 'customer.order.title' | t: name: order.name }}</h1>
       {%- assign order_date = order.created_at | date: format: 'date_at_time' -%}
-      <p dir="ltr">{{ 'customer.order.date' | t: date: order_date }}</p>
+      <p>{{ 'customer.order.date' | t: date: order_date }}</p>
 
       {%- if order.cancelled -%}
         {%- assign cancelled_at = order.cancelled_at | date: format: 'date_at_time' -%}
-        <p dir="ltr">{{ 'customer.order.cancelled_on' | t: date: cancelled_at }}</p>
+        <p>{{ 'customer.order.cancelled_on' | t: date: cancelled_at }}</p>
         <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</p>
       {%- endif -%}
     </div>
@@ -148,37 +135,30 @@
               {%- endif -%}
 
               {%- assign property_size = line_item.properties | size -%}
-
               {%- unless line_item.selling_plan_allocation == nil and property_size == 0 -%}
                 <div class="order__properties">
-                  {%- unless line_item.product.has_only_default_variant or line_item.product.gift_card? -%}
-                    <div>{{ line_item.variant.title }}</div>
+                  {%- unless line_item.product.has_only_default_variant -%}
+                    <span>{{ line_item.variant.title }}</span>
                   {%- endunless -%}
 
                   {%- unless line_item.selling_plan_allocation == nil -%}
-                    <div>{{ line_item.selling_plan_allocation.selling_plan.name }}</div>
+                    <span>{{ line_item.selling_plan_allocation.selling_plan.name }}</span>
                   {%- endunless -%}
 
-                  {%- if property_size != 0 and all_properties_empty == false -%}
-                    <div class="mt-4 mb-4">
-                      {%- for property in line_item.properties -%}
-                        {%- assign property_first_char = property.first | slice: 0 -%}
-                        {%- if property.first contains 'Recipient' and property.last != '' -%}
-                          <div class="line-item-property">
-                            <strong>{{ property.first | remove: 'properties[' | remove: ']' }}:</strong> {{ property.last }}
-                          </div>
-                        {%- elsif property.last != blank and property_first_char != '_' -%}
-                          <div>
-                            <strong>{{ property.first }}:</strong>
+                  {%- if property_size != 0 -%}
+                    {%- for property in line_item.properties -%}
+                      {% assign property_first_char = property.first | slice: 0 %}
+                      {%- if property.last != blank and property_first_char != '_' -%}
+                        <span>
+                            {{ property.first }}:&nbsp;
                             {%- if property.last contains '/uploads/' -%}
                               <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
                             {%- else -%}
                               {{ property.last }}
                             {%- endif -%}
-                          </div>
-                        {%- endif -%}
-                      {%- endfor -%}
-                    </div>
+                          </span>
+                      {%- endif -%}
+                    {%- endfor -%}
                   {%- endif -%}
                 </div>
               {%- endunless -%}
@@ -198,8 +178,8 @@
 
               {%- if line_item.fulfillment -%}
                 <div class="order__fulfillment">
-                  {%- assign created_at = line_item.fulfillment.created_at | time_tag: format: 'date' | strip_html -%}
-                  <span dir="ltr">{{ 'customer.order.fulfilled_on' | t: date: created_at }}</span>
+                  {%- assign created_at = line_item.fulfillment.created_at | time_tag: format: 'date' -%}
+                  <span>{{ 'customer.order.fulfilled_on' | t: date: created_at }}</span>
 
                   {%- if line_item.fulfillment.tracking_url -%}
                     <a href="{{ line_item.fulfillment.tracking_url }}">

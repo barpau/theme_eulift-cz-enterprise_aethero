@@ -7,22 +7,21 @@
 {% endcomment %}
 
 {%- liquid
-assign uses_comma_decimals = false
-assign currency_test_string_unit = 101 | money_without_currency
-assign currency_test_string_thou = 100000 | money_without_currency
+  assign uses_comma_decimals = false
+  assign currency_test_string = 101 | money_without_currency
 
-if currency_test_string_unit == '1,01' or currency_test_string_thou == '1.000'
-  assign uses_comma_decimals = true
-endif
+  if currency_test_string == '1,01'
+  	assign uses_comma_decimals = true
+  endif
 
   if uses_comma_decimals
-    assign min_value = filter.min_value.value | money_without_currency | remove: ' ' | remove: "'" | remove: '.' | replace: ',', '.' | floor
-    assign max_value = filter.max_value.value | money_without_currency | remove: ' ' | remove: "'" | remove: '.' | replace: ',', '.' | ceil
-    assign range_max = filter.range_max | money_without_currency | remove: ' ' | remove: "'" | remove: '.' | replace: ',', '.' | ceil
+    assign min_value = filter.min_value.value | money_without_currency | remove: ' ' | remove: "'" | remove: '.' | replace: ',', '.' | round
+    assign max_value = filter.max_value.value | money_without_currency | remove: ' ' | remove: "'" | remove: '.' | replace: ',', '.' | round
+    assign range_max = filter.range_max | money_without_currency | remove: ' ' | remove: "'" | remove: '.' | replace: ',', '.' | round
   else
-    assign min_value = filter.min_value.value | money_without_currency | remove: ' ' | remove: "'" | remove: ',' | floor
-    assign max_value = filter.max_value.value | money_without_currency | remove: ' ' | remove: "'" | remove: ',' | ceil
-    assign range_max = filter.range_max | money_without_currency | remove: ' ' | remove: "'" | remove: ',' | ceil
+    assign min_value = filter.min_value.value | money_without_currency | remove: ' ' | remove: "'" | remove: ',' | round
+    assign max_value = filter.max_value.value | money_without_currency | remove: ' ' | remove: "'" | remove: ',' | round
+    assign range_max = filter.range_max | money_without_currency | remove: ' ' | remove: "'" | remove: ',' | round
   endif
 -%}
 

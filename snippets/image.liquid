@@ -15,7 +15,6 @@
   - attributes {String} - Additional attributes (optional).
   - alt_text {String} - Custom text for the 'alt' attribute (optional).
   - disable_focal_point {Boolean} - Disables the focussing of a spot on the image (optional, default is false).
-  - section_index {Number} - If passed, image lazy load will be prevented if it's the first section
 
   Usage:
   {% render 'image',
@@ -129,7 +128,7 @@
   assign image_height = image_width | divided_by: image.aspect_ratio | round
   assign js_class = class
 
-  unless lazy_load == false or section_index == 1
+  unless lazy_load == false
     assign lazy_load = true
 
     if class

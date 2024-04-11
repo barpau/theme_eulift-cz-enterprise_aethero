@@ -1,7 +1,6 @@
 .popup-section .modal__window {
   width: 480px;
   max-width: calc(100vw - var(--gutter) * 2);
-  min-height: 0;
   overflow-y: auto;
 }
 .popup-section .modal__window--no-image-block {
@@ -17,23 +16,12 @@
 .popup-section .modal__window--side-image .modal__content {
   overflow-y: auto;
 }
-.popup-section .modal__content--p-small {
-  padding: calc(5 * var(--space-unit)) var(--gutter);
-}
-.popup-section .modal__content--p-medium {
-  padding: calc(10 * var(--space-unit)) var(--gutter);
-}
-.popup-section .modal__content--p-large {
-  padding: calc(16 * var(--space-unit)) var(--gutter);
+.popup-section .modal__content {
+  padding: 64px var(--gutter);
 }
 .popup-section .modal__close-btn {
-  top: 5px;
-  right: 5px;
-  background-color: transparent;
-}
-.popup-section .modal__close-btn svg {
-  width: 18px;
-  height: 18px;
+  top: 20px;
+  right: 20px;
 }
 .popup-section .modal__image {
   max-width: none;
@@ -53,15 +41,6 @@
   z-index: -1;
 }
 
-.modal.popup-section--age-verification {
-  z-index: 100;
-}
-
-.popup-section--shrink .modal__window {
-  width: auto;
-  min-width: 200px;
-}
-
 @media (min-width: 769px) {
   .popup-section .modal__window {
     width: 640px;
@@ -69,28 +48,11 @@
   .popup-section .modal__window--side-image {
     width: 800px;
   }
-  .popup-section .modal__window--side-image .modal__content--p-small {
-    padding: calc(5 * var(--space-unit)) calc(4 * var(--space-unit));
+  .popup-section .modal__window--side-image .modal__content {
+    padding: 64px 48px;
   }
-  .popup-section .modal__window--side-image .modal__content--p-medium {
-    padding: calc(10 * var(--space-unit)) calc(6 * var(--space-unit));
-  }
-  .popup-section .modal__window--side-image .modal__content--p-large {
-    padding: calc(16 * var(--space-unit)) calc(12 * var(--space-unit));
-  }
-  .popup-section .modal__content--p-small {
-    padding: calc(5 * var(--space-unit));
-  }
-  .popup-section .modal__content--p-medium {
-    padding: calc(10 * var(--space-unit));
-  }
-  .popup-section .modal__content--p-large {
-    padding: calc(16 * var(--space-unit)) 80px;
-  }
-  .popup-section--shrink .modal__window {
-    width: auto;
-    min-width: 200px;
-    max-width: 640px;
+  .popup-section .modal__content {
+    padding: 64px 80px;
   }
 }
 @media (max-width: 768.98px) {

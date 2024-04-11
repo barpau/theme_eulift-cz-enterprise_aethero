@@ -47,56 +47,25 @@ if (!customElements.get('pop-up')) {
           });
 
           document.addEventListener('shopify:section:deselect', this.close.bind(this));
-        } else if (!getCookie(this.cookie) && (this.dataset.showOnMobile === 'true'
-          || theme.mediaMatches.md)) {
+        } else if (!getCookie(this.cookie)) {
           if (this.querySelector('.alert')) {
             this.open();
-          } else if (this.dataset.trigger === 'delay') {
+          } else {
             setTimeout(() => this.open(), Number(this.dataset.delay) * 1000);
-          } else if (this.dataset.trigger === 'exit' && theme.mediaMatches.md) {
-            this.mouseLeaveHandler = this.mouseLeaveHandler || this.handleMouseLeave.bind(this);
-            document.body.addEventListener('mouseleave', this.mouseLeaveHandler);
-          } else if (this.dataset.trigger === 'clipboard') {
-            this.copyHandler = this.copyHandler || this.handleCopy.bind(this);
-            document.addEventListener('copy', this.copyHandler);
           }
         }
       }
 
       /**
-       * Triggers when the web component is removed from the DOM
-       */
-      disconnectedCallback() {
-        if (this.mouseLeaveHandler) {
-          document.body.removeEventListener('mouseleave', this.mouseLeaveHandler);
-        }
-
-        if (this.copyHandler) {
-          document.removeEventListener('copy', this.copyHandler);
-        }
-      }
-
-      /**
-       * Handles 'mouseleave' events on the body.
+       * Handles 'click' events on the modal.
        * @param {object} evt - Event object.
        */
-      handleMouseLeave(evt) {
-        if (evt.clientY < 0 && !getCookie(this.cookie)) this.open();
-      }
+      handleClick(evt) {
+        super.handleClick(evt);
 
-      /**
-       * Handles 'copy' events on the body.
-       */
-      handleCopy() {
-        if (!getCookie(this.cookie)) this.open();
-      }
-
-      /**
-       * Handles 'close' events on the modal.
-       */
-      close() {
-        super.close();
-        setCookie(this.cookie, true, this.dataset.dismissDays);
+        if (evt.target.matches('.js-close-modal')) {
+          setCookie(this.cookie, true, this.dataset.dismissDays);
+        }
       }
     }
 

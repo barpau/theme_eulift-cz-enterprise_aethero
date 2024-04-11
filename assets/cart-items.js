@@ -7,6 +7,10 @@ if (!customElements.get('cart-items')) {
       if (this.dataset.empty === 'false') this.init();
     }
 
+    disconnectedCallback() {
+      document.removeEventListener('dispatch:cart-drawer:refresh', this.cartRefreshHandler);
+    }
+
     init() {
       this.fetchRequestOpts = {
         method: 'POST',
@@ -30,6 +34,9 @@ if (!customElements.get('cart-items')) {
 
       this.addEventListener('click', this.handleClick.bind(this));
       this.addEventListener('change', debounce(this.handleChange.bind(this)));
+
+      this.cartRefreshHandler = this.refreshCart.bind(this);
+      document.addEventListener('dispatch:cart-drawer:refresh', this.cartRefreshHandler);
     }
 
     /**
@@ -57,10 +64,6 @@ if (!customElements.get('cart-items')) {
      * @param {string} name - Active element name.
      */
     async updateQuantity(line, quantity, name) {
-      const cartDrawerContent = this.cartDrawer ? this.cartDrawer.querySelector('.drawer__content') : null;
-      const cartDrawerContentScroll = cartDrawerContent ? cartDrawerContent.scrollTop : 0;
-      const cartDrawerScroll = this.cartDrawer ? this.cartDrawer.scrollTop : 0;
-
       this.enableLoading(line);
 
       // clear all errors except this line's (which will be refreshed after this update)
@@ -71,11 +74,10 @@ if (!customElements.get('cart-items')) {
         el.hidden = true;
       });
 
-      const sections = this.getSectionsToRender().map((section) => section.section);
       this.fetchRequestOpts.body = JSON.stringify({
         line,
         quantity,
-        sections: [...new Set(sections)],
+        sections: this.getSectionsToRender().map((section) => section.section),
         sections_url: window.location.pathname
       });
 
@@ -91,7 +93,9 @@ if (!customElements.get('cart-items')) {
         const newTotalQuantity = data.item_count;
 
         if (this.cartDrawer) {
-          cartDrawerContent.classList.toggle('drawer__content--flex', newTotalQuantity === 0);
+          this.cartDrawer
+            .querySelector('.drawer__content')
+            .classList.toggle('drawer__content--flex', newTotalQuantity === 0);
 
           if (newTotalQuantity === 0) {
             const recommendations = this.cartDrawer.querySelector('product-recommendations');
@@ -118,17 +122,6 @@ if (!customElements.get('cart-items')) {
           el.innerHTML = CartItems.getElementHTML(data.sections[section.section], selector);
         });
 
-        if (this.cartDrawer && newTotalQuantity === 0) {
-          cartDrawerContent.classList.add('grow', 'flex', 'items-center');
-
-          if (this.cartDrawer.querySelector('promoted-products')) {
-            this.cartDrawer
-              .querySelector('.drawer__content')
-              .classList.toggle('drawer__empty-with-promotions', newTotalQuantity === 0);
-          }
-        }
-
-        window.initLazyImages();
         this.updateRecommendations(data.item_count > 0 ? data.items[0].product_id : null);
         this.updateLiveRegions();
         this.setFocus(line, newTotalQuantity, name);
@@ -177,32 +170,17 @@ if (!customElements.get('cart-items')) {
         input.closest('quantity-input').currentQty = input.dataset.initialValue;
       } finally {
         this.classList.remove('pointer-events-none');
-
-        // Attempt to maintain the same scroll position in the cart drawer
-        if (cartDrawerContent) {
-          requestAnimationFrame(() => { cartDrawerContent.scrollTop = cartDrawerContentScroll; });
-          setTimeout(() => { cartDrawerContent.scrollTop = cartDrawerContentScroll; }, 0);
-          requestAnimationFrame(() => { this.cartDrawer.scrollTop = cartDrawerScroll; });
-          setTimeout(() => { this.cartDrawer.scrollTop = cartDrawerScroll; }, 0);
-        }
       }
     }
 
     /**
      * Refreshes the cart by rerendering its sections and updating its product recommendations.
      */
-    async refresh() {
+    async refreshCart() {
       const errors = document.getElementById('cart-errors');
       try {
         const sections = this.getSectionsToRender().map((section) => section.section);
-        const response = await fetch(`?sections=${[...new Set(sections)]}`);
-
-        // The status is 400, refresh the whole cart and stop
-        if (response.status === 400 && this.cartDrawer) {
-          this.cartDrawer.refresh(true);
-          return;
-        }
-
+        const response = await fetch(`?sections=${sections}`);
         const data = await response.json();
 
         if (!response.ok) throw new Error(response.status);
@@ -217,8 +195,6 @@ if (!customElements.get('cart-items')) {
 
         const firstCartItem = this.querySelector('.cart-item:first-child');
         this.updateRecommendations(firstCartItem ? firstCartItem.dataset.productId : null);
-
-        window.initLazyImages();
 
         errors.innerHTML = '';
         errors.hidden = true;
@@ -264,19 +240,9 @@ if (!customElements.get('cart-items')) {
             selector: 'cart-items'
           },
           {
-            id: 'cart-promoted-products',
-            section: cartDrawerId,
-            selector: '#cart-promoted-products'
-          },
-          {
             id: 'cart-drawer',
             section: cartDrawerId,
-            selector: '.cart-drawer__summary'
-          },
-          {
-            id: 'cart-drawer-media-promotion',
-            section: cartDrawerId,
-            selector: '#cart-drawer-media-promotion'
+            selector: '.drawer__footer'
           }
         ];
       } else {

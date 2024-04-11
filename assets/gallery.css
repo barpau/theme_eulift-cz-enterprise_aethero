@@ -1,9 +1,8 @@
-.gallery-block--stacked:last-child .gallery-block__text {
-  margin-bottom: 0;
-}
-
 .gallery-block .subheading:not(:last-child) {
   margin-bottom: var(--space-unit);
+}
+.gallery-block:last-child .gallery-block__text {
+  margin-bottom: 0;
 }
 
 .gallery {
@@ -12,12 +11,6 @@
 }
 .gallery.grid {
   gap: calc(3 * var(--space-unit));
-}
-.gallery .color-scheme--white {
-  background: none;
-}
-.gallery .color-scheme--default {
-  background-color: rgba(var(--bg-color));
 }
 
 .gallery-block__image {

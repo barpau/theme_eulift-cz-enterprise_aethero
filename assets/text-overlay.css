@@ -49,11 +49,8 @@
   }
 }
 @media (min-width: 600px) {
-  .text-overlay,
-.max-w-text-overlay {
-    max-width: 582px;
-  }
   .text-overlay {
+    max-width: 582px;
     margin: calc(14 * var(--space-unit)) auto;
   }
   .text-overlay--grow {
@@ -64,11 +61,8 @@
   }
 }
 @media (min-width: 769px) {
-  .text-overlay,
-.max-w-text-overlay {
-    max-width: 65%;
-  }
   .text-overlay {
+    max-width: 65%;
     margin-right: 0;
     margin-left: 0;
   }
@@ -77,8 +71,7 @@
   }
 }
 @media (min-width: 1024px) {
-  .text-overlay,
-.max-w-text-overlay {
+  .text-overlay {
     max-width: 50%;
   }
   .text-overlay--grow {

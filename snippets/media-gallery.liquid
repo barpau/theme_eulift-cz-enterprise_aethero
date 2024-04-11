@@ -35,7 +35,7 @@
 
   if featured_product
     assign featured_product = true
-    assign layout = 'slider'
+    assign layout = 'featured'
   else
     assign featured_product = false
     assign layout = section.settings.media_layout
@@ -192,7 +192,7 @@
   {%- if media_count > 1 and section.settings.media_thumbs != 'never' and featured_product == false -%}
     {%- unless section.settings.media_layout == 'stacked' and section.settings.media_thumbs == 'desktop' -%}
       <div class="media-gallery__thumbs{% if section.settings.media_thumbs == 'desktop' %} hidden md:block{% endif %}{% if section.settings.media_layout == 'stacked' %} md:hidden{% endif %} no-js-hidden">
-        <ul class="media-thumbs relative flex" role="list">
+        <ul class="media-thumbs flex" role="list">
           {%- for media in product.media -%}
             {%- liquid
               capture thumb_index
@@ -282,18 +282,16 @@
           "groupOptionName": {{- groupOptionName | json -}},
           "groupOptionIndex": {{- groupOptionIndex }},
           "variantMedia": [
-            {% capture data %}
-              {%- for variant in sortedVariants -%}
-                {%- if variant.featured_media -%}
-                  {
-                    "variantId": {{- variant.id -}},
-                    "mediaId": {{- variant.featured_media.id -}},
-                    "option": {{- variant.options[groupOptionIndex] | json -}}
-                  },
-                {%- endif -%}
-              {%- endfor -%}
-            {% endcapture %}
-            {{ data | replace_last: ',', '' }}
+            {%- for variant in sortedVariants -%}
+              {%- if variant.featured_media -%}
+                {
+                  "variantId": {{- variant.id -}},
+                  "mediaId": {{- variant.featured_media.id -}},
+                  "option": {{- variant.options[groupOptionIndex] | json -}}
+                }
+              {%- endif -%}
+              {%- unless forloop.last -%},{%- endunless -%}
+            {%- endfor -%}
           ]
         }
       </script>

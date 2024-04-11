@@ -21,7 +21,6 @@ if (!customElements.get('speech-search-button')) {
       this.isListening = false;
       this.form = null;
       this.searchInput = null;
-      this.predictiveSearch = this.closest('predictive-search');
 
       const userAgent = window.navigator.userAgent.toLowerCase();
       if ('webkitSpeechRecognition' in window
@@ -30,8 +29,6 @@ if (!customElements.get('speech-search-button')) {
         // Browser webkit speech recognition api, and is chrome
         this.init();
         this.bindEvents();
-      } else if (this.predictiveSearch) {
-        this.predictiveSearch.classList.add('speech-search--failed');
       }
     }
 
@@ -78,7 +75,7 @@ if (!customElements.get('speech-search-button')) {
       this.recognition.interimResults = false;
       this.form = this.closest('form');
       this.searchInput = this.form.querySelector('.js-search-input');
-      if (this.predictiveSearch) this.predictiveSearch.classList.add('speech-search--enabled');
+      this.form.classList.add('search--speech');
     }
 
     /**

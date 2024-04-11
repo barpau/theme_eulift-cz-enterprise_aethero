@@ -250,10 +250,3 @@ slide-show {
 [data-transition=fade] .is-active > .has-motion {
   opacity: 1;
 }
-
-.slideshow__slide--no-pagination {
-  padding-bottom: 0;
-}
-.js .slideshow__slide--no-pagination .text-overlay {
-  margin: calc(12 * var(--space-unit)) 0;
-}

@@ -16,13 +16,11 @@ if (!customElements.get('variant-picker')) {
     constructor() {
       super();
       this.section = this.closest('.js-product');
-      this.productForm = this.section.querySelector('.js-product-form-main');
+      this.productForm = this.section.querySelector('.js-product-form');
       this.optionSelectors = this.querySelectorAll('.option-selector');
       this.data = this.getProductData();
-      this.variant = this.getSelectedVariant();
 
       this.updateAvailability();
-      this.updateAddToCartButton();
       this.addEventListener('change', this.handleVariantChange.bind(this));
     }
 
@@ -31,10 +29,13 @@ if (!customElements.get('variant-picker')) {
      * @param {object} evt - Event object.
      */
     handleVariantChange(evt) {
+      const selectedOptions = this.getSelectedOptions();
       this.variant = null;
 
       // Get selected variant data (if variant exists).
-      this.variant = this.getSelectedVariant();
+      this.variant = this.data.product.variants.find((v) =>
+        v.options.every((val, index) => val === selectedOptions[index])
+      );
 
       if (this.variant) {
         this.updateMedia();
@@ -45,8 +46,6 @@ if (!customElements.get('variant-picker')) {
       this.updateAddToCartButton();
       this.updateAvailability();
       this.updatePrice();
-      this.updateWeight();
-      this.updateBarcode();
       this.updateBackorderText();
       this.updatePickupAvailability();
       this.updateSku();
@@ -66,7 +65,7 @@ if (!customElements.get('variant-picker')) {
      * Updates the "Add to Cart" button label and disabled state.
      */
     updateAddToCartButton() {
-      this.productForm = this.section.querySelector('.js-product-form-main');
+      this.productForm = this.section.querySelector('.js-product-form');
       if (!this.productForm) return;
 
       this.addBtn = this.addBtn || this.productForm.querySelector('[name="add"]');
@@ -136,9 +135,12 @@ if (!customElements.get('variant-picker')) {
             const options = selector.querySelectorAll('.js-option');
             const optionEl = Array.from(options).find((opt) => {
               if (selector.dataset.selectorType === 'dropdown') {
-                return opt.dataset.value === variant.options[selectorIndex];
+                return opt.firstElementChild.textContent === variant.options[selectorIndex];
               }
-              return opt.value === variant.options[selectorIndex];
+              return (
+                opt.nextElementSibling.querySelector('.js-value').textContent ===
+                variant.options[selectorIndex]
+              );
             });
 
             if (optionEl) {
@@ -238,9 +240,9 @@ if (!customElements.get('variant-picker')) {
         const unitPriceEl = this.price.querySelector('.unit-price');
 
         // Update current price and original price if on sale.
-        priceCurrentEl.innerHTML = this.data.formatted[this.variant.id].price;
+        priceCurrentEl.textContent = this.data.formatted[this.variant.id].price;
         if (priceWasEl)
-          priceWasEl.innerHTML = this.data.formatted[this.variant.id].compareAtPrice || '';
+          priceWasEl.textContent = this.data.formatted[this.variant.id].compareAtPrice || '';
 
         // Update unit price, if specified.
         if (this.variant.unit_price_measurement) {
@@ -249,7 +251,7 @@ if (!customElements.get('variant-picker')) {
           const value = this.variant.unit_price_measurement.reference_value;
           const unit = this.variant.unit_price_measurement.reference_unit;
 
-          valueEl.innerHTML = this.data.formatted[this.variant.id].unitPrice;
+          valueEl.textContent = this.data.formatted[this.variant.id].unitPrice;
           unitEl.textContent = value === 1 ? unit : `${value} ${unit}`;
         }
 
@@ -263,34 +265,6 @@ if (!customElements.get('variant-picker')) {
 
       this.price.querySelector('.price__default').hidden = !this.variant;
       this.price.querySelector('.price__no-variant').hidden = this.variant;
-    }
-
-    /**
-     * Updates the weight.
-     */
-    updateWeight() {
-      this.weights = this.weights || this.section.querySelectorAll('.product-info__weight');
-      if (this.weights.length === 0) return;
-
-      const weightAvailable = this.variant && this.variant.weight > 0;
-      this.weights.forEach((weight) => {
-        weight.textContent = weightAvailable ? this.data.formatted[this.variant.id].weight : '';
-        weight.hidden = !weightAvailable;
-      });
-    }
-
-    /**
-     * Updates the Barcode.
-     */
-    updateBarcode() {
-      this.barcodes = this.barcodes || this.section.querySelectorAll('.product-info__barcode-value');
-      if (this.barcodes.length === 0) return;
-
-      const barcodeAvailable = this.variant && this.variant.barcode;
-      this.barcodes.forEach((barcode) => {
-        barcode.textContent = barcodeAvailable ? this.variant.barcode : '';
-        barcode.parentNode.hidden = !barcodeAvailable;
-      });
     }
 
     /**
@@ -319,7 +293,7 @@ if (!customElements.get('variant-picker')) {
      */
     updateVariantInput() {
       this.forms =
-        this.forms || this.section.querySelectorAll('.js-product-form-main, .js-instalments-form');
+        this.forms || this.section.querySelectorAll('.js-product-form, .js-instalments-form');
 
       this.forms.forEach((form) => {
         const input = form.querySelector('input[name="id"]');
@@ -353,17 +327,6 @@ if (!customElements.get('variant-picker')) {
     getProductData() {
       const dataEl = this.querySelector('[type="application/json"]');
       return JSON.parse(dataEl.textContent);
-    }
-
-    /**
-     * Get selected variant data.
-     * @returns {?object} Variant object, or null if one is not selected.
-     */
-    getSelectedVariant() {
-      const selectedOptions = this.getSelectedOptions();
-      return this.data.product.variants.find(
-        (v) => v.options.every((val, index) => val === selectedOptions[index])
-      );
     }
   }
 

@@ -76,8 +76,6 @@ cart-items {
 .cart-item__image img {
   width: 100%;
   height: auto;
-  max-height: 200px;
-  object-fit: contain;
 }
 
 .cart-item__info {
@@ -179,9 +177,6 @@ cart-items {
     grid-row: 1/4;
     padding-top: 0;
     text-align: end;
-  }
-  .cart-item__total .price__current {
-    padding-inline-end: 0;
   }
   .cart-item__qty {
     grid-row: 3/4;

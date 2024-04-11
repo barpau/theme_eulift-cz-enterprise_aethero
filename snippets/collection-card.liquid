@@ -5,7 +5,6 @@
   - image_ratio {Number} - Aspect ratio for the image (optional).
   - use_product_image {Boolean} - Uses the first product as the collection image (optional).
   - circle_image {Boolean} - Whether the collection card is a circle or not
-  - show_border {Boolean} - Whether the collection card image border should be shown or not (shows by default)
 
   Usage:
   {% render 'collection-card', collection: collection %}
@@ -35,13 +34,9 @@
       assign circle_image = true
     endif
   endunless
-
-  unless show_border == false
-    assign show_border = true
-  endunless
 -%}
 
-<div class="card hover:grow-media relative flex flex-col card__collection{% if show_border %} card__collection--with-border{% endif %}">
+<div class="card hover:grow-media relative flex flex-col card__collection">
   <div class="card__media relative{% if circle_image %} card__media--circle{% endif %}">
     <a href="{{ collection.url }}" aria-label="{{ collection.title | escape }}" class="media block relative{% if settings.blend_collection_images %} image-blend{% endif %}" tabindex="-1" style="padding-top: {{ 1 | divided_by: image_ratio | times: 100 }}%;">
       {%- if collection != empty and image != blank -%}
@@ -68,7 +63,7 @@
       {%- endif -%}
     </a>
   </div>
-  <div class="card__info relative {% if circle_image %}text-center{% else %}{{ settings.coll_text_align }}{% endif %}">
+  <div class="card__info relative{% if circle_image %} text-center{% endif %}">
     <p class="card__title h6 mb-2 last:mb-0">
       {%- if collection != blank -%}
         <a href="{{ collection.url }}" class="card-link text-current">{{ collection.title | escape }}</a>

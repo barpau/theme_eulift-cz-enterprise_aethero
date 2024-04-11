@@ -97,36 +97,38 @@
         {%- else -%}
           <legend class="label">{{- option.name -}}{% if is_color_selector and settings.variant_picker_color_style != 'text' %}: <span class="option-selector__label-value js-color-text">{{ option.selected_value }}</span>{% endif %}</legend>
         {%- endif -%}
-        <div class="option-selector__btns flex flex-wrap{% if is_variant_image_style %} items-start{% endif %}">
+        <div class="option-selector__btns flex flex-wrap">
           {%- for value in option.values -%}
             {%- assign value_index0 = forloop.index0 -%}
             <input type="radio" class="opt-btn visually-hidden focus-label js-option" name="{{ option_id }}-option" id="{{ option_id }}-opt-{{ value_index0 }}" value="{{ value | escape }}"{% if option.selected_value == value %} checked{% endif %}>
             {%- if is_variant_image_style -%}
               {%- for variant in product.variants -%}
                 {%- if variant.options[option_index0] == value -%}
-                  <label class="opt-label opt-label--swatch opt-label--image relative swatch-shape--{{ settings.variant_picker_swatch_shape }}{% if settings.variant_picker_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}{% if settings.variant_picker_color_style == 'variant-images' and variant.featured_media %} swatch--variant-image{% endif %}"{% if variant.featured_media == blank %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %} for="{{ option_id }}-opt-{{ value_index0 }}">
+                  <label class="opt-label opt-label--image relative" for="{{ option_id }}-opt-{{ value_index0 }}">
                     <span class="visually-hidden js-value">{{- value | escape -}}</span>
-                    <div class="opt-label__media media h-full w-full{% if settings.variant_picker_color_style == 'variant-images' and variant.featured_media == blank %} absolute top-0 left-0{% else %} relative{% endif %}">
+                    <div class="opt-label__media media relative" style="padding-top: 100%;">
                       {%- liquid
-                        if settings.variant_picker_swatch_shape == "natural"
-                          assign class = 'bg-theme-bg'
-                        elsif swatch_crop == 'top'
-                          assign class = 'img-fit object-top bg-theme-bg'
+                        if swatch_crop == 'top'
+                          assign class = 'img-fit object-top'
                         else
-                          assign class = 'img-fit bg-theme-bg'
+                          assign class = 'img-fit'
                         endif
-
-                        assign swatch_size = settings.variant_picker_swatch_size | times: 1.5
                       -%}
-                      {% render 'image', image: variant.featured_media, src_width: swatch_size, lazy_load: false, class: class, disable_focal_point: true %}
+                      {% render 'image', image: variant.featured_media, src_width: 128, lazy_load: false, class: class, disable_focal_point: true %}
                     </div>
                   </label>
                   {%- break -%}
                 {%- endif -%}
               {%- endfor -%}
             {%- else -%}
-              <label class="opt-label {% if is_color_selector and is_swatch_style %}opt-label--swatch swatch-shape--{{ settings.variant_picker_swatch_shape }}{% if settings.variant_picker_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}{% else %}opt-label--btn{% endif %} btn relative text-center"{% if is_color_selector and is_swatch_style %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %} for="{{ option_id }}-opt-{{ value_index0 }}">
-                <span{% if is_color_selector and is_swatch_style %} class="visually-hidden js-value"{% endif %}>{{- value | escape -}}</span>
+              {%- liquid
+                assign is_swatch = false
+                if is_color_selector and settings.variant_picker_color_style == 'swatches'
+                  assign is_swatch = true
+                endif
+              -%}
+              <label class="opt-label {% if is_swatch %}opt-label--swatch{% else %}opt-label--btn{% endif %} btn relative text-center"{% if is_swatch %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %} for="{{ option_id }}-opt-{{ value_index0 }}">
+                <span class="{% if is_swatch %}visually-hidden {% endif %}js-value">{{- value | escape -}}</span>
               </label>
             {%- endif -%}
           {%- endfor -%}
@@ -140,32 +142,15 @@
       "product": {{- product | json -}},
       "formatted": {
         {%- for variant in product.variants -%}
-
-          {%- liquid
-            capture price
-              render 'price-as-money', price: variant.price
-            endcapture
-
-            capture compare_at_price
-              render 'price-as-money', price: variant.compare_at_price, show_money_with_currency: false
-            endcapture
-
-            capture unit_price
-              render 'price-as-money', price: variant.unit_price, show_money_with_currency: false
-            endcapture
-          -%}
-          "{{ variant.id }}":{"price":{{ price | json }}
+          "{{ variant.id }}":{"price":"{% if settings.show_currency_code %}{{ variant.price | money_with_currency }}{% else %}{{ variant.price | money }}{% endif %}"
             {%- if variant.compare_at_price and variant.compare_at_price > variant.price -%}
-              ,"compareAtPrice":{{ compare_at_price | json -}}
+              ,"compareAtPrice":"{{ variant.compare_at_price | money -}}"
             {%- endif -%}
             {%- if variant.unit_price_measurement -%}
-              ,"unitPrice":{{ unit_price | json -}}
+              ,"unitPrice":"{{ variant.unit_price | money -}}"
             {%- endif -%}
             {%- if variant.inventory_management != nil and variant.inventory_quantity <= 0 -%}
               ,"inventory":"none"
-            {%- endif -%}
-            {%- if variant.weight -%}
-              ,"weight":{{ variant.weight | weight_with_unit: variant.weight_unit | json }}
             {%- endif -%}
           }{%- unless forloop.last %},{% endunless -%}
         {%- endfor -%}

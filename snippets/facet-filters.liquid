@@ -219,9 +219,8 @@
               assign swatches = false
               assign has_active_filters = false
               assign active_count = filter.active_values.size
-              assign selectable_filter_count = 0
 
-              if settings.filter_color_style == "swatches" and settings.swatch_colors != blank and settings.swatch_option_name contains filter.label
+              if settings.swatch_colors != blank and settings.swatch_option_name contains filter.label
                 assign swatches = true
               endif
 
@@ -239,83 +238,72 @@
                   assign has_active_filters = true
                 endif
               endif
-
             -%}
 
-            {%- capture filter_markup -%}
-              {%- case filter.type -%}
-                {%- when 'boolean' or 'list' -%}
-                  <ul role="list"{% if swatches %} class="filter__swatches"{% endif %}>
-                    {%- for value in filter.values -%}
-                      {%- if value.count > 0 or section.settings.show_filter_deadends -%}
-                        {%- assign selectable_filter_count = selectable_filter_count | plus: 1 -%}
-                        <li{% if selectable_filter_count > section.settings.max_filter_options %} class="js-hidden"{% endif %}>
-                          <input type="checkbox"
-                                 class="{% unless swatches %}checkbox {% endunless %}visually-hidden focus-label-before"
-                                 id="filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                                 name="{{ value.param_name }}"
-                                 value="{{ value.value | escape }}"
-                                 {% if value.active %}checked{% endif %}
-                            {% if value.count == 0 and value.active == false %}disabled{% endif %}>
-                          <label for="filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                                 class="filter__label flex items-start w-full m-0"
-                          {%- if swatches %} data-swatch="{{ value.label | replace: '"', '' | downcase }}"{% endif %}>
-                            <span class="flex-auto">{{ value.label | escape }}</span>
-                            {% if section.settings.show_filter_counts -%}
-                              <span class="filter__count">({{ value.count }})</span>
-                            {%- endif -%}
-                          </label>
-                        </li>
+            <details-disclosure>
+              <details class="filter disclosure" data-type="{{ filter.type }}" data-index="{{ forloop.index }}"{% if section.settings.expand_filters %} open{% endif %}>
+                <summary class="filter__toggle">
+                  <div class="flex justify-between items-center">
+                    <span class="flex-auto font-bold">{{ filter.label | escape }}</span>
+                    <span class="disclosure__toggle">
+                      {%- if settings.disclosure_toggle == 'plus' -%}
+                        {% render 'icon-plus' %}
+                      {%- else -%}
+                        {% render 'icon-chevron-down' %}
                       {%- endif -%}
-                    {%- endfor -%}
-                  </ul>
+                    </span>
+                  </div>
+                </summary>
+                <div class="disclosure__panel has-motion">
+                  <div class="disclosure__content">
+                    <div class="filter__content">
+                      {%- case filter.type -%}
+                        {%- when 'boolean' or 'list' -%}
+                          <ul role="list"{% if swatches %} class="filter__swatches"{% endif %}>
+                            {%- for value in filter.values -%}
+                              <li{% if forloop.index > section.settings.max_filter_options %} class="js-hidden"{% endif %}>
+                                <input type="checkbox"
+                                        class="{% unless swatches %}checkbox {% endunless %}visually-hidden focus-label-before"
+                                        id="filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                                        name="{{ value.param_name }}"
+                                        value="{{ value.value | escape }}"
+                                        {% if value.active %}checked{% endif %}
+                                        {% if value.count == 0 and value.active == false %}disabled{% endif %}>
+                                <label for="filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                                       class="filter__label flex items-start w-full m-0"
+                                       {%- if swatches %} data-swatch="{{ value.label | replace: '"', '' | downcase }}"{% endif %}>
+                                  <span class="flex-auto">{{ value.label | escape }}</span>
+                                  {% if section.settings.show_filter_counts -%}
+                                    <span class="filter__count">({{ value.count }})</span>
+                                  {%- endif -%}
+                                </label>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
 
-                {%- when 'price_range' -%}
-                  {%- assign selectable_filter_count = selectable_filter_count | plus: 1 -%}
-                  {% render 'price-range', filter: filter %}
+                        {%- when 'price_range' -%}
+                          {% render 'price-range', filter: filter %}
 
-              {%- endcase -%}
-            {%- endcapture -%}
-
-            {%- if selectable_filter_count > 0 -%}
-              <details-disclosure>
-                <details class="filter disclosure" data-type="{{ filter.type }}" data-index="{{ forloop.index }}"{% if section.settings.expand_filters %} open{% endif %}>
-                  <summary class="filter__toggle">
-                    <div class="flex justify-between items-center">
-                      <span class="flex-auto font-bold">{{ filter.label | escape }}</span>
-                      <span class="disclosure__toggle">
-                        {%- if settings.disclosure_toggle == 'plus' -%}
-                          {% render 'icon-plus' %}
-                        {%- else -%}
-                          {% render 'icon-chevron-down' %}
-                        {%- endif -%}
-                      </span>
+                      {%- endcase -%}
                     </div>
-                  </summary>
-                  <div class="disclosure__panel has-motion">
-                    <div class="disclosure__content">
-                      <div class="filter__content">
-                        {{ filter_markup }}
-                      </div>
 
-                      <div class="flex relative items-center mt-6">
-                        {%- if selectable_filter_count > section.settings.max_filter_options -%}
-                          <button type="button" class="filter__more link text-current text-sm js-show-more">
-                            {{- 'products.filtering.show_more' | t -}}
-                          </button>
-                        {%- endif -%}
+                    <div class="flex relative items-center mt-6">
+                      {%- if filter.values.size > section.settings.max_filter_options -%}
+                        <button type="button" class="filter__more link text-current text-sm js-show-more">
+                          {{- 'products.filtering.show_more' | t -}}
+                        </button>
+                      {%- endif -%}
 
-                        <div class="filter__header">
-                          <a href="{{ filter.url_to_remove }}" class="link text-current text-sm js-clear-filter"{% if has_active_filters == false %} hidden{% endif %}>
-                            {{- 'products.filtering.clear' | t -}}
-                          </a>
-                        </div>
+                      <div class="filter__header">
+                        <a href="{{ filter.url_to_remove }}" class="link text-current text-sm js-clear-filter"{% if has_active_filters == false %} hidden{% endif %}>
+                          {{- 'products.filtering.clear' | t -}}
+                        </a>
                       </div>
                     </div>
                   </div>
-                </details>
-              </details-disclosure>
-            {%- endif -%}
+                </div>
+              </details>
+            </details-disclosure>
           {%- endfor -%}
 
           {%- if section.settings.enable_sorting and section.settings.sort_first == false -%}

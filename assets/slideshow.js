@@ -15,7 +15,6 @@ if (!customElements.get('slide-show')) {
       this.rtl = document.dir === 'rtl';
       this.currentIndex = 0;
       this.swipeThreshold = 80;
-      this.wheelTriggerWait = 800;
 
       if (this.nav) {
         this.counterCurrent = this.querySelector('.slideshow-nav__counter-current');
@@ -31,8 +30,6 @@ if (!customElements.get('slide-show')) {
         this.slideshow.addEventListener('touchstart', this.handleTouchStart.bind(this), { passive: true });
         this.slideshow.addEventListener('touchmove', debounce(this.handleTouchMove.bind(this), 200), { passive: true });
       }
-
-      this.slideshow.addEventListener('wheel', this.handleWheel.bind(this));
 
       this.slideshow.addEventListener('transitionend', SlideShow.handleTransitionend);
 
@@ -78,26 +75,6 @@ if (!customElements.get('slide-show')) {
       if (!evt.target.matches('.page-btn')) return;
       this.autoplayTimeLeft = this.autoplaySpeed;
       this.setActiveSlide(Number(evt.target.dataset.index));
-    }
-
-    /**
-     * Handles 'wheel' events on the slideshow.
-     * @param {object} evt - Event object.
-     */
-    handleWheel(evt) {
-      if (this.blockWheelTrigger) {
-        evt.preventDefault();
-      } else if (evt.deltaX > 20) {
-        evt.preventDefault();
-        this.showNextSlide();
-        this.blockWheelTrigger = true;
-        setTimeout(() => { this.blockWheelTrigger = false; }, this.wheelTriggerWait);
-      } else if (evt.deltaX < -20) {
-        evt.preventDefault();
-        this.showPrevSlide();
-        this.blockWheelTrigger = true;
-        setTimeout(() => { this.blockWheelTrigger = false; }, this.wheelTriggerWait);
-      }
     }
 
     /**

@@ -20,8 +20,7 @@ if (!customElements.get('product-inventory')) {
       // Init
       this.updateInventory(
         parseInt(this.dataset.inventoryQuantity, 10),
-        this.dataset.variantAvailable === 'true',
-        this.dataset.inventoryPolicy
+        this.dataset.variantAvailable === 'true'
       );
     }
 
@@ -43,11 +42,7 @@ if (!customElements.get('product-inventory')) {
         const inventory = this.variantInventory.filter(
           (variant) => variant.id === evt.detail.variant.id
         )[0];
-        this.updateInventory(
-          inventory.inventory_quantity,
-          inventory.available,
-          inventory.inventory_policy
-        );
+        this.updateInventory(inventory.inventory_quantity, inventory.available);
       } else {
         this.updateInventory(0, false);
         this.hidden = true;
@@ -59,15 +54,11 @@ if (!customElements.get('product-inventory')) {
      * Updates the inventory notice
      * @param {number} count - the inventory quantity available
      * @param {boolean} available - whether current variant is available
-     * @param {string} inventoryPolicy - whether product continues selling when out of stock
      */
-    updateInventory(count, available, inventoryPolicy) {
+    updateInventory(count, available) {
       let inventoryLevel;
-
       if (count <= 0) {
-        if (inventoryPolicy === 'continue') {
-          inventoryLevel = 'backordered';
-        } else if (available) {
+        if (available) {
           inventoryLevel = 'in_stock';
         } else {
           inventoryLevel = 'none';
@@ -80,18 +71,15 @@ if (!customElements.get('product-inventory')) {
         inventoryLevel = 'normal';
       }
 
-      if (((this.dataset.showNotice === 'always'
-        || (this.dataset.showNotice === 'low' && inventoryLevel.includes('low')))
-        && !(inventoryLevel === 'backordered' && this.dataset.showNoStockBackordered === 'false'))) {
+      if (this.dataset.showNotice === 'always'
+        || (this.dataset.showNotice === 'low' && inventoryLevel.includes('low'))) {
         this.hidden = false;
 
         // Set the inventory level data attribute
         this.setAttribute('data-inventory-level', inventoryLevel);
 
         // Determine whether to show the count or not
-        if (inventoryLevel === 'backordered') {
-          this.inventoryNotice.innerText = '';
-        } else if (inventoryLevel !== 'in_stock' && (this.dataset.showCount === 'always' || (this.dataset.showCount === 'low' && inventoryLevel.includes('low')))) {
+        if (inventoryLevel !== 'in_stock' && (this.dataset.showCount === 'always' || (this.dataset.showCount === 'low' && inventoryLevel.includes('low')))) {
           this.inventoryNotice.innerText = theme.strings.onlyXLeft.replace('[quantity]', count);
         } else if (inventoryLevel.includes('low')) {
           this.inventoryNotice.innerText = theme.strings.lowStock;
@@ -107,8 +95,6 @@ if (!customElements.get('product-inventory')) {
             this.urgencyMessage.innerHTML = this.dataset.textVeryLow;
           } else if (inventoryLevel === 'low') {
             this.urgencyMessage.innerHTML = this.dataset.textLow;
-          } else if (inventoryLevel === 'backordered') {
-            this.urgencyMessage.innerHTML = this.dataset.textNoStockBackordered;
           } else if (inventoryLevel === 'normal' || inventoryLevel === 'in_stock') {
             this.urgencyMessage.innerHTML = this.dataset.textNormal;
           } else if (inventoryLevel === 'none') {
@@ -121,7 +107,7 @@ if (!customElements.get('product-inventory')) {
           this.indicatorBar.hidden = false;
 
           let newWidth;
-          if ((count >= this.dataset.scale || inventoryLevel === 'in_stock') && inventoryLevel !== 'backordered') {
+          if (count >= this.dataset.scale || inventoryLevel === 'in_stock') {
             newWidth = 100;
           } else {
             newWidth = ((100 / parseInt(this.dataset.scale, 10)) * count).toFixed(1);

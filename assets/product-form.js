@@ -65,12 +65,8 @@ if (!customElements.get('product-form')) {
 
         const response = await fetch(theme.routes.cartAdd, fetchRequestOpts);
         const data = await response.json();
-        let error = typeof data.description === 'string' ? data.description : data.message;
-        if (data.errors && typeof data.errors === 'object') {
-          error = Object.entries(data.errors).map((item) => item[1].join(', '));
-        }
 
-        if (data.status) this.setErrorMsgState(error);
+        if (data.status) this.setErrorMsgState(data.description);
 
         if (!response.ok) throw new Error(response.status);
 
@@ -96,13 +92,7 @@ if (!customElements.get('product-form')) {
               );
             } else if (window.location.pathname === theme.routes.cart) {
               const cartItems = document.querySelector('cart-items');
-              if (cartItems) {
-                if (cartItems.dataset.empty === 'true') {
-                  window.location.reload();
-                } else {
-                  cartItems.refresh();
-                }
-              }
+              if (cartItems) cartItems.refreshCart();
             }
           }, 700);
         }
@@ -174,14 +164,7 @@ if (!customElements.get('product-form')) {
       if (!this.errorMsg) return;
 
       this.errorMsg.hidden = !error;
-      if (error) {
-        this.errorMsg.innerHTML = '';
-        const errorArray = Array.isArray(error) ? error : [error];
-        errorArray.forEach((err, index) => {
-          if (index > 0) this.errorMsg.insertAdjacentHTML('beforeend', '<br>');
-          this.errorMsg.insertAdjacentText('beforeend', err);
-        });
-      }
+      if (error) this.errorMsg.textContent = error;
     }
   }
 

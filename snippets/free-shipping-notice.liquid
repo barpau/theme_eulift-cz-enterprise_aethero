@@ -44,12 +44,7 @@
           {%- if cart.total_price >= free_shipping_minimum -%}
             <strong>{{ 'cart.general.free_shipping' | t }}</strong>
           {%- else -%}
-            {%- liquid
-              capture deficit
-                assign pric_deficit = cart.total_price | minus: free_shipping_minimum | abs
-                render 'price-as-money', price: pric_deficit, show_money_with_currency: false
-              endcapture
-            -%}
+            {%- capture deficit %}{{ cart.total_price | minus: free_shipping_minimum | abs | money }}{% endcapture -%}
             {{- 'cart.general.free_shipping_deficit_html' | t: amount: deficit -}}
           {%- endif -%}
         </div>
