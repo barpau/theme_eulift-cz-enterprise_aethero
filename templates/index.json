@@ -67,6 +67,7 @@
         },
         "ced40511-ca73-41be-819f-8f2b1cecd281": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "overlay_position": "justify-start items-start",
             "overlay_text_align": "text-start",
