@@ -312,6 +312,7 @@
         "media-0": {
           "type": "media",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Sortiment-2.jpg",
             "link_url": "",
             "columns": 2,
             "rows": 2,
@@ -330,6 +331,7 @@
         "media-3": {
           "type": "media",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Servis-v2.png",
             "link_url": "",
             "columns": 2,
             "rows": 1,
@@ -477,7 +479,7 @@
         "divider-9"
       ],
       "settings": {
-        "product": "paletovy-vozik-bf25-black-edition",
+        "product": "paletovy-vozik-bf25ny",
         "media_ratio": "1",
         "media_crop": "none",
         "hover_zoom": "large",
