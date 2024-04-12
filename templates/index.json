@@ -683,6 +683,7 @@
         "banner-button"
       ],
       "settings": {
+        "image_desktop": "shopify:\/\/shop_images\/slide-heli-mtqa-terenni-jpg_QDrM.webp",
         "url": "",
         "height_mode": "fixed",
         "fixed_height_desktop": 520,
