@@ -325,7 +325,7 @@
     "predictive_search_show_collections": true,
     "predictive_search_show_vendor": true,
     "predictive_search_show_price": true,
-    "predictive_search_include_skus": true,
+    "predictive_search_include_skus": false,
     "cart_icon": "cart",
     "cart_type": "page",
     "after_add_to_cart": "page",
