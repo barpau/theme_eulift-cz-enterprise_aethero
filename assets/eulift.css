@@ -4,7 +4,7 @@
 }
 
 /* Hide tax validation for non payers */
-
+/**/
 #taxPayerValidation {
     display: none;
 }
