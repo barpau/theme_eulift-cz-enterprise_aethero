@@ -3,7 +3,7 @@ var button = "<button id='zeman-button' class='btn btn--primary'style='position:
 
 var button_close = "<button id='zeman-button-close' class='btn btn--primary'style='position:fixed; align:right; background: #333a40; bottom: 10px; right:25px; z-index: 39;'><a href='tel:00420606600011' style='color:white;'>Nyní nejsem na drátě.<br>Prozvoňte mě, zavolám vám zpět.<br>+420 606 600 011</a></button>"
 
-//
+
 
 function insertImage() {
   $(".shopify-section-group-footer-group").after(zeman);
