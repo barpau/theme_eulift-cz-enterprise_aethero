@@ -9,30 +9,83 @@
 */
 {
   "sections": {
-    "collection-banner": {
-      "type": "main-collection-banner",
+    "309ee8e3-a91d-47a0-9f69-f906c170da1e": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19412322058549__309ee8e3-a91d-47a0-9f69-f906c170da1e-1686127932f94e0c09-0": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "{{ collection.title }}"
+          }
+        },
+        "template--19412322058549__309ee8e3-a91d-47a0-9f69-f906c170da1e-1686127932f94e0c09-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_size": "h2",
+            "heading_h1": true
+          }
+        },
+        "template--19412322058549__309ee8e3-a91d-47a0-9f69-f906c170da1e-1686127932f94e0c09-2": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your store with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "enlarge_text": true
+          }
+        },
+        "template--19412322058549__309ee8e3-a91d-47a0-9f69-f906c170da1e-1686127932f94e0c09-3": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_1_label": "Optional button",
+            "button_1_link": "",
+            "button_1_style": "btn--primary",
+            "button_2_label": "Optional button",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--19412322058549__309ee8e3-a91d-47a0-9f69-f906c170da1e-1686127932f94e0c09-0",
+        "template--19412322058549__309ee8e3-a91d-47a0-9f69-f906c170da1e-1686127932f94e0c09-1",
+        "template--19412322058549__309ee8e3-a91d-47a0-9f69-f906c170da1e-1686127932f94e0c09-2",
+        "template--19412322058549__309ee8e3-a91d-47a0-9f69-f906c170da1e-1686127932f94e0c09-3"
+      ],
       "settings": {
-        "show_collection_title": true,
-        "show_product_count": true,
-        "show_collection_description": true,
         "text_align": "text-start",
-        "collection_image": "natural",
-        "use_product_image": false,
-        "text_width": "standard",
-        "color_scheme": "default"
+        "mob_center_text": true,
+        "color_scheme": "none",
+        "full_width": true
       }
     },
-    "f87075b8-0023-4593-bf3f-d5cd997e2cc6": {
-      "type": "collection-list",
+    "4cff302b-4c0a-4427-98aa-720037873b90": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "template--19412950319413__4cff302b-4c0a-4427-98aa-720037873b90-1686639700aa124988-0": {
+          "type": "text",
+          "settings": {
+            "text": "TIP v kategorii || {{ collection.metafields.custom.tip_v_kategorii.value }}",
+            "link": "",
+            "font": "body",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--19412950319413__4cff302b-4c0a-4427-98aa-720037873b90-1686639700aa124988-0"
+      ],
       "settings": {
-        "title": "",
-        "heading_align": "text-start",
-        "button_label": "",
-        "button_link": "",
-        "layout": "carousel",
-        "card_size": "small",
-        "use_product_image": false,
-        "circle_image": true
+        "section_height": "medium",
+        "spacing": 40,
+        "speed": 24,
+        "direction": "normal",
+        "pausable": true,
+        "color_scheme": "1",
+        "dividers": "none",
+        "prevent_animation": false
       }
     },
     "collection-products": {
@@ -67,18 +120,32 @@
         "enable_filtering": true,
         "filters_open_lg": true,
         "stick_on_scroll": true,
-        "show_filter_counts": false,
-        "expand_filters": false,
+        "show_filter_counts": true,
+        "expand_filters": true,
         "max_filter_options": 7,
         "enable_sorting": true,
         "show_feat_sort_opt": true,
         "sort_first": true
       }
+    },
+    "collection-banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_title": false,
+        "show_product_count": true,
+        "show_collection_description": true,
+        "text_align": "text-start",
+        "collection_image": "1",
+        "use_product_image": false,
+        "text_width": "wide",
+        "color_scheme": "default"
+      }
     }
   },
   "order": [
-    "collection-banner",
-    "f87075b8-0023-4593-bf3f-d5cd997e2cc6",
-    "collection-products"
+    "309ee8e3-a91d-47a0-9f69-f906c170da1e",
+    "4cff302b-4c0a-4427-98aa-720037873b90",
+    "collection-products",
+    "collection-banner"
   ]
 }
