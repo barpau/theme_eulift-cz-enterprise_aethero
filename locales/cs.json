@@ -552,7 +552,7 @@
       },
       "contact": {
         "optional_first_name_label": "IČO (volitelné)",
-        "last_name_label": "Jméno a příjmení"
+        "last_name_label": "Jméno a Příjmení"
       }
     }
   }
