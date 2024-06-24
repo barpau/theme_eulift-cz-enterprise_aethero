@@ -13,47 +13,47 @@ function insertImage() {
 
 function openingHours(){
   var openHours = [{
-      openHour: -1,
-      openMinute: -1,
-      closeHour: -1,
-      closeMinute: -1,
-  },
-  {
-    openHour: 8,
-    openMinute: 00,
-    closeHour: 17,
-    closeMinute: 00,
-  },
-  {
-    openHour: 8,
-    openMinute: 00,
-    closeHour: 17,
-    closeMinute: 00,
-  },
-  {
-    openHour: 8,
-    openMinute: 00,
-    closeHour: 17,
-    closeMinute: 00,
-  },
-  {
-    openHour: 8,
-    openMinute: 00,
-    closeHour: 17,
-    closeMinute: 00,
-  },
-  {
-    openHour: 8,
-    openMinute: 00,
-    closeHour: 17,
-    closeMinute: 00,
-  },
-  {
     openHour: -1,
     openMinute: -1,
     closeHour: -1,
     closeMinute: -1,
-  }];
+  },
+    {
+      openHour: 8,
+      openMinute: 00,
+      closeHour: 17,
+      closeMinute: 00,
+    },
+    {
+      openHour: 8,
+      openMinute: 00,
+      closeHour: 17,
+      closeMinute: 00,
+    },
+    {
+      openHour: 8,
+      openMinute: 00,
+      closeHour: 17,
+      closeMinute: 00,
+    },
+    {
+      openHour: 8,
+      openMinute: 00,
+      closeHour: 17,
+      closeMinute: 00,
+    },
+    {
+      openHour: 8,
+      openMinute: 00,
+      closeHour: 17,
+      closeMinute: 00,
+    },
+    {
+      openHour: -1,
+      openMinute: -1,
+      closeHour: -1,
+      closeMinute: -1,
+    }];
 
   var d = new Date($.now());
   var dayOfWeek = d.getDay();
@@ -66,13 +66,13 @@ function openingHours(){
   //console.log(todayHours.closeHour);
 
   if (hour >= todayHours.openHour && hour <= todayHours.closeHour) {
-     if ((hour == todayHours.openHour && mins < todayHours.openMinute) || (hour == todayHours.closeHour && mins > todayHours.closeMinute)) {
+    if ((hour == todayHours.openHour && mins < todayHours.openMinute) || (hour == todayHours.closeHour && mins > todayHours.closeMinute)) {
+      open = false;
+    } else {
+      open = true;
+    }
+  } else {
     open = false;
-  } else {
-    open = true;
-  }
-  } else {
-  open = false;
   }
 
   //console.log(open);
@@ -89,21 +89,21 @@ function openingHours(){
 
 function showPhone(){
   $("#zeman").on( "click", function() {
-  $("#zeman").animate({left: '250px'});
+    $("#zeman").animate({left: '250px'});
   });
 }
 
 jQuery(document).ready(function(){
-   
+
   var interval = setInterval(function() {
     if(document.readyState === 'complete') {
-        clearInterval(interval);
-        insertImage();
-        openingHours();
-        showPhone();
-     
-    }    
-}, 1000);
+      clearInterval(interval);
+      insertImage();
+      openingHours();
+      showPhone();
+
+    }
+  }, 1000);
 });
 
 
