@@ -117,35 +117,7 @@
           <div class="flex justify-between items-center mt-6">
             <h3 class="mb-0 h6">{{ 'cart.summary.subtotal' | t }}:</h3>
             <p class="mb-0 h6">{{ cart.total_price | money_with_currency }}</p>
-          </div>
-
-          <!-- Begin Exemptify cart page VAT ID validation -->
-    <div id="ExemptifyCartValidationSnippet">
-        <script src="//www.modules4u.biz/shopify/exemptify/js/validate_vat_v1.js.php?shop=eulift.myshopify.com{{ shop.metafields['exemptify']['price_qs'] }}"></script>
-        <script>function ShowTextInput() {
-        var radioyes = document.getElementById("radioyes");
-        var textinput = document.getElementById("taxPayerValidation");
-        textinput.style.display = radioyes.checked ? "block" : "none";
-}</script>
-      <div><div><h4>Ste platca DPH?</h4></div>
-
-          <label for="radiono">
-          <input type="radio" id="radiono" name="group1" onclick="ShowTextInput()" />Nie</label>
-          <label for="radioyes">
-          <input type="radio" id="radioyes" name="group1" onclick="ShowTextInput()" />Áno</label>
-
-          <div id="taxPayerValidation">
-            <div>Ak chcete u nás nakupovať bez DPH, zadajte prosím platné IČ DPH. DPH bude odpočítaná v ďalšom kroku</div>
-            <input type="text" placeholder="IČ DPH" id="VatId" name="attributes[vat-id]" value="{{ cart.attributes.vat-id }}" maxlength="20" style="max-width:160px;">
-            <div id="ValidStatus"><img id="StatusImg" width="28"></div>
-            <div id="ErrMsg"></div>   
-            <input id="CustomerId" type="hidden" value="{{ customer.id }}">
-            <input id="ShopCtyId" type="hidden" value="{{ shop.metafields['exemptify']['country'] }}">  
-          </div>
-        </div>
-    </div>
-  <!-- End Exemptify cart page VAT ID validation -->
-        
+          </div>       
           {%- if section.settings.cart_terms_page != blank -%}
             <cart-terms class="block mt-6">
               <input type="checkbox" class="checkbox" id="cart-terms">
