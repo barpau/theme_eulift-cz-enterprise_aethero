@@ -68,7 +68,7 @@
           "type": "text",
           "settings": {
             "text": "TIP v kategorii || {{ collection.metafields.custom.tip_v_kategorii.value }}",
-            "link": "",
+            "link": "{{ collection.metafields.custom.tip_produkt_url.value }}",
             "font": "body",
             "heading_size": "h3"
           }
