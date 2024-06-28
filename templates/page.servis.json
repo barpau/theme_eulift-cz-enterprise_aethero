@@ -223,7 +223,7 @@
         "8eb35413-b29a-4c0c-8061-b6b638442178": {
           "type": "custom",
           "settings": {
-            "title": "Telefón a meno osoby, ktorá bude preberať vozík a podpisovať ML (montážny list)",
+            "title": "Telefonní číslo a jméno osoby, která převezme vozík a podepíše ML (montážní list).",
             "type": "text",
             "required": false,
             "half_width": false
@@ -232,14 +232,14 @@
         "8245fea8-d8ea-43ba-9c44-414fd6987414": {
           "type": "text",
           "settings": {
-            "text": "<p>Pokiaľ nevyplníte kolónku s kontaktmi na osobu zodpovednú za prevzatie servisovaného vozíka automaticky bude kontaktovaná osoba pre prevzatie vozíka, ktorá je vyplnená v kolónke \"Meno osoby objednávajúcej opravu, telefón\".<\/p>",
+            "text": "<p>Pokud nevyplníte pole s kontaktními údaji osoby odpovědné za převzetí servisovaného vozíku, bude automaticky kontaktována osoba odpovědná za převzetí vozíku, která je vyplněna v poli \"Jméno osoby objednávající opravu, telefon\".<\/p>",
             "half_width": false
           }
         },
         "3d632cc8-86f4-44ac-b5a9-902530ef6f2f": {
           "type": "text",
           "settings": {
-            "text": "<p>Informácie o zákazníkoch sú uchovávané v súlade s platnými zákonmi Slovenskej republiky, najmä so zákonom č. 110\/2019 Zb., o spracovaní osobných údajov. Gekkon International s.r.o. všetky údaje získané od zákazníkov používa výhradne pre vnútornú potrebu spoločnosti a neposkytuje ich tretím osobám. Bez výslovného súhlasu zákazníkov nakladá Gekkon International s.r.o. s ich osobnými údajmi iba a výhradne v rozsahu, ktorý pripúšťa zákon o ochrane osobných údajov, a to predovšetkým v § 5 ods. 2 písm. b).<\/p>",
+            "text": "<p>Informace o zákaznících jsou uchovávány v souladu s platnými zákony Slovenské republiky, zejména se zákonem č. 110\/2019 Z. z., o zpracování osobních údajů. Společnost Gekkon International s.r.o. využívá veškeré údaje získané od zákazníků výhradně pro interní potřebu společnosti a neposkytuje je třetím stranám. Bez výslovného souhlasu zákazníků nakládá společnost Gekkon International s.r.o. s jejich osobními údaji pouze a výhradně v rozsahu, který umožňuje zákon o ochraně osobních údajů, zejména § 5 odst. 2 písm. b).<\/p>",
             "half_width": false
           }
         }
