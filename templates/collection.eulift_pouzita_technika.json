@@ -77,24 +77,24 @@
             "image": "shopify:\/\/shop_images\/bazar_cdd_acbd.png"
           }
         },
-        "template--19688954626357__6aa32866-1041-4619-bf34-2cbd10793318-1687765841cc7fd42f-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "pronajem"
-          }
-        },
         "collection_LiNi7r": {
           "type": "collection",
           "settings": {
             "collection": "bazar-celnich-voziku"
+          }
+        },
+        "template--19688954626357__6aa32866-1041-4619-bf34-2cbd10793318-1687765841cc7fd42f-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "pronajem"
           }
         }
       },
       "block_order": [
         "template--19688954626357__6aa32866-1041-4619-bf34-2cbd10793318-1687765841cc7fd42f-0",
         "template--19688954626357__6aa32866-1041-4619-bf34-2cbd10793318-1687765841cc7fd42f-1",
-        "template--19688954626357__6aa32866-1041-4619-bf34-2cbd10793318-1687765841cc7fd42f-2",
-        "collection_LiNi7r"
+        "collection_LiNi7r",
+        "template--19688954626357__6aa32866-1041-4619-bf34-2cbd10793318-1687765841cc7fd42f-2"
       ],
       "settings": {
         "title": "",
