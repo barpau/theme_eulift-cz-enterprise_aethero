@@ -112,7 +112,7 @@
         "a6da173f-4af6-42b1-963d-de1025638e8b": {
           "type": "custom",
           "settings": {
-            "title": "Názov spoločnosti",
+            "title": "Název společnosti",
             "type": "text",
             "required": false,
             "half_width": true
@@ -130,7 +130,7 @@
         "5f5627e2-0b2d-4eb6-9603-16653571fa9c": {
           "type": "custom",
           "settings": {
-            "title": "Meno osoby objednávajúcej opravu, telefón",
+            "title": "Jméno osoby objednávající opravu, telefon",
             "type": "text",
             "required": true,
             "half_width": false
@@ -139,7 +139,7 @@
         "56a10be7-01ac-4092-a293-1957858b76e6": {
           "type": "custom",
           "settings": {
-            "title": "Model (z výrobného štítku)",
+            "title": "Model (z výrobního štítku)",
             "type": "text",
             "required": true,
             "half_width": true
