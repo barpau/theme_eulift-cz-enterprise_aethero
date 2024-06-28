@@ -17,7 +17,7 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "<p><strong>Vítejte na EULIFTU<\/strong> <a href=\"\/pages\/o-nas\" title=\"O nás\">viac o nás<\/a><\/p>"
+            "text": "<p><strong>Vítejte na EULIFTU<\/strong> <a href=\"\/pages\/o-nas\" title=\"O nás\">víc o nás<\/a><\/p>"
           }
         },
         "announcement-2": {
