@@ -34,6 +34,7 @@
         "text"
       ],
       "settings": {
+        "image_desktop": "shopify:\/\/shop_images\/Flotila-2023-front-2.png",
         "url": "",
         "height_mode": "fixed",
         "fixed_height_desktop": 560,
