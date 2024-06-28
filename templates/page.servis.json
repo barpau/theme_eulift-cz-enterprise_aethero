@@ -149,7 +149,7 @@
           "type": "dropdown",
           "settings": {
             "title": "Vyberte druh pohonu",
-            "options": "Diesel\nLPG\nCNG\nAku\nRučné",
+            "options": "Diesel\nLPG\nCNG\nAku\nRuční",
             "half_width": true
           }
         },
