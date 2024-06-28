@@ -207,7 +207,7 @@
         "c6e5d39e-0dc1-481f-ab14-548f98fc5ab4": {
           "type": "custom",
           "settings": {
-            "title": "Email pre motážny list",
+            "title": "Email pro montážní list",
             "type": "text",
             "required": false,
             "half_width": false
@@ -216,7 +216,7 @@
         "7d80755f-ecfb-4d5d-94ba-acf725d54b90": {
           "type": "text",
           "settings": {
-            "text": "<p>Pokiaľ nevyplníte e-mail pre fakturáciu a e-mail pre montážny list, po realizácii servisu bude faktúra a montážny list odoslaný na hlavnú e-mailovú adresu.<\/p>",
+            "text": "<p>Pokud nevyplníte e-mail pro fakturaci a e-mail pro instalační dopis, bude faktura a instalační dopis zaslán na hlavní e-mailovou adresu po provedení služby.<\/p>",
             "half_width": false
           }
         },
