@@ -164,7 +164,7 @@
         "7fb0ce21-804e-4ac8-9263-730601625ea7": {
           "type": "custom",
           "settings": {
-            "title": "Výrobné číslo (nepovinné)",
+            "title": "Výrobní číslo (nepovinné)",
             "type": "text",
             "required": false,
             "half_width": true
