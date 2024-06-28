@@ -133,6 +133,13 @@
     "collection-list": {
       "type": "collection-list",
       "blocks": {
+        "collection_UNNMdK": {
+          "type": "collection",
+          "settings": {
+            "collection": "akcni-nabidka",
+            "image": "shopify:\/\/shop_images\/Artboard_1_copy.webp"
+          }
+        },
         "collection-5": {
           "type": "collection",
           "settings": {
@@ -143,12 +150,6 @@
           "type": "collection",
           "settings": {
             "collection": "paletove-voziky-standardni"
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "paletove-voziky-dlouhe"
           }
         },
         "collection-2": {
@@ -168,15 +169,22 @@
           "settings": {
             "collection": "vysokozdvizne-voziky"
           }
+        },
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "paletove-voziky-dlouhe"
+          }
         }
       },
       "block_order": [
+        "collection_UNNMdK",
         "collection-5",
         "collection-0",
-        "collection-1",
         "collection-2",
         "collection-3",
-        "collection-4"
+        "collection-4",
+        "collection-1"
       ],
       "settings": {
         "title": "",
