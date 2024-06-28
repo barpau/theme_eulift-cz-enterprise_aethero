@@ -156,8 +156,8 @@
         "1cf8258d-ec0f-4a75-a499-b0e8281d58ad": {
           "type": "dropdown",
           "settings": {
-            "title": "Vozík je v prenájme či lízingu",
-            "options": "Áno\nNie",
+            "title": "Vozík je v pronájmu či leasingu",
+            "options": "Ano\nNe",
             "half_width": true
           }
         },
