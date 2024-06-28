@@ -182,7 +182,7 @@
         "eb57e916-ccd7-458f-8b9e-c09fe5b9cdde": {
           "type": "custom",
           "settings": {
-            "title": "Presná adresa servisu (kam máme prísť)",
+            "title": "Přesná adresa servisu (kam máme přijet)",
             "type": "textarea",
             "required": true,
             "half_width": false
@@ -198,7 +198,7 @@
         "be292051-5703-4bd4-a593-306f4ed340d0": {
           "type": "custom",
           "settings": {
-            "title": "Fakturačný email",
+            "title": "Fakturační email",
             "type": "email",
             "required": false,
             "half_width": true
