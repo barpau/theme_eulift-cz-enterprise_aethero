@@ -17,7 +17,7 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "<p><strong>Vítejte na EULIFTU<\/strong> <a href=\"\/pages\/o-nas\" title=\"O nás\">víc o nás<\/a><\/p>"
+            "text": "<p><strong>Vítejte na EULIFTU<\/strong> <a href=\"\/pages\/o-nas\" title=\"O nás\">více o nás<\/a><\/p>"
           }
         },
         "announcement-2": {
@@ -30,7 +30,7 @@
         "announcement_pd9x6r": {
           "type": "announcement",
           "settings": {
-            "text": "<p>Produkty v akcii <a href=\"\/collections\/akcni-nabidka\" title=\"\/collections\/akcni-nabidka\">nájdete tu<\/a>.<\/p>"
+            "text": "<p>Produkty v akcii <a href=\"\/collections\/akcni-nabidka\" title=\"\/collections\/akcni-nabidka\">najdete zde<\/a>.<\/p>"
           }
         }
       },
