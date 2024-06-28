@@ -124,7 +124,7 @@
     "b6db31af-fa46-498e-afc9-929edfb66d9c": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<span id=\"contact-form-rent-CZ\"><\/span>",
+        "custom_liquid": "<span id=\"contact-form-rent\"><\/span>",
         "section_height": "default",
         "full_width": false,
         "dividers": "none",
