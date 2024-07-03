@@ -139,6 +139,7 @@
         "slide_Bmg7ze": {
           "type": "slide",
           "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/akcni_nabidka_rada.jpg",
             "overlay_position": "justify-center items-center",
             "overlay_text_align": "text-center",
             "mob_center_text": false,
@@ -146,12 +147,12 @@
             "heading": "",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p>Share announcements and information with your customers and welcome them to your store.<\/p>",
+            "text": "",
             "enlarge_text": true,
-            "button_1_label": "Optional button",
+            "button_1_label": "",
             "button_1_link": "",
             "button_1_style": "btn btn--primary",
-            "button_2_label": "Optional button",
+            "button_2_label": "",
             "button_2_link": "",
             "button_2_style": "btn btn--primary",
             "countdown_show": false,
