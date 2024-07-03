@@ -98,7 +98,7 @@
           "type": "link_list",
           "settings": {
             "heading": "Právní informace",
-            "menu": ""
+            "menu": "footer"
           }
         },
         "newsletter": {
