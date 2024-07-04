@@ -228,12 +228,6 @@
             "collection": "paletove-voziky-snizene"
           }
         },
-        "collection-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "vysokozdvizne-voziky"
-          }
-        },
         "collection-1": {
           "type": "collection",
           "settings": {
@@ -247,7 +241,6 @@
         "collection-0",
         "collection-2",
         "collection-3",
-        "collection-4",
         "collection-1"
       ],
       "settings": {
