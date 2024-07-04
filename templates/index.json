@@ -131,7 +131,7 @@
             "enlarge_end_text": false,
             "countdown_hide_on_end": false,
             "use_custom_colors": false,
-            "count_color": "#fff",
+            "count_color": "#ffffff",
             "bg_color": "#070707",
             "bg_grad": ""
           }
@@ -162,7 +162,7 @@
             "enlarge_end_text": false,
             "countdown_hide_on_end": false,
             "use_custom_colors": false,
-            "count_color": "#fff",
+            "count_color": "#ffffff",
             "bg_color": "#070707",
             "bg_grad": ""
           }
@@ -560,7 +560,7 @@
         "divider-9"
       ],
       "settings": {
-        "product": "paletovy-vozik-bf25ny",
+        "product": "paletovy-vozik-bf25-black-edition",
         "media_ratio": "1",
         "media_crop": "none",
         "hover_zoom": "large",
