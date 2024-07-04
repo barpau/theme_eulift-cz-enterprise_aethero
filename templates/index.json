@@ -233,6 +233,13 @@
           "settings": {
             "collection": "paletove-voziky-dlouhe"
           }
+        },
+        "collection_mRXUgA": {
+          "type": "collection",
+          "settings": {
+            "collection": "vysokozdvizne-voziky-rucni",
+            "image": "shopify:\/\/shop_images\/01_rucne_vedene_mechanicke.png"
+          }
         }
       },
       "block_order": [
@@ -241,7 +248,8 @@
         "collection-0",
         "collection-2",
         "collection-3",
-        "collection-1"
+        "collection-1",
+        "collection_mRXUgA"
       ],
       "settings": {
         "title": "",
