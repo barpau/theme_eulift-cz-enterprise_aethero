@@ -353,10 +353,11 @@
     "animation_speed": "fast",
     "image_quality": "1",
     "show_blur_messages": true,
-    "blur_message_1": "Don't leave us hanging!",
+    "blur_message_1": "Nenechte nás na holičkách!",
+    "blur_message_2": "Jsme stále tady!",
     "blur_message_delay": 4,
     "vibrate_on_atc": true,
-    "favicon": "shopify:\/\/shop_images\/EULIFT-favicon.png",
+    "favicon": "shopify:\/\/shop_images\/EULIFT-favicon_430x_6e0ceb1e-bb7d-46f5-acea-a2e22d78b13a.webp",
     "heading_type_scale": "1.3",
     "content_for_index": [
 
@@ -366,7 +367,7 @@
     "custom_css": [
       ".main-nav__collection-image {flex-shrink: 0;}",
       "#ExemptifyCartValidationSnippet h4 {color: red;}",
-      ".price__from{display: none;}"
+      ".price__from {display: none;}"
     ]
   }
 }
