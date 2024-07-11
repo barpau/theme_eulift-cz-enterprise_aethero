@@ -263,7 +263,7 @@
         "2dc71c1b-947c-43bf-b36f-1d8291092554": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "{% if product.metafields.custom.rotation_url != blank %}\n<center><iframe class=\"rotation-desktop\" src=\"{{ product.metafields.custom.rotation_url }}\" frameborder=\"0\" scrolling=\"no\" style=\"width: 544px; height: 408px;\"><\/iframe><\/center>\n<center><iframe class=\"rotation-mobile\" src=\"{{ product.metafields.custom.rotation_url_mobile }}\" width=\"320\" frameborder=\"0\" scrolling=\"no\" style=\"width: 320px; height: 420px;\" ><\/iframe><\/center>\n{% endif %}"
+            "custom_liquid": "{% if product.metafields.custom.rotation_url_cz != blank %}\n<center><iframe class=\"rotation-desktop\" src=\"{{ product.metafields.custom.rotation_url_cz }}\" frameborder=\"0\" scrolling=\"no\" style=\"width: 544px; height: 408px;\"><\/iframe><\/center>\n<center><iframe class=\"rotation-mobile\" src=\"{{ product.metafields.custom.rotation_url_mobile_cz }}\" width=\"320\" frameborder=\"0\" scrolling=\"no\" style=\"width: 320px; height: 420px;\" ><\/iframe><\/center>\n{% endif %}"
           }
         },
         "highlight-text": {
