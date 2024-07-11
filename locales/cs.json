@@ -360,7 +360,7 @@
   "cart": {
     "general": {
       "title": "Váš košík",
-      "empty": "tvůj vozík je prázdný",
+      "empty": "Váš vozík je prázdný",
       "start_shopping": "Začněte nakupovat",
       "backorder": "Produkt je doobjednaný a bude odeslán, jakmile bude opět skladem.",
       "view_cart": "Prohlédnout košík",
