@@ -30,7 +30,7 @@
         "announcement_pd9x6r": {
           "type": "announcement",
           "settings": {
-            "text": "<p>Produkty v akcii <a href=\"\/collections\/akcni-nabidka\" title=\"\/collections\/akcni-nabidka\">najdete zde<\/a>.<\/p>"
+            "text": "<p>Produkty v akci <a href=\"\/collections\/akcni-nabidka\" title=\"\/collections\/akcni-nabidka\">najdete zde<\/a>.<\/p>"
           }
         }
       },
