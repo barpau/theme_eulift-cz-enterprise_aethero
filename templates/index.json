@@ -276,7 +276,7 @@
         "image_ratio": "fill",
         "promo_title": "To nejlepší",
         "content": "<p>Vybrali jsme pro vás produkty které u nás profesionálové z logistiky a skladů nejčastěji kupují, abyste ušetřili čas. <br\/>Pokud si nejste jisti zavolejte nám nebo vyberte celé nabídky<\/p>",
-        "link_url": "\/collections\/all",
+        "link_url": "shopify:\/\/collections\/kompletni-sortiment",
         "button_label": "Prohlédnout všechny produkty",
         "color_scheme": "2",
         "button_style": "btn btn--primary"
