@@ -5,3 +5,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.shopify-payment-button__more-options').textContent = 'Další platební možnosti';
+});
