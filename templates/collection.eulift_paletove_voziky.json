@@ -147,6 +147,13 @@
           "settings": {
             "collection": "paletove-voziky-bazarove"
           }
+        },
+        "collection_yDc9Q8": {
+          "type": "collection",
+          "settings": {
+            "collection": "nahradni-dily-1",
+            "image": "shopify:\/\/shop_images\/ND_paletove_voziky_a_stoly.png"
+          }
         }
       },
       "block_order": [
@@ -163,7 +170,8 @@
         "a9dba6c0-ed31-4953-b2bf-9711cac4de80",
         "43f8f0b8-e204-45ae-b7e9-1e1b540cc3aa",
         "bfbe9729-4723-40c7-aa01-f5cb7eafbc15",
-        "e34a344a-0097-45fe-bba5-6c8099f3472a"
+        "e34a344a-0097-45fe-bba5-6c8099f3472a",
+        "collection_yDc9Q8"
       ],
       "settings": {
         "title": "",
