@@ -348,14 +348,14 @@
         "img {max-width: 50%;}"
       ],
       "settings": {
-        "product": "vysokozdvizny-vozik-cdd1225el-li",
+        "product": "vysokozdvizny-vozik-cdd1525r",
         "show_content": true,
         "layout": "text_first",
         "text_align": "text-center",
         "mob_center_text": false,
         "heading_size": "h1",
         "enlarge_text": false,
-        "image": "shopify:\/\/shop_images\/vysokozdvizny_vozik_elektricky_standard_eulift_CDD1225EL-LI_01.jpg",
+        "image": "shopify:\/\/shop_images\/cdd1525r_001_cr_026a4cd3-bb5d-4766-897c-e1fed7874121.jpg",
         "title": "{{ section.settings.product.title }}",
         "description": "<p>Podívejte se na výhody tohoto produktu:<\/p>",
         "button_label": "",
@@ -576,7 +576,6 @@
       "settings": {
         "video_external": "https:\/\/vimeo.com\/429286026",
         "video_description": "",
-        "poster_image": "shopify:\/\/shop_images\/sidlo-gekkon-opti_133f830b-2d51-44fe-a78c-16d65eebe74a.webp",
         "video_size": "md",
         "video_autoplay": true,
         "text_align": "text-center",
