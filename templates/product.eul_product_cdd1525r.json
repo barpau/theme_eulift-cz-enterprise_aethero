@@ -301,7 +301,7 @@
           "type": "feature",
           "settings": {
             "heading": "Maximální výška vozíku",
-            "text": "<p>při zcela spuštěných vidlicích 1810 mm, při maximálním zdvihu je výška vozíku 3000 mm<\/p>",
+            "text": "<p>při zcela spuštěných vidlicích 1837 mm, při maximálním zdvihu je výška vozíku 3087 mm<\/p>",
             "content_align": "text-start",
             "hotspot_x": 57,
             "hotspot_y": 10
@@ -313,15 +313,15 @@
             "heading": "Tlačítko \"odskoku\"",
             "text": "<p>bezpečnostní červené tlačítko chrání obsluhu před možným úrazem. Například<br\/>přimáčknutí ojí při manipulaci.<\/p>",
             "content_align": "text-start",
-            "hotspot_x": 68,
-            "hotspot_y": 30
+            "hotspot_x": 69,
+            "hotspot_y": 40
           }
         },
         "product-features-feature-2": {
           "type": "feature",
           "settings": {
-            "heading": "Pohon vozíku - lithiová baterie",
-            "text": "<p>vozík pohání lithiová baterie o kapacitě 24 V<\/p>",
+            "heading": "Pohon vozíku - trakční baterie",
+            "text": "<p>vozík pohání trakční baterie o kapacitě 24\/200 V\/Ah<\/p>",
             "content_align": "text-start",
             "hotspot_x": 55,
             "hotspot_y": 83
