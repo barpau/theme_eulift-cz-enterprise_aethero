@@ -407,11 +407,11 @@
         "view_more_label": "View more",
         "view_more_link": "",
         "product_list": [
-          "rudl-keg-40a",
-          "rudl-001a",
-          "rudl-008b",
-          "rudl-008c",
-          "rudl-002a"
+          "rudl-001a-black-edition",
+          "rudl-002a-black-edition",
+          "rudl-keg-040a-black-edition",
+          "rudl-008c-black-edition",
+          "rudl-008b-black-edition"
         ],
         "empty_field_text": "-",
         "image_ratio": "shortest",
