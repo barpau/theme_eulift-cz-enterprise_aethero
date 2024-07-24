@@ -79,7 +79,7 @@
     }
 }
 
-.price-with-tax {
+.price-with-tax, .delivery {
   margin-top: -25px;
    
 }
