@@ -75,7 +75,11 @@
             "show_tax_and_shipping": true
           }
         },
-
+         "aethero_shipping_tax_CMLzGH": {
+          "type": "aethero-shipping-tax",
+          "settings": {
+          }
+        },
         "fb748c5f-ce21-4199-a2fb-bcc4958b7cbd": {
           "type": "custom-liquid",
           "settings": {
