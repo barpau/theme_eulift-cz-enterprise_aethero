@@ -172,6 +172,8 @@
                 {%- endif -%}
               {%- endif -%}
 
+              {% render 'aethero-shipping-price-with-tax' %}
+
               {%- assign instalments_form_id = 'instalments-form-' | append: section.id -%}
               {%- form 'product', product, class: 'js-instalments-form  text-sm mt-2', id: instalments_form_id -%}
                 <input type="hidden" name="id" value="{{ current_variant.id }}">
@@ -938,6 +940,10 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "aethero-shipping-price-with-tax",
+      "name": "Size Chart"
     },
     {
       "type": "buy-buttons",
