@@ -75,7 +75,7 @@
             "show_tax_and_shipping": false
           }
         },
-         "aethero_shipping_tax_CMLzGH": {
+        "aethero_shipping_tax_W78ctn": {
           "type": "aethero-shipping-tax",
           "settings": {
           }
@@ -175,7 +175,7 @@
         "divider-0",
         "97e3fb95-e8e5-4640-b8cf-81f9031aa4c7",
         "price",
-        "74fcb4e7-3982-4233-8412-790c84380ec6",
+        "aethero_shipping_tax_W78ctn",
         "fb748c5f-ce21-4199-a2fb-bcc4958b7cbd",
         "buy-buttons",
         "message-1",
