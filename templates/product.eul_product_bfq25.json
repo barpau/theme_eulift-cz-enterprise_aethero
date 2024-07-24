@@ -75,6 +75,12 @@
             "show_tax_and_shipping": false
           }
         },
+        "custom_liquid_rhAm8m": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"price-with-tax\">{{ product.price | times: 1.21 | money }} s DPH<\/div>"
+          }
+        },
         "fb748c5f-ce21-4199-a2fb-bcc4958b7cbd": {
           "type": "custom-liquid",
           "settings": {
