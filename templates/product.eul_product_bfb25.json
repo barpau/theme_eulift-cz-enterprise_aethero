@@ -75,17 +75,6 @@
             "show_tax_and_shipping": false
           }
         },
-        "custom_liquid_rhAm8m": {
-          "type": "custom-liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"price-with-tax\">{{ product.price | times: 1.21 | money }} s DPH<\/div>"
-          }
-        },
-        "aethero_shipping_tax_TwzfCF": {
-          "type": "aethero-shipping-tax",
-          "settings": {
-          }
-        },
         "fb748c5f-ce21-4199-a2fb-bcc4958b7cbd": {
           "type": "custom-liquid",
           "settings": {
@@ -181,8 +170,6 @@
         "divider-0",
         "97e3fb95-e8e5-4640-b8cf-81f9031aa4c7",
         "price",
-        "custom_liquid_rhAm8m",
-        "aethero_shipping_tax_TwzfCF",
         "fb748c5f-ce21-4199-a2fb-bcc4958b7cbd",
         "buy-buttons",
         "message-1",
