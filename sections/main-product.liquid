@@ -180,51 +180,83 @@
             </div>
 
           <div class="price-with-tax">{{ product.price | times: 1.21 | money }} s DPH</div>
-          <div class="delivery">Doprava:
-    {% for variant in product.variants %}
-        {% assign weight_in_grams = variant.weight %}
-    {% endfor %}
-    {% if weight_in_grams <= 7999 %}
-        114 Kč
-    {% elsif weight_in_grams <= 22999 %}
-        194 Kč
-    {% elsif weight_in_grams <= 32999 %}
-        275 Kč
-    {% elsif weight_in_grams <= 52999 %}
-        378 Kč
-    {% elsif weight_in_grams <= 92999 %}
-        493 Kč
-    {% elsif weight_in_grams <= 97999 %}
-        607 Kč
-    {% elsif weight_in_grams <= 102999 %}
-        727 Kč
-    {% elsif weight_in_grams <= 107999 %}
-        827 Kč
-    {% elsif weight_in_grams <= 182999 %}
-        919 Kč
-    {% elsif weight_in_grams <= 187999 %}
-        1.033 Kč
-    {% elsif weight_in_grams <= 192999 %}
-        1.148 Kč
-    {% elsif weight_in_grams <= 267999 %}
-        1.377 Kč
-    {% elsif weight_in_grams <= 272999 %}
-        1.403 Kč
-    {% elsif weight_in_grams <= 277999 %}
-        1.607 Kč
-    {% elsif weight_in_grams <= 322999 %}
-        1.701 Kč
-    {% elsif weight_in_grams <= 362999 %}
-        1.839 Kč
-    {% elsif weight_in_grams <= 367999 %}
-        2.068 Kč
-    {% elsif weight_in_grams <= 372999 %}
-        2.182 Kč
-    {% elsif weight_in_grams <= 2000000 %}
-        2.990 Kč
-    {% endif %}
+          <div class="delivery" id="shipping-cost" data-product-id="{{ product.id }}">
+  Doprava: <span id="shipping-price"></span>
 </div>
 
+<script type="application/json" id="shipping-rates">
+  {
+    "7999": 114,
+    "22999": 194,
+    "32999": 275,
+    "52999": 378,
+    "92999": 493,
+    "97999": 607,
+    "102999": 727,
+    "107999": 827,
+    "182999": 919,
+    "187999": 1033,
+    "192999": 1148,
+    "267999": 1377,
+    "272999": 1403,
+    "277999": 1607,
+    "322999": 1701,
+    "362999": 1839,
+    "367999": 2068,
+    "372999": 2182,
+    "2000000": 2990
+  }
+</script>
+          document.addEventListener('DOMContentLoaded', function() {
+  var shippingCostElement = document.getElementById('shipping-cost');
+  var shippingPriceElement = document.getElementById('shipping-price');
+  var shippingRates = JSON.parse(document.getElementById('shipping-rates').textContent);
+
+  if (shippingCostElement && shippingPriceElement) {
+    var productId = shippingCostElement.getAttribute('data-product-id');
+
+    function updateShippingCost(variant, quantity) {
+      var totalWeight = variant.weight * quantity;
+      var shippingCost = 2990; // Default to highest rate
+
+      for (var weight in shippingRates) {
+        if (totalWeight <= parseInt(weight)) {
+          shippingCost = shippingRates[weight];
+          break;
+        }
+      }
+
+      shippingPriceElement.textContent = shippingCost + ' Kč';
+    }
+
+    if (typeof Shopify !== 'undefined' && Shopify.PaymentButton) {
+      Shopify.PaymentButton.init();
+    }
+
+    if (typeof Shopify !== 'undefined' && Shopify.OptionSelectors) {
+      new Shopify.OptionSelectors('product-select-' + productId, {
+        product: {{ product | json }},
+        onVariantSelected: function(variant, selector) {
+          if (variant) {
+            var quantityElement = document.querySelector('input[name="quantity"]');
+            var quantity = quantityElement ? parseInt(quantityElement.value) : 1;
+            updateShippingCost(variant, quantity);
+          }
+        }
+      });
+    }
+
+    // Listen for quantity changes
+    document.addEventListener('change', function(event) {
+      if (event.target.matches('input[name="quantity"]')) {
+        var variant = Shopify.PaymentButton.getVariant();
+        if (variant) {
+          updateShippingCost(variant, parseInt(event.target.value));
+        }
+      }
+    });
+  }
+});
           {%- when 'rating' -%}
             {%- if product.metafields.reviews.rating.value != blank -%}
               <div class="product-info__block product-info__block--sm product-info__rating" {{ block.shopify_attributes }}>
