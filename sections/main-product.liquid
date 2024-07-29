@@ -180,7 +180,7 @@
             </div>
 
           <div class="price-with-tax">{{ product.price | times: 1.21 | money }} s DPH</div>
-          <div class="delivery">Doprava:
+          <div class="delivery">Doprava 1 ks:
     {% for variant in product.variants %}
         {% assign weight_in_grams = variant.weight %}
     {% endfor %}
