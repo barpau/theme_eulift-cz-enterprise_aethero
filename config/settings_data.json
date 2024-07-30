@@ -342,7 +342,7 @@
     "cart_type": "page",
     "after_add_to_cart": "page",
     "show_recommendations": true,
-    "recommendations_heading": "You may also like...",
+    "recommendations_heading": "Mohlo by se vám také líbit ...",
     "recommendations_to_show": 3,
     "cart_shaking": true,
     "cart_shaking_frequency": 5,
