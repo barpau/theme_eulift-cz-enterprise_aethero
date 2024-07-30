@@ -275,25 +275,17 @@
 
   {{ content_for_header }}
   
-{%- comment -%} Eulift RM code {%- endcomment -%}
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-993928973"></script>
-<script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
- gtag('config', 'AW-993928973');
-</script>
-  {%- comment -%} End of Eulift RM code {%- endcomment -%}
+
 
 {%- comment -%} Eulift Ads conversion code {%- endcomment -%}
   <meta name="google-site-verification" content="RQoT3usavei7u5jzADd_jEOH33qumi0rJ__P1Aj1wEY" />
 {%- comment -%} End of ads conversion code {%- endcomment -%}
 
   
+  {%- comment -%} Heureka conversion code insert {%- endcomment -%}
   <script type="text/javascript">
 var _hrq = _hrq || [];
-    _hrq.push(['setKey', 'E7BEF9EAC01F1059974A6C93D6D8A002']);
+    _hrq.push(['setKey', 'E65BBCB22003A260C07F527BFCA779D0']);
     _hrq.push(['setOrderId', 'CISLO_OBJEDNAVKY']);
     _hrq.push(['addProduct', 'NAZEV_PRODUKTU', 'CENA_ZA_KUS', 'POCET_KUSU', 'ITEM_ID']);
     _hrq.push(['addProduct', 'NAZEV_PRODUKTU', 'CENA_ZA_KUS', 'POCET_KUSU', 'ITEM_ID']);
@@ -305,7 +297,7 @@ var _hrq = _hrq || [];
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ho, s);
 })();
 </script>
-  {%- comment -%} End of conversion code insert {%- endcomment -%}
+  {%- comment -%} End of Heureka conversion code insert {%- endcomment -%}
   
   {%- if request.design_mode -%}
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
@@ -503,5 +495,6 @@ var _hrq = _hrq || [];
   {%- if request.design_mode == false and settings.preload_links -%}
     <script src="{{ 'instant-page.js' | asset_url }}" type="module" defer="defer"></script>
   {%- endif -%}
+  {% render 'sklik-retargeting' %}
 </body>
 </html>
