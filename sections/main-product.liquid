@@ -180,50 +180,88 @@
             </div>
 
           <div class="price-with-tax">{{ product.price | times: 1.21 | money }} s DPH</div>
-          <div class="delivery">Doprava 1 ks:
-    {% for variant in product.variants %}
-        {% assign weight_in_grams = variant.weight %}
-    {% endfor %}
-    {% if weight_in_grams <= 7999 %}
-        114 Kč
-    {% elsif weight_in_grams <= 22999 %}
-        194 Kč
-    {% elsif weight_in_grams <= 32999 %}
-        275 Kč
-    {% elsif weight_in_grams <= 52999 %}
-        378 Kč
-    {% elsif weight_in_grams <= 92999 %}
-        493 Kč
-    {% elsif weight_in_grams <= 97999 %}
-        607 Kč
-    {% elsif weight_in_grams <= 102999 %}
-        727 Kč
-    {% elsif weight_in_grams <= 107999 %}
-        827 Kč
-    {% elsif weight_in_grams <= 182999 %}
-        919 Kč
-    {% elsif weight_in_grams <= 187999 %}
-        1.033 Kč
-    {% elsif weight_in_grams <= 192999 %}
-        1.148 Kč
-    {% elsif weight_in_grams <= 267999 %}
-        1.377 Kč
-    {% elsif weight_in_grams <= 272999 %}
-        1.403 Kč
-    {% elsif weight_in_grams <= 277999 %}
-        1.607 Kč
-    {% elsif weight_in_grams <= 322999 %}
-        1.701 Kč
-    {% elsif weight_in_grams <= 362999 %}
-        1.839 Kč
-    {% elsif weight_in_grams <= 367999 %}
-        2.068 Kč
-    {% elsif weight_in_grams <= 372999 %}
-        2.182 Kč
-    {% elsif weight_in_grams <= 2000000 %}
-        2.990 Kč
-    {% endif %}
+          <div class="delivery" data-delivery-price>
+  Doprava: <span id="shipping-price"></span>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const variantWeights = [
+      {% for variant in product.variants %}
+        {{ variant.weight }},
+      {% endfor %}
+    ];
+    
+    function updateShippingPrice(quantity) {
+      const totalWeight = variantWeights[0] * quantity; // Assuming all variants have the same weight
+      let price;
+      
+      if (totalWeight <= 7999) {
+        price = 114;
+      } else if (totalWeight <= 22999) {
+        price = 194;
+      } else if (totalWeight <= 32999) {
+        price = 275;
+      } else if (totalWeight <= 52999) {
+        price = 378;
+      } else if (totalWeight <= 92999) {
+        price = 493;
+      } else if (totalWeight <= 97999) {
+        price = 607;
+      } else if (totalWeight <= 102999) {
+        price = 727;
+      } else if (totalWeight <= 107999) {
+        price = 827;
+      } else if (totalWeight <= 182999) {
+        price = 919;
+      } else if (totalWeight <= 187999) {
+        price = 1033;
+      } else if (totalWeight <= 192999) {
+        price = 1148;
+      } else if (totalWeight <= 267999) {
+        price = 1377;
+      } else if (totalWeight <= 272999) {
+        price = 1403;
+      } else if (totalWeight <= 277999) {
+        price = 1607;
+      } else if (totalWeight <= 322999) {
+        price = 1701;
+      } else if (totalWeight <= 362999) {
+        price = 1839;
+      } else if (totalWeight <= 367999) {
+        price = 2068;
+      } else if (totalWeight <= 372999) {
+        price = 2182;
+      } else if (totalWeight <= 2000000) {
+        price = 2990;
+      }
+      
+      document.getElementById('shipping-price').textContent = price + ' Kč';
+    }
+    
+    // Initial update
+    updateShippingPrice(1);
+    
+    // Listen for quantity changes
+    const quantityInput = document.querySelector('[name="quantity"]');
+    if (quantityInput) {
+      quantityInput.addEventListener('change', function() {
+        updateShippingPrice(parseInt(this.value, 10));
+      });
+    }
+    
+    // Listen for quantity button clicks
+    const quantityButtons = document.querySelectorAll('.quantity-button');
+    quantityButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        setTimeout(() => {
+          const newQuantity = parseInt(quantityInput.value, 10);
+          updateShippingPrice(newQuantity);
+        }, 0);
+      });
+    });
+  });
+</script>
 
           {%- when 'rating' -%}
             {%- if product.metafields.reviews.rating.value != blank -%}
