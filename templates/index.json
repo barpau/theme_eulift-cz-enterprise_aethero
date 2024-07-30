@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/1-header-2560_v2.webp",
+            "image_mobile": "shopify:\/\/shop_images\/1-header-2040_v1-mobil_1_430x_7ab43420-8e8d-4c21-bebc-ae3f5efb7c49.webp",
             "overlay_position": "justify-start items-start",
             "overlay_text_align": "text-start",
             "mob_center_text": false,
