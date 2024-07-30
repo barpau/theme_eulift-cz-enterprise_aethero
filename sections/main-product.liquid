@@ -179,6 +179,7 @@
               {%- endform -%}
             </div>
 
+        {%- comment -%}Aethero code edit start{%- endcomment -%}  
           <div class="price-with-tax">{{ product.price | times: 1.21 | money }} s DPH</div>
           <div class="delivery" data-delivery-price>
   Doprava: <span id="shipping-price"></span>
@@ -262,6 +263,7 @@
     });
   });
 </script>
+           {%- comment -%}Aethero code edit end{%- endcomment -%}  
 
           {%- when 'rating' -%}
             {%- if product.metafields.reviews.rating.value != blank -%}
