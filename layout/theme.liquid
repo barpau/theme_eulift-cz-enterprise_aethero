@@ -487,6 +487,9 @@ var _hrq = _hrq || [];
     {%- endif %}
   </script>
 
+  {%- if request.design_mode == false and settings.preload_links -%}
+    <script src="{{ 'instant-page.js' | asset_url }}" type="module" defer="defer"></script>
+  {%- endif -%}
   
 </body>
 </html>
