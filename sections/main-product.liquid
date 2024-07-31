@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ 'product.css' | asset_url }}">
 <link rel="stylesheet" href="{{ 'product-page.css' | asset_url }}">
 
-
+{% render 'google-ads-event' %}
 
 {%- assign messages = section.blocks | where: "type", "message" -%}
 {%- if messages -%}
