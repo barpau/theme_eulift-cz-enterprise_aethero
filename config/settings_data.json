@@ -358,7 +358,7 @@
     "blur_message_delay": 4,
     "vibrate_on_atc": true,
     "favicon": "shopify:\/\/shop_images\/EULIFT-favicon_430x_6e0ceb1e-bb7d-46f5-acea-a2e22d78b13a.webp",
-    "custom_html_head": "<!-- Google tag (gtag.js) --> <script async=\"\" src=\"https:\/\/www.googletagmanager.com\/gtag\/js?id=G-DX3SG21V7Q\"><\/script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-DX3SG21V7Q'); <\/script>\n<!-- Google tag (gtag.js) -->\n<script async src=\"https:\/\/www.googletagmanager.com\/gtag\/js?id=AW-993928973\"><\/script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'AW-993928973');\n<\/script>",
+    "custom_html_head": "",
     "heading_type_scale": "1.3",
     "content_for_index": [
 
