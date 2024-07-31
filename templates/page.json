@@ -45,7 +45,8 @@
         "template--20693546369333__54e3d0a3-1904-4064-a2af-29ae7bf79a4a-button-1"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/gekkon_sidlo-wide.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/2560x1440.webp",
+        "image_mobile": "shopify:\/\/shop_images\/2560x2560.webp",
         "url": "",
         "height_mode": "fixed",
         "fixed_height_desktop": 560,
