@@ -1000,6 +1000,7 @@
         "video-heading-1",
         "video-text-2"
       ],
+      "disabled": true,
       "settings": {
         "video_external": "https:\/\/youtu.be\/WB7ryToOQ2c",
         "video_description": "",
