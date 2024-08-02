@@ -76,37 +76,6 @@
             "bg_grad": ""
           }
         },
-        "ced40511-ca73-41be-819f-8f2b1cecd281": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "overlay_position": "justify-start items-start",
-            "overlay_text_align": "text-start",
-            "mob_center_text": false,
-            "subheading": "",
-            "heading": "Máme pro vás skvělou nabídku",
-            "heading_size": "h0",
-            "heading_h1": false,
-            "text": "<p>Nakupte si manipulační techniku z ČR<br\/>A neplaťte nic navíc, ani za dopravu<\/p>",
-            "enlarge_text": true,
-            "button_1_label": "Jdu si vybrat ➝",
-            "button_1_link": "\/collections\/kompletni-sortiment",
-            "button_1_style": "btn btn--primary",
-            "button_2_label": "",
-            "button_2_link": "",
-            "button_2_style": "btn btn--primary",
-            "countdown_show": false,
-            "countdown_end_date": "",
-            "countdown_end_time": "",
-            "countdown_end_text": "",
-            "enlarge_end_text": false,
-            "countdown_hide_on_end": false,
-            "use_custom_colors": false,
-            "count_color": "#ffffff",
-            "bg_color": "#070707",
-            "bg_grad": ""
-          }
-        },
         "slide_H6WQzG": {
           "type": "slide",
           "settings": {
@@ -175,7 +144,6 @@
       "block_order": [
         "slide-1",
         "2b1e300b-a0a7-4a95-aa24-7ab800a9e1ed",
-        "ced40511-ca73-41be-819f-8f2b1cecd281",
         "slide_H6WQzG",
         "slide_Bmg7ze"
       ],
