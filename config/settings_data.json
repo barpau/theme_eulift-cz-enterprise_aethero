@@ -369,7 +369,7 @@
       ".main-nav__collection-image {flex-shrink: 0;}",
       "#ExemptifyCartValidationSnippet h4 {color: red;}",
       ".price__from {display: none;}",
-      ".end {right: 40px;}"
+      ".sticky-atc-panel.end {right: 40px;}"
     ]
   }
 }
