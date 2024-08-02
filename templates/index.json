@@ -145,7 +145,7 @@
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/akcni_nabidka_rada_2.png",
             "image_mobile": "shopify:\/\/shop_images\/reklama2.jpg",
-            "overlay_position": "justify-center items-start",
+            "overlay_position": "justify-center items-end",
             "overlay_text_align": "text-center",
             "mob_center_text": false,
             "subheading": "",
