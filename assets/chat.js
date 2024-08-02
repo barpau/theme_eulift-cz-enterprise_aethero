@@ -1,7 +1,8 @@
-var zeman = "<div id='zeman'><img src='https://cdn.shopify.com/s/files/1/0755/1526/5333/files/chat3.svg?v=1685966497' style='position: fixed; align: right; bottom: 60px; right: 20px; z-index: 39; height: 100px;' /></div>";
-var button = "<button id='zeman-button' class='btn btn--primary'style='position: fixed; align: right; background: #333a40; bottom: 10px; right: 25px; z-index: 39;'><a href='tel:00420606600011' style='color:white;'>Zavolejte mi<br>+420 606 600 011</a></button>"
+var zeman = "<div id='zeman'><img src='https://cdn.shopify.com/s/files/1/0755/1526/5333/files/chat3.svg?v=1685966497' style='position: fixed; align: right; bottom: 80px; right: 20px; z-index: 39; height: 100px;' /></div>";
 
-var button_close = "<button id='zeman-button-close' class='btn btn--primary'style='position:fixed; align:right; background: #333a40; bottom: 10px; right:25px; z-index: 39;'><a href='tel:00420606600011' style='color:white;'>Nyní nejsem na drátě.<br>Prozvoňte mě, zavolám vám zpět.<br>+420 606 600 011</a></button>"
+var button = "<button id='zeman-button' class='btn btn--primary'style='position: fixed; align: right; background: #333a40; bottom: 20px; right: 25px; z-index: 39;'><a href='tel:00420606600011' style='color:white;'>Zavolejte mi<br>+420 606 600 011</a></button>"
+
+var button_close = "<button id='zeman-button-close' class='btn btn--primary'style='position:fixed; align:right; background: #333a40; bottom: 20px; right:25px; z-index: 39;'><a href='tel:00420606600011' style='color:white;'>Nyní nejsem na drátě.<br>Prozvoňte mě, zavolám vám zpět.<br>+420 606 600 011</a></button>"
 
 
 
