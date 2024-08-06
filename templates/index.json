@@ -103,7 +103,7 @@
             "enlarge_end_text": false,
             "countdown_hide_on_end": false,
             "use_custom_colors": false,
-            "count_color": "#fff",
+            "count_color": "#ffffff",
             "bg_color": "#070707",
             "bg_grad": ""
           }
@@ -112,7 +112,7 @@
           "type": "slide",
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/akcni_nabidka_cbd15j-li3.webp",
-            "image_mobile": "shopify:\/\/shop_images\/reklama1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/akcni_nabidka_cbd15j-li3_2560px.jpg",
             "overlay_position": "justify-start items-center",
             "overlay_text_align": "text-start",
             "mob_center_text": false,
