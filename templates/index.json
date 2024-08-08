@@ -571,7 +571,7 @@
         "media_crop": "none",
         "hover_zoom": "large",
         "enable_video_looping": false,
-        "color_scheme": "1",
+        "color_scheme": "none",
         "border_color": "rgba(0,0,0,0)",
         "bg_color": "#f4f4f4"
       }
