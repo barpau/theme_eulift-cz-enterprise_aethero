@@ -85,10 +85,10 @@
           "type": "message",
           "settings": {
             "icon": "none",
-            "title": "<h5>AKCE: DOPRAVA ZDARMA<\/h5>",
+            "title": "<h6>AKCE: DOPRAVA ZDARMA<\/h6>",
             "close": "once",
             "show_over_media": false,
-            "visibility_duration": 7,
+            "visibility_duration": 10,
             "bg_color": "#ff9f1c",
             "text_color": "#2a2b2a"
           }
