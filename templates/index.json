@@ -415,24 +415,6 @@
             "tint_opacity": 60
           }
         },
-        "media_gjC8nX": {
-          "type": "media",
-          "settings": {
-            "link_url": "",
-            "columns": 1,
-            "rows": 1,
-            "subheading": "",
-            "title": "<p>Media heading<\/p>",
-            "heading_size": "h4",
-            "button_label": "",
-            "button_link": "",
-            "overlay_position": "justify-start items-end",
-            "text_alignment": "text-start",
-            "button_style": "btn btn--primary",
-            "tint_color": "#000000",
-            "tint_opacity": 40
-          }
-        },
         "media-3": {
           "type": "media",
           "settings": {
@@ -493,7 +475,6 @@
       },
       "block_order": [
         "media-0",
-        "media_gjC8nX",
         "media-3",
         "media-2",
         "media-1"
