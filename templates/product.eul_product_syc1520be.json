@@ -85,7 +85,7 @@
           "type": "buy-buttons",
           "settings": {
             "show_qty_selector": true,
-            "enable_dynamic_checkout": true,
+            "enable_dynamic_checkout": false,
             "show_pickup_availability": true
           }
         },
