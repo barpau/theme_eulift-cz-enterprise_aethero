@@ -84,8 +84,8 @@
         "message_Ej9D7m": {
           "type": "message",
           "settings": {
-            "icon": "none",
-            "title": "<h6>AKCE: DOPRAVA ZDARMA<\/h6>",
+            "icon": "star",
+            "title": "<h6>AKCE: DOPRAVA ZDARMA!<\/h6>",
             "close": "once",
             "show_over_media": false,
             "visibility_duration": 10,
