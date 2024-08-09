@@ -152,7 +152,7 @@
             "heading": "AKČNÍ<br>NABÍDKA",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p>Nejlepší poměr výkon-cena a ještě ve slevě?<\/p>",
+            "text": "<p>Nejlepší poměr výkon-cena <br\/>a ještě ve slevě?<\/p>",
             "enlarge_text": true,
             "button_1_label": "Přejít na vozíky V AKCI",
             "button_1_link": "shopify:\/\/collections\/akcni-nabidka",
