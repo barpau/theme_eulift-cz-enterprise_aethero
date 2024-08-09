@@ -79,8 +79,8 @@
         "slide_PGVUtm": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/akcni_nabidka_cbd15j-li3_4689799a-b883-4bf2-985a-8286d448477d.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/akcni_nabidka_cbd15j-li3_2560px_61217401-cbab-4108-b507-8fbf6fdc1d02.jpg",
+            "image_desktop": "shopify:\/\/shop_images\/eulift_CZ_beztextu_modry.webp",
+            "image_mobile": "shopify:\/\/shop_images\/eulift_2560x2560_f8438fb0-4da6-4244-b956-57930164f912.jpg",
             "overlay_position": "justify-start items-start",
             "overlay_text_align": "text-start",
             "mob_center_text": false,
