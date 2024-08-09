@@ -63,6 +63,18 @@
             "spacing": "mt-8 mb-8"
           }
         },
+        "message_Ej9D7m": {
+          "type": "message",
+          "settings": {
+            "icon": "none",
+            "title": "<p>AKCE: DOPRAVA ZDARMA<\/p>",
+            "close": "once",
+            "show_over_media": false,
+            "visibility_duration": 7,
+            "bg_color": "#e4edfa",
+            "text_color": "#1a66d2"
+          }
+        },
         "97e3fb95-e8e5-4640-b8cf-81f9031aa4c7": {
           "type": "custom-liquid",
           "settings": {
@@ -168,6 +180,7 @@
         "title",
         "a8bd77c7-585e-4f64-9f0d-7f2eb68b8816",
         "divider-0",
+        "message_Ej9D7m",
         "97e3fb95-e8e5-4640-b8cf-81f9031aa4c7",
         "price",
         "fb748c5f-ce21-4199-a2fb-bcc4958b7cbd",
