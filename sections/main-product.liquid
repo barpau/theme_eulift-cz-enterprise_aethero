@@ -199,7 +199,9 @@
       const totalWeight = variantWeights[0] * quantity; // Assuming all variants have the same weight
       let price;
       
-      if (totalWeight <= 7999) {
+      if (totalWeight <= 0001) {
+        price = 0;
+      } else if (totalWeight <= 7999) {
         price = 114;
       } else if (totalWeight <= 22999) {
         price = 194;
