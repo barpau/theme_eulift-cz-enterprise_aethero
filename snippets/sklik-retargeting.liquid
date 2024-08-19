@@ -1,12 +1,52 @@
-<script type="text/javascript" src="https://c.seznam.cz/js/rc.js" async></script>
+<script src="https://c.seznam.cz/js/rc.js" async></script>
 <script>
-  window.sznIVA.IS.updateIdentities({
-    eid: null
-  });
+  function updateRetargetingHit() {
+    var shopifyConsent = Shopify.customerPrivacy.getTrackingConsent();
+    var consent = (shopifyConsent === 'yes') ? 1 : 0;
 
-  var retargetingConf = {
-    rtgId: 10779,
-    consent: null
-  };
-  window.rc.retargetingHit(retargetingConf);
+    // Console logging for testing
+    console.log('Shopify Consent Status:', shopifyConsent);
+    console.log('Seznam Consent Value:', consent);
+
+    window.sznIVA = window.sznIVA || {};
+    window.sznIVA.IS = window.sznIVA.IS || {};
+    window.sznIVA.IS.updateIdentities = window.sznIVA.IS.updateIdentities || function() {};
+    window.sznIVA.IS.updateIdentities({
+      eid: null
+    });
+
+    var retargetingConf = {
+      rtgId: 10779,
+      consent: consent
+    };
+
+    window.rc = window.rc || {};
+    window.rc.retargetingHit = window.rc.retargetingHit || function() {};
+    window.rc.retargetingHit(retargetingConf);
+
+    // Console logging for testing
+    console.log('Retargeting configuration:', retargetingConf);
+  }
+
+  // Initial call
+  if (typeof Shopify !== 'undefined' && Shopify.customerPrivacy) {
+    console.log('Initializing Seznam retargeting...');
+    updateRetargetingHit();
+  } else {
+    console.log('Shopify object not ready, waiting for DOMContentLoaded...');
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof Shopify !== 'undefined' && Shopify.customerPrivacy) {
+        console.log('Initializing Seznam retargeting after DOMContentLoaded...');
+        updateRetargetingHit();
+      } else {
+        console.log('Shopify object still not available after DOMContentLoaded');
+      }
+    });
+  }
+
+  // Listen for changes in consent
+  document.addEventListener('trackingConsentChanged', function() {
+    console.log('Consent status changed, updating Seznam retargeting...');
+    updateRetargetingHit();
+  });
 </script>
