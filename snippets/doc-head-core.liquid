@@ -13,9 +13,11 @@
 <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
 
+{%- comment -%}Aethero code edit start{%- endcomment -%}
 {%- if canonical_url != blank -%}
   <link rel="canonical" href="{{ canonical_url | split: '?' | first }}">
 {%- endif -%}
+{%- comment -%}Aethero code edit end{%- endcomment -%}
 
 {%- if settings.favicon != blank -%}
   {%- liquid
