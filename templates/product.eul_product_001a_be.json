@@ -104,6 +104,7 @@
         },
         "message-2": {
           "type": "message",
+          "disabled": true,
           "settings": {
             "icon": "price_tag",
             "title": "<p><strong>Prodávají se rychle!<br\/><\/strong>Kupte si ten svůj dokuď jsou.<\/p>",
