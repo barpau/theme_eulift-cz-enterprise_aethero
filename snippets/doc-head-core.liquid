@@ -15,7 +15,12 @@
 
 {%- comment -%}Aethero code edit start{%- endcomment -%}
 {%- if canonical_url != blank -%}
-  <link rel="canonical" href="{{ canonical_url | split: '?' | first }}">
+  {%- assign canonical_base = canonical_url | split: '?' | first -%}
+  {%- if request.page_type == 'search' and search.terms != blank -%}
+    <link rel="canonical" href="{{ canonical_base }}?q={{ search.terms | escape }}">
+  {%- else -%}
+    <link rel="canonical" href="{{ canonical_base }}">
+  {%- endif -%}
 {%- endif -%}
 {%- comment -%}Aethero code edit end{%- endcomment -%}
 
