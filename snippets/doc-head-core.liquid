@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
 
 {%- if canonical_url != blank -%}
-  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="canonical" href="{{ canonical_url | split: '?' | first }}">
 {%- endif -%}
 
 {%- if settings.favicon != blank -%}
