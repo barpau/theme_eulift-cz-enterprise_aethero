@@ -13,6 +13,7 @@
   {%- if group.user_agent.value == '*' -%}
     {{ 'Disallow: /*.atom' }}
     {{ 'Disallow: /*?pr_prod_strat' }}
+    {{ 'Allow: /search?q=' }}  # Povolení indexace vyhledávacích stránek s parametrem 'q'
     {{ 'Disallow: /*?*' }}  # Pravidlo pro blokování všech URL s parametry
   {%- endif -%}
   {{ 'Sitemap: https://eulift.cz/sitemap.xml' }}
