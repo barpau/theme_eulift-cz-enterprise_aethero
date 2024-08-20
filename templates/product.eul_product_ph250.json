@@ -89,7 +89,7 @@
             "show_pickup_availability": true
           }
         },
-         "message-1": {
+        "message-1": {
           "type": "message",
           "disabled": true,
           "settings": {
