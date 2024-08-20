@@ -15,6 +15,7 @@
     {{ 'Disallow: /*?pr_prod_strat' }}
     {{ 'Disallow: /search?q=' }}  # Blokování indexace vyhledávacích stránek s parametrem 'q'
     {{ 'Disallow: /*?*' }}  # Pravidlo pro blokování všech URL s parametry
+    {{ 'Disallow: /catalogsearch/result/' }}
   {%- endif -%}
   {{ 'Sitemap: https://eulift.cz/sitemap.xml' }}
 {%- comment -%}Aethero code edit end{% endcomment %}
