@@ -91,7 +91,6 @@
         },
         "message-1": {
           "type": "message",
-          "disabled": true,
           "settings": {
             "icon": "clock",
             "title": "<p><strong>Právě teď jsou populární<br\/><\/strong>Tento produkt si v poslední době prohlíží mnoho zákazníků.<\/p>",
