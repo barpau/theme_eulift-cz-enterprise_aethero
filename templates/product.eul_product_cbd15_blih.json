@@ -91,7 +91,6 @@
         },
         "message-1": {
           "type": "message",
-          "disabled": true,
           "settings": {
             "icon": "clock",
             "title": "<p><strong>Právě teď jsou populární<br\/><\/strong>Tento produkt si v poslední době prohlíží mnoho zákazníků.<\/p>",
@@ -571,7 +570,6 @@
       "settings": {
         "video_external": "https:\/\/vimeo.com\/932366446",
         "video_description": "",
-        "poster_image": "shopify:\/\/shop_images\/sidlo-gekkon-opti_133f830b-2d51-44fe-a78c-16d65eebe74a.webp",
         "video_size": "md",
         "video_autoplay": true,
         "text_align": "text-center",
