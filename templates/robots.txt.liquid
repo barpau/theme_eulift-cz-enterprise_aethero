@@ -1,25 +1,26 @@
-# we use Shopify as our ecommerce platform
-{%- comment -%}
 # Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file.
-{% endcomment %}
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: Googlebot-image
+Disallow:
+
+User-agent: *
+Disallow: /*.atom
+Disallow: /*?pr_prod_strat
+Disallow: /search?q=
+Disallow: /*?*
+Disallow: /catalogsearch/result/
+
+Sitemap: https://eulift.cz/sitemap.xml
+
+# The following content is automatically generated. Please do not modify.
 {% for group in robots.default_groups %}
   {{- group.user_agent -}}
-
   {% for rule in group.rules %}
     {{- rule -}}
   {% endfor %}
-
-  {%- comment -%} Aethero code edit start{% endcomment %}
-  {%- if group.user_agent.value == '*' -%}
-    {{ 'Disallow: /*.atom' }}
-    {{ 'Disallow: /*?pr_prod_strat' }}
-    {{ 'Disallow: /search?q=' }}  # Blokování indexace vyhledávacích stránek s parametrem 'q'
-    {{ 'Disallow: /*?*' }}  # Pravidlo pro blokování všech URL s parametry
-    {{ 'Disallow: /catalogsearch/result/' }}
-  {%- endif -%}
-  {{ 'Sitemap: https://eulift.cz/sitemap.xml' }}
-{%- comment -%}Aethero code edit end{% endcomment %}
-
   {%- if group.sitemap != blank -%}
     {{ group.sitemap }}
   {%- endif -%}
