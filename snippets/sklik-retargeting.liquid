@@ -11,6 +11,11 @@
    if (error) {
      console.log("No sklik");
    }
+   window.Shopify.customerPrivacy.preferencesProcessingAllowed();
+window.Shopify.customerPrivacy.analyticsProcessingAllowed();
+window.Shopify.customerPrivacy.marketingAllowed();
+window.Shopify.customerPrivacy.saleOfDataAllowed();
+
    document.addEventListener("visitorConsentCollected", (event) => console.log(event.detail));
  },
 );
