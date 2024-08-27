@@ -3,45 +3,43 @@
     var consent = window.Shopify.customerPrivacy.currentVisitorConsent();
     
     if (consent && consent.marketing === 'yes') {
-      console.log("SKLIK retargeting");
+      console.log("SKLIK marketing consent granted");
+      
       var sklikScript = document.createElement('script');
       sklikScript.src = "https://c.seznam.cz/js/rc.js";
       sklikScript.onload = function() {
+        // Společná část pro obě funkce
         window.sznIVA.IS.updateIdentities({
           eid: null
         });
+        
+        // Retargeting
+        console.log("SKLIK retargeting");
         var retargetingConf = {
           rtgId: 10779,
           consent: 1
         };
         window.rc.retargetingHit(retargetingConf);
+        
+        // Konverze
+        console.log("SKLIK konverze");
+        // Poznámka: 'event' objekt není definován v tomto kontextu.
+        // Musíme zajistit, že máme přístup k potřebným datům.
+        // Pro demonstraci použijeme placeholder hodnoty.
+        var conversionConf = {
+          id: 100140354,
+          value: 0, // Toto by mělo být nahrazeno skutečnou hodnotou
+          orderId: 'placeholder', // Toto by mělo být nahrazeno skutečným ID objednávky
+          zboziType: null,
+          zboziId: 47330,
+          consent: 1
+        };
+        window.rc = window.rc || {};
+        window.rc.conversionHit = window.rc.conversionHit || function() {};
+        window.rc.conversionHit(conversionConf);
       };
-      document.body.appendChild(sklikScript);
-    }
-
-    if (consent && consent.marketing === 'yes') {
-    console.log("SKLIK konverze");
-    var script = document.createElement('script');
-    script.src = 'https://c.seznam.cz/js/rc.js';
-    script.onload = function() {
-      window.sznIVA.IS.updateIdentities({
-          eid: null
-        });
-
-      var conversionConf = {
-        id: 100140354,
-        value: event.data.checkout.totalPrice.amount,
-        orderId: event.data.checkout.order.id,
-        zboziType: null,
-        zboziId: 47330,
-        consent: 1
-      };
-
-      window.rc = window.rc || {};
-      window.rc.conversionHit = window.rc.conversionHit || function() {};
-      window.rc.conversionHit(conversionConf);
-    };
-    document.head.appendChild(script);
+      
+      document.head.appendChild(sklikScript);
     }
   });
 </script>
