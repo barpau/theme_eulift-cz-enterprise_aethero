@@ -1,20 +1,25 @@
 <script>
-  consent = window.Shopify.customerPrivacy.currentVisitorConsent();
-  
-  if (consent && consent.marketing === 'yes') {
-    console.log("SKLIK Uživatel dal souhlas s marketingem");
-    <script type="text/javascript" src="https://c.seznam.cz/js/rc.js"></script>
-<script>
-  window.sznIVA.IS.updateIdentities({
-    eid: null
-  });
-
-  var retargetingConf = {
-    rtgId: 10779,
-    consent: 1
-  };
-  window.rc.retargetingHit(retargetingConf);
-</script>
-  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var consent = window.Shopify.customerPrivacy.currentVisitorConsent();
     
+    if (consent && consent.marketing === 'yes') {
+      console.log("SKLIK Uživatel dal souhlas s marketingem");
+      
+      // Dynamicky vytvoříme a přidáme skript Sklik
+      var sklikScript = document.createElement('script');
+      sklikScript.src = "https://c.seznam.cz/js/rc.js";
+      sklikScript.onload = function() {
+        // Tento kód se spustí až po načtení Sklik skriptu
+        window.sznIVA.IS.updateIdentities({
+          eid: null
+        });
+        var retargetingConf = {
+          rtgId: 10779,
+          consent: 1
+        };
+        window.rc.retargetingHit(retargetingConf);
+      };
+      document.body.appendChild(sklikScript);
+    }
+  });
 </script>
