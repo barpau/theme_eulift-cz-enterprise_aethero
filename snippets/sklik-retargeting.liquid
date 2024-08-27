@@ -3,13 +3,9 @@
     var consent = window.Shopify.customerPrivacy.currentVisitorConsent();
     
     if (consent && consent.marketing === 'yes') {
-      console.log("SKLIK Uživatel dal souhlas s marketingem");
-      
-      // Dynamicky vytvoříme a přidáme skript Sklik
       var sklikScript = document.createElement('script');
       sklikScript.src = "https://c.seznam.cz/js/rc.js";
       sklikScript.onload = function() {
-        // Tento kód se spustí až po načtení Sklik skriptu
         window.sznIVA.IS.updateIdentities({
           eid: null
         });
