@@ -1,6 +1,6 @@
 <script type="text/javascript" src="https://c.seznam.cz/js/rc.js" async></script>
 <script>
-  function updateRetargetingHit() {
+  
     var shopifyConsent = Shopify.customerPrivacy.getTrackingConsent();
     var consent = (shopifyConsent === 'yes') ? 1 : 0;
 
@@ -19,12 +19,12 @@
       rtgId: 10779,
       consent: consent
     };
-    
+
     window.rc.retargetingHit(retargetingConf);
 
     // Console logging for testing
     console.log('Retargeting configuration:', retargetingConf);
-  }
+  
 
   // Initial call
   if (typeof Shopify !== 'undefined' && Shopify.customerPrivacy) {
