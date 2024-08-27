@@ -1,4 +1,6 @@
 <script>
+  consent = window.Shopify.customerPrivacy.currentVisitorConsent();
+  console.log("Consent:" consent)
     
     window.Shopify.loadFeatures(
  [
@@ -7,10 +9,10 @@
      version: '0.1',
    },
  ],
- error => {
-   if (error) {
-     console.log("No sklik");
-   }
+ function(error) {
+            if (error) {
+              throw error;
+            }
    window.Shopify.customerPrivacy.preferencesProcessingAllowed();
 window.Shopify.customerPrivacy.analyticsProcessingAllowed();
 window.Shopify.customerPrivacy.marketingAllowed();
