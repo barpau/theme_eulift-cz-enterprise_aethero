@@ -2,25 +2,5 @@
   consent = window.Shopify.customerPrivacy.currentVisitorConsent();
   console.log("Consent:" consent)
     
-    window.Shopify.loadFeatures(
- [
-   {
-     name: 'consent-tracking-api',
-     version: '0.1',
-   },
- ],
- function(error) {
-            if (error) {
-              throw error;
-            }
-   window.Shopify.customerPrivacy.preferencesProcessingAllowed();
-window.Shopify.customerPrivacy.analyticsProcessingAllowed();
-window.Shopify.customerPrivacy.marketingAllowed();
-window.Shopify.customerPrivacy.saleOfDataAllowed();
-
-   document.addEventListener("visitorConsentCollected", (event) => console.log(event.detail));
- },
-);
-
-         
+    
 </script>
