@@ -1,11 +1,8 @@
 <script>
   consent = window.Shopify.customerPrivacy.currentVisitorConsent();
   console.log("Consent:")
-  console.log(consent)
+  console.log(consent.marketing)
 
-  if (consent && consent.marketing === 'yes') {
-    
-    console.log("Uživatel dal souhlas s marketingem");
-  }
+  
     
 </script>
