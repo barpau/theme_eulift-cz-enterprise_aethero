@@ -1,24 +1,33 @@
-<script type="text/javascript" src="https://c.seznam.cz/js/rc.js" async></script>
 <script>
-  
-    var shopifyConsent = Shopify.customerPrivacy.getTrackingConsent();
-    var consent = (shopifyConsent === 'yes') ? 1 : 0;
+    function sklik() {
+          <script type="text/javascript" src="https://c.seznam.cz/js/rc.js"></script>
+          <script>
+            window.sznIVA.IS.updateIdentities({
+              eid: null
+            });
+          
+            var retargetingConf = {
+              rtgId: 10779,
+              consent: 1
+            };
+            window.rc.retargetingHit(retargetingConf);
+          </script>
+    }
 
-    // Console logging for testing
-    console.log('Shopify Consent Status:', shopifyConsent);
-    console.log('Seznam Consent Value:', consent);
-
-     window.sznIVA.IS.updateIdentities({
-    eid: null
-  });
-
-    var retargetingConf = {
-      rtgId: 10779,
-      consent: consent
-    };
-
-    window.rc.retargetingHit(retargetingConf);
-
-    // Console logging for testing
-    console.log('Retargeting configuration:', retargetingConf);
+    window.Shopify.loadFeatures([
+          {
+            name: 'consent-tracking-api',
+            version: '0.1',
+          }
+          ],
+          function(error) {
+            if (error) {
+              throw error;
+            }
+            sklik();
+        
+            document.addEventListener('visitorConsentCollected', () => {
+              sklik();
+            });
+    });
 </script>
