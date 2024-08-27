@@ -21,27 +21,4 @@
 
     // Console logging for testing
     console.log('Retargeting configuration:', retargetingConf);
-  
-
-  // Initial call
-  if (typeof Shopify !== 'undefined' && Shopify.customerPrivacy) {
-    console.log('Initializing Seznam retargeting...');
-    updateRetargetingHit();
-  } else {
-    console.log('Shopify object not ready, waiting for DOMContentLoaded...');
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof Shopify !== 'undefined' && Shopify.customerPrivacy) {
-        console.log('Initializing Seznam retargeting after DOMContentLoaded...');
-        updateRetargetingHit();
-      } else {
-        console.log('Shopify object still not available after DOMContentLoaded');
-      }
-    });
-  }
-
-  // Listen for changes in consent
-  document.addEventListener('trackingConsentChanged', function() {
-    console.log('Consent status changed, updating Seznam retargeting...');
-    updateRetargetingHit();
-  });
 </script>
