@@ -12,22 +12,22 @@
             };
             window.rc.retargetingHit(retargetingConf);
           </script>
-    }
+}
 
-    window.Shopify.loadFeatures([
-          {
-            name: 'consent-tracking-api',
-            version: '0.1',
-          }
-          ],
-          function(error) {
-            if (error) {
-              throw error;
-            }
-            sklik();
-        
-            document.addEventListener('visitorConsentCollected', () => {
-              sklik();
-            });
-    });
+    window.Shopify.loadFeatures(
+ [
+   {
+     name: 'consent-tracking-api',
+     version: '0.1',
+   },
+ ],
+ error => {
+   if (error) {
+     console.log("No sklik");
+   }
+   document.addEventListener("visitorConsentCollected", (event) => console.log(event.detail));
+ },
+);
+
+         
 </script>
