@@ -25,6 +25,12 @@
     "f87075b8-0023-4593-bf3f-d5cd997e2cc6": {
       "type": "collection-list",
       "blocks": {
+        "collection_Y7m4Bx": {
+          "type": "collection",
+          "settings": {
+            "collection": "technika-li-ion-1"
+          }
+        },
         "collection_dhJfWg": {
           "type": "collection",
           "settings": {
@@ -114,15 +120,10 @@
           "settings": {
             "collection": "nahradni-dily"
           }
-        },
-        "collection_HAfXrC": {
-          "type": "collection",
-          "settings": {
-            "collection": "modely-vzv"
-          }
         }
       },
       "block_order": [
+        "collection_Y7m4Bx",
         "collection_dhJfWg",
         "collection_3WeRWG",
         "collection_JAyMPR",
@@ -137,8 +138,7 @@
         "collection_jJcX6C",
         "collection_BaGAqx",
         "collection_d4aBgc",
-        "collection_fcV47b",
-        "collection_HAfXrC"
+        "collection_fcV47b"
       ],
       "settings": {
         "title": "",
