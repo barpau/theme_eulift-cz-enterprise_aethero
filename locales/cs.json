@@ -553,6 +553,9 @@
       "contact": {
         "optional_first_name_label": "IČO (volitelné)",
         "last_name_label": "Jméno a Příjmení"
+      },
+      "delivery_options": {
+        "pick_up_locations": "Adresa výdejního místa"
       }
     }
   }
