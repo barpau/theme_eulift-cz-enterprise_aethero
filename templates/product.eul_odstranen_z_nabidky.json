@@ -243,6 +243,16 @@
         "prevent_animation": false
       }
     },
+    "custom_liquid_CkrCdn": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% assign similar_products = product.metafields.custom.podobne_produkty_pro_produkt_s_nulovou_cenou.value %}\n\n{% if similar_products != blank %}\n  {% liquid\n    assign card_size = 'small'\n    if card_size == 'small'\n      assign grid_classes = 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'\n    elsif card_size == 'medium'\n      assign grid_classes = 'grid-cols-1 md:grid-cols-3 xl:grid-cols-4'\n    else\n      assign grid_classes = 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'\n    endif\n    assign grid_classes = grid_classes | prepend: 'grid gap-x-theme gap-y-10 '\n  %}\n\n  <section class=\"section cc-product-recommendations\">\n    <div class=\"container\">\n      <h2 class=\"h4 section__heading text-start\">Podobné produkty<\/h2>\n    <\/div>\n\n    <div class=\"container products-grid-container\">\n      <ul class=\"{{ grid_classes }}{% if card_size == 'small' and settings.card_contain %} small__grid{% endif %}\" role=\"list\">\n        {% for similar_product in similar_products %}\n          <li>\n            {% render 'product-card', product: similar_product %}\n          <\/li>\n        {% endfor %}\n      <\/ul>\n    <\/div>\n  <\/section>\n{% endif %}",
+        "section_height": "default",
+        "full_width": false,
+        "dividers": "none",
+        "prevent_animation": false
+      }
+    },
     "details": {
       "type": "product-details",
       "blocks": {
@@ -598,16 +608,6 @@
         "color_scheme": "1"
       }
     },
-    "custom_liquid_CkrCdn": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{% assign similar_products = product.metafields.custom.podobne_produkty_pro_produkt_s_nulovou_cenou.value %}\n\n{% if similar_products != blank %}\n  {% liquid\n    assign card_size = 'small'\n    if card_size == 'small'\n      assign grid_classes = 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'\n    elsif card_size == 'medium'\n      assign grid_classes = 'grid-cols-1 md:grid-cols-3 xl:grid-cols-4'\n    else\n      assign grid_classes = 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'\n    endif\n    assign grid_classes = grid_classes | prepend: 'grid gap-x-theme gap-y-10 '\n  %}\n\n  <section class=\"section cc-product-recommendations\">\n    <div class=\"container\">\n      <h2 class=\"h4 section__heading text-start\">Podobné produkty<\/h2>\n    <\/div>\n\n    <div class=\"container products-grid-container\">\n      <ul class=\"{{ grid_classes }}{% if card_size == 'small' and settings.card_contain %} small__grid{% endif %}\" role=\"list\">\n        {% for similar_product in similar_products %}\n          <li>\n            {% render 'product-card', product: similar_product %}\n          <\/li>\n        {% endfor %}\n      <\/ul>\n    <\/div>\n  <\/section>\n{% endif %}",
-        "section_height": "default",
-        "full_width": false,
-        "dividers": "none",
-        "prevent_animation": false
-      }
-    },
     "recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -622,13 +622,13 @@
   "order": [
     "main",
     "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e",
+    "custom_liquid_CkrCdn",
     "details",
     "product-features",
     "product-comparison-grid",
     "collection-list",
     "image-banner",
     "video_Lpc8Qp",
-    "custom_liquid_CkrCdn",
     "recommendations"
   ]
 }
