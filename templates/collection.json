@@ -177,10 +177,10 @@
         "b76569be-5485-456d-858c-0c26ac8ebfd5"
       ],
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 25,
         "card_size": "medium",
         "show_layout_toggle": true,
-        "enable_filtering": true,
+        "enable_filtering": false,
         "filters_open_lg": true,
         "stick_on_scroll": true,
         "show_filter_counts": false,
