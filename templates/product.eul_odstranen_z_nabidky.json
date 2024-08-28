@@ -53,6 +53,7 @@
         },
         "66489f77-cc4a-4623-901d-c11836881e18": {
           "type": "custom-liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"esyncer_eulift_form\" client=\"EULIFTSK_MALL\"><\/div>"
           }
@@ -83,6 +84,12 @@
           "disabled": true,
           "settings": {
             "show_tax_and_shipping": false
+          }
+        },
+        "richtext_LhMBPk": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Tento produkt již není v nabídce.<\/p>"
           }
         },
         "74fcb4e7-3982-4233-8412-790c84380ec6": {
@@ -192,6 +199,7 @@
         "divider-0",
         "97e3fb95-e8e5-4640-b8cf-81f9031aa4c7",
         "price",
+        "richtext_LhMBPk",
         "74fcb4e7-3982-4233-8412-790c84380ec6",
         "fb748c5f-ce21-4199-a2fb-bcc4958b7cbd",
         "buy-buttons",
