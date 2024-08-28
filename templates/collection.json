@@ -114,6 +114,12 @@
           "settings": {
             "collection": "nahradni-dily"
           }
+        },
+        "collection_HAfXrC": {
+          "type": "collection",
+          "settings": {
+            "collection": "modely-vzv"
+          }
         }
       },
       "block_order": [
@@ -131,7 +137,8 @@
         "collection_jJcX6C",
         "collection_BaGAqx",
         "collection_d4aBgc",
-        "collection_fcV47b"
+        "collection_fcV47b",
+        "collection_HAfXrC"
       ],
       "settings": {
         "title": "",
