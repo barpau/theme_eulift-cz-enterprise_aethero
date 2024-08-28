@@ -291,7 +291,7 @@
     "card_show_subtitle": false,
     "card_show_rating": true,
     "card_show_inventory": false,
-    "enable_quick_add": false,
+    "enable_quick_add": true,
     "card_atc_mobile": "text_button_bottom",
     "card_atc_desktop": "text_button_bottom",
     "card_contain": false,
@@ -369,7 +369,7 @@
       ".main-nav__collection-image {flex-shrink: 0;}",
       "#ExemptifyCartValidationSnippet h4 {color: red;}",
       ".price__from {display: none;}",
-      "\/* Move the sticky panel on product page left, so it does not cover the Zeman chat *\/.sticky-atc-panel.end {right: 40px;}"
+      " \/* Move the sticky panel on product page left, so it does not cover the Zeman chat *\/.sticky-atc-panel.end {right: 40px;}"
     ]
   }
 }
