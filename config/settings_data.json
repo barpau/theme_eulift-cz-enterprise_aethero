@@ -291,7 +291,7 @@
     "card_show_subtitle": false,
     "card_show_rating": true,
     "card_show_inventory": false,
-    "enable_quick_add": true,
+    "enable_quick_add": false,
     "card_atc_mobile": "text_button_bottom",
     "card_atc_desktop": "text_button_bottom",
     "card_contain": false,
