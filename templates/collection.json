@@ -178,7 +178,7 @@
       ],
       "settings": {
         "products_per_page": 25,
-        "card_size": "medium",
+        "card_size": "small",
         "show_layout_toggle": true,
         "enable_filtering": false,
         "filters_open_lg": true,
