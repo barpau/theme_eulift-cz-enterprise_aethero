@@ -366,10 +366,10 @@
       "view_cart": "Prohlédnout košík",
       "free_shipping": "Vaše objednávka má nárok na dopravu zdarma!",
       "free_shipping_deficit_html": "Utraťte o <strong>{{ amount }}<\/strong> více a získáte <strong>dopravu zdarma<\/strong> !",
-      "taxes_and_shipping_at_checkout": "Daně a doprava vypočítané při pokladně.",
-      "taxes_and_shipping_at_checkout_html": "Daně a <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">doprava<\/a> vypočítané při pokladně.",
-      "taxes_included_shipping_at_checkout": "Včetně daně, poštovné se počítá při pokladně.",
-      "taxes_included_shipping_at_checkout_html": "Včetně daně, <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">poštovné<\/a> se počítá při pokladně.",
+      "taxes_and_shipping_at_checkout": "Daně a doprava budou vypočítané na pokladně.",
+      "taxes_and_shipping_at_checkout_html": "Daně a <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">doprava<\/a> vypočítané na pokladně.",
+      "taxes_included_shipping_at_checkout": "Včetně daně, poštovné se počítá na pokladně.",
+      "taxes_included_shipping_at_checkout_html": "Včetně daně, <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">poštovné<\/a> se počítá na pokladně.",
       "error": "Při aktualizaci vašeho košíku došlo k chybě. Prosím zkuste to znovu."
     },
     "items": {
