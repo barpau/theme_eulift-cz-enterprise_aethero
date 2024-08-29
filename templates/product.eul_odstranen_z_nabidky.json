@@ -90,7 +90,7 @@
           "type": "message",
           "settings": {
             "icon": "none",
-            "title": "<p><strong>Tento produkt ji ž není v nabídce.<\/strong><\/p>",
+            "title": "<p><strong>Tento produkt již není v nabídce.<\/strong><\/p>",
             "close": "none",
             "show_over_media": false,
             "visibility_duration": 7,
