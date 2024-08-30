@@ -369,7 +369,8 @@
       ".main-nav__collection-image {flex-shrink: 0;}",
       "#ExemptifyCartValidationSnippet h4 {color: red;}",
       ".price__from {display: none;}",
-      " \/* Move the sticky panel on product page left, so it does not cover the Zeman chat *\/.sticky-atc-panel.end {right: 40px;}"
+      " \/* Move the sticky panel on product page left, so it does not cover the Zeman chat *\/.sticky-atc-panel.end {right: 40px;}",
+      ".product-message{margin-top:10px;}"
     ]
   }
 }
