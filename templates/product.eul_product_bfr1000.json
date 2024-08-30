@@ -75,7 +75,6 @@
             "show_tax_and_shipping": false
           }
         },
-
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -161,7 +160,6 @@
         "divider-0",
         "97e3fb95-e8e5-4640-b8cf-81f9031aa4c7",
         "price",
-        "fb748c5f-ce21-4199-a2fb-bcc4958b7cbd",
         "buy-buttons",
         "message-1",
         "message-2",

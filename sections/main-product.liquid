@@ -186,6 +186,16 @@
           <div class="delivery" data-delivery-price>
   Doprava: <span id="shipping-price"></span>
 </div>
+          <div>
+<span class="inventory-icon">
+{% if product.metafields.custom.skladem == true %}
+<img src="https://cdn.shopify.com/s/files/1/0834/5468/9568/files/skladem2.svg?v=1725004779" width="32" height="32" frameborder="0" scrolling="no" style="max-width:100%; max-height:100vw;"></img><br>Skladem 
+
+{% else %}
+<img src="https://cdn.shopify.com/s/files/1/0834/5468/9568/files/na-ceste.svg?v=1725004779" width="32" height="32"></img><br>Na cestě
+{% endif %}
+</span>
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
