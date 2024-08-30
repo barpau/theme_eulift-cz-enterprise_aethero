@@ -78,7 +78,7 @@
         "fb748c5f-ce21-4199-a2fb-bcc4958b7cbd": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<div>\n<span class=\"inventory-icon\">\n{% if product.metafields.custom.skladem == true %}\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-warehouse-50.png?v=1683230284\" width=\"40\" height=\"40\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img><br>Skladem \n\n{% else %}\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-truck-100.png?v=1683230115\" width=\"50\"><\/img><br>Na cestě\n{% endif %}\n<\/span>\n<\/div>"
+            "custom_liquid": "<div>\n<span class=\"inventory-icon\">\n{% if product.metafields.custom.skladem == true %}\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-warehouse-50.png?v=1683230284\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img><br>Skladem \n\n{% else %}\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-truck-100.png?v=1683230115\" width=\"50\"><\/img><br>Na cestě\n{% endif %}\n<\/span>\n<\/div>"
           }
         },
         "buy-buttons": {
