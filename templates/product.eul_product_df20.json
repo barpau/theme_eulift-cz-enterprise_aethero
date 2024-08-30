@@ -105,7 +105,7 @@
           "type": "message",
           "settings": {
             "icon": "price_tag",
-            "title": "<p><strong>Prodávají se rychle!<br\/><\/strong>Kupte si ten svůj dokuď jsou..<\/p>",
+            "title": "<p><strong>Prodávají se rychle!<br\/><\/strong>Kupte si ten svůj dokuď jsou...<\/p>",
             "close": "once",
             "show_over_media": true,
             "visibility_duration": 5,
