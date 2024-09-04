@@ -556,6 +556,9 @@
       },
       "delivery_options": {
         "pick_up_locations": "Adresa výdejního místa"
+      },
+      "order_summary": {
+        "estimated_tax_label": "Daň"
       }
     }
   }
