@@ -552,7 +552,8 @@
       },
       "contact": {
         "optional_first_name_label": "Jméno",
-        "last_name_label": "Jméno a Příjmení"
+        "last_name_label": "Příjmení",
+        "optional_company_label": "IČO (volitelné)"
       },
       "delivery_options": {
         "pick_up_locations": "Adresa výdejního místa"
