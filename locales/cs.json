@@ -551,8 +551,8 @@
         "address2_add_label": "Přidat DIČ"
       },
       "contact": {
-        "optional_first_name_label": "Jméno",
-        "last_name_label": "Příjmení",
+        "optional_first_name_label": "Společnost (volitelné)",
+        "last_name_label": "Jméno a Příjmení",
         "optional_company_label": "IČO (volitelné)"
       },
       "delivery_options": {
