@@ -560,7 +560,7 @@
       "delivery_options": {
         "pick_up_locations": "Adresa výdejního místa",
         "pick_up_from_store": "OSOBNÍ VYZVEDNUTÍ V PARDUBICÍCH",
-        "pick_up_in_twenty_four_hours": "Pro dotazy volejte +420 606 600 011"
+        "pick_up_in_twenty_four_hours": "+420 606 600 011"
       },
       "order_summary": {
         "estimated_tax_label": "Daň",
