@@ -562,6 +562,12 @@
         "estimated_tax_label": "Daň",
         "estimated_taxes_label": "Daň",
         "estimated_taxes_finalization_tooltip_content": "Celková částka včetně daně vám bude zaslaná na email po odeslání objednávky."
+      },
+      "payment": {
+        "billing_address_title": "FAKTURAČNÍ ADRESA"
+      },
+      "payment_summary": {
+        "billing_address_title": "FAKTURAČNÍ ADRESA"
       }
     }
   }
