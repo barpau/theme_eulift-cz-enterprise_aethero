@@ -575,7 +575,8 @@
       },
       "payment_gateway": {
         "cash_on_delivery_label": "PLATBA NA DOBÍRKU ",
-        "credit_card_label": "PLATEBNÍ KARTA"
+        "credit_card_label": "PLATEBNÍ KARTA",
+        "debit_card_label": "PLATEBNÍ KARTA"
       }
     }
   },
