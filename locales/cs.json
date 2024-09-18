@@ -548,7 +548,8 @@
   "shopify": {
     "checkout": {
       "shipping": {
-        "address2_add_label": "Přidat DIČ"
+        "address2_add_label": "Přidat DIČ",
+        "delivery_title": "DORUČENÍ"
       },
       "contact": {
         "optional_first_name_label": "Společnost (volitelné)",
@@ -557,7 +558,7 @@
       },
       "delivery_options": {
         "pick_up_locations": "Adresa výdejního místa",
-        "pick_up_from_store": "OSOBNÍ VYZVEDNUTÍ V PRADUBICÍCH"
+        "pick_up_from_store": "OSOBNÍ VYZVEDNUTÍ V PARDUBICÍCH"
       },
       "order_summary": {
         "estimated_tax_label": "Daň",
