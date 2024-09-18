@@ -570,5 +570,10 @@
         "billing_address_title": "FAKTURAČNÍ ADRESA"
       }
     }
+  },
+  "customer_accounts": {
+    "addresses": {
+      "billing_address_dropdown_placeholder": "FAKTURAČNÍ ADRESA"
+    }
   }
 }
