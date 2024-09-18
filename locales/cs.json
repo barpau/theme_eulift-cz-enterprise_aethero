@@ -583,9 +583,6 @@
   "customer_accounts": {
     "addresses": {
       "billing_address_dropdown_placeholder": "FAKTURAČNÍ ADRESA"
-    },
-    "payment_methods": {
-      "credit_or_debit_card_title": "PLATEBNÍ KARTA"
     }
   }
 }
