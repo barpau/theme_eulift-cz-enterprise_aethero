@@ -560,7 +560,7 @@
       "delivery_options": {
         "pick_up_locations": "Adresa výdejního místa",
         "pick_up_from_store": "OSOBNÍ VYZVEDNUTÍ V PARDUBICÍCH",
-        "pick_up_in_twenty_four_hours": " "
+        "pick_up_in_twenty_four_hours": "-"
       },
       "order_summary": {
         "estimated_tax_label": "Daň",
@@ -582,7 +582,7 @@
     },
     "store_availability": {
       "pick_up_time": {
-        "twenty_four_hours": " "
+        "twenty_four_hours": "--"
       }
     }
   },
