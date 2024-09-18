@@ -559,8 +559,7 @@
       },
       "delivery_options": {
         "pick_up_locations": "Adresa výdejního místa",
-        "pick_up_from_store": "OSOBNÍ VYZVEDNUTÍ V PARDUBICÍCH",
-        "pick_up_in_twenty_four_hours": "-"
+        "pick_up_from_store": "OSOBNÍ VYZVEDNUTÍ V PARDUBICÍCH"
       },
       "order_summary": {
         "estimated_tax_label": "Daň",
@@ -578,11 +577,6 @@
         "cash_on_delivery_label": "PLATBA NA DOBÍRKU ",
         "credit_card_label": "PLATEBNÍ KARTA",
         "debit_card_label": "PLATEBNÍ KARTA"
-      }
-    },
-    "store_availability": {
-      "pick_up_time": {
-        "twenty_four_hours": "--"
       }
     }
   },
