@@ -17,20 +17,20 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "<p><strong>Vítejte na EULIFTU<\/strong> <a href=\"\/pages\/o-nas\" title=\"O nás\">více o nás<\/a><\/p>"
+            "text": "<p><strong>Vítejte na EULIFTU</strong> <a href=\"/pages/o-nas\" title=\"O nás\">více o nás</a></p>"
           }
         },
         "announcement-2": {
           "type": "announcement",
           "disabled": true,
           "settings": {
-            "text": "<p><strong>Právě dorazily nové produkty!<\/strong> <a href=\"#\" title=\"#\">Zjistěte jaké<\/a><\/p>"
+            "text": "<p><strong>Právě dorazily nové produkty!</strong> <a href=\"#\" title=\"#\">Zjistěte jaké</a></p>"
           }
         },
         "announcement_pd9x6r": {
           "type": "announcement",
           "settings": {
-            "text": "<p>Produkty v akci <a href=\"\/collections\/akcni-nabidka\" title=\"\/collections\/akcni-nabidka\">najdete zde<\/a>.<\/p>"
+            "text": "<p>Produkty v akci <a href=\"/collections/akcni-nabidka\" title=\"/collections/akcni-nabidka\">najdete zde</a>.</p>"
           }
         }
       },
@@ -67,8 +67,8 @@
             "promo_text_color": "#e42b2c",
             "promo_tint_color": "#000000",
             "promo_tint_opacity": 20,
-            "promo1_content": "<p>TEXT 1<\/p>",
-            "promo1_link_url": "shopify:\/\/collections\/manualni-pohon",
+            "promo1_content": "<p>TEXT 1</p>",
+            "promo1_link_url": "shopify://collections/manualni-pohon",
             "promo1_text_size": 16,
             "promo1_text_width": 100,
             "promo1_text_alignment": "justify-center items-center text-center",
@@ -110,7 +110,7 @@
         "e00194e9-c5e0-4f32-be10-517e0e56174b": {
           "type": "pills",
           "settings": {
-            "title": "KOUPIT",
+            "title": "KOMPLETNÍ SORTIMENT",
             "collection_images": "large",
             "collection_use_product_image": false,
             "promo_position": "bottom",
@@ -146,7 +146,7 @@
         "mobile_menu_position": "burger-right",
         "logo_text": "EULIFT.sk",
         "logo_type_scale": "2",
-        "logo": "shopify:\/\/shop_images\/EULIFT-CZ_shoplogo.svg",
+        "logo": "shopify://shop_images/EULIFT-CZ_shoplogo.svg",
         "logo_width": 170,
         "enable_search": true,
         "minimise_search_mobile": true,
@@ -175,7 +175,7 @@
         "text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Máme pro vás celý set v exkluzivní černé!<\/p>",
+            "text": "<p>Máme pro vás celý set v exkluzivní černé!</p>",
             "enlarge_text": false,
             "show_on_mobile": true,
             "show_on_desktop": true
