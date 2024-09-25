@@ -587,12 +587,14 @@
     },
     "collections": {
       "sorting": {
-        "price_ascending": "Od nejlevnějšího"
+        "price_ascending": "Od nejlevnějšího",
+        "price_descending": "Od nejdražšího"
       }
     },
     "search": {
       "sorting": {
-        "price_ascending": "Od nejlevnějšího"
+        "price_ascending": "Od nejlevnějšího",
+        "price_descending": "Od nejdražšího"
       }
     }
   },
