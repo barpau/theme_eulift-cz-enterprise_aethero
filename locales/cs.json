@@ -588,7 +588,8 @@
     "collections": {
       "sorting": {
         "price_ascending": "Od nejlevnějšího",
-        "price_descending": "Od nejdražšího"
+        "price_descending": "Od nejdražšího",
+        "manual": "Výběr"
       }
     },
     "search": {
