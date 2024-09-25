@@ -194,7 +194,7 @@
             "view": "grid_list",
             "hide_on_filter": true,
             "min_height": 150,
-            "content": "<p>Promotion text<\/p>",
+            "content": "<p>Promotion text</p>",
             "link_url": "",
             "text_type_scale": "--h4-font-size",
             "text_width": 400,
@@ -219,7 +219,7 @@
         "expand_filters": false,
         "max_filter_options": 7,
         "enable_sorting": true,
-        "show_feat_sort_opt": true,
+        "show_feat_sort_opt": false,
         "sort_first": true
       }
     }
