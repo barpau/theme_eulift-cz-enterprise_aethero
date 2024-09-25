@@ -41,6 +41,19 @@
         "circle_image": true
       }
     },
+    "collection-banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_title": true,
+        "show_product_count": true,
+        "show_collection_description": true,
+        "text_align": "text-start",
+        "collection_image": "natural",
+        "use_product_image": false,
+        "text_width": "standard",
+        "color_scheme": "default"
+      }
+    },
     "collection-products": {
       "type": "main-collection-products",
       "blocks": {
@@ -80,24 +93,11 @@
         "show_feat_sort_opt": true,
         "sort_first": true
       }
-    },
-    "collection-banner": {
-      "type": "main-collection-banner",
-      "settings": {
-        "show_collection_title": true,
-        "show_product_count": true,
-        "show_collection_description": true,
-        "text_align": "text-start",
-        "collection_image": "natural",
-        "use_product_image": false,
-        "text_width": "standard",
-        "color_scheme": "default"
-      }
     }
   },
   "order": [
     "collection_list_AP7Eey",
-    "collection-products",
-    "collection-banner"
+    "collection-banner",
+    "collection-products"
   ]
 }
