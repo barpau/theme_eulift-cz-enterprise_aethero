@@ -219,7 +219,7 @@
         "expand_filters": false,
         "max_filter_options": 7,
         "enable_sorting": true,
-        "show_feat_sort_opt": false,
+        "show_feat_sort_opt": true,
         "sort_first": true
       }
     }
