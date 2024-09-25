@@ -9,148 +9,6 @@
 */
 {
   "sections": {
-    "collection-banner": {
-      "type": "main-collection-banner",
-      "settings": {
-        "show_collection_title": true,
-        "show_product_count": true,
-        "show_collection_description": true,
-        "text_align": "text-start",
-        "collection_image": "natural",
-        "use_product_image": false,
-        "text_width": "standard",
-        "color_scheme": "default"
-      }
-    },
-    "f87075b8-0023-4593-bf3f-d5cd997e2cc6": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_Y7m4Bx": {
-          "type": "collection",
-          "settings": {
-            "collection": "technika-li-ion-1"
-          }
-        },
-        "collection_dhJfWg": {
-          "type": "collection",
-          "settings": {
-            "collection": "paletove-voziky"
-          }
-        },
-        "collection_3WeRWG": {
-          "type": "collection",
-          "settings": {
-            "collection": "nizkozdvizne-voziky"
-          }
-        },
-        "collection_JAyMPR": {
-          "type": "collection",
-          "settings": {
-            "collection": "vysokozdvizne-voziky-rucni"
-          }
-        },
-        "collection_Wk9CNb": {
-          "type": "collection",
-          "settings": {
-            "collection": "vysokozdvizne-voziky-elektricke"
-          }
-        },
-        "collection_bz6CUy": {
-          "type": "collection",
-          "settings": {
-            "collection": "celni-motorove-voziky"
-          }
-        },
-        "collection_kdjdH4": {
-          "type": "collection",
-          "settings": {
-            "collection": "prislusenstvi-k-vzv"
-          }
-        },
-        "collection_VAYqkE": {
-          "type": "collection",
-          "settings": {
-            "collection": "regalove-zakladace"
-          }
-        },
-        "collection_97DUGY": {
-          "type": "collection",
-          "settings": {
-            "collection": "tahace-a-plosinove-voziky"
-          }
-        },
-        "collection_hBY78X": {
-          "type": "collection",
-          "settings": {
-            "collection": "rudly-a-skladove-voziky"
-          }
-        },
-        "collection_E4hjhE": {
-          "type": "collection",
-          "settings": {
-            "collection": "zdvihaci-plosiny-a-stoly"
-          }
-        },
-        "collection_G8N38N": {
-          "type": "collection",
-          "settings": {
-            "collection": "jerabova-technika"
-          }
-        },
-        "collection_jJcX6C": {
-          "type": "collection",
-          "settings": {
-            "collection": "manipulace-se-sudy"
-          }
-        },
-        "collection_BaGAqx": {
-          "type": "collection",
-          "settings": {
-            "collection": "kladkostroje"
-          }
-        },
-        "collection_d4aBgc": {
-          "type": "collection",
-          "settings": {
-            "collection": "pojezdove-kocky"
-          }
-        },
-        "collection_fcV47b": {
-          "type": "collection",
-          "settings": {
-            "collection": "nahradni-dily"
-          }
-        }
-      },
-      "block_order": [
-        "collection_Y7m4Bx",
-        "collection_dhJfWg",
-        "collection_3WeRWG",
-        "collection_JAyMPR",
-        "collection_Wk9CNb",
-        "collection_bz6CUy",
-        "collection_kdjdH4",
-        "collection_VAYqkE",
-        "collection_97DUGY",
-        "collection_hBY78X",
-        "collection_E4hjhE",
-        "collection_G8N38N",
-        "collection_jJcX6C",
-        "collection_BaGAqx",
-        "collection_d4aBgc",
-        "collection_fcV47b"
-      ],
-      "settings": {
-        "title": "",
-        "heading_align": "text-start",
-        "button_label": "",
-        "button_link": "",
-        "layout": "grid",
-        "card_size": "small",
-        "use_product_image": false,
-        "circle_image": true
-      }
-    },
     "collection_list_AP7Eey": {
       "type": "collection-list",
       "blocks": {
@@ -222,12 +80,24 @@
         "show_feat_sort_opt": true,
         "sort_first": true
       }
+    },
+    "collection-banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_title": true,
+        "show_product_count": true,
+        "show_collection_description": true,
+        "text_align": "text-start",
+        "collection_image": "natural",
+        "use_product_image": false,
+        "text_width": "standard",
+        "color_scheme": "default"
+      }
     }
   },
   "order": [
-    "collection-banner",
-    "f87075b8-0023-4593-bf3f-d5cd997e2cc6",
     "collection_list_AP7Eey",
-    "collection-products"
+    "collection-products",
+    "collection-banner"
   ]
 }
