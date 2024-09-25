@@ -72,7 +72,7 @@
       "zeman_comment": "Jsem tu, abych vám pomohl. Zavolej mi."
     },
     "localization": {
-      "country_label": "Země\/oblast",
+      "country_label": "Země/oblast",
       "countries_error": "Při načítání zemí došlo k chybě, zkuste to prosím znovu.",
       "language_label": "Jazyk",
       "update": "Aktualizace"
@@ -98,7 +98,7 @@
       "label": "Stránkování",
       "next": "další",
       "previous": "Předchozí",
-      "position": "Stránka {{ current_page }} \/ {{ total_pages }}"
+      "position": "Stránka {{ current_page }} / {{ total_pages }}"
     },
     "search": {
       "title": "Vyhledávání",
@@ -177,9 +177,9 @@
       "pickup_availability": {
         "check_other_stores": "Ověřte si dostupnost na jiných prodejnách",
         "pick_up_available": "Možnost vyzvednutí",
-        "pick_up_available_at_html": "Možnost vyzvednutí na <strong>{{ location_name }}<\/strong>",
+        "pick_up_available_at_html": "Možnost vyzvednutí na <strong>{{ location_name }}</strong>",
         "pick_up_unavailable": "Vyzvednutí momentálně není k dispozici",
-        "pick_up_unavailable_at_html": "Vyzvednutí momentálně není k dispozici v <strong>{{ location_name }}<\/strong>",
+        "pick_up_unavailable_at_html": "Vyzvednutí momentálně není k dispozici v <strong>{{ location_name }}</strong>",
         "refresh": "Obnovit",
         "unavailable": "Dostupnost vyzvednutí se nepodařilo načíst",
         "view_store_info": "Zobrazit informace o prodejně"
@@ -198,7 +198,7 @@
       "rating": "Hodnocení",
       "reviews": "Recenze",
       "sale": "Prodej",
-      "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">Poštovné<\/a> kalkulováno při pokladně.",
+      "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">Poštovné</a> kalkulováno při pokladně.",
       "size_chart": "Průvodce velikostí",
       "sold_out": "Vyprodáno",
       "specification": "Specifikace",
@@ -285,7 +285,7 @@
         "powered_by": "Tento obchod bude poháněn"
       },
       "login_form": {
-        "admin_link_html": "Jste majitelem obchodu? <a href=\"\/admin\">Přihlaste se zde<\/a>",
+        "admin_link_html": "Jste majitelem obchodu? <a href=\"/admin\">Přihlaste se zde</a>",
         "error": "Nesprávné heslo",
         "heading": "Vstupte do obchodu pomocí hesla",
         "password_label": "Heslo",
@@ -365,11 +365,11 @@
       "backorder": "Produkt je doobjednaný a bude odeslán, jakmile bude opět skladem.",
       "view_cart": "Prohlédnout košík",
       "free_shipping": "Vaše objednávka má nárok na dopravu zdarma!",
-      "free_shipping_deficit_html": "Utraťte o <strong>{{ amount }}<\/strong> více a získáte <strong>dopravu zdarma<\/strong> !",
+      "free_shipping_deficit_html": "Utraťte o <strong>{{ amount }}</strong> více a získáte <strong>dopravu zdarma</strong> !",
       "taxes_and_shipping_at_checkout": "Daně a doprava budou vypočítané na pokladně.",
-      "taxes_and_shipping_at_checkout_html": "Daně a <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">doprava<\/a> vypočítané na pokladně.",
+      "taxes_and_shipping_at_checkout_html": "Daně a <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">doprava</a> vypočítané na pokladně.",
       "taxes_included_shipping_at_checkout": "Včetně daně, poštovné se počítá na pokladně.",
-      "taxes_included_shipping_at_checkout_html": "Včetně daně, <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">poštovné<\/a> se počítá na pokladně.",
+      "taxes_included_shipping_at_checkout_html": "Včetně daně, <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">poštovné</a> se počítá na pokladně.",
       "error": "Při aktualizaci vašeho košíku došlo k chybě. Prosím zkuste to znovu."
     },
     "items": {
@@ -404,7 +404,7 @@
       "continue_shopping": "Pokračovat v nákupu"
     },
     "terms": {
-      "agreement_html": "Souhlasím s <a href=\"&lt;span%20class='notranslate'&gt;{{%20terms_url%20}}&lt;\/span&gt;\" target=\"_blank\">podmínkami a zásadami vrácení peněz<\/a>",
+      "agreement_html": "Souhlasím s <a href=\"&lt;span%20class='notranslate'&gt;{{%20terms_url%20}}&lt;/span&gt;\" target=\"_blank\">podmínkami a zásadami vrácení peněz</a>",
       "confirmation": "Než budete pokračovat, musíte souhlasit s podmínkami."
     }
   },
@@ -583,6 +583,16 @@
     "store_availability": {
       "pick_up_time": {
         "twenty_four_hours": "+420 606 600 011"
+      }
+    },
+    "collections": {
+      "sorting": {
+        "price_ascending": "Od nejlevnějšího"
+      }
+    },
+    "search": {
+      "sorting": {
+        "price_ascending": "Od nejlevnějšího"
       }
     }
   },
