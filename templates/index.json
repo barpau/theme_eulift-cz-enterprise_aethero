@@ -15,8 +15,8 @@
         "slide-1": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/1-header-2560_v2.webp",
-            "image_mobile": "shopify:\/\/shop_images\/1-header-2040_v1-mobil_1_430x_7ab43420-8e8d-4c21-bebc-ae3f5efb7c49.webp",
+            "image_desktop": "shopify://shop_images/1-header-2560_v2.webp",
+            "image_mobile": "shopify://shop_images/1-header-2040_v1-mobil_1_430x_7ab43420-8e8d-4c21-bebc-ae3f5efb7c49.webp",
             "overlay_position": "justify-start items-start",
             "overlay_text_align": "text-start",
             "mob_center_text": false,
@@ -24,10 +24,10 @@
             "heading": "Veškerá manipulační technika EULIFT a HELI pro váš sklad",
             "heading_size": "h1",
             "heading_h1": true,
-            "text": "<p>Vše co můžete potřebovat, od malých paleťáků přes vysokozdvižné vozíky, zdvihací stoly či plošiny až po čelní motorové vozíky.<\/p>",
+            "text": "<p>Vše co můžete potřebovat, od malých paleťáků přes vysokozdvižné vozíky, zdvihací stoly či plošiny až po čelní motorové vozíky.</p>",
             "enlarge_text": true,
             "button_1_label": "Jdu si vybrat zboží!",
-            "button_1_link": "shopify:\/\/collections\/kompletni-sortiment",
+            "button_1_link": "shopify://collections/kompletni-sortiment",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "#",
@@ -47,8 +47,8 @@
         "2b1e300b-a0a7-4a95-aa24-7ab800a9e1ed": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/black_edition.webp",
-            "image_mobile": "shopify:\/\/shop_images\/reklama22-BLCK-EDI.jpg",
+            "image_desktop": "shopify://shop_images/web-head-BLCK-rada_voziky_02102024_01.jpg",
+            "image_mobile": "shopify://shop_images/blck_edition_2560x2560_02102024_maly.jpg",
             "overlay_position": "justify-start items-start",
             "overlay_text_align": "text-start",
             "mob_center_text": false,
@@ -56,10 +56,10 @@
             "heading": "BLACK EDITION",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p>Vytvořili jsme pro vás s partnery set strojů v černé! K dispozici je dokonce<strong> celý set za zvýhodněnou cenu. <\/strong><br\/>S námi získá práce styl!<\/p>",
+            "text": "<p>Vytvořili jsme pro vás s partnery set strojů v černé! K dispozici je dokonce<strong> celý set za zvýhodněnou cenu. </strong><br/>S námi získá práce styl!</p>",
             "enlarge_text": true,
             "button_1_label": "Přejít na BLACK EDITION",
-            "button_1_link": "\/collections\/black-edition",
+            "button_1_link": "/collections/black-edition",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -79,8 +79,8 @@
         "slide_PGVUtm": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/eulift_CZ_beztextu_modry.webp",
-            "image_mobile": "shopify:\/\/shop_images\/eulift_2560x2560_f8438fb0-4da6-4244-b956-57930164f912.jpg",
+            "image_desktop": "shopify://shop_images/eulift_CZ_beztextu_modry.webp",
+            "image_mobile": "shopify://shop_images/eulift_2560x2560_f8438fb0-4da6-4244-b956-57930164f912.jpg",
             "overlay_position": "justify-start items-start",
             "overlay_text_align": "text-start",
             "mob_center_text": false,
@@ -88,10 +88,10 @@
             "heading": "JEDINEČNÁ NABÍDKA  zánovních strojů",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p><strong>SKVĚLÁ MOTORIZACE ZA VÝBORNOU CENU!<\/strong><\/p><p><strong>HELI G1, EURO 3<\/strong><br\/><strong>Lehce použité<\/strong> vysokozdvižné vozíky<br\/><strong>EURO 3<\/strong> - bez filtru pevných částic<br\/><strong>Minimální počet Mth<\/strong><\/p>",
+            "text": "<p><strong>SKVĚLÁ MOTORIZACE ZA VÝBORNOU CENU!</strong></p><p><strong>HELI G1, EURO 3</strong><br/><strong>Lehce použité</strong> vysokozdvižné vozíky<br/><strong>EURO 3</strong> - bez filtru pevných částic<br/><strong>Minimální počet Mth</strong></p>",
             "enlarge_text": true,
             "button_1_label": "Přejít na ZÁNOVNÍ TECHNIKU",
-            "button_1_link": "shopify:\/\/collections\/zanovni-technika",
+            "button_1_link": "shopify://collections/zanovni-technika",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -111,8 +111,8 @@
         "slide_H6WQzG": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/akcni_nabidka_cbd15j-li3_4689799a-b883-4bf2-985a-8286d448477d.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/akcni_nabidka_cbd15j-li3_2560px_61217401-cbab-4108-b507-8fbf6fdc1d02.jpg",
+            "image_desktop": "shopify://shop_images/akcni_nabidka_cbd15j-li3_4689799a-b883-4bf2-985a-8286d448477d.jpg",
+            "image_mobile": "shopify://shop_images/akcni_nabidka_cbd15j-li3_2560px_61217401-cbab-4108-b507-8fbf6fdc1d02.jpg",
             "overlay_position": "justify-start items-center",
             "overlay_text_align": "text-start",
             "mob_center_text": false,
@@ -120,10 +120,10 @@
             "heading": "SKVĚLÁ <br>CENA",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p><strong>Na elektrické paletové vozíky <br\/>jsme na českém trhu jednička. <\/strong><br\/>Podívejte se na jeden z našich<br\/>nejprodávanějších vedených <br\/>vozíků.<\/p>",
+            "text": "<p><strong>Na elektrické paletové vozíky <br/>jsme na českém trhu jednička. </strong><br/>Podívejte se na jeden z našich<br/>nejprodávanějších vedených <br/>vozíků.</p>",
             "enlarge_text": true,
             "button_1_label": "To chci",
-            "button_1_link": "shopify:\/\/products\/paletovy-vozik-cbd15j-li3",
+            "button_1_link": "shopify://products/paletovy-vozik-cbd15j-li3",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -143,8 +143,8 @@
         "slide_Bmg7ze": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/akcni_nabidka_rada_1275910b-2610-4086-8b66-f2f3d0d01fa3.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/akcni_nabidka_rada_mob.jpg",
+            "image_desktop": "shopify://shop_images/akcni_nabidka_rada_1275910b-2610-4086-8b66-f2f3d0d01fa3.jpg",
+            "image_mobile": "shopify://shop_images/akcni_nabidka_rada_mob.jpg",
             "overlay_position": "justify-start items-center",
             "overlay_text_align": "text-start",
             "mob_center_text": false,
@@ -152,10 +152,10 @@
             "heading": "AKČNÍ<br>NABÍDKA",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p><strong>Nejlepší poměr výkon-cena <br\/>a ještě ve slevě?<\/strong><\/p>",
+            "text": "<p><strong>Nejlepší poměr výkon-cena <br/>a ještě ve slevě?</strong></p>",
             "enlarge_text": true,
             "button_1_label": "Přejít na vozíky V AKCI",
-            "button_1_link": "shopify:\/\/collections\/akcni-nabidka",
+            "button_1_link": "shopify://collections/akcni-nabidka",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -206,7 +206,7 @@
           "type": "collection",
           "settings": {
             "collection": "akcni-nabidka",
-            "image": "shopify:\/\/shop_images\/SLEVA3.webp"
+            "image": "shopify://shop_images/SLEVA3.webp"
           }
         },
         "collection-5": {
@@ -243,7 +243,7 @@
           "type": "collection",
           "settings": {
             "collection": "vysokozdvizne-voziky-rucni",
-            "image": "shopify:\/\/shop_images\/01_rucne_vedene_mechanicke.png"
+            "image": "shopify://shop_images/01_rucne_vedene_mechanicke.png"
           }
         }
       },
@@ -280,8 +280,8 @@
         "show_promo_info": true,
         "image_ratio": "fill",
         "promo_title": "To nejlepší",
-        "content": "<p>Vybrali jsme pro vás produkty které u nás profesionálové z logistiky a skladů nejčastěji kupují, abyste ušetřili čas. <br\/>Pokud si nejste jisti zavolejte nám nebo vyberte celé nabídky<\/p>",
-        "link_url": "shopify:\/\/collections\/kompletni-sortiment",
+        "content": "<p>Vybrali jsme pro vás produkty které u nás profesionálové z logistiky a skladů nejčastěji kupují, abyste ušetřili čas. <br/>Pokud si nejste jisti zavolejte nám nebo vyberte celé nabídky</p>",
+        "link_url": "shopify://collections/kompletni-sortiment",
         "button_label": "Prohlédnout všechny produkty",
         "color_scheme": "2",
         "button_style": "btn btn--primary"
@@ -355,7 +355,7 @@
         "countdown-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pomůže nám zákazníky trochu popostrčit<\/p>",
+            "text": "<p>Pomůže nám zákazníky trochu popostrčit</p>",
             "enlarge_text": true
           }
         },
@@ -399,15 +399,15 @@
         "media-0": {
           "type": "media",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Sortiment-2.jpg",
+            "image": "shopify://shop_images/Sortiment-2.jpg",
             "link_url": "",
             "columns": 2,
             "rows": 2,
             "subheading": "",
-            "title": "<h2>KOMPLEXNÍ SORTIMENT<\/h2><p><strong>Máme pro vás téměř vyčerpávající nabídku manipulační techniky. Přesvědčte se sami nebo nám zavolejte, máte-li naprosto speciální požadavky.<\/strong><\/p><h2><\/h2>",
+            "title": "<h2>KOMPLEXNÍ SORTIMENT</h2><p><strong>Máme pro vás téměř vyčerpávající nabídku manipulační techniky. Přesvědčte se sami nebo nám zavolejte, máte-li naprosto speciální požadavky.</strong></p><h2></h2>",
             "heading_size": "h4",
             "button_label": "Vyberte si z naší nabídky",
-            "button_link": "shopify:\/\/collections\/all",
+            "button_link": "shopify://collections/all",
             "overlay_position": "justify-start items-start",
             "text_alignment": "text-start",
             "button_style": "btn btn--primary",
@@ -418,15 +418,15 @@
         "media-3": {
           "type": "media",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Servis-v2.png",
+            "image": "shopify://shop_images/Servis-v2.png",
             "link_url": "",
             "columns": 2,
             "rows": 1,
             "subheading": "",
-            "title": "<h2>SERVIS<br\/><\/h2><p><strong>Jako společnost s výhradním zastoupením značky HELI pro ČR disponujeme servisním týmem, který se postará o perfektní funkčnost techniky od nás <\/strong><\/p>",
+            "title": "<h2>SERVIS<br/></h2><p><strong>Jako společnost s výhradním zastoupením značky HELI pro ČR disponujeme servisním týmem, který se postará o perfektní funkčnost techniky od nás </strong></p>",
             "heading_size": "h5",
             "button_label": "Nenecháme vás „ve štychu\"!",
-            "button_link": "shopify:\/\/pages\/servis",
+            "button_link": "shopify://pages/servis",
             "overlay_position": "justify-start items-start",
             "text_alignment": "text-start",
             "button_style": "btn btn--primary",
@@ -437,15 +437,15 @@
         "media-2": {
           "type": "media",
           "settings": {
-            "image": "shopify:\/\/shop_images\/sidlo-gekkon-opti.webp",
+            "image": "shopify://shop_images/sidlo-gekkon-opti.webp",
             "link_url": "",
             "columns": 1,
             "rows": 1,
             "subheading": "",
-            "title": "<p>O NÁS<\/p>",
+            "title": "<p>O NÁS</p>",
             "heading_size": "h5",
             "button_label": "Více",
-            "button_link": "shopify:\/\/pages\/o-nas",
+            "button_link": "shopify://pages/o-nas",
             "overlay_position": "justify-start items-end",
             "text_alignment": "text-start",
             "button_style": "btn btn--primary",
@@ -456,15 +456,15 @@
         "media-1": {
           "type": "media",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bazar-1.jpg",
+            "image": "shopify://shop_images/bazar-1.jpg",
             "link_url": "",
             "columns": 1,
             "rows": 1,
             "subheading": "",
-            "title": "<p>BAZAR<\/p>",
+            "title": "<p>BAZAR</p>",
             "heading_size": "h5",
             "button_label": "Podrobnosti",
-            "button_link": "shopify:\/\/collections\/pouzita-technika",
+            "button_link": "shopify://collections/pouzita-technika",
             "overlay_position": "justify-start items-end",
             "text_alignment": "text-start",
             "button_style": "btn btn--primary",
@@ -518,7 +518,7 @@
         "description-5": {
           "type": "description",
           "settings": {
-            "text": "<p>Paletové vozíky limitované edice <strong>EULIFT BF25 BLACK EDITION <\/strong>o nosnosti 2500 kg nabízíme v promo akci nyní <strong>s dopravou zdarma<\/strong>.<\/p>"
+            "text": "<p>Paletové vozíky limitované edice <strong>EULIFT BF25 BLACK EDITION </strong>o nosnosti 2500 kg nabízíme v promo akci nyní <strong>s dopravou zdarma</strong>.</p>"
           }
         },
         "divider-6": {
@@ -583,7 +583,7 @@
           "type": "feature",
           "settings": {
             "heading": "PADNE DO RUKY!",
-            "text": "<p>Ruční držadlo<\/p>",
+            "text": "<p>Ruční držadlo</p>",
             "content_align": "text-start",
             "hotspot_x": 90,
             "hotspot_y": 22
@@ -593,7 +593,7 @@
           "type": "feature",
           "settings": {
             "heading": "Feature name",
-            "text": "<p>Add some text describing the product feature.<\/p>",
+            "text": "<p>Add some text describing the product feature.</p>",
             "content_align": "text-start",
             "hotspot_x": 60,
             "hotspot_y": 23
@@ -603,7 +603,7 @@
           "type": "feature",
           "settings": {
             "heading": "Feature name",
-            "text": "<p>Add some text describing the product feature.<\/p>",
+            "text": "<p>Add some text describing the product feature.</p>",
             "content_align": "text-start",
             "hotspot_x": 73,
             "hotspot_y": 54
@@ -613,7 +613,7 @@
           "type": "feature",
           "settings": {
             "heading": "Feature name",
-            "text": "<p>Add some text describing the product feature.<\/p>",
+            "text": "<p>Add some text describing the product feature.</p>",
             "content_align": "text-start",
             "hotspot_x": 50,
             "hotspot_y": 30
@@ -636,7 +636,7 @@
         "heading_size": "h1",
         "enlarge_text": false,
         "title": "Product features",
-        "description": "<p>Use this section to highlight specific product features to your customers.<\/p>",
+        "description": "<p>Use this section to highlight specific product features to your customers.</p>",
         "button_label": "",
         "button_link": "",
         "hotspot_color": "#070707",
@@ -658,7 +658,7 @@
         "media-with-text-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
             "enlarge_text": false
           }
         },
@@ -720,15 +720,15 @@
         "hotspot-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/cdd_flotila_2-1.webp",
+        "image": "shopify://shop_images/cdd_flotila_2-1.webp",
         "layout": "image_first",
         "show_vendor": true,
         "show_content": true,
         "mob_center_text": false,
         "heading": "Ručně vedené vysokozdvižné vozíky HELI",
-        "text": "<p><strong>Vyberte si snadno z řad produktů HELI  <\/strong>variantu ideální pro váš typ provozu a ušetřete tak peníze i provozní čas.<br\/><br\/><strong>EKO =<\/strong> nejlepší poměr CENA × VÝKON<br\/><strong>STANDARD =<\/strong> vysoký výkon pro náročné provozy<br\/><strong>PROFI =<\/strong> Absolutní výkon + HI-TECH <\/p>",
+        "text": "<p><strong>Vyberte si snadno z řad produktů HELI  </strong>variantu ideální pro váš typ provozu a ušetřete tak peníze i provozní čas.<br/><br/><strong>EKO =</strong> nejlepší poměr CENA × VÝKON<br/><strong>STANDARD =</strong> vysoký výkon pro náročné provozy<br/><strong>PROFI =</strong> Absolutní výkon + HI-TECH </p>",
         "button_label": "Vysokozdvižné vozíky HELI",
-        "button_link": "shopify:\/\/collections\/vysokozdvizne-voziky-elektricke",
+        "button_link": "shopify://collections/vysokozdvizne-voziky-elektricke",
         "hotspot_color": "#f44849",
         "color_scheme": "2",
         "button_style": "btn btn--primary"
@@ -748,7 +748,7 @@
         "banner-text": {
           "type": "text",
           "settings": {
-            "text": "<p>Vybírejte z kompletního sortimentu manipulační techniky <strong>HELI. <\/strong>Naši obchodníci vám pomohou s detalním výběrem .<\/p>",
+            "text": "<p>Vybírejte z kompletního sortimentu manipulační techniky <strong>HELI. </strong>Naši obchodníci vám pomohou s detalním výběrem .</p>",
             "enlarge_text": true
           }
         },
@@ -756,7 +756,7 @@
           "type": "button",
           "settings": {
             "button_1_label": "Vyberte si z „TĚCH VELKÝCH”",
-            "button_1_link": "shopify:\/\/collections\/celni-motorove-voziky",
+            "button_1_link": "shopify://collections/celni-motorove-voziky",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "#",
@@ -770,7 +770,7 @@
         "banner-button"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/slide-heli-mtqa-terenni-jpg_QDrM.webp",
+        "image_desktop": "shopify://shop_images/slide-heli-mtqa-terenni-jpg_QDrM.webp",
         "url": "",
         "height_mode": "fixed",
         "fixed_height_desktop": 520,
@@ -904,7 +904,7 @@
       "disabled": true,
       "settings": {
         "heading": "Product comparison grid",
-        "text": "<p>Add content here to explain a bit about the range of products on offer and which ones may be most suitable for your customers.<\/p>",
+        "text": "<p>Add content here to explain a bit about the range of products on offer and which ones may be most suitable for your customers.</p>",
         "heading_align": "text-center",
         "view_more_label": "View more",
         "view_more_link": "",
@@ -926,7 +926,7 @@
           "type": "column",
           "settings": {
             "heading": "01. ÚČEL",
-            "text": "<p>Ujasněte si, jak a kde budete techniku využívat:<\/p><ul><li>jak často ? (1x za den, celou směnu, non-stop)<\/li><li>v jakém prostředí? (venku, uvnitř, oboje)<\/li><li>na jakém povrchu (beton, asfalt, štěrk)<\/li><\/ul><h6><strong><br\/>Máte? Paráda - pojďme dál <\/strong>➔ 02<\/h6>",
+            "text": "<p>Ujasněte si, jak a kde budete techniku využívat:</p><ul><li>jak často ? (1x za den, celou směnu, non-stop)</li><li>v jakém prostředí? (venku, uvnitř, oboje)</li><li>na jakém povrchu (beton, asfalt, štěrk)</li></ul><h6><strong><br/>Máte? Paráda - pojďme dál </strong>➔ 02</h6>",
             "button_label": "",
             "button_link": ""
           }
@@ -935,7 +935,7 @@
           "type": "column",
           "settings": {
             "heading": "02. PARAMETRY",
-            "text": "<p>Nyní si potřebuje v dané kategorii říci, <strong>jaké parametry má mít<\/strong> vozík nebo plošina (potřebné parametry se budou lišit podle toho co chcete koupit) - zde je pár příkladů:<\/p><ul><li>způsob pohonu (ruční, elektrický, jiný)<\/li><li>potřebná nosnost  (v kg)<\/li><li>potřebná výška zdvihu (v mm)<\/li><li>potřebná délka vidlic (v mm)<\/li><\/ul><p>atd. (můžete se podívat na některý z výrobků pro představu)<\/p><h6><strong>A máme téměř hotovo ➔ 03<\/strong><\/h6>",
+            "text": "<p>Nyní si potřebuje v dané kategorii říci, <strong>jaké parametry má mít</strong> vozík nebo plošina (potřebné parametry se budou lišit podle toho co chcete koupit) - zde je pár příkladů:</p><ul><li>způsob pohonu (ruční, elektrický, jiný)</li><li>potřebná nosnost  (v kg)</li><li>potřebná výška zdvihu (v mm)</li><li>potřebná délka vidlic (v mm)</li></ul><p>atd. (můžete se podívat na některý z výrobků pro představu)</p><h6><strong>A máme téměř hotovo ➔ 03</strong></h6>",
             "button_label": "",
             "button_link": ""
           }
@@ -944,7 +944,7 @@
           "type": "column",
           "settings": {
             "heading": "03. VÝBĚR",
-            "text": "<p><strong>Začít můžete <\/strong><a href=\"\/collections\" title=\"All collections\"><strong>ZDE v KATALOGU<\/strong><\/a><strong><br\/><\/strong>Vyberte si v menu tu správnou kategorii a vyfiltrujte parametry které vám vyhovují.<\/p><p><strong>Pokud narazíte na jakékoliv potíže s výběrem<\/strong> neváhejte a <\/p><h5><a href=\"tel:00420606600011\" target=\"_blank\" title=\"tel:00420606600011\"><strong>ZAVOLEJTE NÁM +420 606 600 011<\/strong><\/a><\/h5><p><br\/>Náš odborník vám poradí a pravděpodobně ušetří i mnoho času a starostí. <br\/><strong>Jsme zde pro vás v pracovní dni <br\/>8:00 - 17:00 hod. <\/strong><\/p>",
+            "text": "<p><strong>Začít můžete </strong><a href=\"/collections\" title=\"All collections\"><strong>ZDE v KATALOGU</strong></a><strong><br/></strong>Vyberte si v menu tu správnou kategorii a vyfiltrujte parametry které vám vyhovují.</p><p><strong>Pokud narazíte na jakékoliv potíže s výběrem</strong> neváhejte a </p><h5><a href=\"tel:00420606600011\" target=\"_blank\" title=\"tel:00420606600011\"><strong>ZAVOLEJTE NÁM +420 606 600 011</strong></a></h5><p><br/>Náš odborník vám poradí a pravděpodobně ušetří i mnoho času a starostí. <br/><strong>Jsme zde pro vás v pracovní dni <br/>8:00 - 17:00 hod. </strong></p>",
             "button_label": "",
             "button_link": ""
           }
@@ -954,7 +954,7 @@
           "disabled": true,
           "settings": {
             "heading": "Column 4",
-            "text": "<p>Pair text with an image to focus on a product, collection or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on a product, collection or blog post. Add details on availability, style, or even provide a review.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -995,7 +995,7 @@
         "video-text-2": {
           "type": "text",
           "settings": {
-            "text": "<h3>Vysokozdvižný vozík HELI - G2 série s Lithiovou baterií<\/h3>",
+            "text": "<h3>Vysokozdvižný vozík HELI - G2 série s Lithiovou baterií</h3>",
             "enlarge_text": false
           }
         }
@@ -1005,7 +1005,7 @@
         "video-text-2"
       ],
       "settings": {
-        "video_external": "https:\/\/youtu.be\/WB7ryToOQ2c",
+        "video_external": "https://youtu.be/WB7ryToOQ2c",
         "video_description": "",
         "video_size": "md",
         "video_autoplay": true,
