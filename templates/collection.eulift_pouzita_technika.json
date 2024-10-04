@@ -31,7 +31,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>Share information about your store with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>Share information about your store with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
             "enlarge_text": true
           }
         },
@@ -74,13 +74,19 @@
           "type": "collection",
           "settings": {
             "collection": "bazar-cdd-cbd-voziku",
-            "image": "shopify:\/\/shop_images\/bazar_cdd_acbd.png"
+            "image": "shopify://shop_images/bazar_cdd_acbd.png"
           }
         },
         "collection_LiNi7r": {
           "type": "collection",
           "settings": {
             "collection": "bazar-celnich-voziku"
+          }
+        },
+        "collection_AiAYir": {
+          "type": "collection",
+          "settings": {
+            "collection": "predvadeci-voziky"
           }
         },
         "template--19688954626357__6aa32866-1041-4619-bf34-2cbd10793318-1687765841cc7fd42f-2": {
@@ -94,6 +100,7 @@
         "template--19688954626357__6aa32866-1041-4619-bf34-2cbd10793318-1687765841cc7fd42f-0",
         "template--19688954626357__6aa32866-1041-4619-bf34-2cbd10793318-1687765841cc7fd42f-1",
         "collection_LiNi7r",
+        "collection_AiAYir",
         "template--19688954626357__6aa32866-1041-4619-bf34-2cbd10793318-1687765841cc7fd42f-2"
       ],
       "settings": {
