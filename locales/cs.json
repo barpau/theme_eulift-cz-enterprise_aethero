@@ -555,7 +555,7 @@
         "optional_first_name_label": "Společnost (volitelné)",
         "last_name_label": "Jméno a Příjmení",
         "optional_company_label": "IČO (volitelné)",
-        "contact_method_title": "KONTAKT"
+        "contact_method_title": "1. KONTAKT"
       },
       "delivery_options": {
         "pick_up_locations": "Adresa výdejního místa",
@@ -569,7 +569,7 @@
       },
       "payment": {
         "billing_address_title": "FAKTURAČNÍ ADRESA",
-        "title": "PLATBA"
+        "title": "3. VYBERTE PLATEBNÍ METODU"
       },
       "payment_summary": {
         "billing_address_title": "FAKTURAČNÍ ADRESA"
