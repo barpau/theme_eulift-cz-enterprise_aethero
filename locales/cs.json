@@ -569,7 +569,7 @@
       },
       "payment": {
         "billing_address_title": "4. ZADEJTE FAKTURAČNÍ ADRESU",
-        "title": "3. VYBERTE PLATEBNÍ METODU"
+        "title": "3. ZVOLTE PLATEBNÍ METODU"
       },
       "payment_summary": {
         "billing_address_title": "FAKTURAČNÍ ADRESA"
