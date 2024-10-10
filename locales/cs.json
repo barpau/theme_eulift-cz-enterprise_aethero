@@ -549,7 +549,7 @@
     "checkout": {
       "shipping": {
         "address2_add_label": "Přidat DIČ",
-        "delivery_title": "DORUČENÍ NA DODACÍ ADRESU"
+        "delivery_title": "VYBERTE DOPRAVU"
       },
       "contact": {
         "optional_first_name_label": "Společnost (volitelné)",
