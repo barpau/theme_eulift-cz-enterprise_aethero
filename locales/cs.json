@@ -568,7 +568,7 @@
         "estimated_taxes_finalization_tooltip_content": "Celková částka včetně daně vám bude zaslaná na email po odeslání objednávky."
       },
       "payment": {
-        "billing_address_title": "FAKTURAČNÍ ADRESA",
+        "billing_address_title": "4. ZADEJTE FAKTURAČNÍ ADRESU",
         "title": "3. VYBERTE PLATEBNÍ METODU"
       },
       "payment_summary": {
