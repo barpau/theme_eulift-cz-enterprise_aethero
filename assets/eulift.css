@@ -150,3 +150,8 @@
 b, strong {
     font-weight: bold !important;
 }
+
+/* Cart */
+.vatValidationblock {
+  display:none;
+}
