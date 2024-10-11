@@ -52,7 +52,7 @@
     {%- if cart != empty -%}
       <div class="cart__summary p-6 md:p-8" id="cart-summary" data-section="{{ section.id }}">
         {%- if cart != empty -%}
-          <h2 class="h5">{{ 'cart.summary.title' | t }}lala</h2>
+          <h2 class="h5">{{ 'cart.summary.title' | t }}l</h2>
 
           {%- if section.settings.show_order_note -%}
             <script src="{{ 'cart-note.js' | asset_url }}" defer="defer"></script>
@@ -115,7 +115,7 @@
           {%- endif -%}
 
           <div class="flex justify-between items-center mt-6">
-            <h3 class="mb-0 h6">{{ 'cart.summary.subtotal' | t }}:</h3>
+            <h3 class="mb-0 h6">{{ 'cart.summary.subtotal' | t }}:lala</h3>
             <p class="mb-0 h6">{{ cart.total_price | money_with_currency }}</p>
           </div>       
           {%- if section.settings.cart_terms_page != blank -%}
