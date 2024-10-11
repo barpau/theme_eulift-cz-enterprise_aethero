@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.body.appendChild(scriptElement);
 });
 
+function ShowVATinput() {
+        var radioyes = document.getElementById("radioyes");
+        var textinput = document.getElementById("vatInput");
+        textinput.style.display = radioyes.checked ? "block" : "none";
+}
+
 
 
 
