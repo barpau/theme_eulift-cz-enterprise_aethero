@@ -132,19 +132,8 @@
 <label for="radioyes">
           <input type="radio" id="radioyes" name="group1" onclick="ShowTextInput()" />Ano</label>
           <label for="radiono">
-          <input type="radio" id="radiono" name="group1" onclick="ShowTextInput()" />Be</label>
+          <input type="radio" id="radiono" name="group1" onclick="ShowTextInput()" />Ne</label>
           
-
-          <div id="taxPayerValidation">
-            <div>Ak chcete u nás nakupovať bez DPH, zadajte prosím platné IČ DPH. DPH bude odpočítaná v ďalšom kroku</div>
-            <input type="text" placeholder="IČ DPH" id="VatId" name="attributes[vat-id]" value="{{ cart.attributes.vat-id }}" maxlength="20" style="max-width:160px;">
-            <div id="ValidStatus"><img id="StatusImg" width="28"></div>
-            <div id="ErrMsg"></div>   
-            <input id="CustomerId" type="hidden" value="{{ customer.id }}">
-            <input id="ShopCtyId" type="hidden" value="{{ shop.metafields['exemptify']['country'] }}">  
-          </div>
-        </div>
-
           <div class="mt-6">
             <div class="custom-fields">
     <label for="invoice_number">Zadejte IČO:</label>
