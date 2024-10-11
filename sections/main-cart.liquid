@@ -133,7 +133,16 @@
     <input type="text" id="invoice_number" name="attributes[Invoice Number]">
               
   </div>
-                 <button id="eulift-cheat-checkout-button" class="cart__update-button button button--secondary">Ověřit IČO a přejít k platbě</button>
+                 <button id="eulift-cheat-checkout-button" class="btn btn--primary btn--icon-with-text w-full exemptify_checkout">
+                   {%- if settings.cart_icon == 'bag' -%}
+                {%- render 'icon-bag' -%}
+              {%- elsif settings.cart_icon == 'basket' -%}
+                {%- render 'icon-basket' -%}
+              {%- else -%}
+                {%- render 'icon-cart' -%}
+              {%- endif -%}
+                   Ověřit IČO a přejít k platbě
+                 </button>
               
           
             <button class="btn btn--primary btn--icon-with-text w-full exemptify_checkout" name="checkout">
