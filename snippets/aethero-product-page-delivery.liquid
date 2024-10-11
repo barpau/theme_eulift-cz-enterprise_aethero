@@ -2,13 +2,6 @@
         {% render 'icon-available' %}
       </div>
       <div>
-        <p class="mb-0">{{ 'products.product.pickup_availability.pick_up_available_at_html' | t: location_name: closest_location.location.name }}</p>
-        <p class="mb-0 text-sm">{{ closest_location.pick_up_time }}</p>
-        <button class="link mt-2 text-sm color-link js-show-pickup-info" aria-haspopup="dialog">
-          {%- if pick_up_availabilities.size == 1 -%}
-            {{ 'products.product.pickup_availability.view_store_info' | t }}
-          {%- else -%}
-            {{ 'products.product.pickup_availability.check_other_stores' | t }}
-          {%- endif -%}
-        </button>
+        <p class="mb-0">Doprava společností GEIS</p>
+        <p class="mb-0 text-sm"></p>
 </div>
