@@ -156,5 +156,5 @@ b, strong {
   display:none;
 }
 .vat-validation-title{
-  color: rgb(var(--heading-color));
+  color: rgb(var(--heading-color)) !important;
 }
