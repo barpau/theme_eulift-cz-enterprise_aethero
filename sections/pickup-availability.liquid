@@ -1,9 +1,10 @@
 {%- assign pick_up_availabilities = product_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 {%- if pick_up_availabilities.size > 0 -%}
-  <div class="pickup-status flex mt-8 mb-8">
+  
+  <div class="pickup-status flex mt-8 mb-8">  
+    
  {% render 'aethero-product-page-delivery'%}
-</div>
-  <div class="pickup-status flex mt-8 mb-8">    
+
     {%- assign closest_location = pick_up_availabilities.first -%}
     {%- if closest_location.available -%}
       <div class="pickup-icon">
