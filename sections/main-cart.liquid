@@ -136,17 +136,18 @@
           <h4>Přejete si nakupovat na firmu?</h4>
         </div>
         <label for="radioyes">
-          <input type="radio" id="radioyes" name="group1" onclick="ShowTextInput()" />Ano</label>
+          <input type="radio" id="radioyes" name="group1" onclick="ShowVATinput()" />Ano</label>
           <label for="radiono">
-          <input type="radio" id="radiono" name="group1" onclick="ShowTextInput()" />Ne</label>
+          <input type="radio" id="radiono" name="group1" onclick="ShowVATinput()" />Ne</label>
           
           <div class="mt-6">
             <div id="vatInput" class="custom-fields">
               <label for="invoice_number">Zadejte IČO:</label>
                 <input type="text" id="invoice_number" name="attributes[Invoice Number]">
               
-          </div>
+         
                  <button id="eulift-cheat-checkout-button" class="btn btn--primary btn--icon-with-text w-full exemptify_checkout">
+                    
                    {%- if settings.cart_icon == 'bag' -%}
                 {%- render 'icon-bag' -%}
               {%- elsif settings.cart_icon == 'basket' -%}
@@ -156,7 +157,7 @@
               {%- endif -%}
                    Ověřit IČO a přejít k platbě
                  </button>
-              
+               </div>
           
             <button class="btn btn--primary btn--icon-with-text w-full exemptify_checkout" name="checkout">
               {%- if settings.cart_icon == 'bag' -%}
