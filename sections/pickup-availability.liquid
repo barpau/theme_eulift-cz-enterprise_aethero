@@ -3,7 +3,7 @@
   
   <div class="pickup-status flex mt-8 mb-8">  
     
- 
+ {% render 'aethero-product-page-delivery'%}
 
     {%- assign closest_location = pick_up_availabilities.first -%}
     {%- if closest_location.available -%}
