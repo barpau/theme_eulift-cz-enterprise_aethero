@@ -177,7 +177,7 @@
       "pickup_availability": {
         "check_other_stores": "Ověřte si dostupnost na jiných prodejnách",
         "pick_up_available": "Možnost vyzvednutí",
-        "pick_up_available_at_html": "Možnost vyzvednutí na <strong>{{ location_name }}</strong>",
+        "pick_up_available_at_html": "Možnost vyzvednutí - <strong>{{ location_name }}</strong>",
         "pick_up_unavailable": "Vyzvednutí momentálně není k dispozici",
         "pick_up_unavailable_at_html": "Vyzvednutí momentálně není k dispozici v <strong>{{ location_name }}</strong>",
         "refresh": "Obnovit",
