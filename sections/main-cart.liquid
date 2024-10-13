@@ -129,17 +129,8 @@
           {%- endif -%}
 
     
-        <div>
-          <h2 class="h4 section__heading vat-validation-title">Přejete si nakupovat na firmu?</h2>
-        </div>
-        <label for="radioyes">
-          <input type="radio" id="radioyes" name="group1" onclick="ShowVATinput()" />Ano</label>
-          <label for="radiono">
-          <input type="radio" id="radiono" name="group1" onclick="ShowVATinput()" />Ne</label>
-          
+       
           <div class="mt-6">
-            
-          
             <button class="btn btn--primary btn--icon-with-text w-full exemptify_checkout" name="checkout">
               {%- if settings.cart_icon == 'bag' -%}
                 {%- render 'icon-bag' -%}
