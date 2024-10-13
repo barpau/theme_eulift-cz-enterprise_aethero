@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ 'cart-items.css' | asset_url }}">
-<script src="{{ 'aethero-vat-validation.js' | asset_url }}" defer="defer"></script>
+
 
 {%- if cart != empty -%}
   <link rel="stylesheet" id="cart-summary-css" href="{{ 'cart-summary.css' | asset_url }}">
@@ -138,23 +138,7 @@
           <input type="radio" id="radiono" name="group1" onclick="ShowVATinput()" />Ne</label>
           
           <div class="mt-6">
-            <div id="vatInput" class="vatValidationblock">
-              <label for="invoice_number">Zadejte IČO:</label>
-                <input type="text" id="invoice_number">
-              
-          
-                 <span id="eulift-cheat-checkout-button" class="btn btn--primary btn--icon-with-text w-full" style="cursor:pointer;margin-top:15px;">
-                    
-                   {%- if settings.cart_icon == 'bag' -%}
-                {%- render 'icon-bag' -%}
-              {%- elsif settings.cart_icon == 'basket' -%}
-                {%- render 'icon-basket' -%}
-              {%- else -%}
-                {%- render 'icon-cart' -%}
-              {%- endif -%}
-                   Ověřit IČO a přejít k platbě
-                 </span>
-            </div>  
+            
           
             <button class="btn btn--primary btn--icon-with-text w-full exemptify_checkout" name="checkout">
               {%- if settings.cart_icon == 'bag' -%}
