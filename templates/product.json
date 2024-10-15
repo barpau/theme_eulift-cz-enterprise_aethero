@@ -200,8 +200,8 @@
     "f581de30-ad9f-4e74-91e8-7587354cc3c6": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"height:1px;\"></div>",
-        "section_height": "xsmall",
+        "custom_liquid": "",
+        "section_height": "tight",
         "full_width": false,
         "dividers": "none",
         "prevent_animation": false
