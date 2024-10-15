@@ -199,6 +199,7 @@
     },
     "f581de30-ad9f-4e74-91e8-7587354cc3c6": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "",
         "section_height": "default",
