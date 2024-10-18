@@ -552,9 +552,9 @@
         "delivery_title": "2. VYBERTE DOPRAVU"
       },
       "contact": {
-        "optional_first_name_label": "Společnost (volitelné)",
+        "optional_first_name_label": "Jméno",
         "last_name_label": "Jméno a Příjmení",
-        "optional_company_label": "Název společnosti (volitelné)",
+        "optional_company_label": "Společnosti (volitelné)",
         "contact_method_title": "1. VÁŠ EMAIL"
       },
       "delivery_options": {
