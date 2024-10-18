@@ -553,7 +553,7 @@
       },
       "contact": {
         "optional_first_name_label": "Jméno",
-        "last_name_label": "Jméno a Příjmení",
+        "last_name_label": "Příjmení",
         "optional_company_label": "Společnosti (volitelné)",
         "contact_method_title": "1. VÁŠ EMAIL"
       },
