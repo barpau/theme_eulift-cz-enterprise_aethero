@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin language editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header": {
@@ -554,7 +554,7 @@
       "contact": {
         "optional_first_name_label": "Společnost (volitelné)",
         "last_name_label": "Jméno a Příjmení",
-        "optional_company_label": "IČO (volitelné)",
+        "optional_company_label": "Název společnosti (volitelné)",
         "contact_method_title": "1. VÁŠ EMAIL"
       },
       "delivery_options": {
