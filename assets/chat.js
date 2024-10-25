@@ -20,10 +20,10 @@ function openingHours(){
     closeMinute: -1,
   },
     {
-      openHour: 8,
-      openMinute: 00,
-      closeHour: 17,
-      closeMinute: 00,
+      openHour: -1,
+    openMinute: -1,
+    closeHour: -1,
+    closeMinute: -1,
     },
     {
       openHour: 8,
