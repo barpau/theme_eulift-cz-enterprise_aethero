@@ -298,6 +298,7 @@
         "product-features-feature-1": {
           "type": "feature",
           "settings": {
+            "image": "shopify://shop_images/vysokozdvizny_vozik_elektricky_lithiovy_pohon_CDD1225J_LI_BE_OBR_01_97b70f92-2bd2-4332-844c-954c56491c04.jpg",
             "heading": "Tlačítko želva",
             "text": "<p>slouží ke zpomalení jízdy vozíku pro bezpečnou manipulaci</p>",
             "content_align": "text-start",
@@ -318,6 +319,7 @@
         "product-features-feature-3": {
           "type": "feature",
           "settings": {
+            "image": "shopify://shop_images/vysokozdvizny_vozik_elektricky_lithiovy_pohon_CDD1220J_LI_BE_06_b990fd73-20b3-49a5-9260-1c6277c590de.jpg",
             "heading": "Vestavěný nabíjecí automat",
             "text": "<p>pro nabití vozíku stačí zastrčit konektor do zásuvky</p>",
             "content_align": "text-start",
