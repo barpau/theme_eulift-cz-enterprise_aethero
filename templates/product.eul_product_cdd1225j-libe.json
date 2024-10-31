@@ -298,8 +298,9 @@
         "product-features-feature-1": {
           "type": "feature",
           "settings": {
+            "image": "shopify://shop_images/vysokozdvizny_vozik_elektricky_lithiovy_pohon_CDD1225J_LI_BE_OBR_01.jpg",
             "heading": "Tlačítko želva",
-            "text": "<p>slouží ke zpomalení jízdy vozíku pro bezpečnou manipulaci</p>",
+            "text": "<p>slouží ke zpomalení jízdy vozíku pro bezpečnou manipulaci.</p>",
             "content_align": "text-start",
             "hotspot_x": 64,
             "hotspot_y": 35
@@ -336,7 +337,7 @@
         "img {max-width: 50%;}"
       ],
       "settings": {
-        "product": "vysokozdvizny-vozik-cdd1225j-li",
+        "product": "vysokozdvizny-vozik-cdd1225j-li-black-edition",
         "show_content": true,
         "layout": "text_first",
         "text_align": "text-center",
