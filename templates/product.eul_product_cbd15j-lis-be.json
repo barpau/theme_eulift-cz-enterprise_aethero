@@ -298,6 +298,7 @@
         "product-features-feature-1": {
           "type": "feature",
           "settings": {
+            "image": "shopify://shop_images/paletovy_vozik_elektricky-HELI_CBD15J-LI-S-BE_OBR_02.jpg",
             "heading": "Lithiová baterie",
             "text": "<p>Vozíky s lithiovou baterií mají minimální servisní a provozní náklady, ačkoliv poskytují maximální komfort manipulace. </p>",
             "content_align": "text-start",
