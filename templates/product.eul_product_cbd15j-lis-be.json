@@ -288,6 +288,7 @@
         "product-features-feature-0": {
           "type": "feature",
           "settings": {
+            "image": "shopify://shop_images/paletovy_vozik_elektricky-HELI_CBD15J-LI-S-BE_OBR_03.jpg",
             "heading": "Tlačítko \"odskoku\"",
             "text": "<p>bezpečnostní červené tlačítko chrání obsluhu před možným úrazem. Například<br/>přimáčknutí ojí při manipulaci.</p>",
             "content_align": "text-start",
