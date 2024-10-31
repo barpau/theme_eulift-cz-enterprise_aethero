@@ -292,7 +292,7 @@
             "text": "<p>při zcela spuštěných vidlicích 1500 mm, při maximálním zdvihu je max. výška 2424 mm</p>",
             "content_align": "text-start",
             "hotspot_x": 62,
-            "hotspot_y": 18
+            "hotspot_y": 10
           }
         },
         "product-features-feature-1": {
@@ -302,7 +302,7 @@
             "heading": "Tlačítko želva",
             "text": "<p>slouží ke zpomalení jízdy vozíku pro bezpečnou manipulaci</p>",
             "content_align": "text-start",
-            "hotspot_x": 64,
+            "hotspot_x": 63,
             "hotspot_y": 33
           }
         },
