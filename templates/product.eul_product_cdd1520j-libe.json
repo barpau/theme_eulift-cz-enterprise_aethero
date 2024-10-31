@@ -302,7 +302,7 @@
             "heading": "Tlačítko želva",
             "text": "<p>slouží ke zpomalení jízdy vozíku pro bezpečnou manipulaci</p>",
             "content_align": "text-start",
-            "hotspot_x": 65,
+            "hotspot_x": 64,
             "hotspot_y": 33
           }
         },
@@ -312,18 +312,19 @@
             "heading": "Pohon vozíku - lithiová baterie",
             "text": "<p>vozík pohání lithiová baterie o kapacitě 24/60 V/Ah</p>",
             "content_align": "text-start",
-            "hotspot_x": 55,
-            "hotspot_y": 68
+            "hotspot_x": 57,
+            "hotspot_y": 69
           }
         },
         "product-features-feature-3": {
           "type": "feature",
           "settings": {
+            "image": "shopify://shop_images/vysokozdvizny_vozik_elektricky_lithiovy_pohon_CDD1520J_LI_BE_04_0c8d0871-225e-4b62-8dce-e593e268e14a.jpg",
             "heading": "Vestavěný nabíjecí automat",
             "text": "<p>pro nabití vozíku stačí zastrčit konektor do zásuvky</p>",
             "content_align": "text-start",
             "hotspot_x": 52,
-            "hotspot_y": 54
+            "hotspot_y": 56
           }
         }
       },
