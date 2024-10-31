@@ -336,14 +336,14 @@
         "img {max-width: 50%;}"
       ],
       "settings": {
-        "product": "vysokozdvizny-vozik-cdd1525j-li",
+        "product": "vysokozdvizny-vozik-cdd1525j-li-black-edition",
         "show_content": true,
         "layout": "text_first",
         "text_align": "text-center",
         "mob_center_text": false,
         "heading_size": "h1",
         "enlarge_text": false,
-        "image": "shopify://shop_images/00_cdd1525j_1.jpg",
+        "image": "shopify://shop_images/vysokozdvizny_vozik_elektricky_lithiovy_pohon_CDD1525J_LI_BE_03.jpg",
         "title": "{{ section.settings.product.title }}",
         "description": "<p>Podívejte se na výhody tohoto produktu:</p>",
         "button_label": "",
@@ -564,7 +564,6 @@
       "settings": {
         "video_external": "https://vimeo.com/691976543",
         "video_description": "",
-        "poster_image": "shopify://shop_images/sidlo-gekkon-opti_133f830b-2d51-44fe-a78c-16d65eebe74a.webp",
         "video_size": "md",
         "video_autoplay": true,
         "text_align": "text-center",
