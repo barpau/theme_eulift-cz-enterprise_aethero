@@ -302,8 +302,8 @@
             "heading": "Tlačítko želva",
             "text": "<p>slouží ke zpomalení jízdy vozíku pro bezpečnou manipulaci.</p>",
             "content_align": "text-start",
-            "hotspot_x": 64,
-            "hotspot_y": 35
+            "hotspot_x": 63,
+            "hotspot_y": 36
           }
         },
         "product-features-feature-2": {
