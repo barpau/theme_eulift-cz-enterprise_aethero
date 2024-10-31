@@ -336,7 +336,7 @@
         "img {max-width: 50%;}"
       ],
       "settings": {
-        "product": "paletovy-vozik-cbd15j-li-s",
+        "product": "paletovy-vozik-cbd15j-li-s-black-edition",
         "show_content": true,
         "layout": "text_first",
         "text_align": "text-center",
@@ -563,7 +563,6 @@
       "settings": {
         "video_external": "https://vimeo.com/827540439",
         "video_description": "",
-        "poster_image": "shopify://shop_images/sidlo-gekkon-opti_133f830b-2d51-44fe-a78c-16d65eebe74a.webp",
         "video_size": "md",
         "video_autoplay": true,
         "text_align": "text-center",
