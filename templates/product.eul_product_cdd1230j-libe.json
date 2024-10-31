@@ -298,10 +298,11 @@
         "product-features-feature-1": {
           "type": "feature",
           "settings": {
+            "image": "shopify://shop_images/vysokozdvizny_vozik_elektricky_lithiovy_pohon_CDD1225J_LI_BE_OBR_01_c9e3bf5a-e4e1-455e-8357-a85ed1b8e56b.jpg",
             "heading": "Tlačítko želva",
             "text": "<p>slouží ke zpomalení jízdy vozíku pro bezpečnou manipulaci</p>",
             "content_align": "text-start",
-            "hotspot_x": 61,
+            "hotspot_x": 63,
             "hotspot_y": 40
           }
         },
