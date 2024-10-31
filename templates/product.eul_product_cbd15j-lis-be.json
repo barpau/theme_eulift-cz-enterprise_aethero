@@ -299,17 +299,18 @@
           "type": "feature",
           "settings": {
             "heading": "Lithiová baterie",
-            "text": "<p>Vozíky s lithiovou baterií mají minimální servisní a provozní náklady, ačkoliv poskytují maximální komfort manipulace. Minimální náklad, maximální výkon.</p>",
+            "text": "<p>Vozíky s lithiovou baterií mají minimální servisní a provozní náklady, ačkoliv poskytují maximální komfort manipulace. </p>",
             "content_align": "text-start",
-            "hotspot_x": 65,
-            "hotspot_y": 63
+            "hotspot_x": 54,
+            "hotspot_y": 47
           }
         },
         "product-features-feature-2": {
           "type": "feature",
           "settings": {
-            "heading": "Hydraulika",
-            "text": "<p>osazení kvalitní hydraulickou jednotkou</p>",
+            "image": "shopify://shop_images/paletovy_vozik_elektricky-HELI_CBD15J-LI-S-BE_01_OBR.jpg",
+            "heading": "Pedál pro spouštění vidlic",
+            "text": "<p>Spouštěcím pedálem lze snadno spouštět nosné vidlice stejně jako páčkou na oji vozíku.</p>",
             "content_align": "text-start",
             "hotspot_x": 72,
             "hotspot_y": 68
@@ -318,6 +319,7 @@
         "product-features-feature-3": {
           "type": "feature",
           "settings": {
+            "image": "shopify://shop_images/paletovy_vozik_elektricky-HELI_CBD15J-LI-S-BE_04_b6ccd2c4-d9b4-489a-8075-53df2da0404d.jpg",
             "heading": "Tandemové kola pod vidlicí",
             "text": "<p>pro větší stabilitu při manipulaci</p>",
             "content_align": "text-start",
