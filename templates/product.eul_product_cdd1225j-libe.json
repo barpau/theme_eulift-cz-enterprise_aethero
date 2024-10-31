@@ -310,7 +310,7 @@
           "type": "feature",
           "settings": {
             "heading": "Pohon vozíku - lithiová baterie",
-            "text": "<p>vozík pohání lithiová baterie o kapacitě 24/60 V/Ah</p>",
+            "text": "<p>vozík pohání lithiová baterie o kapacitě 24 V/60 Ah</p>",
             "content_align": "text-start",
             "hotspot_x": 55,
             "hotspot_y": 68
