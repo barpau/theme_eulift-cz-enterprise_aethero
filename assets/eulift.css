@@ -41,6 +41,11 @@
     margin-top: 0px !important;
 }
 
+.product-details__block li {
+  list-style: disc;
+  margin-left: 17px;
+}
+
 
 /* Phone in header - comment bubble */
 .custom-comment {
