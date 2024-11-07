@@ -247,8 +247,10 @@
         price = 2068;
       } else if (totalWeight <= 372999) {
         price = 2182;
-      } else if (totalWeight <= 2000000) {
+      } else if (totalWeight <= 1999999) {
         price = 2990;
+      } else if (totalWeight > 2000000) {
+        price = 4900;
       }
       
       document.getElementById('shipping-price').textContent = price + ' Kč';
