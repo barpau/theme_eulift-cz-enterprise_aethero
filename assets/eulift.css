@@ -29,6 +29,10 @@
   padding: 0px !important;
 }
 
+.rotation-mobile{
+  height:240px !important;
+}
+
 .product-info__block--sm {
     margin-top: -17px !important;
 }
