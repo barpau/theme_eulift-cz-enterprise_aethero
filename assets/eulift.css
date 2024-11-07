@@ -25,6 +25,9 @@
 .product-vendor-sku+.product-info__title {
     margin-top: -18px !important;
 }
+.section--padded-default{
+  padding: 0px !important;
+}
 
 .product-info__block--sm {
     margin-top: -17px !important;
