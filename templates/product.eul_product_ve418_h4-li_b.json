@@ -285,41 +285,41 @@
         "product-features-feature-0": {
           "type": "feature",
           "settings": {
-            "heading": "Výška zdvihu",
-            "text": "<p>2000 mm</p>",
+            "heading": "Kabina s topením",
+            "text": "<p>Kabina zajišťuje bezpečnost a komfort pro obsluhu. Topení zvyšuje komfort obsluhy vysokozdvižného vozíku zejména v chladném počasí.</p>",
             "content_align": "text-start",
-            "hotspot_x": 50,
-            "hotspot_y": 10
+            "hotspot_x": 59,
+            "hotspot_y": 13
           }
         },
         "product-features-feature-1": {
           "type": "feature",
           "settings": {
-            "heading": "Tlačítko \"odskoku\"",
-            "text": "<p>bezpečnostní červené tlačítko chrání obsluhu před možným úrazem. Například<br/>přimáčknutí ojí při manipulaci.</p>",
+            "heading": "Nejnovější technologie",
+            "text": "<p>... přinášejí vyšší efektivitu a  komfort obsluze</p>",
             "content_align": "text-start",
-            "hotspot_x": 65,
-            "hotspot_y": 30
+            "hotspot_x": 45,
+            "hotspot_y": 39
           }
         },
         "product-features-feature-2": {
           "type": "feature",
           "settings": {
-            "heading": "Pohon vozíku - trakční baterie",
-            "text": "<p>vozík pohání baterie o kapacitě 25,6/150 V/Ah</p>",
+            "heading": "Zásuvka",
+            "text": "<p>pro možnost zapojení rychlonabíječe</p>",
             "content_align": "text-start",
-            "hotspot_x": 54,
-            "hotspot_y": 70
+            "hotspot_x": 55,
+            "hotspot_y": 64
           }
         },
         "product-features-feature-3": {
           "type": "feature",
           "settings": {
-            "heading": "Nosné vidlice",
-            "text": "<p>o délce 1150 mm na běžné EURO palety.</p>",
+            "heading": "Lithiová baterie",
+            "text": "<p>vozík pohání líthiová baterie o kapacitě 80V/ 154 Ah</p>",
             "content_align": "text-start",
-            "hotspot_x": 32,
-            "hotspot_y": 85
+            "hotspot_x": 60,
+            "hotspot_y": 78
           }
         }
       },
@@ -333,14 +333,14 @@
         "img {max-width: 50%;}"
       ],
       "settings": {
-        "product": "vysokozdvizny-vozik-cdd2020j-li",
+        "product": "celni-elektricky-vzv-heli-h4-li-1-8-tuny-ctyrkolovy-black-edition",
         "show_content": true,
         "layout": "text_first",
         "text_align": "text-center",
         "mob_center_text": false,
         "heading_size": "h1",
         "enlarge_text": false,
-        "image": "shopify://shop_images/cdd2020j_01_cr__01_1_1_1_1_9baf117e-9675-49a3-951c-6b30a6b7eb16.jpg",
+        "image": "shopify://shop_images/celni_VZV_HELI-G4-LI-BE_1_8T_3_5M_ctyrkolova_02_6c29ebeb-658c-42ec-8681-4f0c3ac139a6.jpg",
         "title": "{{ section.settings.product.title }}",
         "description": "<p>Podívejte se na výhody tohoto produktu:</p>",
         "button_label": "",
@@ -390,11 +390,9 @@
         "view_more_label": "View more",
         "view_more_link": "",
         "product_list": [
-          "vysokozdvizny-vozik-cdd2025j",
-          "vysokozdvizny-vozik-cdd2030j",
-          "vysokozdvizny-vozik-cdd2035j",
-          "vysokozdvizny-vozik-cdd2025j-li",
-          "vysokozdvizny-vozik-cdd2020j"
+          "celni-elektricke-vzv-heli-g4-li-1-5-3-5-tuny-ctyrkolove",
+          "celni-elektricke-vzv-heli-g3-li-1-5-2-tuny-trikolove-dual",
+          "celni-elektricke-vzv-heli-g3-li-1-5-3-5-tuny-ctyrkolove-dual"
         ],
         "empty_field_text": "-",
         "image_ratio": "shortest",
@@ -559,7 +557,6 @@
       "settings": {
         "video_external": "https://vimeo.com/429286026",
         "video_description": "",
-        "poster_image": "shopify://shop_images/sidlo-gekkon-opti_133f830b-2d51-44fe-a78c-16d65eebe74a.webp",
         "video_size": "md",
         "video_autoplay": true,
         "text_align": "text-center",
