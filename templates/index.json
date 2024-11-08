@@ -205,8 +205,7 @@
         "collection_UNNMdK": {
           "type": "collection",
           "settings": {
-            "collection": "akcni-nabidka",
-            "image": "shopify://shop_images/SLEVA3.webp"
+            "collection": "akcni-nabidka"
           }
         },
         "collection_6fAykx": {
