@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow": {
@@ -209,6 +209,12 @@
             "image": "shopify://shop_images/SLEVA3.webp"
           }
         },
+        "collection_6fAykx": {
+          "type": "collection",
+          "settings": {
+            "collection": "black-edition"
+          }
+        },
         "collection-5": {
           "type": "collection",
           "settings": {
@@ -249,6 +255,7 @@
       },
       "block_order": [
         "collection_UNNMdK",
+        "collection_6fAykx",
         "collection-5",
         "collection-0",
         "collection-2",
@@ -496,18 +503,15 @@
       "blocks": {
         "product-labels-1": {
           "type": "product-labels",
-          "settings": {
-          }
+          "settings": {}
         },
         "title-2": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "rating-3": {
           "type": "rating",
-          "settings": {
-          }
+          "settings": {}
         },
         "price-4": {
           "type": "price",
@@ -879,13 +883,11 @@
         },
         "comparison-vendor-2": {
           "type": "vendor",
-          "settings": {
-          }
+          "settings": {}
         },
         "comparison-price-3": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "comparison-description-4": {
           "type": "description",
@@ -908,9 +910,7 @@
         "heading_align": "text-center",
         "view_more_label": "View more",
         "view_more_link": "",
-        "product_list": [
-
-        ],
+        "product_list": [],
         "empty_field_text": "-",
         "image_ratio": "shortest",
         "image_crop": "center",
