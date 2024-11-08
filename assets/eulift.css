@@ -29,6 +29,21 @@
   padding: 0px !important;
 }
 
+/* home page - because of this
+
+.section--padded-default{
+  padding: 0px !important;
+}
+
+since it moved the instafeed as well
+
+ */
+
+#insta-feed {
+  padding: calc(var(--section-gap)* var(--fluid-1-5)) 0 !important;
+}
+
+
 .rotation-mobile{
   height:240px !important;
 }
