@@ -3,6 +3,7 @@
         {% render 'icon-available' %}
       </div>
       <div>
+         <p>Debug: [{{ product.metafields.custom.dopravce_u_produktu }}]</p>
         <p class="mb-0">
           {% if product.metafields.custom.dopravce_u_produktu != blank %}
             {{ product.metafields.custom.dopravce_u_produktu }}
