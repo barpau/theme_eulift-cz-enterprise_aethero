@@ -2,8 +2,8 @@
 <div class="pickup-icon">
         {% render 'icon-available' %}
       </div>
-      <div>
-        <p class="mb-0" style="text-justify:left;">
+      <div class="pickup-text">
+        <p class="mb-0">
           {% if product.metafields.custom.dopravce_u_produktu != blank %}
             {{ product.metafields.custom.dopravce_u_produktu }}
           {% else %}
