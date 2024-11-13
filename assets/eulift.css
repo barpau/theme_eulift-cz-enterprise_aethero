@@ -47,6 +47,15 @@
     border: none !important;
   }
 
+/* Product page - Body na obrázku zmenšené pro mobil */
+
+@media (max-width: 500px) {
+.hotspot__btn{
+  width:24px;
+  height:24px;
+}
+}
+
 /* home page - because of this
 
 .section--padded-default{
