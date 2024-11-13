@@ -3,6 +3,10 @@
     display: none;
 }
 
+/* Basic settings */
+p {
+    text-align: justify;
+}
 /* Hide tax validation for non payers */
 
 #taxPayerValidation {
