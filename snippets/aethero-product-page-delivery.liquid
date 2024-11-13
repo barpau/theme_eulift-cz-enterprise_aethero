@@ -4,8 +4,8 @@
       </div>
       <div>
         <p class="mb-0">
-          {% if product.metafields.custom.dopravce_u_produktu.value != blank %}
-            {{ product.metafields.custom.dopravce_u_produktu.value }}
+          {% if product.metafields.custom.dopravce_u_produktu != blank %}
+            {{ product.metafields.custom.dopravce_u_produktu }}
           {% else %}
             Doprava společností GEIS
           {% endif %}
