@@ -4,7 +4,7 @@
 }
 
 /* Basic settings */
-p {
+.product-main p, .product-details p {
     text-align: justify;
 }
 /* Hide tax validation for non payers */
