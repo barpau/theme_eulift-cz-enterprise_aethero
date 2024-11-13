@@ -7,6 +7,11 @@
 .product-main p, .product-details p {
     text-align: justify;
 }
+
+.pickup-icon p{
+    text-align:left;
+}
+
 /* Hide tax validation for non payers */
 
 #taxPayerValidation {
