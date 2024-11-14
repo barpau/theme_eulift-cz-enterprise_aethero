@@ -655,7 +655,23 @@
     </div>
 </details>
             </details-disclosure>
-          
+            <div class="mt-4">
+              {% if product.metafields.custom.manual %} 
+                <a href="{{ product.metafields.custom.manual | file_url }}" target="blank"><p style="font-weight:bold; text-decoration:underline;">Manuál produktu</p></a>
+            {% endif %}
+              
+            {% if product.metafields.custom.produktovy_list %} 
+              <a href="{{ product.metafields.custom.produktovy_list| file_url }}" target="blank"><p style="font-weight:bold; text-decoration:underline;">Produktový list</p></a>
+            {% endif %}
+              
+            {% if product.metafields.custom.navod_k_baterii %} 
+              <a href="{{ product.metafields.custom.navod_k_baterii | file_url }}" target="blank"><p style="font-weight:bold; text-decoration:underline;">Návod k baterii</p></a>
+            {% endif %}
+              
+            {% if product.metafields.custom.sk_navod_k_nabijecce %} 
+              <a href="{{ product.metafields.custom.cz_navod_k_nabijecce | file_url }}" target="blank"><p style="font-weight:bold; text-decoration:underline;">Návod k nabíjačce</p></a>
+            {% endif %}
+            </div>
 
           {%- when 'product-signup' -%}
             {%- liquid
