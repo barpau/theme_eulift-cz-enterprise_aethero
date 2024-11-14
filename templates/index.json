@@ -12,6 +12,38 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "slide_PGVUtm": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/2560x1139_eulift.jpg",
+            "image_mobile": "shopify://shop_images/2560x2560_eulift_mobil.jpg",
+            "overlay_position": "justify-start items-start",
+            "overlay_text_align": "text-start",
+            "mob_center_text": false,
+            "subheading": "",
+            "heading": "HELI Black edition s kabinou a topením jako nejlepší volba na zimu",
+            "heading_size": "h0",
+            "heading_h1": false,
+            "text": "<p>Práce v chladném počasí pohodlně a bezpečně. Čelní vysokozdvižný vozík HELI se skvělou výbavou a nejlevněji na trhu.</p>",
+            "enlarge_text": true,
+            "button_1_label": "Chci si prohlédnout",
+            "button_1_link": "shopify://collections/black-edition",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary",
+            "countdown_show": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_end_text": "",
+            "enlarge_end_text": false,
+            "countdown_hide_on_end": false,
+            "use_custom_colors": false,
+            "count_color": "#ffffff",
+            "bg_color": "#070707",
+            "bg_grad": ""
+          }
+        },
         "slide-1": {
           "type": "slide",
           "settings": {
@@ -60,38 +92,6 @@
             "enlarge_text": true,
             "button_1_label": "Přejít na BLACK EDITION",
             "button_1_link": "/collections/black-edition",
-            "button_1_style": "btn btn--primary",
-            "button_2_label": "",
-            "button_2_link": "",
-            "button_2_style": "btn btn--primary",
-            "countdown_show": false,
-            "countdown_end_date": "",
-            "countdown_end_time": "",
-            "countdown_end_text": "",
-            "enlarge_end_text": false,
-            "countdown_hide_on_end": false,
-            "use_custom_colors": false,
-            "count_color": "#ffffff",
-            "bg_color": "#070707",
-            "bg_grad": ""
-          }
-        },
-        "slide_PGVUtm": {
-          "type": "slide",
-          "settings": {
-            "image_desktop": "shopify://shop_images/eulift_CZ_beztextu_modry.webp",
-            "image_mobile": "shopify://shop_images/eulift_2560x2560_f8438fb0-4da6-4244-b956-57930164f912.jpg",
-            "overlay_position": "justify-start items-start",
-            "overlay_text_align": "text-start",
-            "mob_center_text": false,
-            "subheading": "",
-            "heading": "JEDINEČNÁ NABÍDKA  zánovních strojů",
-            "heading_size": "h0",
-            "heading_h1": false,
-            "text": "<p><strong>SKVĚLÁ MOTORIZACE ZA VÝBORNOU CENU!</strong></p><p><strong>HELI G1, EURO 3</strong><br/><strong>Lehce použité</strong> vysokozdvižné vozíky<br/><strong>EURO 3</strong> - bez filtru pevných částic<br/><strong>Minimální počet Mth</strong></p>",
-            "enlarge_text": true,
-            "button_1_label": "Přejít na ZÁNOVNÍ TECHNIKU",
-            "button_1_link": "shopify://collections/zanovni-technika",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -174,9 +174,9 @@
         }
       },
       "block_order": [
+        "slide_PGVUtm",
         "slide-1",
         "2b1e300b-a0a7-4a95-aa24-7ab800a9e1ed",
-        "slide_PGVUtm",
         "slide_H6WQzG",
         "slide_Bmg7ze"
       ],
