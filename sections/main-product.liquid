@@ -186,16 +186,16 @@
           <div class="delivery" data-delivery-price>
   Doprava: <span id="shipping-price"></span>
 </div>
-          <div>
-<span class="inventory-icon">
-{% if product.metafields.custom.skladem == true %}
-<img src="https://cdn.shopify.com/s/files/1/0834/5468/9568/files/skladem2.svg?v=1725004779" width="32" height="32" frameborder="0" scrolling="no" style="max-width:100%; max-height:100vw;"></img><br>Skladem 
+      <div>
+              <span class="inventory-icon">
+              {% if product.metafields.custom.skladem == true %}
+              <img src="https://cdn.shopify.com/s/files/1/0834/5468/9568/files/skladem2.svg?v=1725004779" width="32" height="32" frameborder="0" scrolling="no" style="max-width:100%; max-height:100vw;"></img><br>Skladem 
 
-{% else %}
-<img src="https://cdn.shopify.com/s/files/1/0834/5468/9568/files/na-ceste.svg?v=1725004779" width="32" height="32"></img><br>Na cestě
-{% endif %}
-</span>
-</div>
+              {% else %}
+              <img src="https://cdn.shopify.com/s/files/1/0834/5468/9568/files/na-ceste.svg?v=1725004779" width="32" height="32"></img><br>Na cestě
+              {% endif %}
+              </span>
+      </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -415,7 +415,7 @@
                   </div>
                 </div>
               </details>
-          <details class="disclosure disclosure--row" close="">
+<details class="disclosure disclosure--row" close="">
     <summary>
         <div class="flex justify-between items-center">
             <h2 class="disclosure__title product-info__disclosure font-body font-bold text-body flex flex-auto items-center mb-0">Parametry</h2>
@@ -654,8 +654,8 @@
         </div>
     </div>
 </details>
-            </details-disclosure>
-            <div class="mt-4">
+</details-disclosure>
+          <div class="mt-4">
               {% if product.metafields.custom.manual %} 
                 <a href="{{ product.metafields.custom.manual | file_url }}" target="blank"><p style="font-weight:bold; text-decoration:underline;">Manuál produktu</p></a>
             {% endif %}
@@ -671,7 +671,7 @@
             {% if product.metafields.custom.sk_navod_k_nabijecce %} 
               <a href="{{ product.metafields.custom.cz_navod_k_nabijecce | file_url }}" target="blank"><p style="font-weight:bold; text-decoration:underline;">Návod k nabíjačce</p></a>
             {% endif %}
-            </div>
+          </div>
 
           {%- when 'product-signup' -%}
             {%- liquid
@@ -879,6 +879,8 @@
   </div>
 </div>
 
+
+
 {%- render 'product-popups' -%}
 
 {%- if section.settings.sticky_atc_panel and product.available -%}
@@ -929,6 +931,14 @@
 {%- endif -%}
 
 {% render 'structured-data-product', product: product, current_variant: current_variant %}
+
+<div style="justify-content: center;">
+{% if product.metafields.custom.rotation_url_cz != blank %}
+  <center><iframe class="rotation-desktop" src="{{ product.metafields.custom.rotation_url_cz }}" frameborder="0" scrolling="no" style="width: 544px; height: 408px;"></iframe></center>
+  <center><iframe class="rotation-mobile" src="{{ product.metafields.custom.rotation_url_mobile_cz }}" width="320" frameborder="0" scrolling="no" style="width: 320px; height: 420px;" ></iframe></center>
+  {% endif %}
+</div>
+
 
 {% schema %}
 {
@@ -2095,3 +2105,4 @@
   ]
 }
 {% endschema %}
+
