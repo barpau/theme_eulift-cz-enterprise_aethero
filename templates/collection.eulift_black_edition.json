@@ -9,6 +9,28 @@
  */
 {
   "sections": {
+    "rich_text_7XeXim": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fUxDRY": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_size": "h2",
+            "heading_h1": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_fUxDRY"
+      ],
+      "settings": {
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "color_scheme": "none",
+        "full_width": true
+      }
+    },
     "collection_list_AP7Eey": {
       "type": "collection-list",
       "blocks": {
@@ -96,6 +118,7 @@
     }
   },
   "order": [
+    "rich_text_7XeXim",
     "collection_list_AP7Eey",
     "collection-products",
     "collection-banner"
