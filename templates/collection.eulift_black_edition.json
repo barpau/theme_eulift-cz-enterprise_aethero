@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "collection_list_AP7Eey": {
@@ -39,19 +39,6 @@
         "card_size": "small",
         "use_product_image": false,
         "circle_image": true
-      }
-    },
-    "collection-banner": {
-      "type": "main-collection-banner",
-      "settings": {
-        "show_collection_title": true,
-        "show_product_count": true,
-        "show_collection_description": true,
-        "text_align": "text-start",
-        "collection_image": "natural",
-        "use_product_image": false,
-        "text_width": "standard",
-        "color_scheme": "default"
       }
     },
     "collection-products": {
@@ -93,11 +80,24 @@
         "show_feat_sort_opt": true,
         "sort_first": true
       }
+    },
+    "collection-banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_title": true,
+        "show_product_count": true,
+        "show_collection_description": true,
+        "text_align": "text-start",
+        "collection_image": "natural",
+        "use_product_image": false,
+        "text_width": "standard",
+        "color_scheme": "default"
+      }
     }
   },
   "order": [
     "collection_list_AP7Eey",
-    "collection-banner",
-    "collection-products"
+    "collection-products",
+    "collection-banner"
   ]
 }
