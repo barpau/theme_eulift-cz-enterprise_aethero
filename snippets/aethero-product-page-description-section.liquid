@@ -1,9 +1,9 @@
-<div>
+<div class="mt-8 description-section">
     <div class="detailed-info">
         <h4>Podrobné informace</h4>
         {{ product.description }}
     </div>
-    <div>
+    <div class="technical-parameters">
         <h4>Technické parametry</h4>
         <table class="parameters-table">
             <tbody>
@@ -233,5 +233,22 @@
             </tbody>
           </table>
     </div>
-
 </div>
+
+<style>
+    .description-section {
+        display: flex; /* Použijte Flexbox pro umístění divů vedle sebe */
+        gap: 135px; /* Mezera mezi divy */
+    }
+    .detailed-info, .technical-parameters {
+        flex: 1; /* Každý div zabere stejnou šířku */
+        padding: 20px; /* Přidání paddingu pro lepší vzhled */
+    }
+
+    /* Media query pro mobilní zařízení */
+    @media (max-width: 768px) {
+        .description-section {
+            flex-direction: column; /* Změna směru flexboxu na sloupec */
+        }
+    }
+</style>
