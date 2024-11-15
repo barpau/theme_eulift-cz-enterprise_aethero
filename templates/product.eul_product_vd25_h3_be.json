@@ -278,8 +278,8 @@
         "product-features-feature-0": {
           "type": "feature",
           "settings": {
-            "heading": "Kabina s topením",
-            "text": "<p>Kabina zajišťuje bezpečnost a komfort pro obsluhu. Topení zvyšuje komfort obsluhy vysokozdvižného vozíku zejména v chladném počasí.</p>",
+            "heading": "Vyhřívané zadní sklo",
+            "text": "<p>ocení obsluha v chladných měsících</p>",
             "content_align": "text-start",
             "hotspot_x": 59,
             "hotspot_y": 13
@@ -288,8 +288,8 @@
         "product-features-feature-1": {
           "type": "feature",
           "settings": {
-            "heading": "Nejnovější technologie",
-            "text": "<p>přinášejí vyšší efektivitu a  komfort obsluze.</p>",
+            "heading": "Kabina",
+            "text": "<p>s topením, vyhřívanými zadním sklem a stěrači.</p>",
             "content_align": "text-start",
             "hotspot_x": 45,
             "hotspot_y": 39
@@ -298,18 +298,18 @@
         "product-features-feature-2": {
           "type": "feature",
           "settings": {
-            "heading": "Zásuvka",
-            "text": "<p>pro možnost zapojení rychlonabíječe</p>",
+            "heading": "Výfuk",
+            "text": "",
             "content_align": "text-start",
-            "hotspot_x": 55,
+            "hotspot_x": 75,
             "hotspot_y": 64
           }
         },
         "product-features-feature-3": {
           "type": "feature",
           "settings": {
-            "heading": "Lithiová baterie",
-            "text": "<p>vozík pohání líthiová baterie o kapacitě 80V/ 154 Ah.</p>",
+            "heading": "Plnopryžové pneumatiky",
+            "text": "<p>vynikají odolností a životností</p>",
             "content_align": "text-start",
             "hotspot_x": 60,
             "hotspot_y": 75
