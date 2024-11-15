@@ -45,8 +45,7 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "a8bd77c7-585e-4f64-9f0d-7f2eb68b8816": {
           "type": "custom-liquid",
@@ -123,8 +122,7 @@
         "share": {
           "type": "share",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "message-3": {
           "type": "message",
@@ -166,8 +164,7 @@
         "collapsible-content-2",
         "share",
         "message-3",
-        "3e20cfb2-9a29-4ede-a25d-a0b558debdfa",
-        "2eda680c-0225-47ec-9916-0ebb8ab9ca64"
+        "3e20cfb2-9a29-4ede-a25d-a0b558debdfa"
       ],
       "settings": {
         "stick_on_scroll": true,
@@ -191,7 +188,7 @@
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
-   "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e": {
+    "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e": {
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "{% render 'aethero-product-page-description-section'%}",
@@ -226,7 +223,7 @@
             "tab_3_text": "",
             "tab_3_page": ""
           }
-        },    
+        },
         "payment-methods": {
           "type": "payment-methods",
           "disabled": true,
@@ -242,12 +239,9 @@
       },
       "block_order": [
         "tabs",
-       
-        "highlight-text",
         "payment-methods"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "product-features": {
       "type": "product-features",
@@ -334,13 +328,11 @@
         },
         "comparison-vendor-2": {
           "type": "vendor",
-          "settings": {
-          }
+          "settings": {}
         },
         "comparison-price-3": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "comparison-description-4": {
           "type": "description",

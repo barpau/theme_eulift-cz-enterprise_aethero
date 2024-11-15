@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -16,7 +16,7 @@
           "type": "custom-liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "<div class=\"icons-block-top\">\n{% if product.metafields.custom.nosnost %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-weight-50.png?v=1683022408\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img>\n\n<li class=\"icons-text-product-page-top\">Nosnost<\/li>\n\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.nosnost }}<\/li>\n<\/strong>\n<\/div>\n\n{% endif %}\n\n{% if product.metafields.custom.celkova_sirka %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-width-50.png?v=1687258509\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img>\n<li class=\"icons-text-product-page-top\">Šířka<\/li>\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.celkova_sirka }}<\/li>\n<\/strong>\n<\/div>\n{% endif %}\n\n{% if product.metafields.custom.delka_vidlic %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-length-64.png?v=1687258509\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img>\n<li class=\"icons-text-product-page-top\">Délka vidlic<\/li>\n\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.delka_vidlic}}<\/li>\n<\/strong>\n<\/div>\n{% endif %}\n\n{% if product.metafields.custom.vyska_zdvihu %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icon_pohon.png?v=1683230284\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img>\n<li class=\"icons-text-product-page-top\">Pohon<\/li>\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.pohon}}<\/li>\n<\/strong>\n<\/div>\n{% endif %}\n<\/div>"
+            "custom_liquid": "<div class=\"icons-block-top\">\n{% if product.metafields.custom.nosnost %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https://cdn.shopify.com/s/files/1/0755/1526/5333/files/icons8-weight-50.png?v=1683022408\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"></img>\n\n<li class=\"icons-text-product-page-top\">Nosnost</li>\n\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.nosnost }}</li>\n</strong>\n</div>\n\n{% endif %}\n\n{% if product.metafields.custom.celkova_sirka %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https://cdn.shopify.com/s/files/1/0755/1526/5333/files/icons8-width-50.png?v=1687258509\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"></img>\n<li class=\"icons-text-product-page-top\">Šířka</li>\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.celkova_sirka }}</li>\n</strong>\n</div>\n{% endif %}\n\n{% if product.metafields.custom.delka_vidlic %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https://cdn.shopify.com/s/files/1/0755/1526/5333/files/icons8-length-64.png?v=1687258509\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"></img>\n<li class=\"icons-text-product-page-top\">Délka vidlic</li>\n\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.delka_vidlic}}</li>\n</strong>\n</div>\n{% endif %}\n\n{% if product.metafields.custom.vyska_zdvihu %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https://cdn.shopify.com/s/files/1/0755/1526/5333/files/icon_pohon.png?v=1683230284\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"></img>\n<li class=\"icons-text-product-page-top\">Pohon</li>\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.pohon}}</li>\n</strong>\n</div>\n{% endif %}\n</div>"
           }
         },
         "variant-picker": {
@@ -48,20 +48,19 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "66489f77-cc4a-4623-901d-c11836881e18": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<div class=\"esyncer_eulift_form\" client=\"EULIFTSK_MALL\"><\/div>"
+            "custom_liquid": "<div class=\"esyncer_eulift_form\" client=\"EULIFTSK_MALL\"></div>"
           }
         },
         "45f3f56d-f278-4d4c-872e-0c8b3c2dec44": {
           "type": "custom-liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "<div style=\"color: red; font-weight: 700; font-size: 30px;\">Cena na dotaz<\/div>\n\n{% form 'contact' %}\n{{ form.errors | default_errors }}\n\n<div style=\"display:none;\" class=\"order-number\">\n<input type=\"text\" name=\"contact[Dotaz na cenu:{{product.title}}]\" id=\"order-number\"\/>\n<\/div>\n\n<div class=\"first-name\"><label for=\"first-name\">Jméno a příjmení\n<\/label>\n<br>\n<input type=\"text\" name=\"contact[jmeno]\" id=\"first-name\" \/>\n<\/div>\n\n<div class=\"phone\">\n<label for=\"phone\">Telefon\n<\/label>\n<br>\n<input type=\"tel\" name=\"contact[telefon]\" id=\"phone\"\/>\n<\/div>\n\n<div class=\"email\">\n<label for=\"email\">Email\n<\/label>\n<br>\n<input type=\"email\" name=\"contact[email]\" id=\"email\"\/>\n<\/div>\n\n<div class=\"message\">\n<label for=\"message\">Výška zdvihu<\/label><br>\n   <input type=\"text\" name=\"contact[vyska-zdvihu]\" id=\"message\"><\/input>\n<\/div>\n\n<div class=\"jak-kontaktovat\">\n<label for=\"jak-kontaktovat\">Jaký způsob komunikace preferujete?<\/label>\n<br>\n  <input type=\"radio\" name=\"contact[jak-kontaktovat]\" value=\"email\" id=\"email\"><label for=\"email\">Email<\/label><br>\n  <input type=\"radio\" name=\"contact[jak-kontaktovat]\" value=\"Telefon\" id=\"phone\"><label for=\"phone\">Telefon<\/label><br>\n<\/div>\n\n  <div class=\"submit\">\n    <input class=\"na-dotaz\" type=\"submit\" value=\"Poptat cenu\" \/>\n  <\/div>\n{% endform %}"
+            "custom_liquid": "<div style=\"color: red; font-weight: 700; font-size: 30px;\">Cena na dotaz</div>\n\n{% form 'contact' %}\n{{ form.errors | default_errors }}\n\n<div style=\"display:none;\" class=\"order-number\">\n<input type=\"text\" name=\"contact[Dotaz na cenu:{{product.title}}]\" id=\"order-number\"/>\n</div>\n\n<div class=\"first-name\"><label for=\"first-name\">Jméno a příjmení\n</label>\n<br>\n<input type=\"text\" name=\"contact[jmeno]\" id=\"first-name\" />\n</div>\n\n<div class=\"phone\">\n<label for=\"phone\">Telefon\n</label>\n<br>\n<input type=\"tel\" name=\"contact[telefon]\" id=\"phone\"/>\n</div>\n\n<div class=\"email\">\n<label for=\"email\">Email\n</label>\n<br>\n<input type=\"email\" name=\"contact[email]\" id=\"email\"/>\n</div>\n\n<div class=\"message\">\n<label for=\"message\">Výška zdvihu</label><br>\n   <input type=\"text\" name=\"contact[vyska-zdvihu]\" id=\"message\"></input>\n</div>\n\n<div class=\"jak-kontaktovat\">\n<label for=\"jak-kontaktovat\">Jaký způsob komunikace preferujete?</label>\n<br>\n  <input type=\"radio\" name=\"contact[jak-kontaktovat]\" value=\"email\" id=\"email\"><label for=\"email\">Email</label><br>\n  <input type=\"radio\" name=\"contact[jak-kontaktovat]\" value=\"Telefon\" id=\"phone\"><label for=\"phone\">Telefon</label><br>\n</div>\n\n  <div class=\"submit\">\n    <input class=\"na-dotaz\" type=\"submit\" value=\"Poptat cenu\" />\n  </div>\n{% endform %}"
           }
         },
         "divider-0": {
@@ -75,7 +74,7 @@
         "97e3fb95-e8e5-4640-b8cf-81f9031aa4c7": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<div><\/div>"
+            "custom_liquid": "<div></div>"
           }
         },
         "price": {
@@ -89,14 +88,14 @@
           "type": "custom-liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "<div class=\"price-with-tax\">{{ product.price | times: 1.21 | money }} s DPH<\/div>\n\n<div class=\"delivery\">\n    Doprava:    \n    {% for variant in product.variants %}\n        {% assign weight_in_grams = variant.weight %}\n {% endfor %}       \n        {% if weight_in_grams <= 7999 %}\n            114 Kč\n        {% elsif weight_in_grams <= 22999 %}\n            194 Kč\n        {% elsif weight_in_grams <= 32999 %}\n            275 Kč\n        {% elsif weight_in_grams <= 52999 %}\n            378 Kč\n        {% elsif weight_in_grams <= 92999 %}\n            493 Kč\n        {% elsif weight_in_grams <= 97999 %}\n            607 Kč\n        {% elsif weight_in_grams <= 102999 %}\n            727 Kč\n        {% elsif weight_in_grams <= 107999 %}\n            827 Kč\n        {% elsif weight_in_grams <= 182999 %}\n            919 Kč\n        {% elsif weight_in_grams <= 187999 %}\n            1.033 Kč\n        {% elsif weight_in_grams <= 192999 %}\n            1.148 Kč\n        {% elsif weight_in_grams <= 267999 %}\n            1.377 Kč\n        {% elsif weight_in_grams <= 272999 %}\n            1.403 Kč\n        {% elsif weight_in_grams <= 277999 %}\n            1.607 Kč\n        {% elsif weight_in_grams <= 322999 %}\n            1.701 Kč\n        {% elsif weight_in_grams <= 362999 %}\n            1.839 Kč\n        {% elsif weight_in_grams <= 367999 %}\n            2.068 Kč\n        {% elsif weight_in_grams <= 372999 %}\n            2.182 Kč\n        {% elsif weight_in_grams <= 2000000 %}\n            2.990 Kč\n        {% endif %}\n<\/div>"
+            "custom_liquid": "<div class=\"price-with-tax\">{{ product.price | times: 1.21 | money }} s DPH</div>\n\n<div class=\"delivery\">\n    Doprava:    \n    {% for variant in product.variants %}\n        {% assign weight_in_grams = variant.weight %}\n {% endfor %}       \n        {% if weight_in_grams <= 7999 %}\n            114 Kč\n        {% elsif weight_in_grams <= 22999 %}\n            194 Kč\n        {% elsif weight_in_grams <= 32999 %}\n            275 Kč\n        {% elsif weight_in_grams <= 52999 %}\n            378 Kč\n        {% elsif weight_in_grams <= 92999 %}\n            493 Kč\n        {% elsif weight_in_grams <= 97999 %}\n            607 Kč\n        {% elsif weight_in_grams <= 102999 %}\n            727 Kč\n        {% elsif weight_in_grams <= 107999 %}\n            827 Kč\n        {% elsif weight_in_grams <= 182999 %}\n            919 Kč\n        {% elsif weight_in_grams <= 187999 %}\n            1.033 Kč\n        {% elsif weight_in_grams <= 192999 %}\n            1.148 Kč\n        {% elsif weight_in_grams <= 267999 %}\n            1.377 Kč\n        {% elsif weight_in_grams <= 272999 %}\n            1.403 Kč\n        {% elsif weight_in_grams <= 277999 %}\n            1.607 Kč\n        {% elsif weight_in_grams <= 322999 %}\n            1.701 Kč\n        {% elsif weight_in_grams <= 362999 %}\n            1.839 Kč\n        {% elsif weight_in_grams <= 367999 %}\n            2.068 Kč\n        {% elsif weight_in_grams <= 372999 %}\n            2.182 Kč\n        {% elsif weight_in_grams <= 2000000 %}\n            2.990 Kč\n        {% endif %}\n</div>"
           }
         },
         "fb748c5f-ce21-4199-a2fb-bcc4958b7cbd": {
           "type": "custom-liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "<div>\n<span class=\"inventory-icon\">\n{% if product.metafields.custom.skladem == true %}\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-warehouse-50.png?v=1683230284\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img><br>Skladem \n\n{% else %}\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-truck-100.png?v=1683230115\" width=\"50\"><\/img><br>Na cestě\n{% endif %}\n<\/span>\n<\/div>"
+            "custom_liquid": "<div>\n<span class=\"inventory-icon\">\n{% if product.metafields.custom.skladem == true %}\n<img src=\"https://cdn.shopify.com/s/files/1/0755/1526/5333/files/icons8-warehouse-50.png?v=1683230284\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"></img><br>Skladem \n\n{% else %}\n<img src=\"https://cdn.shopify.com/s/files/1/0755/1526/5333/files/icons8-truck-100.png?v=1683230115\" width=\"50\"></img><br>Na cestě\n{% endif %}\n</span>\n</div>"
           }
         },
         "buy-buttons": {
@@ -113,7 +112,7 @@
           "disabled": true,
           "settings": {
             "icon": "clock",
-            "title": "<p><strong>Právě teď jsou populární<br\/><\/strong>Tento produkt si v poslední době prohlíží mnoho zákazníků.<\/p>",
+            "title": "<p><strong>Právě teď jsou populární<br/></strong>Tento produkt si v poslední době prohlíží mnoho zákazníků.</p>",
             "close": "once",
             "show_over_media": true,
             "visibility_duration": 4,
@@ -126,7 +125,7 @@
           "disabled": true,
           "settings": {
             "icon": "price_tag",
-            "title": "<p><strong>Prodávají se rychle!<br\/><\/strong>Kupte si ten svůj dokuď jsou.<\/p>",
+            "title": "<p><strong>Prodávají se rychle!<br/></strong>Kupte si ten svůj dokuď jsou.</p>",
             "close": "once",
             "show_over_media": true,
             "visibility_duration": 5,
@@ -140,7 +139,7 @@
           "settings": {
             "heading": "Doprava zdarma",
             "icon": "truck",
-            "text": "<p>Add some general information about your delivery and shipping policies.<\/p>",
+            "text": "<p>Add some general information about your delivery and shipping policies.</p>",
             "page": "",
             "open": false
           }
@@ -148,15 +147,14 @@
         "share": {
           "type": "share",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "message-3": {
           "type": "message",
           "disabled": true,
           "settings": {
             "icon": "none",
-            "title": "<p>Add a stand out message for your customers<\/p>",
+            "title": "<p>Add a stand out message for your customers</p>",
             "close": "once",
             "show_over_media": false,
             "visibility_duration": 7,
@@ -173,7 +171,8 @@
             "page": "",
             "open": true
           }
-        }},
+        }
+      },
       "block_order": [
         "9b54a0e5-c077-4c4d-b987-a2c9c18a7525",
         "variant-picker",
@@ -193,8 +192,7 @@
         "collapsible-content-2",
         "share",
         "message-3",
-        "3e20cfb2-9a29-4ede-a25d-a0b558debdfa",
-        "2eda680c-0225-47ec-9916-0ebb8ab9ca64"
+        "3e20cfb2-9a29-4ede-a25d-a0b558debdfa"
       ],
       "settings": {
         "stick_on_scroll": true,
@@ -218,7 +216,7 @@
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
-   "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e": {
+    "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e": {
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "{% render 'aethero-product-page-description-section'%}",
@@ -254,7 +252,6 @@
             "tab_3_page": ""
           }
         },
-        
         "payment-methods": {
           "type": "payment-methods",
           "disabled": true,
@@ -262,7 +259,7 @@
             "title": "Payment & Security",
             "title1": "Payment methods",
             "show_payment_icons": true,
-            "text1": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.<\/p>",
+            "text1": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.</p>",
             "title2": "",
             "text2": ""
           }
@@ -270,12 +267,9 @@
       },
       "block_order": [
         "tabs",
-       
-        "highlight-text",
         "payment-methods"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "product-features": {
       "type": "product-features",
@@ -284,7 +278,7 @@
           "type": "feature",
           "settings": {
             "heading": "Ovládací páčka",
-            "text": "<p>ovládá zdvih a spouštění vidlic<\/p>",
+            "text": "<p>ovládá zdvih a spouštění vidlic</p>",
             "content_align": "text-start",
             "hotspot_x": 73,
             "hotspot_y": 20
@@ -294,7 +288,7 @@
           "type": "feature",
           "settings": {
             "heading": "Hydraulika",
-            "text": "<p>osazení kvalitní hydraulickou jednotkou<\/p>",
+            "text": "<p>osazení kvalitní hydraulickou jednotkou</p>",
             "content_align": "text-start",
             "hotspot_x": 69,
             "hotspot_y": 67
@@ -304,7 +298,7 @@
           "type": "feature",
           "settings": {
             "heading": "Řiditelná kola: polyuretan a guma",
-            "text": "<p>možnost výběru ze dvou variant materiálu běhounů<\/p>",
+            "text": "<p>možnost výběru ze dvou variant materiálu běhounů</p>",
             "content_align": "text-start",
             "hotspot_x": 72,
             "hotspot_y": 78
@@ -314,7 +308,7 @@
           "type": "feature",
           "settings": {
             "heading": "Vidlicové kolečka",
-            "text": "<p>tandemová pro bezpečnou manipulaci<\/p>",
+            "text": "<p>tandemová pro bezpečnou manipulaci</p>",
             "content_align": "text-start",
             "hotspot_x": 28,
             "hotspot_y": 75
@@ -339,9 +333,9 @@
         "mob_center_text": false,
         "heading_size": "h1",
         "enlarge_text": false,
-        "image": "shopify:\/\/shop_images\/00_bf1500_01.jpg",
+        "image": "shopify://shop_images/00_bf1500_01.jpg",
         "title": "{{ section.settings.product.title }}",
-        "description": "<p>Podívejte se na výhody tohoto produktu:<\/p>",
+        "description": "<p>Podívejte se na výhody tohoto produktu:</p>",
         "button_label": "",
         "button_link": "",
         "hotspot_color": "#e42b2c",
@@ -362,13 +356,11 @@
         },
         "comparison-vendor-2": {
           "type": "vendor",
-          "settings": {
-          }
+          "settings": {}
         },
         "comparison-price-3": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "comparison-description-4": {
           "type": "description",
@@ -387,7 +379,7 @@
       "disabled": true,
       "settings": {
         "heading": "Podobné produkty",
-        "text": "<p>Pokud hledáte produkt s podobným zaměřeným, vlastnostmi či výkonem<\/p>",
+        "text": "<p>Pokud hledáte produkt s podobným zaměřeným, vlastnostmi či výkonem</p>",
         "heading_align": "text-center",
         "view_more_label": "View more",
         "view_more_link": "",
@@ -487,7 +479,7 @@
         "image-banner-text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
             "enlarge_text": true
           }
         },
@@ -539,7 +531,7 @@
         "text_wfM37U": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.video_produktu_popis | metafield_tag }}<\/p>",
+            "text": "<p>{{ product.metafields.custom.video_produktu_popis | metafield_tag }}</p>",
             "enlarge_text": true
           }
         }

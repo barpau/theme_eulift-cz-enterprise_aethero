@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,7 +15,7 @@
         "9b54a0e5-c077-4c4d-b987-a2c9c18a7525": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<div class=\"icons-block-top\">\n{% if product.metafields.custom.nosnost %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-weight-50.png?v=1683022408\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img>\n\n<li class=\"icons-text-product-page-top\">Nosnost<\/li>\n\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.nosnost }}<\/li>\n<\/strong>\n<\/div>\n\n{% endif %}\n\n{% if product.metafields.custom.celkova_sirka %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-width-50.png?v=1687258509\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img>\n<li class=\"icons-text-product-page-top\">Šířka<\/li>\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.celkova_sirka }}<\/li>\n<\/strong>\n<\/div>\n{% endif %}\n\n{% if product.metafields.custom.delka_vidlic %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-length-64.png?v=1687258509\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img>\n<li class=\"icons-text-product-page-top\">Délka vidlic<\/li>\n\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.delka_vidlic}}<\/li>\n<\/strong>\n<\/div>\n{% endif %}\n\n{% if product.metafields.custom.vyska_zdvihu %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0755\/1526\/5333\/files\/icons8-height-50.png?v=1683230284\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/img>\n<li class=\"icons-text-product-page-top\">Výška zdvihu<\/li>\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.vyska_zdvihu}}<\/li>\n<\/strong>\n<\/div>\n{% endif %}\n<\/div>"
+            "custom_liquid": "<div class=\"icons-block-top\">\n{% if product.metafields.custom.nosnost %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https://cdn.shopify.com/s/files/1/0755/1526/5333/files/icons8-weight-50.png?v=1683022408\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"></img>\n\n<li class=\"icons-text-product-page-top\">Nosnost</li>\n\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.nosnost }}</li>\n</strong>\n</div>\n\n{% endif %}\n\n{% if product.metafields.custom.celkova_sirka %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https://cdn.shopify.com/s/files/1/0755/1526/5333/files/icons8-width-50.png?v=1687258509\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"></img>\n<li class=\"icons-text-product-page-top\">Šířka</li>\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.celkova_sirka }}</li>\n</strong>\n</div>\n{% endif %}\n\n{% if product.metafields.custom.delka_vidlic %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https://cdn.shopify.com/s/files/1/0755/1526/5333/files/icons8-length-64.png?v=1687258509\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"></img>\n<li class=\"icons-text-product-page-top\">Délka vidlic</li>\n\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.delka_vidlic}}</li>\n</strong>\n</div>\n{% endif %}\n\n{% if product.metafields.custom.vyska_zdvihu %}\n<div class=\"single-icon\">\n<img class=\"icons-product-page-top\" src=\"https://cdn.shopify.com/s/files/1/0755/1526/5333/files/icons8-height-50.png?v=1683230284\" width=\"50\" height=\"50\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"></img>\n<li class=\"icons-text-product-page-top\">Výška zdvihu</li>\n<strong>\n<li class=\"icons-text-product-page-top\">{{ product.metafields.custom.vyska_zdvihu}}</li>\n</strong>\n</div>\n{% endif %}\n</div>"
           }
         },
         "variant-picker": {
@@ -45,14 +45,13 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "a8bd77c7-585e-4f64-9f0d-7f2eb68b8816": {
           "type": "custom-liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "{% if product.metafields.spin360.enabled contains 'Yes' %} <iframe src=\"https:\/\/th91ukb1jc.execute-api.us-east-1.amazonaws.com\/Prod?id=8261170463029&store=eulift\" width=\"640\" height=\"350\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"><\/iframe> {% endif %}"
+            "custom_liquid": "{% if product.metafields.spin360.enabled contains 'Yes' %} <iframe src=\"https://th91ukb1jc.execute-api.us-east-1.amazonaws.com/Prod?id=8261170463029&store=eulift\" width=\"640\" height=\"350\" frameborder=\"0\" scrolling=\"no\" style=\"max-width:100%; max-height:100vw;\"></iframe> {% endif %}"
           }
         },
         "divider-0": {
@@ -66,7 +65,7 @@
         "97e3fb95-e8e5-4640-b8cf-81f9031aa4c7": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<div><\/div>"
+            "custom_liquid": "<div></div>"
           }
         },
         "price": {
@@ -88,7 +87,7 @@
           "disabled": true,
           "settings": {
             "icon": "clock",
-            "title": "<p><strong>Právě teď jsou populární<br\/><\/strong>Tento produkt si v poslední době prohlíží mnoho zákazníků.<\/p>",
+            "title": "<p><strong>Právě teď jsou populární<br/></strong>Tento produkt si v poslední době prohlíží mnoho zákazníků.</p>",
             "close": "once",
             "show_over_media": true,
             "visibility_duration": 4,
@@ -101,7 +100,7 @@
           "disabled": true,
           "settings": {
             "icon": "price_tag",
-            "title": "<p><strong>Prodávají se rychle!<br\/><\/strong>Kupte si ten svůj dokuď jsou.<\/p>",
+            "title": "<p><strong>Prodávají se rychle!<br/></strong>Kupte si ten svůj dokuď jsou.</p>",
             "close": "once",
             "show_over_media": true,
             "visibility_duration": 5,
@@ -115,7 +114,7 @@
           "settings": {
             "heading": "Doprava zdarma",
             "icon": "truck",
-            "text": "<p>Add some general information about your delivery and shipping policies.<\/p>",
+            "text": "<p>Add some general information about your delivery and shipping policies.</p>",
             "page": "",
             "open": false
           }
@@ -123,15 +122,14 @@
         "share": {
           "type": "share",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "message-3": {
           "type": "message",
           "disabled": true,
           "settings": {
             "icon": "none",
-            "title": "<p>Add a stand out message for your customers<\/p>",
+            "title": "<p>Add a stand out message for your customers</p>",
             "close": "once",
             "show_over_media": false,
             "visibility_duration": 7,
@@ -148,7 +146,8 @@
             "page": "",
             "open": true
           }
-        }},
+        }
+      },
       "block_order": [
         "9b54a0e5-c077-4c4d-b987-a2c9c18a7525",
         "variant-picker",
@@ -165,8 +164,7 @@
         "collapsible-content-2",
         "share",
         "message-3",
-        "3e20cfb2-9a29-4ede-a25d-a0b558debdfa",
-        "2eda680c-0225-47ec-9916-0ebb8ab9ca64"
+        "3e20cfb2-9a29-4ede-a25d-a0b558debdfa"
       ],
       "settings": {
         "stick_on_scroll": true,
@@ -190,7 +188,7 @@
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
-   "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e": {
+    "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e": {
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "{% render 'aethero-product-page-description-section'%}",
@@ -226,7 +224,6 @@
             "tab_3_page": ""
           }
         },
-        
         "payment-methods": {
           "type": "payment-methods",
           "disabled": true,
@@ -234,7 +231,7 @@
             "title": "Payment & Security",
             "title1": "Payment methods",
             "show_payment_icons": true,
-            "text1": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.<\/p>",
+            "text1": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.</p>",
             "title2": "",
             "text2": ""
           }
@@ -242,12 +239,9 @@
       },
       "block_order": [
         "tabs",
-       
-        "highlight-text",
         "payment-methods"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "product-features": {
       "type": "product-features",
@@ -256,7 +250,7 @@
           "type": "feature",
           "settings": {
             "heading": "Zdvih triplex",
-            "text": "<p>= nízká konstrukční výška vozíku<\/p>",
+            "text": "<p>= nízká konstrukční výška vozíku</p>",
             "content_align": "text-start",
             "hotspot_x": 50,
             "hotspot_y": 10
@@ -266,7 +260,7 @@
           "type": "feature",
           "settings": {
             "heading": "Tlačítko \"odskoku\"",
-            "text": "<p>bezpečnostní červené tlačítko chrání obsluhu před možným úrazem. Například<br\/>přimáčknutí ojí při manipulaci.<\/p>",
+            "text": "<p>bezpečnostní červené tlačítko chrání obsluhu před možným úrazem. Například<br/>přimáčknutí ojí při manipulaci.</p>",
             "content_align": "text-start",
             "hotspot_x": 61,
             "hotspot_y": 40
@@ -276,7 +270,7 @@
           "type": "feature",
           "settings": {
             "heading": "Pohon vozíku - lithiová baterie",
-            "text": "<p>vozík pohání baterie o kapacitě 24\/150 V\/Ah<\/p>",
+            "text": "<p>vozík pohání baterie o kapacitě 24/150 V/Ah</p>",
             "content_align": "text-start",
             "hotspot_x": 55,
             "hotspot_y": 80
@@ -286,7 +280,7 @@
           "type": "feature",
           "settings": {
             "heading": "Nosné vidlice",
-            "text": "<p>o délce 1150 mm na běžné EURO palety.<\/p>",
+            "text": "<p>o délce 1150 mm na běžné EURO palety.</p>",
             "content_align": "text-start",
             "hotspot_x": 34,
             "hotspot_y": 40
@@ -310,9 +304,9 @@
         "mob_center_text": false,
         "heading_size": "h1",
         "enlarge_text": false,
-        "image": "shopify:\/\/shop_images\/cdd1540j-zsm-li_00_1_45845061-49c4-4dc4-890d-b9d2f6872f62.jpg",
+        "image": "shopify://shop_images/cdd1540j-zsm-li_00_1_45845061-49c4-4dc4-890d-b9d2f6872f62.jpg",
         "title": "{{ section.settings.product.title }}",
-        "description": "<p>Podívejte se na výhody tohoto produktu:<\/p>",
+        "description": "<p>Podívejte se na výhody tohoto produktu:</p>",
         "button_label": "",
         "button_link": "",
         "hotspot_color": "#e42b2c",
@@ -333,13 +327,11 @@
         },
         "comparison-vendor-2": {
           "type": "vendor",
-          "settings": {
-          }
+          "settings": {}
         },
         "comparison-price-3": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "comparison-description-4": {
           "type": "description",
@@ -357,7 +349,7 @@
       ],
       "settings": {
         "heading": "Podobné produkty",
-        "text": "<p>Pokud hledáte produkt s podobným zaměřeným, vlastnostmi či výkonem<\/p>",
+        "text": "<p>Pokud hledáte produkt s podobným zaměřeným, vlastnostmi či výkonem</p>",
         "heading_align": "text-center",
         "view_more_label": "View more",
         "view_more_link": "",
@@ -457,7 +449,7 @@
         "image-banner-text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
             "enlarge_text": true
           }
         },
@@ -519,7 +511,7 @@
         "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h5>Vysokozdvižný elektrický vozík HELI CDD12 řady J<\/h5>",
+            "text": "<h5>Vysokozdvižný elektrický vozík HELI CDD12 řady J</h5>",
             "enlarge_text": true
           }
         }
@@ -529,9 +521,9 @@
         "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-text-1"
       ],
       "settings": {
-        "video_external": "https:\/\/vimeo.com\/429286026",
+        "video_external": "https://vimeo.com/429286026",
         "video_description": "",
-        "poster_image": "shopify:\/\/shop_images\/sidlo-gekkon-opti_133f830b-2d51-44fe-a78c-16d65eebe74a.webp",
+        "poster_image": "shopify://shop_images/sidlo-gekkon-opti_133f830b-2d51-44fe-a78c-16d65eebe74a.webp",
         "video_size": "md",
         "video_autoplay": true,
         "text_align": "text-center",

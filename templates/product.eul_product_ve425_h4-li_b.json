@@ -164,8 +164,7 @@
         "collapsible-content-2",
         "share",
         "message-3",
-        "3e20cfb2-9a29-4ede-a25d-a0b558debdfa",
-        "2eda680c-0225-47ec-9916-0ebb8ab9ca64"
+        "3e20cfb2-9a29-4ede-a25d-a0b558debdfa"
       ],
       "settings": {
         "stick_on_scroll": true,
@@ -189,7 +188,7 @@
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
-   "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e": {
+    "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e": {
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "{% render 'aethero-product-page-description-section'%}",
@@ -225,7 +224,6 @@
             "tab_3_page": ""
           }
         },
-       
         "payment-methods": {
           "type": "payment-methods",
           "disabled": true,
@@ -241,8 +239,6 @@
       },
       "block_order": [
         "tabs",
-       
-        "highlight-text",
         "payment-methods"
       ],
       "settings": {}

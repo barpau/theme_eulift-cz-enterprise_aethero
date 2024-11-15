@@ -693,7 +693,7 @@
 
 {% render 'structured-data-product', product: product, current_variant: current_variant %}
 
-<div>
+<div class="rotation-product-page">
 {% if product.metafields.custom.rotation_url_cz != blank %}
   <center><iframe class="rotation-desktop-main-product" src="{{ product.metafields.custom.rotation_url_cz }}" frameborder="0" scrolling="no" style="width: 544px; height: 408px;"></iframe></center>
   <center><iframe class="rotation-mobile-main-product" src="{{ product.metafields.custom.rotation_url_mobile_cz }}" width="320" frameborder="0" scrolling="no" style="width: 320px; height: 420px;" ></iframe></center>
