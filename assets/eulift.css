@@ -4,7 +4,7 @@
 }
 
 /* Basic settings */
-.product-main p, .product-details p {
+.product-main p, .product-details p, .detailed-info p {
     text-align: justify;
 }
 
@@ -70,8 +70,16 @@ since it moved the instafeed as well
   padding: calc(var(--section-gap)* var(--fluid-1-5)) 0 !important;
 }
 
+/* Product page - product details height */
+@media (min-width: 769px) {
+.product-main .product-info--sticky {
+    min-height: 1170px !important;
+}
+}
 
-.rotation-mobile{
+/* Product page - rotation */
+
+.rotation-mobile-main-product{
   height:240px !important;
 }
 
@@ -86,6 +94,22 @@ since it moved the instafeed as well
 .product-details__block li {
   list-style: disc;
   margin-left: 17px;
+}
+
+@media (min-width: 769px) {
+    .rotation-mobile-main-product {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .rotation-desktop-main-product {
+        display: none;
+    }
+}
+
+.rotation-desktop, .rotation-mobile{
+    display:none;
 }
 
 
@@ -120,18 +144,6 @@ since it moved the instafeed as well
     }
 }
 
-/*Rotation*/
-@media (min-width: 560px) {
-    .rotation-mobile {
-        display: none;
-    }
-}
-
-@media (max-width: 559px) {
-    .rotation-desktop {
-        display: none;
-    }
-}
 
 .price-with-tax, .delivery {
  
