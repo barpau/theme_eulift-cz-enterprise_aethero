@@ -79,10 +79,7 @@ since it moved the instafeed as well
 
 /* Product page - rotation */
 
-.rotation-product-page{
-  width: calc(var(--page-width, 1320px) + var(--gutter)* 2);
-    margin: auto;
-}
+
 
 .rotation-mobile-main-product{
   height:240px !important;
@@ -105,6 +102,10 @@ since it moved the instafeed as well
     .rotation-mobile-main-product {
         display: none;
     }
+  .rotation-product-page{
+  width: calc(var(--page-width, 1320px) + var(--gutter)* 2);
+    margin: auto;
+}
 }
 
 @media (max-width: 768px) {
