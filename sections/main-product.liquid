@@ -804,10 +804,9 @@
   <center><iframe class="rotation-desktop-main-product" src="{{ product.metafields.custom.rotation_url_cz }}" frameborder="0" scrolling="no" style="width: 544px; height: 408px;"></iframe></center>
   <center><iframe class="rotation-mobile-main-product" src="{{ product.metafields.custom.rotation_url_mobile_cz }}" width="320" frameborder="0" scrolling="no" style="width: 320px; height: 420px;" ></iframe></center>
 {% else %}
-  <center><img class="banner-rotation-main-product" src="{{ product.metafields.custom.banner_rotation | image_url }}" width="544" height="408"></center>
+  <center><img class="banner-rotation-main-product" src="{{ product.metafields.custom.banner_rotace | image_url }}" width="544" height="408"></center>
 {% endif %}
 </div>
-
 
 {% schema %}
 {
