@@ -224,6 +224,7 @@
           {% if product.metafields.custom.pohon.value %}data-pohon="{{ product.metafields.custom.pohon.value }}"{% endif %}
           {% if product.metafields.custom.hmotnost.value %}data-hmotnost="{{ product.metafields.custom.hmotnost.value }}"{% endif %}
           {% if product.metafields.custom.vnitrni_rozmer.value %}data-vnitrni-rozmer="{{ product.metafields.custom.vnitrni_rozmer.value }}"{% endif %}
+          {% if product.metafields.custom.prislusenstvi.value %}data-prislusenstvi="{{ product.metafields.custom.prislusenstvi.value }}"{% endif %}
           {% if product.metafields.custom.prumer_vidlicoveho_kola.value %}data-prumer-vidlicoveho-kola="{{ product.metafields.custom.prumer_vidlicoveho_kola.value }}"{% endif %}
           {% if product.metafields.custom.prumer_hnaciho_kola.value %}data-prumer-hnaciho-kola="{{ product.metafields.custom.prumer_hnaciho_kola.value }}"{% endif %}
           {% if product.metafields.custom.minimalni_vyska_zdvihu.value %}data-minimalni-vyska-zdvihu="{{ product.metafields.custom.minimalni_vyska_zdvihu.value }}"{% endif %}
@@ -706,10 +707,15 @@
               </product-message>
             {%- endif -%}
 
+          {%- if product.metafields.custom.desc_1_text != blank -%}
+            <p class="desc-1-text">{{ product.metafields.custom.desc_1_text | metafield_tag }}</p>
+          <img src="{{ product.metafields.custom.desc_1_image | image_url }}" width="150" height="150">
+        {%- endif -%}
           {%- when 'description' -%}
             <div class="product-info__block product-info__block--sm rte product-description" {{ block.shopify_attributes }}>
               {{ product.description }}
             </div>
+         
 
           {%- when 'product-labels' -%}
             {%- capture variant_labels -%}
@@ -803,7 +809,9 @@
 {% if product.metafields.custom.rotation_url_cz != blank %}
   <center><iframe class="rotation-desktop-main-product" src="{{ product.metafields.custom.rotation_url_cz }}" frameborder="0" scrolling="no" style="width: 544px; height: 408px;"></iframe></center>
   <center><iframe class="rotation-mobile-main-product" src="{{ product.metafields.custom.rotation_url_mobile_cz }}" width="320" frameborder="0" scrolling="no" style="width: 320px; height: 420px;" ></iframe></center>
-  {% endif %}
+{% else if product.metafields.custom.banner_rotace != blank %}
+  <center><img class="banner-rotace-main-product" src="{{ product.metafields.custom.banner_rotace | image_url }}" width="544" height="408"></center>
+{% endif %}
 </div>
 
 

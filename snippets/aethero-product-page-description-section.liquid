@@ -84,6 +84,13 @@
               </tr>
               {% endif %}
               
+              {% if product.metafields.custom.prislusenstvi.value %}
+              <tr>
+                <th>Příslušenství:</th>
+                <td>{{ product.metafields.custom.prislusenstvi.value }}</td>
+              </tr>
+              {% endif %}
+
               {% if product.metafields.custom.vnitrni_rozmer.value %}
               <tr>
                 <th>Vnitřní rozměr:</th>

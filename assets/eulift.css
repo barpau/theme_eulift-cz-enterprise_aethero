@@ -76,8 +76,6 @@
         flex: 1; /* Každý div zabere stejnou šířku */
        
     }
-
-
     .download-offer-btn{
         line-height: 2.2em;
     }
@@ -94,6 +92,13 @@
         gap: 135px; /* Mezera mezi divy */
     }
   }
+  @media (max-width: 768px) {
+  .banner-rotace-main-product{
+    margin-top: 30px;
+    width: 320px;
+  }
+}
+
 
 /* home page - because of this
 
