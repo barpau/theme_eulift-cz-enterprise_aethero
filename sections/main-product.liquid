@@ -197,6 +197,58 @@
               </span>
       </div>
 
+      {% if product.price > 0 %} 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+      <script src="{{ 'aethero-product-pdf-generator.js' | asset_url }}" defer="defer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js" defer></script>
+      
+      <div class="download-offer-button-wrapper mt-4">
+        <button 
+          class="btn btn--secondary btn--sm download-offer-btn"
+          onclick="generateAndDownloadPDF()"
+          data-product-title="{{ product.title | escape }}"
+          data-product-price="{{ product.price | money_without_currency }}"
+          data-product-image="{{ product.featured_media.preview_image | image_url: width: 800 }}"
+          data-kratky-popis="{{ product.description | escape }}"
+          data-kratsi-popis="{{ product.metafields.custom.kratky_popis | escape }}"
+          {% if product.metafields.custom.nosnost.value %}data-nosnost="{{ product.metafields.custom.nosnost.value }}"{% endif %}
+          {% if product.metafields.custom.vyska_zdvihu.value %}data-vyska-zdvihu="{{ product.metafields.custom.vyska_zdvihu.value }}"{% endif %}
+          {% if product.metafields.custom.delka_vidlic.value %}data-delka-vidlic="{{ product.metafields.custom.delka_vidlic.value }}"{% endif %}
+          {% if product.metafields.custom.sirka_vidlice.value %}data-sirka-vidlice="{{ product.metafields.custom.sirka_vidlice.value }}"{% endif %}
+          {% if product.metafields.custom.roztec_vidlic_vnitrni.value %}data-roztec-vidlic-vnitrni="{{ product.metafields.custom.roztec_vidlic_vnitrni.value }}"{% endif %}
+          {% if product.metafields.custom.roztec_vidlic_vnejsi.value %}data-roztec-vidlic-vnejsi="{{ product.metafields.custom.roztec_vidlic_vnejsi.value }}"{% endif %}
+          {% if product.metafields.custom.celkova_delka.value %}data-celkova-delka="{{ product.metafields.custom.celkova_delka.value }}"{% endif %}
+          {% if product.metafields.custom.celkova_sirka.value %}data-celkova-sirka="{{ product.metafields.custom.celkova_sirka.value }}"{% endif %}
+          {% if product.metafields.custom.celkova_vyska.value %}data-celkova-vyska="{{ product.metafields.custom.celkova_vyska.value }}"{% endif %}
+          {% if product.metafields.custom.pohon.value %}data-pohon="{{ product.metafields.custom.pohon.value }}"{% endif %}
+          {% if product.metafields.custom.hmotnost.value %}data-hmotnost="{{ product.metafields.custom.hmotnost.value }}"{% endif %}
+          {% if product.metafields.custom.vnitrni_rozmer.value %}data-vnitrni-rozmer="{{ product.metafields.custom.vnitrni_rozmer.value }}"{% endif %}
+          {% if product.metafields.custom.prumer_vidlicoveho_kola.value %}data-prumer-vidlicoveho-kola="{{ product.metafields.custom.prumer_vidlicoveho_kola.value }}"{% endif %}
+          {% if product.metafields.custom.prumer_hnaciho_kola.value %}data-prumer-hnaciho-kola="{{ product.metafields.custom.prumer_hnaciho_kola.value }}"{% endif %}
+          {% if product.metafields.custom.minimalni_vyska_zdvihu.value %}data-minimalni-vyska-zdvihu="{{ product.metafields.custom.minimalni_vyska_zdvihu.value }}"{% endif %}
+          {% if product.metafields.custom.delka_retezu.value %}data-delka-retezu="{{ product.metafields.custom.delka_retezu.value }}"{% endif %}
+          {% if product.metafields.custom.osvetleni.value %}data-osvetleni="{{ product.metafields.custom.osvetleni.value }}"{% endif %}
+          {% if product.metafields.custom.lozna_plocha.value %}data-lozna-plocha="{{ product.metafields.custom.lozna_plocha.value }}"{% endif %}
+          {% if product.metafields.custom.tazna_kapacita.value %}data-tazna-kapacita="{{ product.metafields.custom.tazna_kapacita.value }}"{% endif %}
+          {% if product.metafields.custom.vyska_madla.value %}data-vyska-madla="{{ product.metafields.custom.vyska_madla.value }}"{% endif %}
+          {% if product.metafields.custom.rozmery_stolu.value %}data-rozmery-stolu="{{ product.metafields.custom.rozmery_stolu.value }}"{% endif %}
+          {% if product.metafields.custom.polomer_otaceni.value %}data-polomer-otaceni="{{ product.metafields.custom.polomer_otaceni.value }}"{% endif %}
+          {% if product.metafields.custom.ovladani_zdvihu.value %}data-ovladani-zdvihu="{{ product.metafields.custom.ovladani_zdvihu.value }}"{% endif %}
+          {% if product.metafields.custom.vidlicova_kola.value %}data-vidlicova-kola="{{ product.metafields.custom.vidlicova_kola.value }}"{% endif %}
+          {% if product.metafields.custom.material_kola.value %}data-material-kola="{{ product.metafields.custom.material_kola.value }}"{% endif %}
+          {% if product.metafields.custom.krokovy_zdvih.value %}data-krokovy-zdvih="{{ product.metafields.custom.krokovy_zdvih.value }}"{% endif %}
+          {% if product.metafields.custom.motor_pojezdu.value %}data-motor-pojezdu="{{ product.metafields.custom.motor_pojezdu.value }}"{% endif %}
+          {% if product.metafields.custom.motor_zdvihu.value %}data-motor-zdvihu="{{ product.metafields.custom.motor_zdvihu.value }}"{% endif %}
+          {% if product.metafields.custom.napajeni.value %}data-napajeni="{{ product.metafields.custom.napajeni.value }}"{% endif %}
+          {% if product.metafields.custom.kapacita_baterie.value %}data-kapacita-baterie="{{ product.metafields.custom.kapacita_baterie.value }}"{% endif %}
+          {% if product.metafields.custom.vylozeni_teziste.value %}data-vylozeni-teziste="{{ product.metafields.custom.vylozeni_teziste.value }}"{% endif %}
+          {% if product.metafields.custom.maximimalni_vyska_voziku.value %}data-maximalni-vyska-voziku="{{ product.metafields.custom.maximimalni_vyska_voziku.value }}"{% endif %}
+        >
+          <span>Stažení nabídky PDF</span> {% render 'icon-download' %}
+        </button>
+      </div>
+      {% endif %}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const variantWeights = [
@@ -415,8 +467,8 @@
                   </div>
                 </div>
               </details>
-</details-disclosure>
-          <div class="mt-4">
+<div class="pdf-download-block">
+          <div class="mt-4 download-block">
               {% if product.metafields.custom.manual %} 
                 <a href="{{ product.metafields.custom.manual | file_url }}" target="blank"><p style="font-weight:bold; text-decoration:underline;">Manuál produktu</p></a>
             {% endif %}
@@ -433,6 +485,60 @@
               <a href="{{ product.metafields.custom.cz_navod_k_nabijecce | file_url }}" target="blank"><p style="font-weight:bold; text-decoration:underline;">Návod k nabíjačce</p></a>
             {% endif %}
           </div>
+          {% if product.price == 0 %} 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+            <script src="{{ 'aethero-product-pdf-generator.js' | asset_url }}" defer="defer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js" defer></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js" defer></script>
+          <div class="download-offer-button-wrapper mt-4">
+            <button 
+              class="btn btn--secondary btn--sm download-offer-btn"
+              onclick="generateAndDownloadPDF()"
+              data-product-title="{{ product.title | escape }}"
+              data-product-price="{{ product.price | money_without_currency }}"
+              data-product-image="{{ product.featured_media.preview_image | image_url: width: 800 }}"
+              data-kratky-popis="{{ product.description | escape }}"
+              data-kratsi-popis="{{ product.metafields.custom.kratky_popis | escape }}"
+              {% if product.metafields.custom.nosnost.value %}data-nosnost="{{ product.metafields.custom.nosnost.value }}"{% endif %}
+              {% if product.metafields.custom.vyska_zdvihu.value %}data-vyska-zdvihu="{{ product.metafields.custom.vyska_zdvihu.value }}"{% endif %}
+              {% if product.metafields.custom.delka_vidlic.value %}data-delka-vidlic="{{ product.metafields.custom.delka_vidlic.value }}"{% endif %}
+              {% if product.metafields.custom.sirka_vidlice.value %}data-sirka-vidlice="{{ product.metafields.custom.sirka_vidlice.value }}"{% endif %}
+              {% if product.metafields.custom.roztec_vidlic_vnitrni.value %}data-roztec-vidlic-vnitrni="{{ product.metafields.custom.roztec_vidlic_vnitrni.value }}"{% endif %}
+              {% if product.metafields.custom.roztec_vidlic_vnejsi.value %}data-roztec-vidlic-vnejsi="{{ product.metafields.custom.roztec_vidlic_vnejsi.value }}"{% endif %}
+              {% if product.metafields.custom.celkova_delka.value %}data-celkova-delka="{{ product.metafields.custom.celkova_delka.value }}"{% endif %}
+              {% if product.metafields.custom.celkova_sirka.value %}data-celkova-sirka="{{ product.metafields.custom.celkova_sirka.value }}"{% endif %}
+              {% if product.metafields.custom.celkova_vyska.value %}data-celkova-vyska="{{ product.metafields.custom.celkova_vyska.value }}"{% endif %}
+              {% if product.metafields.custom.pohon.value %}data-pohon="{{ product.metafields.custom.pohon.value }}"{% endif %}
+              {% if product.metafields.custom.hmotnost.value %}data-hmotnost="{{ product.metafields.custom.hmotnost.value }}"{% endif %}
+              {% if product.metafields.custom.vnitrni_rozmer.value %}data-vnitrni-rozmer="{{ product.metafields.custom.vnitrni_rozmer.value }}"{% endif %}
+              {% if product.metafields.custom.prumer_vidlicoveho_kola.value %}data-prumer-vidlicoveho-kola="{{ product.metafields.custom.prumer_vidlicoveho_kola.value }}"{% endif %}
+              {% if product.metafields.custom.prumer_hnaciho_kola.value %}data-prumer-hnaciho-kola="{{ product.metafields.custom.prumer_hnaciho_kola.value }}"{% endif %}
+              {% if product.metafields.custom.minimalni_vyska_zdvihu.value %}data-minimalni-vyska-zdvihu="{{ product.metafields.custom.minimalni_vyska_zdvihu.value }}"{% endif %}
+              {% if product.metafields.custom.delka_retezu.value %}data-delka-retezu="{{ product.metafields.custom.delka_retezu.value }}"{% endif %}
+              {% if product.metafields.custom.osvetleni.value %}data-osvetleni="{{ product.metafields.custom.osvetleni.value }}"{% endif %}
+              {% if product.metafields.custom.lozna_plocha.value %}data-lozna-plocha="{{ product.metafields.custom.lozna_plocha.value }}"{% endif %}
+              {% if product.metafields.custom.tazna_kapacita.value %}data-tazna-kapacita="{{ product.metafields.custom.tazna_kapacita.value }}"{% endif %}
+              {% if product.metafields.custom.vyska_madla.value %}data-vyska-madla="{{ product.metafields.custom.vyska_madla.value }}"{% endif %}
+              {% if product.metafields.custom.rozmery_stolu.value %}data-rozmery-stolu="{{ product.metafields.custom.rozmery_stolu.value }}"{% endif %}
+              {% if product.metafields.custom.polomer_otaceni.value %}data-polomer-otaceni="{{ product.metafields.custom.polomer_otaceni.value }}"{% endif %}
+              {% if product.metafields.custom.ovladani_zdvihu.value %}data-ovladani-zdvihu="{{ product.metafields.custom.ovladani_zdvihu.value }}"{% endif %}
+              {% if product.metafields.custom.vidlicova_kola.value %}data-vidlicova-kola="{{ product.metafields.custom.vidlicova_kola.value }}"{% endif %}
+              {% if product.metafields.custom.material_kola.value %}data-material-kola="{{ product.metafields.custom.material_kola.value }}"{% endif %}
+              {% if product.metafields.custom.krokovy_zdvih.value %}data-krokovy-zdvih="{{ product.metafields.custom.krokovy_zdvih.value }}"{% endif %}
+              {% if product.metafields.custom.motor_pojezdu.value %}data-motor-pojezdu="{{ product.metafields.custom.motor_pojezdu.value }}"{% endif %}
+              {% if product.metafields.custom.motor_zdvihu.value %}data-motor-zdvihu="{{ product.metafields.custom.motor_zdvihu.value }}"{% endif %}
+              {% if product.metafields.custom.napajeni.value %}data-napajeni="{{ product.metafields.custom.napajeni.value }}"{% endif %}
+              {% if product.metafields.custom.kapacita_baterie.value %}data-kapacita-baterie="{{ product.metafields.custom.kapacita_baterie.value }}"{% endif %}
+              {% if product.metafields.custom.vylozeni_teziste.value %}data-vylozeni-teziste="{{ product.metafields.custom.vylozeni_teziste.value }}"{% endif %}
+              {% if product.metafields.custom.maximimalni_vyska_voziku.value %}data-maximalni-vyska-voziku="{{ product.metafields.custom.maximimalni_vyska_voziku.value }}"{% endif %}
+            >
+              <span>Stažení nabídky PDF</span> {% render 'icon-download' %}
+            </button>
+          </div>
+          {% endif %}
+</div>
+            </details-disclosure>
+          
 
           {%- when 'product-signup' -%}
             {%- liquid
