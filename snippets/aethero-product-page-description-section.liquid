@@ -1,7 +1,43 @@
 <div class="mt-8 description-section">
     <div class="detailed-info">
-        <h4>Podrobné informace</h4>
+      <h4>Podrobné informace</h4>
+      
+      {% if product.metafields.custom.desc_1_text != blank %}
+        <div class="desc-container">
+          <div class="desc-text">
+            {{ product.metafields.custom.desc_1_text | metafield_tag }}
+          </div>
+          <div class="desc-image">
+            <img src="{{ product.metafields.custom.desc_1_image | image_url }}" width="150" height="150">
+          </div>
+        </div>
+      {% endif %}
+
+      {% if product.metafields.custom.desc_2_text != blank %}
+        <div class="desc-container reverse">
+          <div class="desc-text">
+            {{ product.metafields.custom.desc_2_text | metafield_tag }}
+          </div>
+          <div class="desc-image">
+            <img src="{{ product.metafields.custom.desc_2_image | image_url }}" width="150" height="150">
+          </div>
+        </div>
+      {% endif %}
+
+      {% if product.metafields.custom.desc_3_text != blank %}
+        <div class="desc-container">
+          <div class="desc-text">
+            {{ product.metafields.custom.desc_3_text | metafield_tag }}
+          </div>
+          <div class="desc-image">
+            <img src="{{ product.metafields.custom.desc_3_image | image_url }}" width="150" height="150">
+          </div>
+        </div>
+      {% endif %}
+
+      {% if product.metafields.custom.desc_1_text == blank %}        
         <p>{{ product.description }}</p>
+      {% endif %}
     </div>
     <div class="technical-parameters">
         <h4>Technické parametry</h4>
@@ -236,5 +272,19 @@
 </div>
 
 <style>
- 
+  .desc-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  .desc-container.reverse {
+    flex-direction: row-reverse;
+  }
+  .desc-text {
+    flex: 1;
+  }
+  .desc-image {
+    flex-shrink: 0;
+  }
 </style>
