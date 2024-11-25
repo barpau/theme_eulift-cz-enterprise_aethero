@@ -13,6 +13,12 @@
                 <td>{{ product.metafields.custom.nosnost.value }}</td>
               </tr>
               {% endif %}
+              {% if product.metafields.custom.konstrukcni_vyska %}
+              <tr>
+                <th>Konstrukční výška:</th>
+                <td>{{ product.metafields.custom.konstrukcni_vyska }}</td>
+              </tr>
+              {% endif %}
               
               {% if product.metafields.custom.vyska_zdvihu.value %}
               <tr>

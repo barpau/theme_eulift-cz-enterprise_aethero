@@ -243,6 +243,7 @@ async function generateAndDownloadPDF() {
     // Rozšířený seznam technických parametrů
     const parameters = [
       ['Nosnost', button.dataset.nosnost],
+      ['Konstrukční výška', button.dataset.konstrukcniVyska],
       ['Výška zdvihu', button.dataset.vyskaZdvihu],
       ['Délka vidlic', button.dataset.delkaVidlic],
       ['Šířka vidlice', button.dataset.sirkaVidlice],

@@ -213,6 +213,7 @@
           data-kratky-popis="{{ product.description | escape }}"
           data-kratsi-popis="{{ product.metafields.custom.kratky_popis | escape }}"
           {% if product.metafields.custom.nosnost.value %}data-nosnost="{{ product.metafields.custom.nosnost.value }}"{% endif %}
+          {% if product.metafields.custom.konstrukcni_vyska.value %}data-konstrukcni-vyska="{{ product.metafields.custom.konstrukcni_vyska.value }}"{% endif %}
           {% if product.metafields.custom.vyska_zdvihu.value %}data-vyska-zdvihu="{{ product.metafields.custom.vyska_zdvihu.value }}"{% endif %}
           {% if product.metafields.custom.delka_vidlic.value %}data-delka-vidlic="{{ product.metafields.custom.delka_vidlic.value }}"{% endif %}
           {% if product.metafields.custom.sirka_vidlice.value %}data-sirka-vidlice="{{ product.metafields.custom.sirka_vidlice.value }}"{% endif %}
