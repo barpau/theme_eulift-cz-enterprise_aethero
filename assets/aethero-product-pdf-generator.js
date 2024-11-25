@@ -36,7 +36,7 @@ async function generateAndDownloadPDF() {
     // Definice stylu dokumentu
     const docDefinition = {
       pageSize: 'A4',
-      pageMargins: [40, 40, 40, 40],
+      pageMargins: [40, 40, 40, 80],
       defaultStyle: {
         font: 'Roboto'
       },
@@ -121,7 +121,7 @@ async function generateAndDownloadPDF() {
         tableHeader: {
           fontSize: 14,
           bold: true,
-          margin: [0, 5, 0, 5]
+          margin: [0, 0, 0, 0]
         },
         label: {
           fontSize: 10,
@@ -135,28 +135,108 @@ async function generateAndDownloadPDF() {
           fontSize: 8
         },
         productDescription: {
-          fontSize: 9,
-          margin: [0, 5, 0, 5]
+          fontSize: 14,
+          margin: [0, 0, 0, 0]
         }
       }
     };
 
-    // Přidání obrázku produktu
+    // Přidání obrázku produktu a krátkého popisu
     if (productImageBase64) {
       docDefinition.content.push({
-        image: productImageBase64,
-        width: 200,
-        alignment: 'center',
-        margin: [0, 0, 0, 20]
+        stack: [
+          {
+            image: productImageBase64,
+            width: 300,
+            alignment: 'center',
+            margin: [50, 0, 0, 20]
+          }, 
+        ]
       });
     }
 
     // Přidání krátkého popisu se zmenšeným písmem
     if (button.dataset.kratkyPopis) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(button.dataset.kratkyPopis, 'text/html');
+      
+      const formatText = (node) => {
+        let textParts = [];
+        
+        const processNode = (currentNode) => {
+          if (currentNode.nodeType === Node.TEXT_NODE) {
+            if (currentNode.textContent.trim()) {
+              textParts.push({ 
+                text: currentNode.textContent,
+                bold: false
+              });
+            }
+          } else if (currentNode.nodeType === Node.ELEMENT_NODE) {
+            // Zpracování odstavců
+            if (currentNode.tagName === 'P') {
+              for (let child of currentNode.childNodes) {
+                processNode(child);
+              }
+              textParts.push({ text: '\n\n', bold: false });
+            }
+            // Zpracování SPAN elementů
+            else if (currentNode.tagName === 'SPAN') {
+              for (let child of currentNode.childNodes) {
+                processNode(child);
+              }
+            }
+            // Zpracování B a STRONG tagů
+            else if (currentNode.tagName === 'B' || currentNode.tagName === 'STRONG') {
+              textParts.push({
+                text: currentNode.textContent,
+                bold: true
+              });
+            }
+            // Zpracování odkazů
+            else if (currentNode.tagName === 'A') {
+              textParts.push({
+                text: currentNode.textContent,
+                bold: false,
+                color: 'blue',
+                decoration: 'underline'
+              });
+            }
+            // Rekurzivní zpracování ostatních elementů
+            else {
+              for (let child of currentNode.childNodes) {
+                processNode(child);
+              }
+            }
+          }
+        };
+
+        // Zpracování všech child nodes
+        for (let child of node.childNodes) {
+          processNode(child);
+        }
+
+        return textParts;
+      };
+
+      const formattedText = formatText(doc.body);
+      console.log('Formatted text parts:', formattedText); // Pro kontrolu výsledku
+
       docDefinition.content.push({
-        text: button.dataset.kratkyPopis,
-        style: 'productDescription',
-        margin: [0, 0, 0, 20]
+        stack: [
+          {
+            text: 'Podrobný popis produktu:',
+            style: 'tableHeader',
+            margin: [0, 0, 0, 5]
+          },
+          {
+            text: formattedText,
+            style: 'productDescription',
+            margin: [0, 0, 0, 0],
+            fontSize: 11,
+            lineHeight: 1.2
+          }
+        ],
+        pageBreak: 'before'
       });
     }
 
@@ -197,29 +277,61 @@ async function generateAndDownloadPDF() {
     ].filter(([_, value]) => value);
 
     if (parameters.length > 0) {
+      // Nadpis a první parametr jako unbreakable skupina
       docDefinition.content.push(
-        { 
-          text: '',
-          pageBreak: 'before'
-        },
-        { 
-          text: 'Technické parametry:', 
-          style: 'tableHeader', 
-          margin: [0, 20, 0, 10]
-        },
         {
+          stack: [
+            { 
+              text: 'Technické parametry:', 
+              style: 'tableHeader', 
+              margin: [0, 30, 0, 10]
+            },
+            {
+              table: {
+                widths: ['40%', '60%'],
+                headerRows: 0,
+                body: [parameters[0]].map(param => [{
+                  text: param[0],
+                  bold: true,
+                  fillColor: '#f8f8f8',
+                  border: [false, false, false, false],
+                  margin: [0, 8, 0, 8]
+                }, {
+                  text: param[1],
+                  fillColor: '#f8f8f8',
+                  border: [false, false, false, false],
+                  margin: [0, 8, 0, 8]
+                }])
+              },
+              layout: {
+                hLineWidth: function() { return 0; },
+                vLineWidth: function() { return 0; },
+                paddingLeft: function() { return 5; },
+                paddingRight: function() { return 5; },
+                paddingTop: function() { return 3; },
+                paddingBottom: function() { return 3; }
+              }
+            }
+          ],
+          unbreakable: true
+        }
+      );
+
+      // Zbytek parametrů
+      if (parameters.length > 1) {
+        docDefinition.content.push({
           table: {
             widths: ['40%', '60%'],
             headerRows: 0,
-            body: parameters.map((param, i) => [{
+            body: parameters.slice(1).map((param, i) => [{
               text: param[0],
               bold: true,
-              fillColor: i % 2 === 0 ? '#f8f8f8' : null,
+              fillColor: (i + 1) % 2 === 0 ? '#f8f8f8' : null,
               border: [false, false, false, false],
               margin: [0, 8, 0, 8]
             }, {
               text: param[1],
-              fillColor: i % 2 === 0 ? '#f8f8f8' : null,
+              fillColor: (i + 1) % 2 === 0 ? '#f8f8f8' : null,
               border: [false, false, false, false],
               margin: [0, 8, 0, 8]
             }])
@@ -232,16 +344,51 @@ async function generateAndDownloadPDF() {
             paddingTop: function() { return 3; },
             paddingBottom: function() { return 3; }
           }
-        }
-      );
+        });
+      }
     }
 
-    // Patička
+    // Upravená patička
     docDefinition.footer = {
-      text: 'Pro více informací navštivte náš e-shop www.eulift.cz', style: 'small',
-      alignment: 'center',
-      margin: [40, 0]
+      stack: [
+        {
+          canvas: [
+            {
+              type: 'line',
+              x1: 40,
+              y1: 0,
+              x2: 555,
+              y2: 0,
+              lineWidth: 1
+            }
+          ]
+        },
+        {
+          columns: [
+            {
+              width: '30%',
+              text: 'Vygenerováno z www.eulift.cz\n' + button.dataset.productTitle,
+              style: 'small',
+              margin: [40, 5, 0, 0]
+            },
+            {
+              width: '40%',
+              text: 'Gekkon International s.r.o.\nMilheimova 2915\n530 02 Pardubice\nIČO: 25930681 / DIČ: CZ25930681',
+              style: 'small',
+              margin: [100, 5, 0, 0]
+            },
+            {
+              width: '30%',
+              image: logoBase64,
+              width: 120,
+              margin: [0, 5, 40, 0]
+            }
+          ]
+        }
+      ]
     };
+
+  
 
     // Generování PDF
     pdfMake.createPdf(docDefinition).download(`nabidka-${button.dataset.productTitle.toLowerCase().replace(/\s+/g, '-')}.pdf`);
