@@ -254,6 +254,7 @@ async function generateAndDownloadPDF() {
       ['Pohon', button.dataset.pohon],
       ['Hmotnost', button.dataset.hmotnost],
       ['Vnitřní rozměr', button.dataset.vnitrniRozmer],
+      ['Příslušenství', button.dataset.prislusenstvi],
       ['Průměr vidlicového kola', button.dataset.prumerVidlicovehoKola],
       ['Průměr hnacího kola', button.dataset.prumerHnacihoKola],
       ['Minimální výška zdvihu', button.dataset.minimalniVyskaZdvihu],
