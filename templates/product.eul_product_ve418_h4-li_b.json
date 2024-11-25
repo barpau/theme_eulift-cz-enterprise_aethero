@@ -510,8 +510,8 @@
         "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h5>Vysokozdvižný elektrický vozík HELI CDD12 řady J</h5>",
-            "enlarge_text": true
+            "text": "<p>Čelní elektrické VZV HELI H4-LI čtyřkolové BLACK EDITION</p>",
+            "enlarge_text": false
           }
         }
       },
@@ -520,8 +520,9 @@
         "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-text-1"
       ],
       "settings": {
-        "video_external": "",
+        "video_external": "https://vimeo.com/manage/videos/1032987201",
         "video_description": "",
+        "poster_image": "shopify://shop_images/sidlo-gekkon-opti_078a4faf-3600-4438-8066-4d50a4b000c1.webp",
         "video_size": "md",
         "video_autoplay": true,
         "text_align": "text-center",
