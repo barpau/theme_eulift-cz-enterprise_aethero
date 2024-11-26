@@ -1,147 +1,166 @@
 <div class="mt-8 description-section">
     <div class="detailed-info">  
       <h4>{{ product.metafields.custom.desc_title }}</h4>    
+      
       {% if product.metafields.custom.desc_1_text != blank %}
         <div class="desc-container">
           <div class="desc-text">
+            {% if product.metafields.custom.desc_1_image != blank %}
+              <div class="desc-image desc-image--float-left">
+                <img src="{{ product.metafields.custom.desc_1_image | image_url }}" width="150" height="150">
+              </div>
+            {% endif %}
             {% if product.metafields.custom.desc_1_title != blank %}
               <h6>{{ product.metafields.custom.desc_1_title }}</h6>
             {% endif %}
-            {{ product.metafields.custom.desc_1_text | metafield_tag }}
-          </div>
-          {% if product.metafields.custom.desc_1_image != blank %}
-            <div class="desc-image">
-              <img src="{{ product.metafields.custom.desc_1_image | image_url }}" width="150" height="150">
+            <div class="desc-content">
+              {{ product.metafields.custom.desc_1_text | metafield_tag }}
             </div>
-          {% endif %}
+          </div>
         </div>
       {% endif %}
 
       {% if product.metafields.custom.desc_2_text != blank %}
-        <div class="desc-container reverse">
+        <div class="desc-container">
           <div class="desc-text">
+            {% if product.metafields.custom.desc_2_image != blank %}
+              <div class="desc-image desc-image--float-right">
+                <img src="{{ product.metafields.custom.desc_2_image | image_url }}" width="150" height="150">
+              </div>
+            {% endif %}
             {% if product.metafields.custom.desc_2_title != blank %}
               <h6>{{ product.metafields.custom.desc_2_title }}</h6>
             {% endif %}
-            {{ product.metafields.custom.desc_2_text | metafield_tag }}
-          </div>
-          {% if product.metafields.custom.desc_2_image != blank %}
-            <div class="desc-image">
-              <img src="{{ product.metafields.custom.desc_2_image | image_url }}" width="150" height="150">
+            <div class="desc-content">
+              {{ product.metafields.custom.desc_2_text | metafield_tag }}
             </div>
-          {% endif %}
+          </div>
         </div>
       {% endif %}
 
       {% if product.metafields.custom.desc_3_text != blank %}
         <div class="desc-container">
           <div class="desc-text">
+            {% if product.metafields.custom.desc_3_image != blank %}
+              <div class="desc-image desc-image--float-left">
+                <img src="{{ product.metafields.custom.desc_3_image | image_url }}" width="150" height="150">
+              </div>
+            {% endif %}
             {% if product.metafields.custom.desc_3_title != blank %}
               <h6>{{ product.metafields.custom.desc_3_title }}</h6>
             {% endif %}
-            {{ product.metafields.custom.desc_3_text | metafield_tag }}
-          </div>
-          {% if product.metafields.custom.desc_3_image != blank %}
-            <div class="desc-image">
-              <img src="{{ product.metafields.custom.desc_3_image | image_url }}" width="150" height="150">
+            <div class="desc-content">
+              {{ product.metafields.custom.desc_3_text | metafield_tag }}
             </div>
-          {% endif %}
+          </div>
         </div>
       {% endif %}
 
       {% if product.metafields.custom.desc_4_text != blank %}
-        <div class="desc-container reverse">
+        <div class="desc-container">
           <div class="desc-text">
+            {% if product.metafields.custom.desc_4_image != blank %}
+              <div class="desc-image desc-image--float-right">
+                <img src="{{ product.metafields.custom.desc_4_image | image_url }}" width="150" height="150">
+              </div>
+            {% endif %}
             {% if product.metafields.custom.desc_4_title != blank %}
               <h6>{{ product.metafields.custom.desc_4_title }}</h6>
             {% endif %}
-            {{ product.metafields.custom.desc_4_text | metafield_tag }}
-          </div>
-          {% if product.metafields.custom.desc_4_image != blank %}
-            <div class="desc-image">
-              <img src="{{ product.metafields.custom.desc_4_image | image_url }}" width="150" height="150">
+            <div class="desc-content">
+              {{ product.metafields.custom.desc_4_text | metafield_tag }}
             </div>
-          {% endif %}
+          </div>
         </div>
       {% endif %}
 
       {% if product.metafields.custom.desc_5_text != blank %}
-        <div class="desc-container reverse {% if product.metafields.custom.desc_5_image == blank %}full-width{% endif %}">
+        <div class="desc-container">
           <div class="desc-text">
+            {% if product.metafields.custom.desc_5_image != blank %}
+              <div class="desc-image desc-image--float-left">
+                <img src="{{ product.metafields.custom.desc_5_image | image_url }}" width="150" height="150">
+              </div>
+            {% endif %}
             {% if product.metafields.custom.desc_5_title != blank %}
               <h6>{{ product.metafields.custom.desc_5_title }}</h6>
             {% endif %}
-            {{ product.metafields.custom.desc_5_text | metafield_tag }}
-          </div>
-          {% if product.metafields.custom.desc_5_image != blank %}
-            <div class="desc-image">
-              <img src="{{ product.metafields.custom.desc_5_image | image_url }}" width="150" height="150">
+            <div class="desc-content">
+              {{ product.metafields.custom.desc_5_text | metafield_tag }}
             </div>
-          {% endif %}
+          </div>
         </div>
       {% endif %}
 
       {% if product.metafields.custom.desc_6_text != blank %}
-        <div class="desc-container {% if product.metafields.custom.desc_6_image == blank %}full-width{% endif %}">
+        <div class="desc-container">
           <div class="desc-text">
+            {% if product.metafields.custom.desc_6_image != blank %}
+              <div class="desc-image desc-image--float-right">
+                <img src="{{ product.metafields.custom.desc_6_image | image_url }}" width="150" height="150">
+              </div>
+            {% endif %}
             {% if product.metafields.custom.desc_6_title != blank %}
               <h6>{{ product.metafields.custom.desc_6_title }}</h6>
             {% endif %}
-            {{ product.metafields.custom.desc_6_text | metafield_tag }}
-          </div>
-          {% if product.metafields.custom.desc_6_image != blank %}
-            <div class="desc-image">
-              <img src="{{ product.metafields.custom.desc_6_image | image_url }}" width="150" height="150">
+            <div class="desc-content">
+              {{ product.metafields.custom.desc_6_text | metafield_tag }}
             </div>
-          {% endif %}
+          </div>
         </div>
       {% endif %}
 
       {% if product.metafields.custom.desc_7_text != blank %}
-        <div class="desc-container reverse {% if product.metafields.custom.desc_7_image == blank %}full-width{% endif %}">
+        <div class="desc-container">
           <div class="desc-text">
+            {% if product.metafields.custom.desc_7_image != blank %}
+              <div class="desc-image desc-image--float-left">
+                <img src="{{ product.metafields.custom.desc_7_image | image_url }}" width="150" height="150">
+              </div>
+            {% endif %}
             {% if product.metafields.custom.desc_7_title != blank %}
               <h6>{{ product.metafields.custom.desc_7_title }}</h6>
             {% endif %}
-            {{ product.metafields.custom.desc_7_text | metafield_tag }}
-          </div>
-          {% if product.metafields.custom.desc_7_image != blank %}
-            <div class="desc-image">
-              <img src="{{ product.metafields.custom.desc_7_image | image_url }}" width="150" height="150">
+            <div class="desc-content">
+              {{ product.metafields.custom.desc_7_text | metafield_tag }}
             </div>
-          {% endif %}
+          </div>
         </div>
       {% endif %}
 
       {% if product.metafields.custom.desc_8_text != blank %}
-        <div class="desc-container {% if product.metafields.custom.desc_8_image == blank %}full-width{% endif %}">
+        <div class="desc-container">
           <div class="desc-text">
+            {% if product.metafields.custom.desc_8_image != blank %}
+              <div class="desc-image desc-image--float-right">
+                <img src="{{ product.metafields.custom.desc_8_image | image_url }}" width="150" height="150">
+              </div>
+            {% endif %}
             {% if product.metafields.custom.desc_8_title != blank %}
               <h6>{{ product.metafields.custom.desc_8_title }}</h6>
             {% endif %}
-            {{ product.metafields.custom.desc_8_text | metafield_tag }}
-          </div>
-          {% if product.metafields.custom.desc_8_image != blank %}
-            <div class="desc-image">
-              <img src="{{ product.metafields.custom.desc_8_image | image_url }}" width="150" height="150">
+            <div class="desc-content">
+              {{ product.metafields.custom.desc_8_text | metafield_tag }}
             </div>
-          {% endif %}
+          </div>
         </div>
       {% endif %}
 
       {% if product.metafields.custom.desc_9_text != blank %}
-        <div class="desc-container reverse {% if product.metafields.custom.desc_9_image == blank %}full-width{% endif %}">
+        <div class="desc-container">
           <div class="desc-text">
+            {% if product.metafields.custom.desc_9_image != blank %}
+              <div class="desc-image desc-image--float-left">
+                <img src="{{ product.metafields.custom.desc_9_image | image_url }}" width="150" height="150">
+              </div>
+            {% endif %}
             {% if product.metafields.custom.desc_9_title != blank %}
               <h6>{{ product.metafields.custom.desc_9_title }}</h6>
             {% endif %}
-            {{ product.metafields.custom.desc_9_text | metafield_tag }}
-          </div>
-          {% if product.metafields.custom.desc_9_image != blank %}
-            <div class="desc-image">
-              <img src="{{ product.metafields.custom.desc_9_image | image_url }}" width="150" height="150">
+            <div class="desc-content">
+              {{ product.metafields.custom.desc_9_text | metafield_tag }}
             </div>
-          {% endif %}
+          </div>
         </div>
       {% endif %}
 
@@ -150,6 +169,7 @@
         <p>{{ product.description }}</p>
       {% endif %}
     </div>
+
     <div class="technical-parameters">
         <h4>Technické parametry</h4>
         <table class="parameters-table">
@@ -397,22 +417,41 @@
   }
 
   .desc-container {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
     margin-bottom: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e5e5e5;
   }
 
-  .desc-container.reverse {
-    flex-direction: row-reverse;
+  .desc-container:first-child {
+    padding-top: 0;
   }
 
-  .desc-text {
-    flex: 1;
+  .desc-container:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
   }
 
-  .desc-image {
-    flex-shrink: 0;
+  .desc-image--float-left {
+    float: left;
+    margin: 0 2rem 0.5rem 0;
+    clear: left;
+  }
+
+  .desc-image--float-right {
+    float: right;
+    margin: 0 0 0.5rem 2rem;
+    clear: right;
+  }
+
+  .desc-content {
+    clear: none;
+  }
+
+  /* Clearfix pro zabránění přetékání */
+  .desc-text::after {
+    content: "";
+    display: table;
+    clear: both;
   }
 
   /* Pro mobilní zařízení */
