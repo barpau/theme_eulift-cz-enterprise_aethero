@@ -243,77 +243,6 @@
       ],
       "settings": {}
     },
-    "product-features": {
-      "type": "product-features",
-      "blocks": {
-        "product-features-feature-0": {
-          "type": "feature",
-          "settings": {
-            "heading": "Tlačítko \"odskoku\"",
-            "text": "<p>bezpečnostní červené tlačítko chrání obsluhu před možným úrazem. Například<br/>přimáčknutí ojí při manipulaci.</p>",
-            "content_align": "text-start",
-            "hotspot_x": 73,
-            "hotspot_y": 10
-          }
-        },
-        "product-features-feature-1": {
-          "type": "feature",
-          "settings": {
-            "heading": "Lithiová baterie",
-            "text": "<p>Vozíky s lithiovou baterií mají minimální servisní a provozní náklady, ačkoliv poskytují maximální komfort manipulace. Minimální náklad, maximální výkon.</p>",
-            "content_align": "text-start",
-            "hotspot_x": 55,
-            "hotspot_y": 48
-          }
-        },
-        "product-features-feature-2": {
-          "type": "feature",
-          "settings": {
-            "heading": "Hydraulika",
-            "text": "<p>osazení kvalitní hydraulickou jednotkou</p>",
-            "content_align": "text-start",
-            "hotspot_x": 72,
-            "hotspot_y": 68
-          }
-        },
-        "product-features-feature-3": {
-          "type": "feature",
-          "settings": {
-            "heading": "Vidlicová kolečka tandemová",
-            "text": "<p>pro větší stabilitu při manipulaci</p>",
-            "content_align": "text-start",
-            "hotspot_x": 33,
-            "hotspot_y": 83
-          }
-        }
-      },
-      "block_order": [
-        "product-features-feature-0",
-        "product-features-feature-1",
-        "product-features-feature-2",
-        "product-features-feature-3"
-      ],
-      "custom_css": [
-        "img {max-width: 50%;}"
-      ],
-      "settings": {
-        "product": "paletovy-vozik-cbd15j-li-s",
-        "show_content": true,
-        "layout": "text_first",
-        "text_align": "text-center",
-        "mob_center_text": false,
-        "heading_size": "h1",
-        "enlarge_text": false,
-        "image": "shopify://shop_images/CBD15J-Li3_001_CR_bezbalancnichkolecek.jpg",
-        "title": "{{ section.settings.product.title }}",
-        "description": "<p>Podívejte se na výhody tohoto produktu:</p>",
-        "button_label": "",
-        "button_link": "",
-        "hotspot_color": "#e42b2c",
-        "color_scheme": "none",
-        "button_style": "btn btn--primary"
-      }
-    },
     "rich_text_47GBMh": {
       "type": "rich-text",
       "blocks": {
@@ -411,6 +340,77 @@
         "video_autoplay": false,
         "text_align": "text-center",
         "color_scheme": "1"
+      }
+    },
+    "product-features": {
+      "type": "product-features",
+      "blocks": {
+        "product-features-feature-0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Tlačítko \"odskoku\"",
+            "text": "<p>bezpečnostní červené tlačítko chrání obsluhu před možným úrazem. Například<br/>přimáčknutí ojí při manipulaci.</p>",
+            "content_align": "text-start",
+            "hotspot_x": 73,
+            "hotspot_y": 10
+          }
+        },
+        "product-features-feature-1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Lithiová baterie",
+            "text": "<p>Vozíky s lithiovou baterií mají minimální servisní a provozní náklady, ačkoliv poskytují maximální komfort manipulace. Minimální náklad, maximální výkon.</p>",
+            "content_align": "text-start",
+            "hotspot_x": 55,
+            "hotspot_y": 48
+          }
+        },
+        "product-features-feature-2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Hydraulika",
+            "text": "<p>osazení kvalitní hydraulickou jednotkou</p>",
+            "content_align": "text-start",
+            "hotspot_x": 72,
+            "hotspot_y": 68
+          }
+        },
+        "product-features-feature-3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Vidlicová kolečka tandemová",
+            "text": "<p>pro větší stabilitu při manipulaci</p>",
+            "content_align": "text-start",
+            "hotspot_x": 33,
+            "hotspot_y": 83
+          }
+        }
+      },
+      "block_order": [
+        "product-features-feature-0",
+        "product-features-feature-1",
+        "product-features-feature-2",
+        "product-features-feature-3"
+      ],
+      "custom_css": [
+        "img {max-width: 50%;}"
+      ],
+      "settings": {
+        "product": "paletovy-vozik-cbd15j-li-s",
+        "show_content": true,
+        "layout": "text_first",
+        "text_align": "text-center",
+        "mob_center_text": false,
+        "heading_size": "h1",
+        "enlarge_text": false,
+        "image": "shopify://shop_images/CBD15J-Li3_001_CR_bezbalancnichkolecek.jpg",
+        "title": "{{ section.settings.product.title }}",
+        "description": "<p>Podívejte se na výhody tohoto produktu:</p>",
+        "button_label": "",
+        "button_link": "",
+        "hotspot_color": "#e42b2c",
+        "color_scheme": "none",
+        "button_style": "btn btn--primary"
       }
     },
     "product-comparison-grid": {
@@ -601,10 +601,10 @@
     "main",
     "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e",
     "details",
-    "product-features",
     "rich_text_47GBMh",
     "cc613772-77b3-4900-b96a-7f849c5511b3",
     "2a8601ba-bfe3-43d3-bcd3-71ba14908f91",
+    "product-features",
     "product-comparison-grid",
     "collection-list",
     "image-banner",
