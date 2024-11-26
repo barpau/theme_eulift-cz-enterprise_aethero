@@ -65,16 +65,7 @@
     display: flex; /* Použijte Flexbox pro umístění divů vedle sebe */
   }  
 
-    .detailed-info, .technical-parameters {
-        flex: 1; /* Každý div zabere stejnou šířku */
-        padding: 20px; /* Přidání paddingu pro lepší vzhled */
-    }
-
-
-/* Product page - description block */
-.description-section {
-    display: flex; /* Použijte Flexbox pro umístění divů vedle sebe */
-  }  
+   
 
     .download-offer-button-wrapper, .pdf-download-block {
         flex: 1; /* Každý div zabere stejnou šířku */
@@ -84,18 +75,7 @@
         line-height: 2.2em;
     }
 
-    /* Media query pro mobilní zařízení */
-    @media (max-width: 768px) {
-      .description-section {
-            flex-direction: column; /* Změna směru flexboxu na sloupec */
-        }
-      }    
-    
-    @media (min-width: 769px) {
-      .description-section {
-        gap: 135px; /* Mezera mezi divy */
-    }
-  }
+
 
 /* home page - because of this
 
