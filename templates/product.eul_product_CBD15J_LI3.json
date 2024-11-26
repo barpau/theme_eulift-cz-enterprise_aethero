@@ -328,8 +328,8 @@
         "template--20693546598709__cc613772-77b3-4900-b96a-7f849c5511b3-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>CBD15 třídy J s lithiovou baterií</p>",
-            "enlarge_text": false
+            "text": "<h5>CBD15 třídy J s lithiovou baterií</h5>",
+            "enlarge_text": true
           }
         }
       },
@@ -341,6 +341,38 @@
         "video_external": "https://vimeo.com/728565489",
         "video_description": "",
         "poster_image": "shopify://shop_images/sidlo-gekkon-opti.webp",
+        "video_size": "md",
+        "video_autoplay": true,
+        "text_align": "text-center",
+        "color_scheme": "1"
+      }
+    },
+    "2a8601ba-bfe3-43d3-bcd3-71ba14908f91": {
+      "type": "video",
+      "blocks": {
+        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Video o produktu",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        },
+        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Porovnání paletových vozíků</h5>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-heading-1",
+        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-text-1"
+      ],
+      "settings": {
+        "video_external": "https://vimeo.com/827540439",
+        "video_description": "",
         "video_size": "md",
         "video_autoplay": true,
         "text_align": "text-center",
@@ -399,38 +431,6 @@
         "num_rows": 4,
         "color_scheme": "none",
         "highlight_row": false
-      }
-    },
-    "2a8601ba-bfe3-43d3-bcd3-71ba14908f91": {
-      "type": "video",
-      "blocks": {
-        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Video o produktu",
-            "heading_size": "h2",
-            "heading_h1": false
-          }
-        },
-        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Porovnání paletových vozíků</h5>",
-            "enlarge_text": true
-          }
-        }
-      },
-      "block_order": [
-        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-heading-1",
-        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-text-1"
-      ],
-      "settings": {
-        "video_external": "https://vimeo.com/827540439",
-        "video_description": "",
-        "video_size": "md",
-        "video_autoplay": true,
-        "text_align": "text-center",
-        "color_scheme": "1"
       }
     },
     "collection-list": {
