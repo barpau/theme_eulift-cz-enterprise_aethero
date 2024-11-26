@@ -1,3 +1,61 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const productForm = document.querySelector('product-form');
+  if (!productForm) return;
+
+  console.log('Product form nalezen'); // Debug
+
+  // Zkusíme různé selektory pro radio buttony
+  const radioInputs = document.querySelectorAll('input[type="radio"][name*="option"]');
+  console.log('Nalezeno radio inputs (všechny):', radioInputs.length); // Debug
+
+  radioInputs.forEach(input => {
+    input.addEventListener('change', function(event) {
+      console.log('Změna radio buttonu detekována pro hodnotu:', input.value); // Debug
+      
+      // Přidáme malé zpoždění pro zajištění aktualizace ceny v DOM
+      setTimeout(() => {
+        const button = document.querySelector('.download-offer-btn');
+        const priceElement = document.querySelector('.price__current');
+        
+        if (button && priceElement) {
+          // Získáme cenu přímo z DOM elementu
+          const priceText = priceElement.textContent.trim()
+            .replace(/[^0-9,]/g, '') // Odstraníme vše kromě čísel a čárky
+            .replace(',', '.'); // Nahradíme čárku tečkou
+          
+          console.log('Vybraná varianta:', input.value);
+          console.log('Aktuální cena v DOM:', priceElement.textContent.trim());
+          console.log('Zpracovaná cena:', priceText);
+          
+          button.dataset.productPrice = priceText;
+        }
+      }, 100); // Zpoždění 100ms
+    });
+  });
+
+  // Sledování změn ceny v DOM
+  const priceObserver = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'characterData' || mutation.type === 'childList') {
+        console.log('Detekována změna ceny v DOM');
+        const priceElement = document.querySelector('.price__current');
+        if (priceElement) {
+          console.log('Nová cena v DOM:', priceElement.textContent.trim());
+        }
+      }
+    });
+  });
+
+  const priceElement = document.querySelector('.price__current');
+  if (priceElement) {
+    priceObserver.observe(priceElement, {
+      characterData: true,
+      childList: true,
+      subtree: true
+    });
+  }
+});
+
 pdfMake.fonts = {
   Roboto: {
     normal: 'https://cdn.jsdelivr.net/npm/@fontsource/roboto@4.5.8/files/roboto-latin-ext-400-normal.woff',
@@ -93,7 +151,16 @@ async function generateAndDownloadPDF() {
               [
                 [
                   { text: 'NABÍDKA ZBOŽÍ', style: 'tableHeader' },
-                  { text: button.dataset.productTitle, margin: [0, 5, 0, 0] }
+                  { text: button.dataset.productTitle, margin: [0, 5, 0, 0] },
+                  { 
+                    text: document.querySelector('input[type="radio"][name*="option"]:checked') ? 
+                          'Vybraná varianta produktu: ' + 
+                          document.querySelector('input[type="radio"][name*="option"]:checked').value : 
+                          '',
+                    margin: [0, 5, 0, 0],
+                    fontSize: 10,
+                    italics: true
+                  }
                 ],
                 [
                   { 
@@ -105,7 +172,12 @@ async function generateAndDownloadPDF() {
                   { 
                     text: button.dataset.productPrice === '0' || button.dataset.productPrice === '0,00' ? 
                           'Cena na dotaz' : 
-                          button.dataset.productPrice + ' Kč', 
+                          parseFloat(button.dataset.productPrice)
+                            .toLocaleString('cs-CZ', {
+                              minimumFractionDigits: 2,
+                              maximumFractionDigits: 2,
+                              useGrouping: true
+                            }) + ' Kč',
                     style: 'bold' 
                   },
                   { text: '\nDatum pořízení:', style: 'label' },
@@ -392,7 +464,7 @@ async function generateAndDownloadPDF() {
 
   
 
-    // Generování PDF
+    // Generovní PDF
     pdfMake.createPdf(docDefinition).download(`nabidka-${button.dataset.productTitle.toLowerCase().replace(/\s+/g, '-')}.pdf`);
 
   } catch (error) {

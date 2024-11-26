@@ -198,17 +198,17 @@
       </div>
 
       {% if product.price > 0 %} 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-      <script src="{{ 'aethero-product-pdf-generator.js' | asset_url }}" defer="defer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>  
       <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js" defer></script>
+      <script src="{{ 'aethero-product-pdf-generator.js' | asset_url }}" defer="defer"></script>
       
       <div class="download-offer-button-wrapper mt-4">
         <button 
           class="btn btn--secondary btn--sm download-offer-btn"
           onclick="generateAndDownloadPDF()"
           data-product-title="{{ product.title | escape }}"
-          data-product-price="{{ product.price | money_without_currency }}"
+          data-product-price="{{ current_variant.price | money_without_currency }}"
           data-product-image="{{ product.featured_media.preview_image | image_url: width: 800 }}"
           data-kratky-popis="{{ product.description | escape }}"
           data-kratsi-popis="{{ product.metafields.custom.kratky_popis | escape }}"
@@ -497,7 +497,7 @@
               class="btn btn--secondary btn--sm download-offer-btn"
               onclick="generateAndDownloadPDF()"
               data-product-title="{{ product.title | escape }}"
-              data-product-price="{{ product.price | money_without_currency }}"
+              data-product-price="{{ current_variant.price | money_without_currency }}"
               data-product-image="{{ product.featured_media.preview_image | image_url: width: 800 }}"
               data-kratky-popis="{{ product.description | escape }}"
               data-kratsi-popis="{{ product.metafields.custom.kratky_popis | escape }}"
