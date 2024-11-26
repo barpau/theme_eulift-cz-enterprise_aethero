@@ -401,6 +401,38 @@
         "highlight_row": false
       }
     },
+    "2a8601ba-bfe3-43d3-bcd3-71ba14908f91": {
+      "type": "video",
+      "blocks": {
+        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Video o produktu",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        },
+        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Porovnání paletových vozíků</h5>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-heading-1",
+        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-text-1"
+      ],
+      "settings": {
+        "video_external": "https://vimeo.com/827540439",
+        "video_description": "",
+        "video_size": "md",
+        "video_autoplay": true,
+        "text_align": "text-center",
+        "color_scheme": "1"
+      }
+    },
     "collection-list": {
       "type": "collection-list",
       "blocks": {
@@ -529,39 +561,6 @@
         "card_size": "small",
         "products_to_show": 8
       }
-    },
-    "2a8601ba-bfe3-43d3-bcd3-71ba14908f91": {
-      "type": "video",
-      "blocks": {
-        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Video o produktu",
-            "heading_size": "h2",
-            "heading_h1": false
-          }
-        },
-        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Porovnání paletových vozíků</h5>",
-            "enlarge_text": true
-          }
-        }
-      },
-      "block_order": [
-        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-heading-1",
-        "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-text-1"
-      ],
-      "settings": {
-        "video_external": "https://vimeo.com/827540439",
-        "video_description": "",
-        "poster_image": "shopify://shop_images/sidlo-gekkon-opti_133f830b-2d51-44fe-a78c-16d65eebe74a.webp",
-        "video_size": "md",
-        "video_autoplay": true,
-        "text_align": "text-center",
-        "color_scheme": "1"
-      }
     }
   },
   "order": [
@@ -570,10 +569,10 @@
     "details",
     "product-features",
     "cc613772-77b3-4900-b96a-7f849c5511b3",
+    "2a8601ba-bfe3-43d3-bcd3-71ba14908f91",
     "product-comparison-grid",
     "collection-list",
     "image-banner",
-    "recommendations",
-    "2a8601ba-bfe3-43d3-bcd3-71ba14908f91"
+    "recommendations"
   ]
 }
