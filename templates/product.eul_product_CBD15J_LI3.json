@@ -320,7 +320,7 @@
         "heading_9KR6QV": {
           "type": "heading",
           "settings": {
-            "heading": "Video o produktu",
+            "heading": "Videa o produktu",
             "heading_size": "h2",
             "heading_h1": false
           }
@@ -328,6 +328,9 @@
       },
       "block_order": [
         "heading_9KR6QV"
+      ],
+      "custom_css": [
+        ".cc-rich-text {background-color: #f4f4f4; margin-bottom: -50px; padding-top: 30px;}"
       ],
       "settings": {
         "text_align": "text-center",
