@@ -314,6 +314,28 @@
         "button_style": "btn btn--primary"
       }
     },
+    "rich_text_47GBMh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9KR6QV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Video o produktu",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_9KR6QV"
+      ],
+      "settings": {
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "color_scheme": "none",
+        "full_width": true
+      }
+    },
     "cc613772-77b3-4900-b96a-7f849c5511b3": {
       "type": "video",
       "blocks": {
@@ -577,6 +599,7 @@
     "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e",
     "details",
     "product-features",
+    "rich_text_47GBMh",
     "cc613772-77b3-4900-b96a-7f849c5511b3",
     "2a8601ba-bfe3-43d3-bcd3-71ba14908f91",
     "product-comparison-grid",
