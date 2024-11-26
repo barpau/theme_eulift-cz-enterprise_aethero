@@ -92,13 +92,6 @@
         gap: 135px; /* Mezera mezi divy */
     }
   }
-  @media (max-width: 768px) {
-  .banner-rotace-main-product{
-    margin-top: 30px;
-    width: 320px !important;
-    }
-  }
-
 
 /* home page - because of this
 
@@ -273,4 +266,21 @@ b, strong {
 }
 .vat-validation-title{
   color: rgb(244, 72, 73);
+}
+
+@media (min-width: 769px) and (max-width: 1030px) {
+  .banner-rotation-main-product {
+    width: 350px !important;
+  }
+}
+@media (max-width: 768px) {
+  .banner-rotation-main-product {
+    width: 500px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .banner-rotation-main-product {
+    width: 370px !important;
+  }
 }
