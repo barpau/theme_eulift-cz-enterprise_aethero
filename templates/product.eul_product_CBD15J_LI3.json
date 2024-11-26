@@ -338,7 +338,7 @@
         "template--20693546598709__cc613772-77b3-4900-b96a-7f849c5511b3-text-1"
       ],
       "custom_css": [
-        ".cc-video {display: inline-block; width: 50%; vertical-align: top;}"
+        "@media (min-width: 768px) {.cc-video {display: inline-block; width: 50%; vertical-align: top; }}"
       ],
       "settings": {
         "video_external": "https://vimeo.com/728565489",
@@ -374,7 +374,7 @@
         "template--20693546598709__2a8601ba-bfe3-43d3-bcd3-71ba14908f91-text-1"
       ],
       "custom_css": [
-        ".cc-video {display: inline-block; width: 50%; vertical-align: top;}"
+        "@media (min-width: 768px) {.cc-video {display: inline-block; width: 50%; vertical-align: top; }}"
       ],
       "settings": {
         "video_external": "https://vimeo.com/827540439",
