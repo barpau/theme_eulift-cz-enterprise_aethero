@@ -408,7 +408,7 @@
         "video_description": "",
         "poster_image": "shopify://shop_images/Screenshot_2024-11-26_at_10.33.54.png",
         "video_size": "md",
-        "video_autoplay": true,
+        "video_autoplay": false,
         "text_align": "text-center",
         "color_scheme": "1"
       }
