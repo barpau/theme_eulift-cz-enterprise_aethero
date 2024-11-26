@@ -95,9 +95,9 @@
   @media (max-width: 768px) {
   .banner-rotace-main-product{
     margin-top: 30px;
-    width: 320px;
+    width: 320px !important;
+    }
   }
-}
 
 
 /* home page - because of this
