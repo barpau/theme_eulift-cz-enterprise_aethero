@@ -18,13 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const priceElement = document.querySelector('.price__current');
         
         if (button && priceElement) {
-          // Získáme cenu přímo z DOM elementu
-          const priceText = priceElement.textContent.trim()
-            .replace(/[^0-9,]/g, '') // Odstraníme vše kromě čísel a čárky
-            .replace(',', '.'); // Nahradíme čárku tečkou
+          const originalPrice = priceElement.textContent.trim();
+          const priceText = originalPrice
+            .replace(/\s+/g, '')
+            .replace(/[^0-9,]/g, '');
           
-          console.log('Vybraná varianta:', input.value);
-          console.log('Aktuální cena v DOM:', priceElement.textContent.trim());
+          console.log('Původní cena:', originalPrice);
           console.log('Zpracovaná cena:', priceText);
           
           button.dataset.productPrice = priceText;
@@ -163,21 +162,11 @@ async function generateAndDownloadPDF() {
                   }
                 ],
                 [
-                  { 
-                    text: button.dataset.productPrice === '0' || button.dataset.productPrice === '0,00' ? 
-                          '' : 
-                          'Cena bez DPH:', 
-                    style: 'label' 
-                  },
+                  { text: 'Cena bez DPH:', style: 'label', margin: [0, 0, 0, 5] },
                   { 
                     text: button.dataset.productPrice === '0' || button.dataset.productPrice === '0,00' ? 
                           'Cena na dotaz' : 
-                          parseFloat(button.dataset.productPrice)
-                            .toLocaleString('cs-CZ', {
-                              minimumFractionDigits: 2,
-                              maximumFractionDigits: 2,
-                              useGrouping: true
-                            }) + ' Kč',
+                          button.dataset.productPrice.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' Kč',
                     style: 'bold' 
                   },
                   { text: '\nDatum pořízení:', style: 'label' },
