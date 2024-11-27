@@ -196,10 +196,24 @@ async function generateAndDownloadPDF() {
                   { text: 'NABÍDKA ZBOŽÍ', style: 'tableHeader' },
                   { text: button.dataset.productTitle, margin: [0, 5, 0, 0] },
                   { 
-                    text: document.querySelector('input[type="radio"][name*="option"]:checked') ? 
-                          'Vybraná varianta produktu: ' + 
-                          document.querySelector('input[type="radio"][name*="option"]:checked').value : 
-                          '',
+                    text: (() => {
+                      // Kontrola radio buttonů
+                      const selectedRadio = document.querySelector('input[type="radio"][name*="option"]:checked');
+                      const selectedDropdown = document.querySelector('.custom-select__btn span');
+                      
+                      let variantText = '';
+                      
+                      if (selectedRadio) {
+                        variantText += 'Vybraná varianta produktu: ' + selectedRadio.value;
+                      }
+                      
+                      if (selectedDropdown) {
+                        if (variantText) variantText += '\n';
+                        variantText += 'Výška zdvihu: ' + selectedDropdown.textContent.trim();
+                      }
+                      
+                      return variantText;
+                    })(),
                     margin: [0, 5, 0, 0],
                     fontSize: 10,
                     italics: true
