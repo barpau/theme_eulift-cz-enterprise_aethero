@@ -536,8 +536,8 @@
         "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Čelní elektrické VZV HELI H4-LI čtyřkolové BLACK EDITION</p>",
-            "enlarge_text": false
+            "text": "<p><strong>Čelní elektrické vysokozdvižné vozíky HELI H4-LI čtyřkolové BLACK EDITION</strong></p>",
+            "enlarge_text": true
           }
         }
       },
@@ -573,7 +573,7 @@
         "text_QxVdja": {
           "type": "text",
           "settings": {
-            "text": "<p>Čelní elektrické vysokozdvižné vozíky HELI H4-LI čtyřkolové BLACK EDITION popis klíčových funkcí</p>",
+            "text": "<p><strong>Čelní elektrické vysokozdvižné vozíky HELI H4-LI čtyřkolové BLACK EDITION popis klíčových funkcí</strong></p>",
             "enlarge_text": true
           }
         }
