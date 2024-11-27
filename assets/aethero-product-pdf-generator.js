@@ -53,6 +53,50 @@ document.addEventListener('DOMContentLoaded', function() {
       subtree: true
     });
   }
+
+  // Přidání sledování změn pro dropdown select
+  const customSelects = document.querySelectorAll('custom-select');
+  customSelects.forEach(select => {
+    const selectButton = select.querySelector('.custom-select__btn');
+    if (selectButton) {
+      // Sledování změn v MutationObserver pro text v buttonu
+      const selectObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'characterData' || mutation.type === 'childList') {
+            console.log('Změna varianty v dropdownu detekována');
+            
+            // Přidáme malé zpoždění pro zajištění aktualizace ceny v DOM
+            setTimeout(() => {
+              const button = document.querySelector('.download-offer-btn');
+              const priceElement = document.querySelector('.price__current');
+              
+              if (button && priceElement) {
+                const originalPrice = priceElement.textContent.trim();
+                const priceText = originalPrice
+                  .replace(/\s+/g, '')
+                  .replace(/[^0-9,]/g, '');
+                
+                console.log('Původní cena:', originalPrice);
+                console.log('Zpracovaná cena:', priceText);
+                
+                button.dataset.productPrice = priceText;
+              }
+            }, 100);
+          }
+        });
+      });
+
+      // Sledování změn v textu tlačítka
+      const spanElement = selectButton.querySelector('span');
+      if (spanElement) {
+        selectObserver.observe(spanElement, {
+          characterData: true,
+          childList: true,
+          subtree: true
+        });
+      }
+    }
+  });
 });
 
 pdfMake.fonts = {
