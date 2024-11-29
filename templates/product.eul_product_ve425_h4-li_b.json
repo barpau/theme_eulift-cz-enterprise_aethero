@@ -243,6 +243,28 @@
       ],
       "settings": {}
     },
+    "rich_text_fYxyiY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fzKmbG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Video o produktu",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fzKmbG"
+      ],
+      "settings": {
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "color_scheme": "none",
+        "full_width": true
+      }
+    },
     "video_DpUthV": {
       "type": "video",
       "blocks": {
@@ -575,6 +597,7 @@
     "main",
     "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e",
     "details",
+    "rich_text_fYxyiY",
     "video_DpUthV",
     "e62d37c7-75a1-4085-8b0c-9a62fafaeb0c",
     "product-features",
