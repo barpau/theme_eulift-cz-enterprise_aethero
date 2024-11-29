@@ -243,6 +243,80 @@
       ],
       "settings": {}
     },
+    "video_DpUthV": {
+      "type": "video",
+      "blocks": {
+        "heading_aUeLVi": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Video",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "text_DCtVBa": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Čelní elektrické vysokozdvižné vozíky HELI H4-LI BLACK EDITION - prezentace vozíku</strong></p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_aUeLVi",
+        "text_DCtVBa"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.cc-video {display: inline-block; width: 50%; vertical-align: top; }}"
+      ],
+      "settings": {
+        "video_external": "https://vimeo.com/manage/videos/1032987201",
+        "video_description": "",
+        "poster_image": "shopify://shop_images/video_uvodni_obr_HELI_celni_H4_LI_BLACK_EDITION_927x506_7e109cb4-ca80-49ff-ba6c-a3c18a9d09cc.jpg",
+        "video_size": "md",
+        "video_autoplay": true,
+        "text_align": "text-center",
+        "color_scheme": "1"
+      }
+    },
+    "e62d37c7-75a1-4085-8b0c-9a62fafaeb0c": {
+      "type": "video",
+      "blocks": {
+        "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Video o produktu",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        },
+        "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Čelní elektrické vysokozdvižné vozíky HELI H4-LI BLACK EDITION - popis klíčových funkcí</strong></p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-heading-1",
+        "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-text-1"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.cc-video {display: inline-block; width: 50%; vertical-align: top; }}"
+      ],
+      "settings": {
+        "video_external": "https://vimeo.com/1033472723",
+        "video_description": "",
+        "poster_image": "shopify://shop_images/video_uvodni_obr_HELI_celni_H4_LI_BLACK_EDITION_927x506_02.jpg",
+        "video_size": "md",
+        "video_autoplay": true,
+        "text_align": "text-center",
+        "color_scheme": "1"
+      }
+    },
     "product-features": {
       "type": "product-features",
       "blocks": {
@@ -495,49 +569,18 @@
         "card_size": "small",
         "products_to_show": 8
       }
-    },
-    "e62d37c7-75a1-4085-8b0c-9a62fafaeb0c": {
-      "type": "video",
-      "blocks": {
-        "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Video o produktu",
-            "heading_size": "h2",
-            "heading_h1": false
-          }
-        },
-        "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Vysokozdvižný elektrický vozík HELI CDD12 řady J</h5>",
-            "enlarge_text": true
-          }
-        }
-      },
-      "block_order": [
-        "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-heading-1",
-        "template--21519870918965__e62d37c7-75a1-4085-8b0c-9a62fafaeb0c-text-1"
-      ],
-      "settings": {
-        "video_external": "",
-        "video_description": "",
-        "video_size": "md",
-        "video_autoplay": true,
-        "text_align": "text-center",
-        "color_scheme": "1"
-      }
     }
   },
   "order": [
     "main",
     "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e",
     "details",
+    "video_DpUthV",
+    "e62d37c7-75a1-4085-8b0c-9a62fafaeb0c",
     "product-features",
     "product-comparison-grid",
     "collection-list",
     "image-banner",
-    "recommendations",
-    "e62d37c7-75a1-4085-8b0c-9a62fafaeb0c"
+    "recommendations"
   ]
 }
