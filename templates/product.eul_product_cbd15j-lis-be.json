@@ -357,11 +357,11 @@
         "view_more_label": "View more",
         "view_more_link": "",
         "product_list": [
-          "paletovy-vozik-cbd15j-li3",
           "paletovy-vozik-cbd20j-li3",
           "paletovy-vozik-cbd20epm-li",
           "paletovy-vozik-cbd20epm",
-          "paletovy-vozik-cbd20er"
+          "paletovy-vozik-cbd20er",
+          "paletovy-vozik-cbd15j-li-s-black-edition"
         ],
         "empty_field_text": "-",
         "image_ratio": "shortest",
@@ -537,11 +537,11 @@
     "main",
     "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e",
     "details",
+    "73ae227b-6c6b-4aef-91db-71bb11e5344d",
     "product-features",
     "product-comparison-grid",
     "collection-list",
     "image-banner",
-    "recommendations",
-    "73ae227b-6c6b-4aef-91db-71bb11e5344d"
+    "recommendations"
   ]
 }
