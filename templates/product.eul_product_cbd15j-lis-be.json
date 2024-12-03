@@ -295,6 +295,7 @@
       "settings": {
         "video_external": "https://vimeo.com/manage/videos/1035570708",
         "video_description": "",
+        "poster_image": "shopify://shop_images/videoobrazek_CBD15j-li-s-black_edition_01.jpg",
         "video_size": "md",
         "video_autoplay": false,
         "text_align": "text-center",
@@ -331,6 +332,7 @@
       "settings": {
         "video_external": "https://vimeo.com/827540439",
         "video_description": "",
+        "poster_image": "shopify://shop_images/videoobrazek_CBD15j-li-s-black_edition_02.jpg",
         "video_size": "md",
         "video_autoplay": false,
         "text_align": "text-center",
