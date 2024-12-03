@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "309ee8e3-a91d-47a0-9f69-f906c170da1e": {
@@ -31,7 +31,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>Share information about your store with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>Share information about your store with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
             "enlarge_text": true
           }
         },
@@ -67,37 +67,37 @@
         "542f6601-838d-471d-b462-f7e90107d630": {
           "type": "collection",
           "settings": {
-            "collection": "vzv-g2-s-lithiovou-baterii"
+            "collection": "vysokozdvizne-voziky-g2-s-lithiovou-baterii"
           }
         },
         "12135894-6b08-492e-b9d2-5595e6779c5a": {
           "type": "collection",
           "settings": {
-            "collection": "vzv-g3-s-lithiovou-baterii"
+            "collection": "vysokozdvizne-voziky-g3-s-lithiovou-baterii"
           }
         },
         "781987de-dc6f-496b-923b-f1e5bdc0277f": {
           "type": "collection",
           "settings": {
-            "collection": "vzv-h4-s-lithiovou-baterii"
+            "collection": "vysokozdvizne-voziky-h4-s-lithiovou-baterii"
           }
         },
         "54bd70db-66c5-41e3-8bf5-7477924e3206": {
           "type": "collection",
           "settings": {
-            "collection": "vzv-terenni"
+            "collection": "vysokozdvizne-voziky-terenni"
           }
         },
         "bba4b02d-e12b-447d-a16b-3444575fe2e9": {
           "type": "collection",
           "settings": {
-            "collection": "vzv-se-spalovacim-motorem"
+            "collection": "vysokozdvizne-voziky-se-spalovacim-motorem"
           }
         },
         "779256ff-9408-4209-a6d3-ecb695731b1b": {
           "type": "collection",
           "settings": {
-            "collection": "vzv-s-trakcni-baterii"
+            "collection": "vysokozdvizne-voziky-s-trakcni-baterii"
           }
         }
       },

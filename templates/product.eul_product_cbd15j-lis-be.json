@@ -243,6 +243,100 @@
       ],
       "settings": {}
     },
+    "rich_text_YUAWjj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GzzjGD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Videa o produktu",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GzzjGD"
+      ],
+      "settings": {
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "color_scheme": "none",
+        "full_width": true
+      }
+    },
+    "video_dajfDD": {
+      "type": "video",
+      "blocks": {
+        "heading_y8WfQN": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Video",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "text_eADjWp": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Paletový vozík elektrický CBD15J-LI-S BLACK EDITION popis klíčových funkcí</h5>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_y8WfQN",
+        "text_eADjWp"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.cc-video {display: inline-block; width: 50%; vertical-align: top; }}"
+      ],
+      "settings": {
+        "video_external": "https://vimeo.com/manage/videos/1035570708",
+        "video_description": "",
+        "video_size": "md",
+        "video_autoplay": false,
+        "text_align": "text-center",
+        "color_scheme": "1"
+      }
+    },
+    "73ae227b-6c6b-4aef-91db-71bb11e5344d": {
+      "type": "video",
+      "blocks": {
+        "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Video o produktu",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        },
+        "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Porovnání paletových vozíků elektrických s manuálními</h5>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-heading-1",
+        "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-text-1"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.cc-video {display: inline-block; width: 50%; vertical-align: top; }}"
+      ],
+      "settings": {
+        "video_external": "https://vimeo.com/827540439",
+        "video_description": "",
+        "video_size": "md",
+        "video_autoplay": false,
+        "text_align": "text-center",
+        "color_scheme": "1"
+      }
+    },
     "product-features": {
       "type": "product-features",
       "blocks": {
@@ -357,11 +451,11 @@
         "view_more_label": "View more",
         "view_more_link": "",
         "product_list": [
-          "paletovy-vozik-cbd15j-li3",
           "paletovy-vozik-cbd20j-li3",
           "paletovy-vozik-cbd20epm-li",
           "paletovy-vozik-cbd20epm",
-          "paletovy-vozik-cbd20er"
+          "paletovy-vozik-cbd20er",
+          "paletovy-vozik-cbd15j-li-s-black-edition"
         ],
         "empty_field_text": "-",
         "image_ratio": "shortest",
@@ -499,49 +593,19 @@
         "card_size": "small",
         "products_to_show": 8
       }
-    },
-    "73ae227b-6c6b-4aef-91db-71bb11e5344d": {
-      "type": "video",
-      "blocks": {
-        "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Video o produktu",
-            "heading_size": "h2",
-            "heading_h1": false
-          }
-        },
-        "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Porovnání paletových vozíků</h5>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-heading-1",
-        "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-text-1"
-      ],
-      "settings": {
-        "video_external": "https://vimeo.com/827540439",
-        "video_description": "",
-        "video_size": "md",
-        "video_autoplay": true,
-        "text_align": "text-center",
-        "color_scheme": "1"
-      }
     }
   },
   "order": [
     "main",
     "8dc8c37e-8c63-4e4f-8838-dd3dcb77dd8e",
     "details",
+    "rich_text_YUAWjj",
+    "video_dajfDD",
+    "73ae227b-6c6b-4aef-91db-71bb11e5344d",
     "product-features",
     "product-comparison-grid",
     "collection-list",
     "image-banner",
-    "recommendations",
-    "73ae227b-6c6b-4aef-91db-71bb11e5344d"
+    "recommendations"
   ]
 }

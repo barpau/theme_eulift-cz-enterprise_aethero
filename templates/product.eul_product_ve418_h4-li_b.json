@@ -396,7 +396,7 @@
         "img {max-width: 50%;}"
       ],
       "settings": {
-        "product": "celni-elektricky-vzv-heli-h4-li-1-8-tuny-ctyrkolovy-black-edition",
+        "product": "vysokozdvizny-vozik-elektricky-heli-h4-li-1-8-t-black-edition",
         "show_content": true,
         "layout": "text_first",
         "text_align": "text-center",
@@ -453,10 +453,10 @@
         "view_more_label": "View more",
         "view_more_link": "",
         "product_list": [
-          "celni-elektricke-vzv-heli-g4-li-1-5-3-5-tuny-ctyrkolove",
-          "celni-elektricky-vzv-heli-h4-li-2-5-tuny-ctyrkolovy-black-edition",
-          "celni-elektricky-vzv-heli-h4-li-3-5-tuny-ctyrkolovy-black-edition",
-          "celni-spalovaci-vzv-eko-heli-h3-1-5-3-5-tuny"
+          "vysokozdvizne-voziky-elektricke-heli-h4-li-1-5-3-5-t-ctyrkolove",
+          "vysokozdvizny-vozik-elektricky-heli-h4-li-2-5-t-black-edition",
+          "vysokozdvizny-vozik-elektricky-heli-h4-li-3-5-t-black-edition",
+          "vysokozdvizne-voziky-spalovaci-heli-eko-h3-1-5-3-5-t"
         ],
         "empty_field_text": "-",
         "image_ratio": "shortest",

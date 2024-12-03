@@ -111,19 +111,19 @@
         "slide_H6WQzG": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify://shop_images/akcni_nabidka_cbd15j-li3_5e5b3879-cbe2-47fa-9013-27d8bd5564c2.jpg",
-            "image_mobile": "shopify://shop_images/akcni_nabidka_cbd15j-li3_2560px_14796ff8-fa39-4b59-b6c8-1e6b448390c6.jpg",
+            "image_desktop": "shopify://shop_images/akcni_nabidka_cbd15j-li-s.jpg",
+            "image_mobile": "shopify://shop_images/akcni_nabidka_cbd15j-li-s_2560px.jpg",
             "overlay_position": "justify-start items-center",
             "overlay_text_align": "text-start",
             "mob_center_text": false,
-            "subheading": "CBD15J-LI3",
+            "subheading": "CBD15J-LI-S-BE",
             "heading": "SKVĚLÁ <br>CENA",
             "heading_size": "h0",
             "heading_h1": false,
             "text": "<p><strong>Na elektrické paletové vozíky <br/>jsme na českém trhu jednička. </strong><br/>Podívejte se na jeden z našich<br/>nejprodávanějších vedených <br/>vozíků.</p>",
             "enlarge_text": true,
             "button_1_label": "To chci",
-            "button_1_link": "shopify://products/paletovy-vozik-cbd15j-li3",
+            "button_1_link": "shopify://products/paletovy-vozik-cbd15j-li-s-black-edition",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -143,8 +143,8 @@
         "slide_Bmg7ze": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify://shop_images/akcni_nabidka_rada_e5960181-f222-4cb3-b2f8-3d1a7a34bc04.jpg",
-            "image_mobile": "shopify://shop_images/akcni_nabidka_rada_2560px_510ff1c0-8baf-470d-a409-960401be6a28.jpg",
+            "image_desktop": "shopify://shop_images/akcni_nabidka_rada_75c86fdd-d1f1-47d9-ae87-bbf94c5ce289.jpg",
+            "image_mobile": "shopify://shop_images/akcni_nabidka_rada_2560px_5090a36f-2a57-4c34-8caf-cd69f63eb4ff.jpg",
             "overlay_position": "justify-start items-center",
             "overlay_text_align": "text-start",
             "mob_center_text": false,
@@ -759,7 +759,7 @@
           "type": "button",
           "settings": {
             "button_1_label": "Vyberte si z „TĚCH VELKÝCH”",
-            "button_1_link": "shopify://collections/celni-motorove-voziky",
+            "button_1_link": "shopify://collections/celni-vysokozdvizne-voziky-heli",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "#",
