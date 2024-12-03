@@ -268,15 +268,6 @@
     "video_dajfDD": {
       "type": "video",
       "blocks": {
-        "heading_y8WfQN": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Video",
-            "heading_size": "h1",
-            "heading_h1": false
-          }
-        },
         "text_eADjWp": {
           "type": "text",
           "settings": {
@@ -286,7 +277,6 @@
         }
       },
       "block_order": [
-        "heading_y8WfQN",
         "text_eADjWp"
       ],
       "custom_css": [
@@ -295,6 +285,7 @@
       "settings": {
         "video_external": "https://vimeo.com/manage/videos/1035570708",
         "video_description": "",
+        "poster_image": "shopify://shop_images/videoobrazek_CBD15j-li-s-black_edition_01.jpg",
         "video_size": "md",
         "video_autoplay": false,
         "text_align": "text-center",
@@ -304,15 +295,6 @@
     "73ae227b-6c6b-4aef-91db-71bb11e5344d": {
       "type": "video",
       "blocks": {
-        "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-heading-1": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Video o produktu",
-            "heading_size": "h2",
-            "heading_h1": false
-          }
-        },
         "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-text-1": {
           "type": "text",
           "settings": {
@@ -322,7 +304,6 @@
         }
       },
       "block_order": [
-        "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-heading-1",
         "template--21477569888565__73ae227b-6c6b-4aef-91db-71bb11e5344d-text-1"
       ],
       "custom_css": [
@@ -331,6 +312,7 @@
       "settings": {
         "video_external": "https://vimeo.com/827540439",
         "video_description": "",
+        "poster_image": "shopify://shop_images/videoobrazek_CBD15j-li-s-black_edition_02.jpg",
         "video_size": "md",
         "video_autoplay": false,
         "text_align": "text-center",
