@@ -8,6 +8,10 @@
     text-align: justify;
 }
 
+a, .link {
+    text-decoration: underline;
+}
+
 .pickup-status p{
     text-align:left;
 }
