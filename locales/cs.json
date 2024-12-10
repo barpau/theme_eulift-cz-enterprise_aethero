@@ -219,7 +219,7 @@
         "other": "{{ count }} Použité filtry"
       },
       "apply": "Aplikovat",
-      "clear": "Vymazat",
+      "clear": "Zrušit výběr",
       "clear_all": "Vymazat vše",
       "filter": "Filtr",
       "filter_sort": "Filtrovat a třídit",
