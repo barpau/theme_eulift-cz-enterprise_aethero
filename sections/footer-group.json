@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Footer Group",
@@ -17,7 +17,7 @@
         "#insta-feed {margin-bottom: -40px; margin-top: -30px;}"
       ],
       "settings": {
-        "custom_liquid": "<div id=\"insta-feed\"><\/div>",
+        "custom_liquid": "<div id=\"insta-feed\"></div>",
         "section_height": "default",
         "full_width": true,
         "dividers": "none",
@@ -32,7 +32,7 @@
           "settings": {
             "icon": "clock",
             "heading": "OBJEDNÁVKA PO TELEFONU",
-            "text": "<p>Nechcete se zdržovat s vyplňováním objednávky? <strong>+420 606 600 011<\/strong><\/p>",
+            "text": "<p>Nechcete se zdržovat s vyplňováním objednávky? <strong>+420 606 600 011</strong></p>",
             "link": ""
           }
         },
@@ -41,8 +41,8 @@
           "settings": {
             "icon": "truck",
             "heading": "RYCHLÉ DODÁNÍ AŽ K VÁM",
-            "text": "<p>Většinu manipulační techniky doručujeme <strong>do 48 hodin<\/strong> po celém území <strong>ČR a SR<\/strong>.<\/p>",
-            "link": "shopify:\/\/pages\/platebni-a-dodaci-podminky"
+            "text": "<p>Většinu manipulační techniky doručujeme <strong>do 48 hodin</strong> po celém území <strong>ČR a SR</strong>.</p>",
+            "link": "shopify://pages/platebni-a-dodaci-podminky"
           }
         },
         "icons-with-text-3": {
@@ -50,8 +50,8 @@
           "settings": {
             "icon": "star",
             "heading": "JSME VÍCE NEŽLI JEN E-SHOP",
-            "text": "<p>Naše společnost zajišťuje kompletní služby v oblasti manipulační techniky.<\/p>",
-            "link": "shopify:\/\/pages\/o-nas"
+            "text": "<p>Naše společnost zajišťuje kompletní služby v oblasti manipulační techniky.</p>",
+            "link": "shopify://pages/o-nas"
           }
         }
       },
@@ -80,9 +80,9 @@
           "settings": {
             "image_width": 150,
             "heading": "EULIFT.cz",
-            "text": "<p>Jsme jedním z nejstarších a největších eshopů s manipulační technikou v ČR.<br\/><strong>GEKKON International s.r.o<\/strong>., společnost stojící za tímto webem, poskytuje komplexní služby od <strong>financování, školení řidičů<\/strong> přes <strong>servis, údržbu, prodej náhradních dílů<\/strong> až po <strong>pronájem a bazarový prodej<\/strong> použitých strojů<\/p>",
+            "text": "<p>Jsme jedním z nejstarších a největších eshopů s manipulační technikou v ČR.<br/><strong>GEKKON International s.r.o</strong>., společnost stojící za tímto webem, poskytuje komplexní služby od <strong>financování, školení řidičů</strong> přes <strong>servis, údržbu, prodej náhradních dílů</strong> až po <strong>pronájem a bazarový prodej</strong> použitých strojů</p>",
             "button_label": "",
-            "button_link": "shopify:\/\/pages\/o-nas",
+            "button_link": "shopify://pages/o-nas",
             "show_social": true,
             "text_align": "text-start"
           }
@@ -105,7 +105,7 @@
           "type": "newsletter",
           "settings": {
             "heading": "Novinky",
-            "text": "<p>Přihlašte se k odběru a my vám pošleme max. 1x za měsíc zajímavé informace z oboru.<\/p>",
+            "text": "<p>Přihlašte se k odběru a my vám pošleme zajímavé nabídky a informace z oboru.</p>",
             "collapse_mobile": true
           }
         }
