@@ -182,7 +182,7 @@
             </div>
 
         {%- comment -%}Aethero code edit start{%- endcomment -%}  
-          <div class="price-with-tax">{{ product.price | times: 1.21 | money }} s DPH</div>
+          <div class="price-with-tax"><span id="tax-price">{{ product.price | times: 1.21 | money }} s DPH</span></div>
           <div class="delivery" data-delivery-price>
   Doprava: <span id="shipping-price"></span>
 </div>
@@ -329,7 +329,34 @@
         }, 0);
       });
     });
+
+    
   });
+
+  const priceWithTaxElement = document.getElementById('tax-price');
+    
+  function updateTaxPrice(variant){
+    exactPrice = variant.price/100;
+    const formattedPrice = new Intl.NumberFormat('cs-CZ', {
+      style: 'currency',
+      currency: 'CZK'
+  }).format(exactPrice * 1.21);
+    priceWithTaxElement.innerHTML = formattedPrice + ' s DPH';
+  }
+
+  document.querySelector('[name="id"]').addEventListener('change', function() {
+    var selectedVariantId = this.value;
+    var selectedVariant = {{ product.variants | json }}
+        .find(variant => variant.id == selectedVariantId);
+        updateTaxPrice(selectedVariant)
+    // Aktualizace informací o variantě
+    console.log('Vybraná varianta:', selectedVariant.price * 1.21);
+});
+
+
+
+
+  
 </script>
            {%- comment -%}Aethero code edit end{%- endcomment -%}  
 
