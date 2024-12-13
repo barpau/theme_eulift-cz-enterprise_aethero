@@ -8,7 +8,7 @@
     text-align: justify;
 }
 
-a, .link {
+.desc-content a, .desc-content .link {
     text-decoration: underline;
 }
 
