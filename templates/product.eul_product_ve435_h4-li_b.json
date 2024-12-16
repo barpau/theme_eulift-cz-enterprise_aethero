@@ -74,6 +74,12 @@
             "show_tax_and_shipping": false
           }
         },
+        "custom_liquid_QUN6pR": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "{% render 'aethero-email-input' %}"
+          }
+        },
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -158,6 +164,7 @@
         "divider-0",
         "97e3fb95-e8e5-4640-b8cf-81f9031aa4c7",
         "price",
+        "custom_liquid_QUN6pR",
         "buy-buttons",
         "message-1",
         "message-2",
