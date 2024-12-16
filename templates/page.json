@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "54e3d0a3-1904-4064-a2af-29ae7bf79a4a": {
@@ -15,7 +15,7 @@
         "template--20693546369333__54e3d0a3-1904-4064-a2af-29ae7bf79a4a-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "O NÁS <br>EULIFT.cz ",
+            "heading": "Zásady ochrany osobních údajů",
             "heading_size": "h1",
             "heading_h1": false
           }
@@ -52,8 +52,8 @@
         "subheading_erJjLx"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/2560x1440.webp",
-        "image_mobile": "shopify:\/\/shop_images\/2560x2560.webp",
+        "image_desktop": "shopify://shop_images/2560x1440.webp",
+        "image_mobile": "shopify://shop_images/2560x2560.webp",
         "url": "",
         "height_mode": "fixed",
         "fixed_height_desktop": 560,
@@ -96,7 +96,7 @@
         "template--20693546369333__1a549aa7-790b-4de8-b712-34a7e55dffd6-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>EULIFT.cz a EULIFT.sk jsou jednou z nejstarších značek manipulační techniky v České republice a na Slovenku.<\/p>",
+            "text": "<p>EULIFT.cz a EULIFT.sk jsou jednou z nejstarších značek manipulační techniky v České republice a na Slovenku.</p>",
             "enlarge_text": true
           }
         },
